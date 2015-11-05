@@ -1,7 +1,8 @@
 .viewOne {
   background-color: pink;
   text-align: center;
-  font-size: 26px; }
+  font-size: 26px;
+  color: pink; }
 
 .viewTwo {
   background-color: yellow;

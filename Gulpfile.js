@@ -12,7 +12,8 @@ var concatCss 	= require('gulp-concat-css');
 //});
 gulp.task('styles', function() {
 	//debugger;
-    gulp.src('app/sass/**/*.scss')
+   // gulp.src('app/sass/**/*.scss')  //11/4
+	gulp.src('app/styles/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         //.pipe(gulp.dest('.'));
        .pipe(gulp.dest('app/css/'));
