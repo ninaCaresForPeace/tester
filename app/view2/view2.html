@@ -1,21 +1,21 @@
-<p>This is the partial for view 2.</p>
+<p>Image Carousel</p>
 <!--<p>
   Showing of 'interpolate' filter:
   {{ 'Current version is v%VERSION%.' | interpolate }}
 </p>  -->
-<div data-ng-controller="CarouselDemoCtrl">
+<div class='care-Carousel' data-ng-controller="CarouselDemoCtrl">
   <div style="height: 305px">
-    <uib-carousel interval="myInterval" no-wrap="noWrapSlides">
+    <uib-carousel class='carousel-fade' interval="myInterval" no-wrap="noWrapSlides">
       <uib-slide data-ng-repeat="slide in slides" active="slide.active">
-        <img data-ng-src="{{slide.image}}" style="margin:auto;">
+        <img data-ng-src="{{slide.image}}" style="margin:auto;width:600px; height:300px;">
         <div class="carousel-caption">
-          <h4>Slide {{$index}}</h4>
+          <!--<h4>Slide {{$index}}</h4>  -->
           <p>{{slide.text}}</p>
         </div>
       </uib-slide>
     </uib-carousel>
   </div>
-  <div class="row">
+ <!--<div class="row">
     <div class="col-md-6">
       <button type="button" class="btn btn-info" data-ng-click="addSlide()">Add Slide</button>
       <div class="checkbox">
@@ -29,5 +29,5 @@
       Interval, in milliseconds: <input type="number" class="form-control" data-ng-model="myInterval">
       <br />Enter a negative number or 0 to stop the interval.
     </div>
-  </div>
+  </div>  --> 
 </div>

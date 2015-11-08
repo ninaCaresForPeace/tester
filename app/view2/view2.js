@@ -13,16 +13,37 @@ angular.module('myApp.view2', ['ngRoute','ngAnimate','ui.bootstrap'])
 	  $scope.myInterval = 5000;
 	  $scope.noWrapSlides = false;
 	  var slides = $scope.slides = [];
-	  $scope.addSlide = function() {
+	  $scope.addSlide = function(img, txt) {
 	    var newWidth = 600 + slides.length + 1;
 	    slides.push({
-	      image: '//placekitten.com/' + newWidth + '/300',
-	      text: ['More','Extra','Lots of','Surplus'][slides.length % 4] + ' ' +
-	        ['Cats', 'Kittys', 'Felines', 'Cutes'][slides.length % 4]
+	      image: img,
+	      text: txt
 	    });
 	  };
+	  
 	  for (var i=0; i<4; i++) {
-	    $scope.addSlide();
+		  var img;
+		  var text;
+		  switch(i) {
+		  case 0:
+		        img = './images/careforpeace.png';
+		        text = '';
+		        break;
+		    case 1:
+		        img = './images/girlswithfacepaint.png';
+		        text = "Thanaka: Myanmar's fragrant, versatile cosmetic";
+		        break;
+		    case 2:
+		        img = './images/happyboys.png';
+		        text = 'Young buddhist monks';
+		        break;
+		    case 3:
+		        img = './images/newClinic.png';
+		        text = "Making it happen!";
+		        break;
+		   
+		}
+	    $scope.addSlide(img, text);
 	  }
 	});
 
