@@ -1,16 +1,20 @@
 'use strict';
 
-angular.module('myApp.globalNav', ['ngRoute'/*,'ngAnimate'*/,'ui.bootstrap'])
-
-.config(['$routeProvider', function($routeProvider) {
+//angular.module('myApp.globalNav', ['ngRoute'/*,'ngAnimate'*/',ui.bootstrap'])
+angular.module('myApp.globalNav', ['ngRoute','ngAnimate','ui.bootstrap'])/*.
+config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/globalNav', {
     templateUrl: 'Navigation/bandedNavTemplate.html',
     controller: 'bandedNavControl'
+ //   appData: './json/globalNav.json'
   });
-}])
+}])*/
 
-.controller('bandedNavControl', function ($scope) {
+.controller('bandedNavControl',function ($scope) {
 	debugger;
+//	$scope.data = appData.data;
+	
+	
 //	  $scope.myInterval = 5000;
 //	  $scope.noWrapSlides = false;
 //	  var slides = $scope.slides = [];

@@ -9,5 +9,23 @@ angular.module('myApp', [
   'myApp.version'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/view1'});
+	debugger;
+  //$routeProvider.otherwise({redirectTo: '/view1'});
+	$routeProvider.
+		when("/globalNav", {
+//			templateUrl: "bandedNavTemplate.html",
+//			controller: 'bandedNavControl'
+			templateUrl: "Navigation/bandedNavTemplate.html",
+			controller: 'Navigation/bandedNavControl',
+			appData: 'json/globalNav.json'
+		}).
+		when("/view2", {
+			templateUrl: "view2/view2.html",
+			controller: 'CarouselDemoCtrl'
+		}).
+		when("/view1", {
+			templateUrl: "view1/view1.html",
+			controller: 'View1Ctrl'
+		}).
+		otherwise({redirectTo: '/view1'})
 }]);
