@@ -1,13 +1,29 @@
 {
-	"menu": [
-		{"title": "Home"},
-		{"title": "Our Mission"},
-		{"title": "Achievements"},
-		{"title": "Who we are"},
-		{"title": "What's new"},
-		{"title": "About Myanmar"},
-		{"title": "Contact Us"},
-		{"title": "Donate}
+		"menu": [
+			{
+				"title": "Home"
+			},
+			{
+				"title": "Our Mission"
+			},
+			{
+				"title": "Achievements"
+			},
+			{
+				"title": "Who we are"
+			},
+			{
+				"title": "What's new"
+			},
+			{
+				"title": "About Myanmar"
+			},
+			{
+				"title": "Contact Us"
+			},
+			{
+				"title": "Donate"
+			}
 		
-	]
+		]
 }

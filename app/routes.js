@@ -1,22 +1,22 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('myApp', [
-  'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.globalNav',
-  'myApp.version'
-]);/*.
+angular.module('myApp',['ngRoute'
+//  'ngRoute',
+//  'myApp.view1',
+//  'myApp.view2',
+//  'myApp.globalNav',
+//  'myApp.version'
+]).
 config(['$routeProvider', function($routeProvider) {
-	debugger;
+	//debugger;
   //$routeProvider.otherwise({redirectTo: '/view1'});
 	$routeProvider.
 		when("/globalNav", {
 //			templateUrl: "bandedNavTemplate.html",
 //			controller: 'bandedNavControl'
 			templateUrl: "Navigation/bandedNavTemplate.html",
-			controller: 'Navigation/bandedNavControl',
+			controller: 'bandedNavControl',
 			appData: 'json/globalNav.json'
 		}).
 		when("/view2", {
@@ -28,4 +28,4 @@ config(['$routeProvider', function($routeProvider) {
 			controller: 'View1Ctrl'
 		}).
 		otherwise({redirectTo: '/view1'})
-}]);*/
+}]);
