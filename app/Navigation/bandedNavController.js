@@ -10,82 +10,75 @@
 	 //   appData: './json/globalNav.json'
 	  });
 	}])*/
-angular.module('myApp')//.globalNav')
-	.controller('bandedNavControl',[ '$scope', '$http', function ($scope, $http) {
-
-		$scope.data = [];
-		$http.defaults.headers.common['Accept'] = 'application/json';
-		  $http.defaults.headers.common['Content-Type'] = 'application/json';
-		var res = $http.get("./json/globalNav.json");
+angular.module('myApp') 
+.controller('bandedNavControl',['$scope', '$route', 'getJsonService', function ( $scope, $route, getJsonService) {
+	//.controller('bandedNavControl',['$scope', '$route', '$element', 'getJsonService', function ( $scope, $route, $element, getJsonService) {
 		//debugger;
-		res.then(function(results) {
-			//success;
-			debugger;
-			console.log("Success: " + results.status +" Data: " + results);
-			
-			$scope.data = results.data;
-			console.log("Success: "+  $scope.data.menu[0].title )
-		}, function(results) {
-			//error
-			debugger;
-			console.log("Error: " +results.data + "; " + results.data);
-		});
-		debugger;
-//		var response = $http.get('./json/globalNav.json');
-//		response.success
-//		$http.get('./json/globalNav.json').success(function (data){
+		var jsonFile = $route.current.$$route.json;
+		getJsonService.retrieveJson(jsonFile).then(function(response){ 
+			$scope.tabs = response.data.menu;//[0].title;
+			$scope.dTabs = response.data.menu;
 //			debugger;
-//			$scope.data = data;
+//			$scope.counter = 1;
+//			debugger;
+////			$scope.clickTab = function () {
+////				//var elem = $element;
+////				debugger;
+////			}
+//			function addTabs() {
+//				debugger
+//			}
+//			$scope.addTab = function(){
+//				 $scope.counter++;
+//				 debugger;
+//		         $scope.tabs.push({id:$scope.counter,content:'Any Content'});     
+//				
+//			}
+//
+//			$scope.deleteTab = function() {
+//				
+//			}
+		});
+			//jsons;
+//		getJsonService.retrieveJson(jsonFile).then(function(response){ 
+//            $scope.data = response;
+//		});
+		//$scope.data = [];
+		
+//		var tabData = $http.get(jsonFile)
+//			.then(function(results) {
+//			//success;
+//			console.log("Success: " + results.status +" Data: " + results);
+//			//$scope.data = results.data;
+//			console.log("Success: "+  $scope.data.menu[0].title )
+//			return results.data;
+//			}, function(results) {
+//			//error
+//			console.log("Error: " +results.data + "; " + results.data);
 //		});
 
-//		$http.get("/json/globalNav.json")
-//			.then(function(results) {
-//				//success;
-//				debugger;
-//				console.log("Success: " + results.status);
-//				$scope.data = results.data;
-//			}, function(results) {
-//				//error
-//				debugger;
-//				console.log("Error: " +results.data + "; " + results.status);
-//			});
-		//$scope.data = appData.data;
-		debugger;
+
+		}])
 		
-//		  $scope.myInterval = 5000;
-//		  $scope.noWrapSlides = false;
-//		  var slides = $scope.slides = [];
-//		  $scope.addSlide = function(img, txt) {
-//		    var newWidth = 600 + slides.length + 1;
-//		    slides.push({
-//		      image: img,
-//		      text: txt
-//		    });
-//		  };
-//		  
-//		  for (var i=0; i<4; i++) {
-//			  var img;
-//			  var text;
-//			  switch(i) {
-//			  case 0:
-//			        img = './images/careforpeace.png';
-//			        text = '';
-//			        break;
-//			    case 1:
-//			        img = './images/girlswithfacepaint.png';
-//			        text = "Thanaka: Myanmar's fragrant, versatile cosmetic";
-//			        break;
-//			    case 2:
-//			        img = './images/happyboys.png';
-//			        text = 'Young buddhist monks';
-//			        break;
-//			    case 3:
-//			        img = './images/newClinic.png';
-//			        text = "Making it happen!";
-//			        break;
-//			   
-//			}
-//		    $scope.addSlide(img, text);
-		//  }
-		}]);
+		.directive("clickTab", function () {
+			return {
+				 link: function(scope, element) { 
+			        	element.bind('click', function () {
+			        		debugger;
+			                element.toggleClass("open");
+			            });
+				 }
+			}
+       
+        });
+//        return {
+//            restrict: "AE", 
+//            link: link, 
+//            controller:function($scope,$element){
+//                $scope.name2 = 'this is second name';
+//                var barGridSection = $element.find('#barGridSection'); //helps to find the child element.
+//        }
+//        };
+   // })
+
 

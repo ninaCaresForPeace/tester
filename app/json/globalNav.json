@@ -1,28 +1,36 @@
 {
 		"menu": [
 			{
-				"title": "Home"
+				"title": "Home",
+				"href": "#view1"
 			},
 			{
-				"title": "Our Mission"
+				"title": "Our Mission",
+				"href": "#view2"
 			},
 			{
-				"title": "Achievements"
+				"title": "Achievements",
+				"href": "#globalNav"
 			},
 			{
-				"title": "Who we are"
+				"title": "Who we are",
+				"href": ""
 			},
 			{
-				"title": "What's new"
+				"title": "What's new",
+				"href": ""
 			},
 			{
-				"title": "About Myanmar"
+				"title": "About Myanmar",
+				"href": ""
 			},
 			{
-				"title": "Contact Us"
+				"title": "Contact Us",
+				"href": ""
 			},
 			{
-				"title": "Donate"
+				"title": "Donate",
+				"href": ""
 			}
 		
 		]

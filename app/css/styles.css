@@ -34,3 +34,9 @@
     bottom: 0; }
   .care-Carousel .carousel-caption {
     padding-bottom: 2px; }
+
+.globalNav {
+  font: arial; }
+  .globalNav .dropdown.open > a, .globalNav .dropdown.open > a:hover, .globalNav .dropdown.open > a:focus, .globalNav .dropdown.open > a:active {
+    border-color: transparent;
+    color: #CCCCC; }

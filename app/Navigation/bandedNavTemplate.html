@@ -1,16 +1,27 @@
-<div class='bandedNav container-fluid' data-ng-controller="bandedNavControl">
+<div class='globalNav container-fluid' >
 	<header class="global-navigation-header row">
 	<ul class="nav nav-tabs">
-	 <li role="presentation" class="active"><a href="#">Home</a></li>
-  <li role="presentation"><a href="#">Profile</a></li>
-  <li role="presentation"><a href="#">Messages</a></li>
-  		<li role="presentation" class="dropdown">
-    		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span>
-    		</a>
-    		<ul class="dropdown-menu">
-<!-- dropdown nodes go here -->
-    		</ul>
-  		</li>
+	<!-- <div ng-repeat="(key, value) in myObj"> ... </div> 
+	ng-class="{selected: $index==selectedIndex}"-->
+	<li ng-repeat="tab in tabs" role="presentation" class="{active: $index==1}">
+		<a href="{{tab.href}}">{{tab.title}}</a>
+		</li>
+	<li id="dropdown" role="presentation" class="dropdown" click-tab>
+    	<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+      Dropdown <span class="caret"></span>
+    </a>
+	<ul class="dropdown-menu">
+      <!-- inject here -->
+      <li ng-repeat="dTab in dTabs" role="presentation" class="{active: $index==1}">
+		<a href="{{dTab.href}}">{{dTab.title}}</a>
+		</li>
+    </ul>
+    </li>
+	
+	<!-- <li role="presentation" class="active"><a href="#">Home</a></li>
+  		<li role="presentation"><a href="#">Profile</a></li>
+  	<li role="presentation"><a href="#">Messages</a></li>  --> 
+  		
 		</ul>
 	
 	</header>
