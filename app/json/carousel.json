@@ -1,0 +1,34 @@
+{
+	"carousel": [
+	
+		{
+			"image"		: "./images/myanmar_boys.jpg",
+			"altTag"	: "Young boys in Myanmar"
+		},
+		{
+		"image"			: "./images/burma_buddha.jpg",
+			"altTag"	: "Buddha statue in Burma"
+		},
+		{
+			"image"		: "./images/burma_buffalo.jpg",
+			"altTag"	: "Buffalo in Burma"
+		},
+		{
+			"image"		: "./images/burma_land.jpg",
+			"altTag"	: "A Burmese landspace"
+		},
+		{
+			"image"		: "./images/burma_river.jpg",
+			"altTag"	: "Along a Burmese river"
+		},
+		{
+			"image"		: "./images/myanmar_care.jpg",
+			"altTag"	: "Myanmar Care"
+		},
+		{
+			"image"		: "./images/myanmar_health.jpg",
+			"altTag"	: "Myanmar Health"
+		}
+	]
+}
+

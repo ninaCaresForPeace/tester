@@ -15,12 +15,7 @@ config(['$routeProvider', function($routeProvider) {
 			templateUrl: "Navigation/bandedNavTemplate.html",
 			controller: 'bandedNavControl',
 			json: 'json/globalNav.json'
-//			resolve: {
-//				'jsons': function(getJsonService) {
-//					return getJsonService.retrieveJson('json/globalNav.json');
-//				}
-//						//'json/globalNav.json'
-//			}
+
 		}).
 		when("/view2", {
 			templateUrl: "view2/view2.html",
@@ -28,7 +23,9 @@ config(['$routeProvider', function($routeProvider) {
 		}).
 		when("/view1", {
 			templateUrl: "view1/view1.html",
-			controller: 'View1Ctrl'
+			controller: 'CarouselControl',
+			json: 'json/carousel.json'
+			
 		}).
 		otherwise({redirectTo: '/globalNav'})
 		//otherwise({redirectTo: '/view1'})

@@ -1,0 +1,37 @@
+{
+		"menu": [
+			{
+				"title": "Home",
+				"href": "#view1"
+			},
+			{
+				"title": "Our Mission",
+				"href": "#view2"
+			},
+			{
+				"title": "Achievements",
+				"href": "#globalNav"
+			},
+			{
+				"title": "Who we are",
+				"href": ""
+			},
+			{
+				"title": "What's new",
+				"href": ""
+			},
+			{
+				"title": "About Myanmar",
+				"href": ""
+			},
+			{
+				"title": "Contact Us",
+				"href": ""
+			},
+			{
+				"title": "Donate",
+				"href": ""
+			}
+		
+		]
+}

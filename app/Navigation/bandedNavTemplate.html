@@ -6,7 +6,7 @@
 	<li ng-repeat="tab in tabs" role="presentation" class="{active: $index==1}">
 		<a href="{{tab.href}}">{{tab.title}}</a>
 		</li>
-	<li id="dropdown" role="presentation" class="dropdown" click-tab>
+	<li tabindex="0" id="dropdown" role="presentation" class="dropdown" click-tab>
     	<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
       Dropdown <span class="caret"></span>
     </a>
@@ -23,6 +23,5 @@
   	<li role="presentation"><a href="#">Messages</a></li>  --> 
   		
 		</ul>
-	
 	</header>
 </div>

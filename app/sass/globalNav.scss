@@ -1,11 +1,12 @@
 .globalNav {
 	
-	font: arial;
+	font: 15px arial;
 	.dropdown.open > a{
   		&,
     	&:hover,
     	&:focus,
     	&:active {
+    		background-color: transparent;
       		border-color: transparent;
       		color: #CCCCCC;
     	}

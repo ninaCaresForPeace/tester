@@ -1,14 +1,23 @@
 .care-Carousel {
-	width: 600px;
-	margin-left:25%;
-	margin-right:25%;
+	//width: 600px;
+	//margin-left:25%;
+	//margin-right:25%;
+	max-height: 700px;
+	max-width:1250px;
+	overflow: hidden;
 	
 	.carousel-fade {
     .carousel-inner {
+    max-width: 1200px;
         .item {
             transition-property: opacity;
         }
         
+        .item img {
+        	width: 100%;
+        	height: auto;
+        	max-height: 550px;
+        }
         .item,
         .active.left,
         .active.right {
@@ -41,5 +50,6 @@
 	
 	.carousel-caption {
 		padding-bottom: 2px;
+		color:red;
 	}
 }
