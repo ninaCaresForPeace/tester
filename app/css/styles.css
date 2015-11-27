@@ -1,3 +1,14 @@
+/******************
+Colors
+*******************/
+/******************
+Breakpoints
+*******************/
+/*
+@include respond-to(small) { ... }
+@include respond-to(medium) { ... }
+@include respond-to(large) { ... }
+*/
 .viewOne {
   background-color: pink;
   text-align: center;
@@ -9,6 +20,7 @@
   font-size: 25px; }
 
 .care-Carousel {
+  margin-top: 140px;
   max-height: 700px;
   max-width: 1250px;
   overflow: hidden; }
@@ -43,7 +55,54 @@
     color: red; }
 
 .globalNav {
-  font: arial; }
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 20px;
+  height: 140px;
+  background-color: white; }
+  .globalNav .dove-logo {
+    float: left;
+    width: 175px;
+    height: 140px;
+    background-color: #F8BA00;
+    display: inline; }
+    .globalNav .dove-logo img {
+      height: 95px;
+      width: 95px;
+      padding-top: 30px; }
+  .globalNav .global-navigation-header {
+    height: 140px;
+    margin-top: none;
+    line-height: 0px;
+    display: inline; }
+    .globalNav .global-navigation-header.row {
+      margin-left: 0px; }
+    .globalNav .global-navigation-header .nav-tabs {
+      border-bottom: none;
+      margin-top: 50px; }
+  .globalNav .nav .last a {
+    color: #F8BA00; }
+  .globalNav .nav > li > a {
+    font: 16px arial;
+    color: #666666; }
+    @media (max-width: 1116px) {
+      .globalNav .nav > li > a {
+        font-size: 14px;
+        padding-left: 8px;
+        padding-right: 8px; } }
+  .globalNav .nav > li > a:hover,
+  .globalNav .nav > li > a:focus {
+    text-decoration: none;
+    background-color: transparent;
+    border-color: transparent;
+    color: #CCCCCC; }
+  @media (max-width: 935px) {
+    .globalNav .dropdown {
+      visibility: hidden; } }
   .globalNav .dropdown.open > a, .globalNav .dropdown.open > a:hover, .globalNav .dropdown.open > a:focus, .globalNav .dropdown.open > a:active {
+    background-color: transparent;
     border-color: transparent;
     color: #CCCCCC; }

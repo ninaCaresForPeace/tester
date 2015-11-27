@@ -6,6 +6,7 @@ angular.module('myApp')
 		getJsonService.retrieveJson(jsonFile).then(function(response){ 
 			$scope.tabs = response.data.menu;//[0].title;
 			$scope.dTabs = response.data.menu;
+			$scope.logo = response.data.logo;
 		});
 
 }]);

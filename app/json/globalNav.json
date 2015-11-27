@@ -1,4 +1,10 @@
 {
+		"logo": { 
+			"left": "./images/logo_care250.jpg",
+			"top": "./images/care4peace.jpg",
+			"altLeft": "Care for peace image",
+			"altTop": "Care for peace logo"
+		},
 		"menu": [
 			{
 				"title": "Home",

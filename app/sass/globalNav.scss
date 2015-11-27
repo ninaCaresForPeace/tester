@@ -1,6 +1,83 @@
 .globalNav {
+	position:fixed;
+	z-index: 20;
+	top: 0;
+	left: 0;
+    right: 0;
+    margin-bottom: 20px;
+    height: 140px;
+    background-color: white;
 	
-	font: 15px arial;
+	
+	.dove-logo {
+		float: left;
+		width: 175px;
+		height: 140px;
+		background-color: #F8BA00;
+		display: inline;
+		img {
+			height: 95px;
+			width: 95px;
+			padding-top: 30px;
+		}
+		
+	}
+	
+	.global-navigation-header {
+		//float: right;
+		height: 140px;
+		margin-top: none;
+		line-height:0px;
+		display: inline; //or inline block?
+		&.row {
+			margin-left: 0px;
+		}
+		.nav-tabs {
+			border-bottom: none;
+			margin-top:50px
+			
+			//.expanded {
+			//@include respond-to(mobile) {
+			//visibility:hidden;
+	
+			//}
+			//}
+		}
+	}
+	.nav {
+	.last {
+		a {
+			color: #F8BA00;
+		}
+		
+	}
+	}
+	.nav > li > a {
+		font: 16px arial;
+		color: #666666;
+		@include respond-to-max(sm-screen) {
+			font-size: 14px;
+			padding-left: 8px;
+			padding-right: 8px;
+	
+		}
+	}
+	
+	.nav > li > a:hover,
+	.nav > li > a:focus {
+  		text-decoration: none;
+  		background-color: transparent;
+      		border-color: transparent;
+      		color: #CCCCCC;
+	}
+	
+	.dropdown {
+		@include respond-to-max(mobile) {
+			visibility:hidden;
+	
+		}
+		
+	}
 	.dropdown.open > a{
   		&,
     	&:hover,

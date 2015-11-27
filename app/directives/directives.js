@@ -2,19 +2,47 @@
 
 var app = angular.module('myApp');
 
-//TODO:handle tab thrus and 
+//TODO: Handle click functionality with enter key
+//TODO: Handle inserting the text for the dropdown
 app.directive("clickTab", function () {
 	return {
-		 link: function(scope, element) { 
+		 link: function(scope, element, attrs) { 
 	        	element.bind('click', function () {
 	        		debugger;
 	                element.toggleClass("open");
+	                var a = attrs;
+	                
 	            });
 		 }
 	}
 
 });
+//.controller('bandedNavControl',['$scope', '$route', 'getJsonService', function ( $scope, $route, getJsonService) {
+//	var jsonFile = $route.current.$$route.json;
+//	getJsonService.retrieveJson(jsonFile).then(function(response){ 
+//		$scope.tabs = response.data.menu;//[0].title;
+//		$scope.dTabs = response.data.menu;
+//		$scope.logo = response.data.logo;
+//	});
 
+app.directive("globalNavTabs", function () {
+	return {
+		restrict: 'EA',
+		transclude: true,
+		scope: {},
+	    controller: ['$scope', '$route', 'getJsonService', function($scope, $route, getJsonService) {
+	    	var jsonFile = './json/globalNav.json';// $route.current.$$route.json;
+	    	getJsonService.retrieveJson(jsonFile).then(function(response){ 
+	    		$scope.tabs = response.data.menu;//[0].title;
+	    		$scope.dTabs = response.data.menu;
+	    		$scope.logo = response.data.logo;
+	    	});
+	    }],
+		
+		templateUrl: './Navigation/bandedNavTemplate.html'
+	//	replace: true
+	};
+});
 app.directive("band", function () {
 	return {
 		restrict: 'E',

@@ -1,27 +1,55 @@
-<div class='globalNav container-fluid' >
-	<header class="global-navigation-header row">
-	<ul class="nav nav-tabs">
-	<!-- <div ng-repeat="(key, value) in myObj"> ... </div> 
-	ng-class="{selected: $index==selectedIndex}"-->
-	<li ng-repeat="tab in tabs" role="presentation" class="{active: $index==1}">
-		<a href="{{tab.href}}">{{tab.title}}</a>
-		</li>
-	<li tabindex="0" id="dropdown" role="presentation" class="dropdown" click-tab>
-    	<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-      Dropdown <span class="caret"></span>
-    </a>
-	<ul class="dropdown-menu">
-      <!-- inject here -->
-      <li ng-repeat="dTab in dTabs" role="presentation" class="{active: $index==1}">
-		<a href="{{dTab.href}}">{{dTab.title}}</a>
-		</li>
-    </ul>
-    </li>
+<div class='globalNav container-fluid'>
+	<div class="dove-logo">
+		<img data-ng-src="{{logo.left}}" alt="{{logo.altLeft}}">
+	</div>
 	
-	<!-- <li role="presentation" class="active"><a href="#">Home</a></li>
-  		<li role="presentation"><a href="#">Profile</a></li>
-  	<li role="presentation"><a href="#">Messages</a></li>  --> 
-  		
+	<div class="global-navigation-header row">
+		<ul class="nav nav-tabs">
+			<li ng-repeat="tab in tabs" role="presentation"  class="expanded"  data-ng-class="{last: $last, active: $index==1}">
+				<a href="{{tab.href}}">{{tab.title}}</a>
+				</li>
+			<li tabindex="0" id="dropdown" role="presentation" class="dropdown" click-tab>
+		    	<!--  <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+		      		{{tabs[0].title}} <span class="caret"></span>
+		    	</a>-->
+		    	<button class="button btn-lg dropdown-toggle" data-toggle="dropdown" type="button" aria-label="Collapsed Menu">
+		    		<span class="icon-bar"></span>
+		    		<span class="icon-bar"></span>
+		    		<span class="icon-bar"></span>
+		    		<span class="icon-bar"></span>
+		    		</button>
+				<ul class="dropdown-menu">
+		      		<li ng-repeat="dTab in dTabs" role="presentation" data-ng-class="{active: $index==1}">
+						<a href="{{dTab.href}}">{{dTab.title}}</a>
+					</li>
+    			</ul>
+    		</li>
 		</ul>
-	</header>
+	</div>  
 </div>
+
+
+
+
+
+
+
+
+
+<!-- <header class="global-navigation-header row">
+		<ul class="nav nav-tabs">
+			<li ng-repeat="tab in tabs" role="presentation"  data-ng-class="{last: $last, active: $index==1}">
+				<a href="{{tab.href}}">{{tab.title}}</a>
+				</li>
+			<li tabindex="0" id="dropdown" role="presentation" class="dropdown" click-tab>
+		    	<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+		      		{{tabs[0].title}} <span class="caret"></span>
+		    	</a>
+				<ul class="dropdown-menu">
+		      		<li ng-repeat="dTab in dTabs" role="presentation" data-ng-class="{active: $index==1}">
+						<a href="{{dTab.href}}">{{dTab.title}}</a>
+					</li>
+    			</ul>
+    		</li>
+		</ul>
+	</header> -->
