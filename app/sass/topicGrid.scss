@@ -4,9 +4,10 @@
 	// position:relative;
 	 padding: 0;
 	.left-block {
-		//position: absolute;
+		.contents{
+		//border:15px solid $ltGry2;
 		background-color: $drkGry;
-		height: 332px;	
+		height: 362px;;	
 		.top-section {
 			background-color: lighten($drkGry, 20%);
 			font-size: 17px;
@@ -25,46 +26,61 @@
 			font-size: 14px;
 			color: #EDEDED;
 			max-height: 150px;
-		}
+		}}
+		
 	}
 	
 	.right-block {
-		height: 332px;	
-		//position:absolute;
+		//height: inherit;
+		//border-top:15px solid $ltGry2;	
+		//border-left:15px solid $ltGry2;
+		//border-right:15px solid $ltGry2;
+		//border-bottom:15px solid $ltGry2;
+		height: 362px;
+		.row {
+			height:50%
+		}
 		.left {
-			background-color:red;
-			.top {
-				height: 100px;	
-			
-			}
-			
-			.bottom {
-				height: 100px;	
-			}
+			background-color:$ltGry2;
+			height: 100%;
+
 		}
 		
 		.middle {
-			background-color:blue;
-			.top {
-				height: 100px;	
-			}
-			
-			.bottom {
-			height: 100px;	
-			}
+			background-color:$ltGry2;
+			height:100%;
+
 		}
 		
 		.right {
-			background-color:green;
-			.top {
-				height: 100px;	
+			background-color:$ltGry2;
+			//height:inherit;
+		
+		}
+		.test {
+			//min-width: 200px;
+			//min-height:200px;
+			height:100%;
+			//overflow: auto;
+			background-color:yellow;
+		}
+		.test2 {
+			//min-width: 200px;
+			//min-height:200px;
+			height:100%;
+			//overflow: auto;
+			background-color:black;
+		}
+		.top {
+				width: 100%;
+				border-bottom:15px solid $ltGry2;
+				
 			}
 			
 			.bottom {
-				height: 100px;	
+				width: 100%;
+				//border-bottom:15px solid $ltGry2;
 			}
-		
-		}
 	}
 
 }

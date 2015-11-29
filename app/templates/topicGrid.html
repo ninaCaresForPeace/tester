@@ -1,25 +1,41 @@
 <div class="topic-grid row">
 	
 		<div class="left-block col-sm-4 ">
-			<div class="top-section">
-				<div class="content-header">{{content.leftBlock.header}}</div>
+			<div class="contents">
+				<div class="top-section">
+					<div class="content-header">{{content.header}}</div>
+				</div>
+				<div class="content-section">{{content.content}}</div>
 			</div>
-			<div class="content-section">{{content.leftBlock.content}}</div>
 		</div>
 		<div class="right-block col-sm-8 ">
 	  		<div class="row">
 				<div class="left col-xs-4">
-					<div class="top"></div>
-					<div class="bottom"></div>
+				<div class="test"></div>
+				
+					<!--<img data-ng-src="{{grid.topLeft}}" alt="{{}}" height="170" width="170" class="top">-->
+					<!--<img data-ng-src="{{grid.bottomLeft}}" alt="{{}}" height="170" width="170" class="bottom">-->
 				</div>
 				<div class="middle col-xs-4" >
-					<div class="top"></div>
-					<div class="bottom"></div>
+					<img data-ng-src="{{grid.topMiddle}}" alt="{{}}" height="170" width="170" class="top">
+					
 				</div>
 				<div class="right col-xs-4">
-					<div class="top"></div>
-					<div class="bottom"></div>
+					<img data-ng-src="{{grid.topRight}}" alt="{{}}" height="170" width="170" class="top">
+					
 				</div>
+			</div>
+			<div class="row">
+				<div class="left col-xs-4">
+					<div class="test2"></div>
+				</div>
+				<div class="middle col-xs-4" >
+					<img data-ng-src="{{grid.bottomMiddle}}" alt="{{}}" height="170" width="170" class="bottom">
+				</div>
+				<div class="right col-xs-4">
+					<img data-ng-src="{{grid.bottomRight}}" alt="{{}}" height="170" width="170" class="bottom">
+				</div>
+				
 			</div>
 	 	</div>
 	

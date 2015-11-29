@@ -137,38 +137,41 @@ Breakpoints
   background-color: #DDDDDD;
   height: 362px;
   padding: 0; }
-  .topic-grid .left-block {
+  .topic-grid .left-block .contents {
     background-color: #555555;
-    height: 332px; }
-    .topic-grid .left-block .top-section {
+    height: 362px; }
+    .topic-grid .left-block .contents .top-section {
       background-color: #888888;
       font-size: 17px;
       color: #F8BA00;
       max-height: 65px; }
       @media (max-width: 1200px) {
-        .topic-grid .left-block .top-section {
+        .topic-grid .left-block .contents .top-section {
           font-size: 12px; } }
-    .topic-grid .left-block .content-section {
+    .topic-grid .left-block .contents .content-section {
       font-size: 14px;
       color: #EDEDED;
       max-height: 150px; }
   .topic-grid .right-block {
-    height: 332px; }
+    height: 362px; }
+    .topic-grid .right-block .row {
+      height: 50%; }
     .topic-grid .right-block .left {
-      background-color: red; }
-      .topic-grid .right-block .left .top {
-        height: 100px; }
-      .topic-grid .right-block .left .bottom {
-        height: 100px; }
+      background-color: #DDDDDD;
+      height: 100%; }
     .topic-grid .right-block .middle {
-      background-color: blue; }
-      .topic-grid .right-block .middle .top {
-        height: 100px; }
-      .topic-grid .right-block .middle .bottom {
-        height: 100px; }
+      background-color: #DDDDDD;
+      height: 100%; }
     .topic-grid .right-block .right {
-      background-color: green; }
-      .topic-grid .right-block .right .top {
-        height: 100px; }
-      .topic-grid .right-block .right .bottom {
-        height: 100px; }
+      background-color: #DDDDDD; }
+    .topic-grid .right-block .test {
+      height: 100%;
+      background-color: yellow; }
+    .topic-grid .right-block .test2 {
+      height: 100%;
+      background-color: black; }
+    .topic-grid .right-block .top {
+      width: 100%;
+      border-bottom: 15px solid #DDDDDD; }
+    .topic-grid .right-block .bottom {
+      width: 100%; }

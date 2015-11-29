@@ -78,7 +78,8 @@ app.directive("topicGrid", function () {
 		controller: ['$scope', 'getJsonService', function($scope, getJsonService) {
 			var jsonFile = './json/topicGrid.json';
 			getJsonService.retrieveJson(jsonFile).then(function(response){ 
-				$scope.content = response.data.topicGrid;
+				$scope.content = response.data.topicGrid.leftBlock;
+				$scope.grid = response.data.topicGrid.rightBlock;
 			});
 	    }]/*,
 		replace: true*/
