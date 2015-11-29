@@ -22,9 +22,9 @@ config(['$routeProvider', function($routeProvider) {
 			controller: 'CarouselDemoCtrl'
 		}).
 		when("/view1", {
-			templateUrl: "view1/view1.html",
+			templateUrl: "view1/view1.html"/*,
 			controller: 'CarouselControl',
-			json: 'json/carousel.json'
+			json: 'json/carousel.json'*/
 			
 		}).
 		otherwise({redirectTo: '/globalNav'})

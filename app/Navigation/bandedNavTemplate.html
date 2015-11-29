@@ -1,4 +1,5 @@
-<div class='globalNav container-fluid'>
+<div class='globalNav container'>
+	<div class="row">
 	<div class="dove-logo">
 		<img data-ng-src="{{logo.left}}" alt="{{logo.altLeft}}">
 	</div>
@@ -8,26 +9,43 @@
 			<li ng-repeat="tab in tabs" role="presentation"  class="expanded"  data-ng-class="{last: $last, active: $index==1}">
 				<a href="{{tab.href}}">{{tab.title}}</a>
 				</li>
-			<li tabindex="0" id="dropdown" role="presentation" class="dropdown" click-tab>
-		    	<!--  <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+			<!--<li tabindex="0" id="dropdown" role="presentation" class="dropdown" click-tab>
+		    	  <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 		      		{{tabs[0].title}} <span class="caret"></span>
 		    	</a>-->
-		    	<button class="button btn-lg dropdown-toggle" data-toggle="dropdown" type="button" aria-label="Collapsed Menu">
-		    		<span class="icon-bar"></span>
-		    		<span class="icon-bar"></span>
-		    		<span class="icon-bar"></span>
-		    		<span class="icon-bar"></span>
+		    	<!--  <button class="button btn-lg dropdown-toggle" data-toggle="dropdown" type="button" aria-label="Collapsed Menu">
+		    		<span class="glyphicon glyphicon-align-justify"></span>
 		    		</button>
 				<ul class="dropdown-menu">
 		      		<li ng-repeat="dTab in dTabs" role="presentation" data-ng-class="{active: $index==1}">
 						<a href="{{dTab.href}}">{{dTab.title}}</a>
 					</li>
     			</ul>
-    		</li>
+    		</li>-->
 		</ul>
-	</div>  
+	</div> 
+	<!-- Single button -->
+<div class="btn-group" click-tab>
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   <span class="glyphicon glyphicon-align-justify"></span>
+  </button>
+  <ul class="dropdown-menu">
+		      		<li ng-repeat="dTab in dTabs" role="presentation" data-ng-class="{active: $index==1}">
+						<a href="{{dTab.href}}">{{dTab.title}}</a>
+					</li>
+    			</ul>
 </div>
-
+	</div>
+	<!--   <button class="button btn-lg dropdown-toggle" data-toggle="dropdown" type="button" aria-label="Collapsed Menu">
+		    		<span class="glyphicon glyphicon-align-justify"></span>
+		    		</button>
+				<ul class="dropdown-menu">
+		      		<li ng-repeat="dTab in dTabs" role="presentation" data-ng-class="{active: $index==1}">
+						<a href="{{dTab.href}}">{{dTab.title}}</a>
+					</li>
+    			</ul>
+	 
+</div>
 
 
 

@@ -3,7 +3,9 @@ Colors
 *******************/
 
 $gry: #666666;
-$ltGry: #CCCCCC;
+$ltGry1: #CCCCCC;
+$ltGry2: #DDDDDD;
+$drkGry: #555555;
 $yellow: #F8BA00;
 
 /******************
@@ -11,9 +13,9 @@ Breakpoints
 *******************/
 $breakpoints: (
   'small'  : 767px,
-  'mobile': 935px,
-  'sm-screen' : 1116px,//992px,
-  'large'  : 1200px,
+  'mobile': 992px,//935px,
+  'sm-screen' : 1200px,//992px,
+ // 'large'  : 1200px,
 );
  
 @mixin respond-to-max($breakpoint) {
@@ -36,7 +38,22 @@ $breakpoints: (
 }
 
 @mixin respond-to-min($breakpoint) {
+  // Retrieves the value from the key
+  $value: map-get($breakpoints, $breakpoint);
 
+  // If the key exists in the map
+  @if $value != null {
+    // Prints a media query based on the value
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
 }
 /*
 @include respond-to(small) { ... }

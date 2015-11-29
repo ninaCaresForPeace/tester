@@ -1,0 +1,70 @@
+.topic-grid {
+	background-color: $ltGry2;
+	 height: 362px;
+	// position:relative;
+	 padding: 0;
+	.left-block {
+		//position: absolute;
+		background-color: $drkGry;
+		height: 332px;	
+		.top-section {
+			background-color: lighten($drkGry, 20%);
+			font-size: 17px;
+			color: $yellow;
+			max-height: 65px;
+			.content-header {
+		
+		}
+			@include respond-to-max(sm-screen) {
+				font-size: 12px;
+			}
+			
+		}
+		
+		.content-section {
+			font-size: 14px;
+			color: #EDEDED;
+			max-height: 150px;
+		}
+	}
+	
+	.right-block {
+		height: 332px;	
+		//position:absolute;
+		.left {
+			background-color:red;
+			.top {
+				height: 100px;	
+			
+			}
+			
+			.bottom {
+				height: 100px;	
+			}
+		}
+		
+		.middle {
+			background-color:blue;
+			.top {
+				height: 100px;	
+			}
+			
+			.bottom {
+			height: 100px;	
+			}
+		}
+		
+		.right {
+			background-color:green;
+			.top {
+				height: 100px;	
+			}
+			
+			.bottom {
+				height: 100px;	
+			}
+		
+		}
+	}
+
+}

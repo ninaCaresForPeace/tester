@@ -47,13 +47,43 @@ app.directive("band", function () {
 	return {
 		restrict: 'E',
 		transclude: true,
-		template:'<div class="band container-fluid">' +
-				'<div ng-transclude></div> </div>',
+		template:'<div class="band container" ng-transclude>',// +
+				//'<div ng-transclude></div> </div>',
 		replace: true
 	}
 	
 });
 
+app.directive("careCarousel", function () {
+	return {
+		restrict: 'E',
+		transclude: true,
+		templateUrl: './templates/carousel.html',
+		controller: ['$scope', 'getJsonService', function($scope, getJsonService) {
+			var jsonFile = './json/carousel.json';
+			getJsonService.retrieveJson(jsonFile).then(function(response){ 
+				$scope.carousel = response.data.carousel;
+				$scope.interval = 5000;
+				$scope.noWrapSlides = false;
+			});
+	    }]/*,
+		replace: true*/
+	}
+});
+app.directive("topicGrid", function () {
+	return {
+		restrict: 'E',
+		transclude: true,
+		templateUrl: './templates/topicGrid.html',
+		controller: ['$scope', 'getJsonService', function($scope, getJsonService) {
+			var jsonFile = './json/topicGrid.json';
+			getJsonService.retrieveJson(jsonFile).then(function(response){ 
+				$scope.content = response.data.topicGrid;
+			});
+	    }]/*,
+		replace: true*/
+	}
+});
 app.directive("carouselClick", function () {
 	return {
 		link: function(scope, element) { 

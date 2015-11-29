@@ -7,13 +7,12 @@
     margin-bottom: 20px;
     height: 140px;
     background-color: white;
-	
-	
+
 	.dove-logo {
 		float: left;
 		width: 175px;
 		height: 140px;
-		background-color: #F8BA00;
+		background-color: $yellow;
 		display: inline;
 		img {
 			height: 95px;
@@ -24,7 +23,7 @@
 	}
 	
 	.global-navigation-header {
-		//float: right;
+		position: relative;
 		height: 140px;
 		margin-top: none;
 		line-height:0px;
@@ -34,27 +33,27 @@
 		}
 		.nav-tabs {
 			border-bottom: none;
-			margin-top:50px
+			margin-top:50px;
 			
-			//.expanded {
-			//@include respond-to(mobile) {
-			//visibility:hidden;
+			.expanded {
+				@include respond-to-max(mobile) {
+				visibility:hidden;
 	
-			//}
-			//}
+				}
+			}
 		}
 	}
 	.nav {
 	.last {
 		a {
-			color: #F8BA00;
+			color: $yellow;
 		}
 		
 	}
 	}
 	.nav > li > a {
 		font: 16px arial;
-		color: #666666;
+		color: $gry;
 		@include respond-to-max(sm-screen) {
 			font-size: 14px;
 			padding-left: 8px;
@@ -68,12 +67,40 @@
   		text-decoration: none;
   		background-color: transparent;
       		border-color: transparent;
-      		color: #CCCCCC;
+      		color: $ltGry1;
 	}
 	
-	.dropdown {
+	//.dropdown {
+	.btn-group {
+	visibility: hidden;
+	position: absolute;
+	top:70px;
+   		right:0;
+	
+	.btn {
+	border: none;
+		background-color: transparent;
+		    box-shadow: none;
+    background-image: none;
+    text-shadow:none;
+   		
+   		.glyphicon-align-justify {
+   			font-size: 35px;
+   		}
+	}
+	
+	/*.btn-lg, .btn-group-lg > .btn {
+		border: none;
+		background-color: transparent;
+		padding: 0;
+   		.glyphicon-align-justify {
+   			font-size: 35px;
+   		}
+   
+	}*/
+		//visibility: visible;
 		@include respond-to-max(mobile) {
-			visibility:hidden;
+			visibility:visible;
 	
 		}
 		
@@ -85,7 +112,7 @@
     	&:active {
     		background-color: transparent;
       		border-color: transparent;
-      		color: #CCCCCC;
+      		color: $ltGry1;
     	}
 
   	}
