@@ -1,3 +1,4 @@
+/*!bits.scss*/
 /******************
 Colors
 *******************/
@@ -6,6 +7,7 @@ $gry: #666666;
 $ltGry1: #CCCCCC;
 $ltGry2: #DDDDDD;
 $drkGry: #555555;
+$drkGry2: #999999;
 $yellow: #F8BA00;
 
 /******************
@@ -14,7 +16,7 @@ Breakpoints
 $breakpoints: (
   'small'  : 767px,
   'mobile': 992px,//935px,
-  'sm-screen' : 1200px,//992px,
+  'sm-screen' : 1200px//992px,
  // 'large'  : 1200px,
 );
  

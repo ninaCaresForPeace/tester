@@ -43,6 +43,25 @@ app.directive("globalNavTabs", function () {
 	//	replace: true
 	};
 });
+
+app.directive("footerSection", function () {
+	return {
+		restrict: 'EA',
+		transclude: true,
+		scope: {},
+	    controller: ['$scope', '$route', 'getJsonService', function($scope, $route, getJsonService) {
+	    	var jsonFile = './json/globalNav.json';// $route.current.$$route.json;
+	    	getJsonService.retrieveJson(jsonFile).then(function(response){ 
+//	    		$scope.tabs = response.data.menu;//[0].title;
+//	    		$scope.dTabs = response.data.menu;
+//	    		$scope.logo = response.data.logo;
+	    	});
+	    }],
+		
+		templateUrl: './templates/footer.html'
+	//	replace: true
+	};
+});
 app.directive("band", function () {
 	return {
 		restrict: 'E',
@@ -54,6 +73,17 @@ app.directive("band", function () {
 	
 });
 
+app.directive("topBand", function () {
+	return {
+		restrict: 'E',
+		transclude: true,
+		template:'<div class="top-band container">' +
+				'<div class="box-overlay"><div class="box-text">Bringing Peace through care</div></div>' +
+				'<div ng-transclude></div> </div>',
+		replace: true
+	}
+	
+});
 app.directive("careCarousel", function () {
 	return {
 		restrict: 'E',
