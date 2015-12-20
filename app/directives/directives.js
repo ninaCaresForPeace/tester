@@ -66,18 +66,22 @@ app.directive("band", function () {
 	return {
 		restrict: 'E',
 		transclude: true,
-		template:'<div class="band container" ng-transclude>',// +
+		template:'<div class="band container-fluid" ng-transclude>',// +
 				//'<div ng-transclude></div> </div>',
 		replace: true
 	}
 	
 });
 
+
+
+
+//sn-skrollr data-6500="left:65%;bottom[inverted]:100%;" data-9500="bottom:0%;
 app.directive("topBand", function () {
 	return {
 		restrict: 'E',
 		transclude: true,
-		template:'<div class="top-band container">' +
+		template:'<div class="top-band container-fluid">' +
 				'<div class="box-overlay"><div class="box-text">Bringing Peace through care</div></div>' +
 				'<div ng-transclude></div> </div>',
 		replace: true
@@ -108,8 +112,9 @@ app.directive("topicGrid", function () {
 		controller: ['$scope', 'getJsonService', function($scope, getJsonService) {
 			var jsonFile = './json/topicGrid.json';
 			getJsonService.retrieveJson(jsonFile).then(function(response){ 
-				$scope.content = response.data.topicGrid.leftBlock;
+				$scope.left = response.data.topicGrid.leftBlock;
 				$scope.grid = response.data.topicGrid.rightBlock;
+				
 			});
 	    }]/*,
 		replace: true*/

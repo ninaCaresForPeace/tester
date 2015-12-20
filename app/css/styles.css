@@ -22,8 +22,7 @@ Breakpoints
 
 /*!careCarousel.scss*/
 .care-Carousel {
-  margin-top: 140px;
-  border: 15px solid #DDDDDD; }
+  margin-top: 140px; }
   .care-Carousel .carousel-fade .carousel-inner .item {
     transition-property: opacity; }
   .care-Carousel .carousel-fade .carousel-inner .item img {
@@ -60,7 +59,13 @@ Breakpoints
   right: 0;
   margin-bottom: 20px;
   height: 140px;
-  background-color: white; }
+  background-color: white;
+  /* .nav-tabs > li.active > a,
+	.nav-tabs > li.active > a:hover,
+	.nav-tabs > li.active > a:focus {
+color: $gry;
+		border: none;
+	 }*/ }
   .globalNav .dove-logo {
     float: left;
     width: 175px;
@@ -100,11 +105,14 @@ Breakpoints
         padding-left: 8px;
         padding-right: 8px; } }
   .globalNav .nav > li > a:hover,
-  .globalNav .nav > li > a:focus {
+  .globalNav .nav > li > a:focus,
+  .globalNav .nav > li > a:active {
     text-decoration: none;
     background-color: transparent;
     border-color: transparent;
     color: #CCCCCC; }
+  .globalNav .nav > li > a:visited {
+    color: #777777; }
   .globalNav .btn-group {
     visibility: hidden;
     position: absolute;
@@ -140,59 +148,108 @@ Breakpoints
   margin-bottom: 15px;
   margin-top: 15px; }
 
+/*!topicGrid.scss*/
 .topic-grid {
-  background-color: #DDDDDD;
+  background-color: white;
   height: 362px;
-  padding: 0; }
+  padding: 0;
+  /*.left-block {
+		.contents{
+			position: relative;
+			background-color: $drkGry;
+			border-top:15px solid $ltGry2;
+			border-bottom:15px solid $ltGry2;
+			height: 362px;
+			overflow:hidden;
+			@include respond-to-max(mobile) {
+				height: 275px;
+			}	
+			.top-section {
+				width: 100%;
+				   text-align: center;	
+				background-color: lighten($drkGry, 20%);
+				font-size: 23px;
+				color: $yellow;
+				border:15px solid $drkGry;
+				.content-header {
+					margin-left: 15px;
+					margin-right: 15px;
+					
+					@include respond-to-max(sm-screen) {
+						font-size: 22px;
+
+					}
+					
+					@include respond-to-max(mobile) {
+						font-size: 15px;	
+					}
+					
+					@include respond-to-max(small) {
+						font-size: 30px;
+ 
+					}
+					
+					
+				}
+				
+				@include respond-to-max(sm-screen) {
+					font-size: 12px;
+				}
+				
+			}
+		
+			.content-section {
+				font-size: 14px;
+				margin: 20px;
+				color: #EDEDED;
+				max-height: 220px;
+				overflow-y: scroll;
+				
+				@include respond-to-max(mobile) {
+					max-height: 140px;
+					font-size: 12px;
+					margin-top:0;
+				}
+				
+			}
+		}
+	}
+	*/ }
   @media (max-width: 767px) {
     .topic-grid {
       height: 780px; } }
   @media (max-width: 992px) {
     .topic-grid {
       height: 275px; } }
-  .topic-grid .left-block .contents {
-    position: relative;
-    background-color: #555555;
-    border-top: 15px solid #DDDDDD;
-    border-bottom: 15px solid #DDDDDD;
-    height: 362px;
-    overflow: hidden; }
-    @media (max-width: 992px) {
-      .topic-grid .left-block .contents {
-        height: 275px; } }
-    .topic-grid .left-block .contents .top-section {
-      width: 100%;
-      text-align: center;
-      background-color: #888888;
-      font-size: 23px;
-      color: #F8BA00;
-      border: 15px solid #555555; }
-      .topic-grid .left-block .contents .top-section .content-header {
-        margin-left: 15px;
-        margin-right: 15px; }
-        @media (max-width: 1200px) {
-          .topic-grid .left-block .contents .top-section .content-header {
-            font-size: 22px; } }
-        @media (max-width: 992px) {
-          .topic-grid .left-block .contents .top-section .content-header {
-            font-size: 15px; } }
-        @media (max-width: 767px) {
-          .topic-grid .left-block .contents .top-section .content-header {
-            font-size: 30px; } }
-      @media (max-width: 1200px) {
-        .topic-grid .left-block .contents .top-section {
-          font-size: 12px; } }
-    .topic-grid .left-block .contents .content-section {
-      font-size: 14px;
-      margin: 20px;
-      color: #EDEDED;
-      max-height: 220px;
+  .topic-grid .left-block {
+    height: 362px; }
+    .topic-grid .left-block .header {
+      font-size: 25px;
+      font-weight: bold;
+      height: 35px; }
+    .topic-grid .left-block ::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 7px; }
+    .topic-grid .left-block ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 1px rgba(255, 255, 255, 0.5); }
+    .topic-grid .left-block .content {
+      font-size: 18px;
+      max-height: 122px;
       overflow-y: scroll; }
-      @media (max-width: 992px) {
-        .topic-grid .left-block .contents .content-section {
-          max-height: 140px;
-          font-size: 12px;
-          margin-top: 0; } }
+      .topic-grid .left-block .content ::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 7px; }
+      .topic-grid .left-block .content ::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 1px rgba(255, 255, 255, 0.5); }
+    .topic-grid .left-block .top-box {
+      height: 50%;
+      border-top: 15px solid white; }
+    .topic-grid .left-block .bottom-box {
+      height: 50%; }
   .topic-grid .right-block {
     height: 362px; }
     @media (max-width: 767px) {
@@ -206,8 +263,19 @@ Breakpoints
 			}*/ }
       .topic-grid .right-block .row.top-row .left, .topic-grid .right-block .row.top-row .middle, .topic-grid .right-block .row.top-row .right {
         height: 100%;
-        border: 15px solid #DDDDDD;
+        border: 15px solid white;
         padding: 0; }
+        .topic-grid .right-block .row.top-row .left .button-text, .topic-grid .right-block .row.top-row .middle .button-text, .topic-grid .right-block .row.top-row .right .button-text {
+          font-size: 14px;
+          color: white;
+          text-transform: uppercase;
+          position: absolute;
+          bottom: 10px;
+          width: 100%;
+          text-align: center; }
+        .topic-grid .right-block .row.top-row .left .button-text.donate, .topic-grid .right-block .row.top-row .middle .button-text.donate, .topic-grid .right-block .row.top-row .right .button-text.donate {
+          font-size: 22px;
+          color: #F8BA00; }
       @media (max-width: 992px) {
         .topic-grid .right-block .row.top-row {
           height: 145px; } }
@@ -237,10 +305,18 @@ Breakpoints
 			}*/ }
       .topic-grid .right-block .row.bottom-row .left, .topic-grid .right-block .row.bottom-row .middle, .topic-grid .right-block .row.bottom-row .right {
         height: 100%;
-        border-left: 15px solid #DDDDDD;
-        border-right: 15px solid #DDDDDD;
-        border-bottom: 15px solid #DDDDDD;
+        border-left: 15px solid white;
+        border-right: 15px solid white;
+        border-bottom: 15px solid white;
         padding: 0; }
+        .topic-grid .right-block .row.bottom-row .left .button-text, .topic-grid .right-block .row.bottom-row .middle .button-text, .topic-grid .right-block .row.bottom-row .right .button-text {
+          font-size: 14px;
+          color: white;
+          text-transform: uppercase;
+          position: absolute;
+          bottom: 10px;
+          width: 100%;
+          text-align: center; }
       @media (max-width: 992px) {
         .topic-grid .right-block .row.bottom-row {
           height: 130px; } }

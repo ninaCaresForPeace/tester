@@ -1,4 +1,4 @@
-<div class='globalNav container'>
+<div class='globalNav container-fluid'>
 	<div class="row">
 	<div class="dove-logo">
 		<img data-ng-src="{{logo.left}}" alt="{{logo.altLeft}}">
@@ -12,7 +12,7 @@
 	</div>
 	<div class="global-navigation-header row">
 		<ul class="nav nav-tabs">
-			<li ng-repeat="tab in tabs" role="presentation"  class="expanded"  data-ng-class="{last: $last, active: $index==1}">
+			<li ng-repeat="tab in tabs" role="presentation"  class="expanded"  data-ng-class="{last: $last, active: $index==0}">
 				<a href="{{tab.href}}">{{tab.title}}</a>
 			</li>
 		</ul>
@@ -23,7 +23,7 @@
    <span class="glyphicon glyphicon-align-justify"></span>
   </button>
   <ul class="dropdown-menu">
-	<li ng-repeat="dTab in dTabs" role="presentation" data-ng-class="{active: $index==1}">
+	<li ng-repeat="dTab in dTabs" role="presentation" data-ng-class="{active: $index==0}">
 			<a href="{{dTab.href}}">{{dTab.title}}</a>
 	</li>
 	</ul>

@@ -1,36 +1,23 @@
 <div class="topic-grid row">
 	<div class="left-block col-sm-5 ">
-			<div class="contents">
-				<div class="top-section">
-					<div class="content-header">{{content.header}}</div>
-				</div>
-				<div class="content-section">{{content.content}}</div>
-			</div>
+		<div class="top-box row">
+			<div class="header">{{left[0].header}}</div>
+			<div class="content">{{left[0].content}}</div>
 		</div>
-		<div class="right-block col-sm-7 ">
-	  		<div class="row top-row">
-				 <div class="left col-xs-4">
-					<img data-ng-src="{{grid.topLeft}}" alt="{{}}" height="170" width="170" class="top">			
-				</div>
-				<div class="middle col-xs-4" >
-					<img data-ng-src="{{grid.topMiddle}}" alt="{{}}" height="170" width="170" class="top">
-				</div>
-				<div class="right col-xs-4">
-					<img data-ng-src="{{grid.topRight}}" alt="{{}}" height="170" width="170" class="top">
-				</div>
-			</div>
-			<div class="row bottom-row">
-				<div class="left col-xs-4">
-					<!-- div class="test2"></div> -->
-					<img data-ng-src="{{grid.bottomLeft}}" alt="{{}}" height="170" width="170" class="bottom">
-				</div>
-				<div class="middle col-xs-4" >
-					<img data-ng-src="{{grid.bottomMiddle}}" alt="{{}}" height="170" width="170" class="bottom">
-				</div>
-				<div class="right col-xs-4">
-					<img data-ng-src="{{grid.bottomRight}}" alt="{{}}" height="170" width="170" class="bottom">
-				</div>
-			</div>
-	 	</div>
-	
+		<div class="bottom-box row">
+			<div class="header">{{left[1].header}}</div>
+			<div class="content">{{left[1].content}}</div>
+		</div>
+	</div>
+
+	<div class="right-block col-sm-7 ">
+		<div ng-repeat="rowItem in grid" class="row {{rowItem.row}}">
+  			<div ng-repeat="gridItem in rowItem.items" class="{{gridItem.position}} col-xs-4">
+  				<div class="button-text" data-ng-class="{donate: $last}">{{gridItem.text}}</div>
+				<img data-ng-src="{{gridItem.image}}" alt="{{gridItem.alt}}" height="{{gridItem.height}}" width="{{gridItem.width}}" class="{{gridItem.row}}">
+  			</div>
+  		</div>
+  		
+ 	</div>
+
 </div>

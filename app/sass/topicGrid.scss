@@ -1,6 +1,6 @@
-
+/*!topicGrid.scss*/
 .topic-grid {
-	background-color: $ltGry2;
+	background-color: white;
 	 height: 362px;
 	 
 	 @include respond-to-max(small) {
@@ -11,7 +11,55 @@
 			}
 	
 	 padding: 0;
+	
 	.left-block {
+	height: 362px;
+		
+		
+		.header {
+			font-size: 25px;
+			//background-color:yellow;
+			font-weight: bold;
+			height: 35px;
+		}
+		::-webkit-scrollbar {
+		    	-webkit-appearance: none;
+		    	width: 7px;
+			}
+			::-webkit-scrollbar-thumb {
+		    	border-radius: 4px;
+		    	background-color: rgba(0,0,0,.5);
+		    	box-shadow: 0 0 1px rgba(255,255,255,.5);
+			}
+		.content {
+			::-webkit-scrollbar {
+		    	-webkit-appearance: none;
+		    	width: 7px;
+			}
+			::-webkit-scrollbar-thumb {
+		    	border-radius: 4px;
+		    	background-color: rgba(0,0,0,.5);
+		    	box-shadow: 0 0 1px rgba(255,255,255,.5);
+			}
+			font-size: 18px;
+			max-height: 122px;
+			overflow-y: scroll;
+		}
+		.top-box {
+			height: 50%;
+			border-top: 15px solid white;
+			//border:15px solid white;
+			
+		
+		}
+		.bottom-box {
+			
+			height: 50%;
+			//border-top: 15px solid white;
+			
+		}
+	}
+	/*.left-block {
 		.contents{
 			position: relative;
 			background-color: $drkGry;
@@ -72,7 +120,7 @@
 			}
 		}
 	}
-	
+	*/
 	.right-block {
 		height: 362px;
 		
@@ -84,10 +132,25 @@
 			
 		}
 		.row.top-row {
+			
 			.left, .middle, .right {
 				height: 100%;
-				border:15px solid $ltGry2;
+				border:15px solid white;
 				padding:0;
+				.button-text {
+					font-size: 14px;
+					color: white;
+					text-transform: uppercase;
+    				position: absolute;
+    				bottom: 10px;
+    				width: 100%;
+    				text-align: center;
+
+				}
+				.button-text.donate {
+					font-size: 22px;
+					color: $yellow;
+				}
 			}
 			@include respond-to-max(mobile) {
 				height: 145px;
@@ -103,10 +166,21 @@
 		
 			.left, .middle, .right {
 				height: 100%;
-				border-left:15px solid $ltGry2;
-				border-right:15px solid $ltGry2;
-				border-bottom:15px solid $ltGry2;
+				border-left:15px solid white;
+				border-right:15px solid white;
+				border-bottom:15px solid white;
 				padding:0;
+				.button-text {
+					font-size: 14px;
+					color: white;
+					text-transform: uppercase;
+    				position: absolute;
+    				bottom: 10px;
+    				width: 100%;
+    				text-align: center;
+
+				}
+				
 			}
 			@include respond-to-max(mobile) {
 				height: 130px;

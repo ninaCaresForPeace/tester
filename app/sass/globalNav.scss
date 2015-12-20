@@ -41,24 +41,28 @@
 		}
 		.nav-tabs {
 			border-bottom: none;
-			//margin-top:50px;
-			
 			.expanded {
 				@include respond-to-max(mobile) {
-				visibility:hidden;
+					visibility:hidden;
 	
 				}
 			}
 		}
 	}
 	.nav {
-	.last {
-		a {
-			color: $yellow;
-		}
+		.last {
+			a {
+				color: $yellow;
+			}
 		
+		}
 	}
-	}
+	/* .nav-tabs > li.active > a,
+	.nav-tabs > li.active > a:hover,
+	.nav-tabs > li.active > a:focus {
+color: $gry;
+		border: none;
+	 }*/
 	.nav > li > a {
 		font: 16px arial;
 		color: $gry;
@@ -71,12 +75,18 @@
 	}
 	
 	.nav > li > a:hover,
-	.nav > li > a:focus {
+	.nav > li > a:focus,
+	.nav > li > a:active {
   		text-decoration: none;
   		background-color: transparent;
       		border-color: transparent;
       		color: $ltGry1;
+      		//background-color:yellow;
 	}
+	.nav > li > a:visited {
+		color: $gry2;
+	}
+
 	
 	//.dropdown {
 	.btn-group {

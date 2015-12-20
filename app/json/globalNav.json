@@ -20,23 +20,23 @@
 			},
 			{
 				"title": "Who we are",
-				"href": ""
+				"href": "#whoWeAre"
 			},
 			{
 				"title": "What's up now",
-				"href": ""
+				"href": "#Now"
 			},
 			{
 				"title": "About Myanmar",
-				"href": ""
+				"href": "#aboutMyanmar"
 			},
 			{
 				"title": "Contact Us",
-				"href": ""
+				"href": "#contact"
 			},
 			{
 				"title": "Donate",
-				"href": ""
+				"href": "#donate"
 			}
 		
 		]
