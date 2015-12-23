@@ -15,8 +15,12 @@ $yellow: #F8BA00;
 Breakpoints
 *******************/
 $breakpoints: (
+  'xs-small': 464px,
+  'x-small': 520px,
   'small'  : 767px,
   'mobile': 992px,//935px,
+  'mobile-920': 920px,
+  
   'sm-screen' : 1200px//992px,
  // 'large'  : 1200px,
 );

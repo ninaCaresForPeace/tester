@@ -13,16 +13,32 @@
 		float: left;
 		width: 175px;
 		height: 140px;
-		background-color: $yellow;
+		/* width: 95px;
+		position: absolute;
+		top: -12px; */
 		display: inline;
+		//background-color: yellow;
 		img {
 			height: 125px;
-			width: 95px;
-			padding-top: 25px;
+			width: 113px;
+			padding-top: 10px;
+		}
+		@include respond-to-max(x-small) {
+			width: 108px;
 		}
 		
 	}
-	//.fa-facebook-official {
+	@include respond-to-max(x-small) {
+		.block-logo {
+		img {
+			    height: 99px;
+    			margin-top: 27px;
+    			width: 190px;
+		}
+	}
+	}
+	
+	
 	.social-media {
 		position: absolute;
 		top: 15px;
@@ -81,12 +97,16 @@ color: $gry;
   		background-color: transparent;
       		border-color: transparent;
       		color: $ltGry1;
-      		//background-color:yellow;
 	}
 	.nav > li > a:visited {
 		color: $gry2;
 	}
-
+	.nav-tabs > li.active > a,
+	.nav-tabs > li.active > a:hover,
+	.nav-tabs > li.active > a:focus {
+		color: $ltGry1;
+		border: none;
+	}
 	
 	//.dropdown {
 	.btn-group {

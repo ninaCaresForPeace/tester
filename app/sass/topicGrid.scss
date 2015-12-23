@@ -1,36 +1,43 @@
 /*!topicGrid.scss*/
 .topic-grid {
 	background-color: white;
-	 height: 362px;
-	 
+	height: 410px;
+	padding: 0;
 	 @include respond-to-max(small) {
 		height: 780px;
 	}
 	@include respond-to-max(mobile) {
-				height: 275px;
-			}
-	
-	 padding: 0;
+		height: 362px;
+	}
 	
 	.left-block {
-	height: 362px;
+		height: 100%;
+		//////////////
 		
+		/////////////
 		
 		.header {
 			font-size: 25px;
-			//background-color:yellow;
 			font-weight: bold;
 			height: 35px;
+			@include respond-to-max(mobile) {
+				font-size: 18px;
+				height: 29px;
+			}
+			@include respond-to-max(small) {
+				font-size: 24px;
+				height: 32px;
+			}
 		}
 		::-webkit-scrollbar {
-		    	-webkit-appearance: none;
-		    	width: 7px;
-			}
-			::-webkit-scrollbar-thumb {
-		    	border-radius: 4px;
-		    	background-color: rgba(0,0,0,.5);
-		    	box-shadow: 0 0 1px rgba(255,255,255,.5);
-			}
+	    	-webkit-appearance: none;
+	    	width: 7px;
+		}
+		::-webkit-scrollbar-thumb {
+	    	border-radius: 4px;
+	    	background-color: rgba(0,0,0,.5);
+	    	box-shadow: 0 0 1px rgba(255,255,255,.5);
+		}
 		.content {
 			::-webkit-scrollbar {
 		    	-webkit-appearance: none;
@@ -42,109 +49,59 @@
 		    	box-shadow: 0 0 1px rgba(255,255,255,.5);
 			}
 			font-size: 18px;
-			max-height: 122px;
+			max-height: 141px;
 			overflow-y: scroll;
+			@include respond-to-max(mobile) {
+				font-size: 14px;
+				max-height: 110px;
+			}
+			@include respond-to-max(small) {
+				font-size: 20px;
+			
+			}
 		}
 		.top-box {
 			height: 50%;
-			border-top: 15px solid white;
-			//border:15px solid white;
-			
-		
+			padding: 15px;
 		}
 		.bottom-box {
-			
 			height: 50%;
-			//border-top: 15px solid white;
-			
+			padding: 15px;
 		}
 	}
-	/*.left-block {
-		.contents{
-			position: relative;
-			background-color: $drkGry;
-			border-top:15px solid $ltGry2;
-			border-bottom:15px solid $ltGry2;
-			height: 362px;
-			overflow:hidden;
-			@include respond-to-max(mobile) {
-				height: 275px;
-			}	
-			.top-section {
-				width: 100%;
-				   text-align: center;	
-				background-color: lighten($drkGry, 20%);
-				font-size: 23px;
-				color: $yellow;
-				border:15px solid $drkGry;
-				.content-header {
-					margin-left: 15px;
-					margin-right: 15px;
-					
-					@include respond-to-max(sm-screen) {
-						font-size: 22px;
-
-					}
-					
-					@include respond-to-max(mobile) {
-						font-size: 15px;	
-					}
-					
-					@include respond-to-max(small) {
-						font-size: 30px;
- 
-					}
-					
-					
-				}
-				
-				@include respond-to-max(sm-screen) {
-					font-size: 12px;
-				}
-				
-			}
-		
-			.content-section {
-				font-size: 14px;
-				margin: 20px;
-				color: #EDEDED;
-				max-height: 220px;
-				overflow-y: scroll;
-				
-				@include respond-to-max(mobile) {
-					max-height: 140px;
-					font-size: 12px;
-					margin-top:0;
-				}
-				
-			}
-		}
-	}
-	*/
+	
 	.right-block {
-		height: 362px;
+		height: 100%;//410px;
 		
 		@include respond-to-max(small) {
-					height: 470px;
+			height: 470px;
 		}
-		.row {
-			height:50%;
-			
-		}
+		
 		.row.top-row {
-			
+			height:50%;
 			.left, .middle, .right {
 				height: 100%;
-				border:15px solid white;
-				padding:0;
+				padding: 15px;
+				
 				.button-text {
 					font-size: 14px;
 					color: white;
 					text-transform: uppercase;
     				position: absolute;
-    				bottom: 10px;
-    				width: 100%;
+    				bottom: 25px;
+    				width: 85%;
     				text-align: center;
+    				@include respond-to-max(mobile) {
+						bottom: 0;
+					}
+					@include respond-to-max(small) {
+						font-size: 18px;
+					}
+					@include respond-to-max(x-small) {
+						bottom: 20px;
+						font-size: 14px;
+						width: 82%;
+					}
 
 				}
 				.button-text.donate {
@@ -153,107 +110,112 @@
 				}
 			}
 			@include respond-to-max(mobile) {
-				height: 145px;
+				height: 161px;
 			}
-		/*	@include respond-to-max(mobile) {
-					height: 115px;
-			}*/
+
 			@include respond-to-max(small) {
 					height: 235px;
 			}
+			@include respond-to-max(x-small) {
+				height: 180px;
+			}
 		}
 		.row.bottom-row {
-		
+			height:50%;
 			.left, .middle, .right {
 				height: 100%;
-				border-left:15px solid white;
-				border-right:15px solid white;
-				border-bottom:15px solid white;
-				padding:0;
+				padding: 15px;
+				
 				.button-text {
 					font-size: 14px;
 					color: white;
 					text-transform: uppercase;
     				position: absolute;
-    				bottom: 10px;
-    				width: 100%;
+    				bottom: 25px;
+    				width: 85%;
     				text-align: center;
+    				@include respond-to-max(mobile) {
+						bottom: 0;
+					}
+					@include respond-to-max(small) {
+						font-size: 18px;
+					}
+					@include respond-to-max(x-small) {
+						bottom: 20px;
+						font-size: 14px;
+						width: 82%;
+					}
+					
 
 				}
 				
 			}
 			@include respond-to-max(mobile) {
-				height: 130px;
+				height: 161px;
+				margin-top: 15px;
 			}
-			/*@include respond-to-max(mobile) {
-					height: 115px;
-			}*/
+
 			@include respond-to-max(small) {
 					height: 235px;
-		}
-		
-			/*.middle {
-				background-color:$ltGry2;
-				height:100%;
-				border-left:15px solid $ltGry2;
-				border-right:15px solid $ltGry2;
-				border-bottom:15px solid $ltGry2;
-				padding:0;
 			}
-			
-			.right {
-				background-color:$ltGry2;
-				height:100%;
-				border-left:15px solid $ltGry2;
-				border-right:15px solid $ltGry2;
-				border-bottom:15px solid $ltGry2;
-				padding:0;
-			}*/
+			@include respond-to-max(x-small) {
+				height: 180px;
+			}
+		
 		}
 		.left {
-				background-color:$ltGry2;
-				height: 100%;
-	
+			background-color: transparent;
+			height: 100%;
+			
 		}
 		
 		.middle {
-			background-color:$ltGry2;
+			background-color: transparent;
 			height:100%;
-
 		}
 		
 		.right {
-			background-color:$ltGry2;
+			background-color: transparent;
 			height:100%;
-			
-		
 		}
 		
-			.top {
-				width: 100%;
-				height:100%;
-				
-				@include respond-to-max(mobile) {
-					height: 115px;
-				}
-				
-				@include respond-to-max(small) {
-					height: 225px;
-				}
-				
+		.top {
+			width: 100%;
+			height:100%;
+			
+			@include respond-to-max(mobile) {
+				height: 161px;
+			}
+			@include respond-to-max(mobile-920) {
+				height: 145px;
 			}
 			
-			.bottom {
-				width: 100%;
-				height:100%;
-				@include respond-to-max(mobile) {
-					height: 115px;
-				}
-				
-				@include respond-to-max(small) {
-					height: 225px;
-				}
+			@include respond-to-max(small) {
+				height: 225px;
 			}
+			@include respond-to-max(x-small) {
+				height: 150px;
+			}
+			
+		}
+			
+		.bottom {
+			width: 100%;
+			height:100%;
+			@include respond-to-max(mobile) {
+				height: 161px;
+			}
+			@include respond-to-max(mobile-920) {
+				height: 145px;
+			}
+			
+			@include respond-to-max(small) {
+				height: 225px;
+			}
+			@include respond-to-max(x-small) {
+				height: 150px;
+			}
+		}
 	}
 
 }

@@ -5,5 +5,56 @@
 	.row {
 		background-color: $drkGry2;
 		height: 100%;
+		
+		.info-Text.last {
+			text-align: right;
+			@include respond-to-max(small) {
+				text-align: center;
+			}
+		}
+		.info-Text.first {
+			text-align: left;
+			@include respond-to-max(small) {
+				text-align: center;
+			}
+		}
+		.info-Text {
+			margin-right: auto;
+			margin-left: auto;
+			text-align: center;
+			
+			.descriptor {
+				color: white;
+				font-size: 16px;
+				border-right: 1px white solid;
+				padding-right: 10px;
+		
+			}
+			.last.descriptor {
+				border-right: none;
+			}
+			.text {
+				color: white;
+				font-size: 16px;
+				margin-left: 10px;
+		
+			}
+		}
+		.trademark-display  {
+			@include respond-to-max(small) {
+				text-align: center;
+			}
+			.glyphicon-copyright-mark{
+				margin-left: 10px;
+				margin-right: 10px;
+				color: white;
+			}
+			.trademark {
+				color: white;
+				font-size: 16px;
+				
+			}
+		}
+		
 	}
 }

@@ -1,5 +1,5 @@
 {
-	"footer-info": [
+	"footerInfo": [
 		{
 			"descriptor": "call us",
 			"text": "1.415.531.0295",
@@ -11,11 +11,11 @@
 			"href": ""
 		},
 		{
-			"descriptor": "our location",
-			"text": "",
+			"descriptor": "",
+			"text": "our location",
 			"href": ""
 		}
 	
 	],
-	"footer-trademark": "2015 C4P all rights reserved"
+	"footerTrademark": "2015 C4P all rights reserved"
 }

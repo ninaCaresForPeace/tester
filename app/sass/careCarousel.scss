@@ -1,18 +1,10 @@
 /*!careCarousel.scss*/
 .care-Carousel {
-	//width: 600px;
-	//margin-left:25%;
-	//margin-right:25%;
-	//carousel position coor(23,150)›
 	margin-top:140px;
-	//max-height: 700px;
-	//max-width:1250px;
-	//overflow: hidden;
-	//border: 15px solid $ltGry2;
 	
 	.carousel-fade {
     .carousel-inner {
-  //  max-width: 1200px;
+
         .item {
             transition-property: opacity;
         }
@@ -50,6 +42,7 @@
 	
 	.carousel-indicators {
 		bottom: 0;
+		z-index:50px;
 	}
 	
 	.carousel-caption {
