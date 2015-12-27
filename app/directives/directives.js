@@ -1,6 +1,18 @@
 'use strict';
 
 var app = angular.module('myApp');
+//var app = angular.module('myApp').config(["snSkrollrProvider", function(snSkrollrProvider) {
+//	console.log("snskroll before");
+//	//debugger;
+//  snSkrollrProvider.config = {smoothScrolling: true};
+//  console.log("snskroll after");
+//  debugger;
+//}]);
+//
+//app.run(["snSkrollr", function(snSkrollr) {
+//	console.log("beforeInit");
+//	  snSkrollr.init();
+//	}]);
 
 //TODO: Handle click functionality with enter key
 //TODO: Handle inserting the text for the dropdown
@@ -11,6 +23,21 @@ app.directive("clickTab", function () {
 	        		debugger;
 	                element.toggleClass("open");
 	                var a = attrs;
+	                
+	            });
+		 }
+	}
+
+});
+
+app.directive("clickNav", function () {
+	return {
+		 link: function(scope, element, attrs) { 
+	        	element.bind('click', function () {
+	        		debugger;
+	               var g = element;// element.toggleClass("open");
+	                var a = attrs;
+	                var s = scope;
 	                
 	            });
 		 }
@@ -109,13 +136,14 @@ app.directive("topicGrid", function () {
 		restrict: 'E',
 		transclude: true,
 		templateUrl: './templates/topicGrid.html',
-		controller: ['$scope', 'getJsonService', function($scope, getJsonService) {
+		controller: ['$scope', 'getJsonService',  function($scope, getJsonService) {
 			var jsonFile = './json/topicGrid.json';
 			getJsonService.retrieveJson(jsonFile).then(function(response){ 
 				$scope.left = response.data.topicGrid.leftBlock;
 				$scope.grid = response.data.topicGrid.rightBlock;
 				
 			});
+			console.log("after topicgrid");
 	    }]/*,
 		replace: true*/
 	}

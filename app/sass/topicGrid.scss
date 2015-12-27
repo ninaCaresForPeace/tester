@@ -20,6 +20,7 @@
 			font-size: 25px;
 			font-weight: bold;
 			height: 35px;
+			
 			@include respond-to-max(mobile) {
 				font-size: 18px;
 				height: 29px;
