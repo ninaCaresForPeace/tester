@@ -1,56 +1,34 @@
 'use strict';
 
 var app = angular.module('myApp');
-//var app = angular.module('myApp').config(["snSkrollrProvider", function(snSkrollrProvider) {
-//	console.log("snskroll before");
-//	//debugger;
-//  snSkrollrProvider.config = {smoothScrolling: true};
-//  console.log("snskroll after");
-//  debugger;
-//}]);
-//
-//app.run(["snSkrollr", function(snSkrollr) {
-//	console.log("beforeInit");
-//	  snSkrollr.init();
-//	}]);
 
 //TODO: Handle click functionality with enter key
 //TODO: Handle inserting the text for the dropdown
 app.directive("clickTab", function () {
 	return {
-		 link: function(scope, element, attrs) { 
+		
+		 link: function(scope, element ) { 
+			
 	        	element.bind('click', function () {
-	        		debugger;
-	                element.toggleClass("open");
-	                var a = attrs;
-	                
+	                element.toggleClass("open"); 
 	            });
 		 }
 	}
 
 });
 
-app.directive("clickNav", function () {
+app.directive("clickNav", function ($rootScope) {
 	return {
+
 		 link: function(scope, element, attrs) { 
 	        	element.bind('click', function () {
-	        		debugger;
-	               var g = element;// element.toggleClass("open");
-	                var a = attrs;
-	                var s = scope;
-	                
+
+
 	            });
 		 }
 	}
 
 });
-//.controller('bandedNavControl',['$scope', '$route', 'getJsonService', function ( $scope, $route, getJsonService) {
-//	var jsonFile = $route.current.$$route.json;
-//	getJsonService.retrieveJson(jsonFile).then(function(response){ 
-//		$scope.tabs = response.data.menu;//[0].title;
-//		$scope.dTabs = response.data.menu;
-//		$scope.logo = response.data.logo;
-//	});
 
 app.directive("globalNavTabs", function () {
 	return {
@@ -75,11 +53,11 @@ app.directive("footerSection", function () {
 		restrict: 'EA',
 		transclude: true,
 		scope: {},
-	    controller: ['$scope', '$route', 'getJsonService', function($scope, $route, getJsonService) {
+	    controller: ['$rootScope','$scope', '$route', 'getJsonService', function($rootScope,$scope, $route, getJsonService) {
 	    	var jsonFile = './json/footer.json';// $route.current.$$route.json;
 	    	getJsonService.retrieveJson(jsonFile).then(function(response){ 
 	    		
-	    		$scope.info = response.data;
+	    		$scope.info = response.data;    		
 	    		
 	    	});
 	    }],
@@ -152,11 +130,62 @@ app.directive("carouselClick", function () {
 	return {
 		link: function(scope, element) { 
         	element.bind('click', function () {
-        		debugger;
+        		//debugger;
         		scope.interval = -1;
                 //element.toggleClass("open");
             });
 		}
+	}
+});
+app.directive("ourMission", function () {
+	return {
+		restrict: 'E',
+		transclude: true,
+		template:'<div class="ourMission" ng-transclude> </div>',
+		controller: ['$scope', 'getJsonService',  function($scope, getJsonService) {
+			var jsonFile = './json/mission.json';
+			debugger;
+			getJsonService.retrieveJson(jsonFile).then(function(response){ 
+				$scope.bgImage = response.data.bgImage;
+				//debugger;
+			});
+			this.getOptions = function() {
+				//debugger;
+			        return $scope.bgImage;
+			};
+	    }]
+		
+	}
+});
+//app.controller("ourMissionController", ["$scope", "$route", "getJsonService", function ($scope, $route, getJsonService) {
+//	var jsonFile = $route.current.$$route.json;
+//	getJsonService.retrieveJson(jsonFile).then(function(response){ 
+//		$scope.bgImage = response.data.bgImage;
+////		$scope.dTabs = response.data.menu;
+////		$scope.logo = response.data.logo;
+//	});
+//}]);
+app.directive("bgImage", function () {
+	return {
+		restrict: 'E',
+		require: '^ourMission',
+		transclude: true,
+		//scope: false, //use parent scope
+		templateUrl: './templates/bgImage.html',
+		link: function(scope, element, ourMissionCtrl ) { 
+			//debugger;
+			//scope.bgImage = ourMissionCtrl.bgImage;
+        	scope.bgImage = ourMissionCtrl.getOptions();
+         }
+		//controller: 'ourMissionController'
+//		controller: ['$scope', 'getJsonService', function($scope, getJsonService) {
+//			var jsonFile = './json/bgImage.json';
+//			getJsonService.retrieveJson(jsonFile).then(function(response){ 
+//				debugger;
+//				$scope.bgImage = response.data.bgImage;
+//				
+//			});
+//		}]
 	}
 });
 //

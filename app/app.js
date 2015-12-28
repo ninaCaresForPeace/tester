@@ -9,7 +9,7 @@ angular.module('myApp', [
   //'myApp.globalNav',
   'myApp.version'
 ]).config(["snSkrollrProvider", function(snSkrollrProvider) {
-	debugger;
+	//debugger;
   snSkrollrProvider.config = { smoothScrolling: true,};
   console.log("after config");
 }]);
@@ -17,7 +17,7 @@ angular.module('myApp', [
 // 2. initialise skrollr at runtime
 var myApp = angular.module('myApp');
 myApp.run(["snSkrollr", function(snSkrollr) {
-	debugger;
+	//debugger;
   snSkrollr.init();
   console.log("in init ");
 }]);

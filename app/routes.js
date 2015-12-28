@@ -11,6 +11,15 @@ angular.module('myApp').//,['ngRoute','getJsonService'
 config(['$routeProvider', function($routeProvider) {
 //config(['$routeProvider', 'getJsonService', function($routeProvider,getJsonService) {
 	$routeProvider.
+		when("/home", {
+			templateUrl: "Views/home.html"
+			//controller: 'bandedNavControl',
+			//json: 'json/globalNav.json'
+
+		}).
+		when("/ourMission", {
+			templateUrl: "Views/mission.html"
+		}).
 		when("/globalNav", {
 			templateUrl: "Navigation/bandedNavTemplate.html",
 			controller: 'bandedNavControl',
