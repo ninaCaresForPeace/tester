@@ -5,9 +5,17 @@ app.controller("ourMissionController", ["$scope", "$route", "getJsonService", fu
 	var jsonFile = $route.current.$$route.json;
 	debugger;
 	getJsonService.retrieveJson(jsonFile).then(function(response){ 
-		$scope.bgImage = response.data.bgImage;
-		$scope.topBand = response.data.topBand;
-		debugger;
+		var data = response.data;
+		$scope.bgImage = data.bgImage;
+		$scope.topBand = data.topBand;
+		
+		var midComponent = data.midComponent;
+		$scope.infoSection = midComponent.infoSection;
+		$scope.video = midComponent.video;
+		var rightBlock = midComponent.rightBlock;
+		$scope.top = rightBlock.top;
+		$scope.links = rightBlock.links;
+		
 //		$scope.dTabs = response.data.menu;
 //		$scope.logo = response.data.logo;
 	});
@@ -22,4 +30,4 @@ app.controller("ourMissionController", ["$scope", "$route", "getJsonService", fu
 //			$scope.logo = response.data.logo;
 //		});
 //
-//}]);
+//}]);"midComponent": {

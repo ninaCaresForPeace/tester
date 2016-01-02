@@ -423,3 +423,17 @@ color: $gry;
     width: 100%;
     height: auto;
     max-height: 550px; }
+
+.middle-component .top-content {
+  white-space: pre-line;
+  font-family: "proxima-nova";
+  font-size: 23px; }
+
+.middle-component .right-side {
+  background-color: #DDDDDD; }
+  .middle-component .right-side .donate {
+    width: 100%; }
+    .middle-component .right-side .donate .button-image {
+      width: 100px;
+      height: 100px;
+      margin-top: 10px; }

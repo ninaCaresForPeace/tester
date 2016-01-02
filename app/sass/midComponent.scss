@@ -1,0 +1,33 @@
+.middle-component {
+	
+	.top-content {
+		
+		white-space: pre-line;
+	    font-family: "proxima-nova";
+	    font-size: 23px;
+	}
+	
+	.right-side {
+		background-color: $ltGry2;
+		.donate {
+			width:100%;
+			
+			
+			.button-image {
+				width:100px;
+				height: 100px;
+				margin-top: 10px;
+				
+			}
+		}
+		
+		.links {
+		//	position: absolute;
+		
+		}
+	}
+	
+	
+	
+}
+	

@@ -127,6 +127,13 @@ app.directive("topicGrid", function () {
 		replace: true*/
 	}
 });
+app.directive("midComponent", function () {
+	return {
+		restrict: 'E',
+		//transclude: true,
+		templateUrl: './templates/midComponent.html'
+	}
+});
 app.directive("carouselClick", function () {
 	return {
 		link: function(scope, element) { 
@@ -138,27 +145,27 @@ app.directive("carouselClick", function () {
 		}
 	}
 });
-app.directive("ourMission", function () {
-	return {
-		restrict: 'E',
-		transclude: true,
-		template:'<div class="ourMission" ng-transclude> </div>',
-		controller: 'ourMissionController'/*,
-		controller: ['$scope', 'getJsonService',  function($scope, getJsonService) {
-			var jsonFile = './json/mission.json';
-			debugger;
-			getJsonService.retrieveJson(jsonFile).then(function(response){ 
-				$scope.bgImage = response.data.bgImage;
-				//debugger;
-			});
-			this.getOptions = function() {
-				//debugger;
-			        return $scope.bgImage;
-			};
-	    }]*/
-		
-	}
-});
+//app.directive("ourMission", function () {
+//	return {
+//		restrict: 'E',
+//		transclude: true,
+//		template:'<div class="ourMission" ng-transclude> </div>',
+//		controller: 'ourMissionController'/*,
+//		controller: ['$scope', 'getJsonService',  function($scope, getJsonService) {
+//			var jsonFile = './json/mission.json';
+//			debugger;
+//			getJsonService.retrieveJson(jsonFile).then(function(response){ 
+//				$scope.bgImage = response.data.bgImage;
+//				//debugger;
+//			});
+//			this.getOptions = function() {
+//				//debugger;
+//			        return $scope.bgImage;
+//			};
+//	    }]*/
+//		
+//	}
+//});
 //app.controller("ourMissionController", ["$scope", "$route", "getJsonService", function ($scope, $route, getJsonService) {
 //	var jsonFile = $route.current.$$route.json;
 //	getJsonService.retrieveJson(jsonFile).then(function(response){ 
