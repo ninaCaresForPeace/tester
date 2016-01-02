@@ -15,6 +15,7 @@ app.controller("ourMissionController", ["$scope", "$route", "getJsonService", fu
 		var rightBlock = midComponent.rightBlock;
 		$scope.top = rightBlock.top;
 		$scope.links = rightBlock.links;
+		$scope.care = rightBlock.care;
 		
 //		$scope.dTabs = response.data.menu;
 //		$scope.logo = response.data.logo;
