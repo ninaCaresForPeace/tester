@@ -1,6 +1,15 @@
 {
+	"topBand": {
+		"overlay": "We are builders - we build clinics piece by piece - for piece"
+	},
 	"bgImage": {
 		"image": "./images/mission.jpg",
 		"alt": "image of clinic being constructed"
+	},
+	"midComponent": {
+		"infoSection": "Care for Peace is founded on the premise that there is a connection between providing care through public health services to the underserved people of the world, and the peace desired by government and the people.  In Myanmar peace hangs in the balance.  It is our change to test our premise and provide care...for peace. \n\nThe Care for Peace Mission is to work with our local partners, the Ministry of Health and the underserved population in rural Myanmar to improve the health, wellbeing and economic vitality of their village by providing the funding, facilities, technologies and technical support to build their own Healthy Villages.\n\nWe need your support to achieve our goal of having medical facilities accessible to people living in rural areas of Myanmar.  Please help by clicking Donate.",
+		"video": {
+			"title":"Care for Peace Celebration December 2014"
+		}
 	}
 }

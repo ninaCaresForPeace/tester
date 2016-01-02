@@ -87,8 +87,9 @@ app.directive("topBand", function () {
 		transclude: true,
 		template:'<div class="top-band container-fluid">' +
 				'<div class="box-overlay"></div>' +
-				'<div class="box-text">Bringing Peace through care</div>' +
+				'<div class="box-text">{{topBand.overlay}}</div>' +
 				'<div ng-transclude></div> </div>',
+		/*controller: 'ourMissionController',*/
 		replace: true
 	}
 	
@@ -142,6 +143,7 @@ app.directive("ourMission", function () {
 		restrict: 'E',
 		transclude: true,
 		template:'<div class="ourMission" ng-transclude> </div>',
+		controller: 'ourMissionController'/*,
 		controller: ['$scope', 'getJsonService',  function($scope, getJsonService) {
 			var jsonFile = './json/mission.json';
 			debugger;
@@ -153,7 +155,7 @@ app.directive("ourMission", function () {
 				//debugger;
 			        return $scope.bgImage;
 			};
-	    }]
+	    }]*/
 		
 	}
 });
@@ -168,16 +170,16 @@ app.directive("ourMission", function () {
 app.directive("bgImage", function () {
 	return {
 		restrict: 'E',
-		require: '^ourMission',
+		//require: '^ourMission',
 		transclude: true,
 		//scope: false, //use parent scope
 		templateUrl: './templates/bgImage.html',
-		link: function(scope, element, ourMissionCtrl ) { 
+		link: function(scope, element/*, ourMissionCtrl*/ ) { 
 			//debugger;
 			//scope.bgImage = ourMissionCtrl.bgImage;
-        	scope.bgImage = ourMissionCtrl.getOptions();
+        	//scope.bgImage = ourMissionCtrl.getOptions();
          }
-		//controller: 'ourMissionController'
+	//	controller: 'ourMissionController'
 //		controller: ['$scope', 'getJsonService', function($scope, getJsonService) {
 //			var jsonFile = './json/bgImage.json';
 //			getJsonService.retrieveJson(jsonFile).then(function(response){ 

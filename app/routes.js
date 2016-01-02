@@ -18,7 +18,10 @@ config(['$routeProvider', function($routeProvider) {
 
 		}).
 		when("/ourMission", {
-			templateUrl: "Views/mission.html"
+			templateUrl: "Views/mission.html",
+			json: 'json/mission.json',
+			controller: 'ourMissionController'
+			
 		}).
 		when("/globalNav", {
 			templateUrl: "Navigation/bandedNavTemplate.html",
