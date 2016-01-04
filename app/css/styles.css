@@ -384,7 +384,7 @@ color: $gry;
   .top-band .box-text {
     position: absolute;
     color: white;
-    z-index: 20;
+    z-index: 1;
     right: 0;
     width: 30%;
     top: 81%;
@@ -424,16 +424,45 @@ color: $gry;
     height: auto;
     max-height: 550px; }
 
-.middle-component .top-content {
-  white-space: pre-line;
-  font-family: "proxima-nova";
-  font-size: 23px; }
+.middle-component .left-side {
+  background-color: white; }
+  .middle-component .left-side .top-content {
+    margin-top: 45px;
+    background-color: white;
+    white-space: pre-line;
+    font-family: Arial;
+    font-size: 23px; }
+  .middle-component .left-side .bottom-content {
+    margin-top: 45px; }
+    .middle-component .left-side .bottom-content .title {
+      font-family: Arial;
+      font-size: 23px; }
 
 .middle-component .right-side {
-  background-color: #DDDDDD; }
+  background-color: #DDDDDD;
+  background-color: #DDDDDD;
+  /*
+					"title": "facebook",
+					"icon": "fa-facebook-official",
+					"text":"Like Facebook",
+					"href":""
+				},
+				{
+		
+		*/ }
   .middle-component .right-side .donate {
     width: 100%; }
     .middle-component .right-side .donate .button-image {
       width: 100px;
       height: 100px;
       margin-top: 10px; }
+  .middle-component .right-side .links .fa-facebook-official {
+    color: #4965A0; }
+    .middle-component .right-side .links .fa-facebook-official .text {
+      color: black;
+      margin-left: 5px; }
+  .middle-component .right-side .links .fa-twitter {
+    color: #57ADEA; }
+    .middle-component .right-side .links .fa-twitter .text {
+      color: black;
+      margin-left: 5px; }

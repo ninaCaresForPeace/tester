@@ -1,6 +1,6 @@
 <div class="middle-component row">
 	<div class="left-side col-sm-10 ">
-		<div style="white-space:pre-line;" class="top-content">{{infoSection}}</div>
+		<div class="top-content">{{infoSection}}</div>
 		<div class="bottom-content">
 			<div class="title">{{video.title}}</div>
 			<div class="video-container row">
@@ -21,11 +21,10 @@
 		</div>
 		<div ng-repeat="link in links" class="links">
 			<div class="title">{{link.title}}</div>
-			<div>
-				<img class="" href="{{link.href}}"  data-ng-src="{{link.image}}">
-				<div class="">{{link.text}}</div>
-			</div>
+			<button type="button" class="{{link.icon}}"><span class="text">{{link.text}}</span></button>
 		</div>
 		<div class="care">{{care}}</div>
 	</div>
+		
+
 </div>

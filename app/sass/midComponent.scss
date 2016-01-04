@@ -1,28 +1,68 @@
 .middle-component {
 	
-	.top-content {
-		
-		white-space: pre-line;
-	    font-family: "proxima-nova";
-	    font-size: 23px;
+	.left-side {
+		background-color: white;
+		.top-content {
+			margin-top:45px;
+			background-color: white;
+			white-space: pre-line;
+		    font-family: Arial;
+		    font-size: 23px;
+		}
+		.bottom-content {
+			margin-top:45px;
+			.title {
+				font-family: Arial;
+				font-size: 23px;
+			}
+		}
 	}
 	
 	.right-side {
+		//margin-top:45px;
 		background-color: $ltGry2;
-		.donate {
-			width:100%;
-			
-			
-			.button-image {
-				width:100px;
-				height: 100px;
-				margin-top: 10px;
+		//.contain-donate {
+			background-color: $ltGry2;
+			.donate {
 				
+				width:100%;
+			
+			 
+				.button-image {
+					width:100px;
+					height: 100px;
+					margin-top: 10px;
+					
+				}
 			}
-		}
+		//}
+		/*
+					"title": "facebook",
+					"icon": "fa-facebook-official",
+					"text":"Like Facebook",
+					"href":""
+				},
+				{
+		
+		*/
 		
 		.links {
-		//	position: absolute;
+		
+			.fa-facebook-official {
+				color: $facebookBlue;
+				.text {
+					color: black;
+					margin-left:5px;
+				}
+			}
+			.fa-twitter {
+				color: $twitterBlue; 
+				
+				.text {
+					color: black;
+					margin-left:5px;
+				}
+			}
 		
 		}
 	}

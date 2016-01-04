@@ -22,13 +22,13 @@
 			"links": [
 				{ 
 					"title": "facebook",
-					"image": "",
+					"icon": "fa fa-facebook-official",
 					"text":"Like Facebook",
 					"href":""
 				},
 				{
 					"title": "twitter",
-					"image": "",
+					"icon": "fa fa-twitter",
 					"text":"follow",
 					"href":""
 				}
