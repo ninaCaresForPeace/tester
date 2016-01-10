@@ -130,15 +130,19 @@ app.directive("topicGrid", function () {
 app.directive("midComponent", function () {
 	return {
 		restrict: 'E',
-		//transclude: true,
 		templateUrl: './templates/midComponent.html'
+	}
+});
+app.directive("teamGridComponent", function () {
+	return {
+		restrict: 'E',
+		templateUrl: './templates/teamGridComponent.html'
 	}
 });
 app.directive("carouselClick", function () {
 	return {
 		link: function(scope, element) { 
         	element.bind('click', function () {
-        		//debugger;
         		scope.interval = -1;
                 //element.toggleClass("open");
             });

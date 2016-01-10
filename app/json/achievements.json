@@ -1,0 +1,40 @@
+{
+	"topBand": {
+		"overlay": "Your contribution has enabled us to build this clinic"
+	},
+	"bgImage": {
+		"image": "./images/sample5.jpg",
+		"alt": "image of clinic being constructed"
+	},
+	"midComponent": {
+		"infoSection": "Our first mini medical center was successfully built in a rural village of Taung Yin, Kyauk Phyu.\r\nEach mini medical healthcare system will provide 90% of health and medical needs so that patients can receive the care they need right in their own village.\r\nThe center also offers preventative health programs, that include health screening, immunization, and chronic disease management, contraception, active aging among others.\r\nWe also have mother and child health programs, illness and injury programs, dental care programs, and basic lab and radiologic services available.\r\nWithout your support, we couldn’t have achieved this.  Please keep helping by clicking \"Donate\".",
+		"video": {
+			"title":"Check our video of a medical center being built in Taung Yin"
+		},
+		"rightBlock": {
+			"top": {
+				"text":"donate",
+				"image":"./images/donate.jpg",
+				"text":"",
+				"href":"",
+				"alt":""
+			},
+			"links": [
+				{ 
+					"title": "facebook",
+					"icon": "fa fa-facebook-official",
+					"text":"Like Facebook",
+					"href":""
+				},
+				{
+					"title": "twitter",
+					"icon": "fa fa-twitter",
+					"text":"follow",
+					"href":""
+				}
+			],
+			"care": "Care for Peace is a non profit organization founded in 2012.  We are dedicated to build healthy communities in Myanmar"
+			
+		}
+	}
+}

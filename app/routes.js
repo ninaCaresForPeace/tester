@@ -23,6 +23,18 @@ config(['$routeProvider', function($routeProvider) {
 			controller: 'ourMissionController'
 			
 		}).
+		when("/achievements", {
+			templateUrl: "Views/achievements.html",
+			json: 'json/achievements.json',
+			controller: 'achievementsController'
+			
+		}).
+		when("/whoWeAre", {
+			templateUrl: "Views/whoWeAre.html",
+			json: 'json/whoWeAre.json',
+			controller: 'whoWeAreController'
+			
+		}).
 		when("/globalNav", {
 			templateUrl: "Navigation/bandedNavTemplate.html",
 			controller: 'bandedNavControl',

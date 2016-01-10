@@ -1,16 +1,9 @@
-<div class="middle-component row">
+<div class="team-member-component row">
 	<div class="left-side col-sm-10 ">
-		<div class="top-content">{{infoSection}}</div>
-		<div class="bottom-content">
-			<div class="title">{{video.title}}</div>
-			<div class="video-container row">
-			<!-- 4:3 aspect ratio -->
-			<div class="col-sm-6">
-				<div class="embed-responsive embed-responsive-16by9">
-  					<iframe class="embed-responsive-item" src="http://www.youtube.com/embed/dFVxGRekRSg"></iframe>
-				</div>
-			</div>
-         
+		<div ng-repeat="batch in batches" class="team">
+			<div ng-repeat="member in batch" class="member">
+				<img class="member-photo" data-ng-src="{{member.image}}" alt="{{member.alt}}" height="" width="">
+				<div class="about">{{member.about}}</div>
 			</div>
 		</div>
 	</div>
@@ -26,6 +19,4 @@
 		</div>
 		<div class="care">{{care}}</div>
 	</div>
-		
-
 </div>

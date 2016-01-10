@@ -1,0 +1,32 @@
+<div class="team-grid-component row">
+	<div class="left-side col-sm-10 ">
+		<div ng-repeat="batch in batches" class="team">
+			<div ng-repeat="member in batch" class="member">
+				<img class="member-photo" data-ng-src="{{member.image}}" alt="{{member.alt}}" height="" width="">
+				<div class="about">{{member.about}}</div>
+			</div>
+		</div>
+	</div>
+	<!-- Refactor and make the right side its own directive component -->
+	<div class="right-side col-sm-2">
+		<div class="donate">
+			<img class="button-image" href="{{top.href}}" data-ng-src="{{top.image}}" alt="{{top.alt}}" height="" width="">
+			<div class="button-text">{{top.text}}</div>
+		</div>
+		<div ng-repeat="link in links" class="links">
+			<div class="title">{{link.title}}</div>
+			<button type="button" class="{{link.icon}}"><span class="text">{{link.text}}</span></button>
+		</div>
+		<div class="care">{{care}}</div>
+	</div>
+</div>
+<!-- <dl style="visibility: visible; transform: translateY(5em) scale(0.95); opacity: 0; -webkit-transform: translateY(5em) scale(0.95); opacity: 0; ">
+        <dt>
+            WHO<br>
+SAYS
+        </dt>
+        <dd class="balance-text">
+            WHAT HAS NEVER<br>
+BEEN WILL NEVER BE?
+        </dd>
+    </dl> -->
