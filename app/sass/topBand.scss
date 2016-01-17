@@ -8,10 +8,10 @@
    		color: white;
    		z-index: 1;
    		right: 0;
-    	width: 30%;
+    	width: 42%;
     	top: 81%;
     	font-size: 22px;
-    	padding-left: 15px;
+    	padding-right: 15px;
     	font-family: Arial;
     	
     	@include respond-to-max(x-small) {
@@ -35,7 +35,7 @@
     	opacity: 0.5;
     	z-index: 15;
     	right: 0;
-    	width: 30%;
+    	width: 45%;
     	top: 75%;
     	
     	@include respond-to-max(mobile) {

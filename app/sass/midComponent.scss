@@ -8,54 +8,71 @@
 			white-space: pre-line;
 		    font-family: Arial;
 		    font-size: 23px;
+		    color: $gry;
 		}
 		.bottom-content {
 			margin-top:45px;
 			.title {
 				font-family: Arial;
 				font-size: 23px;
+				color: $gry;
 			}
 		}
 	}
 	
 	.right-side {
+		background-color:white;
 
-		background-color: $ltGry2;
-
+		.media-container {
 			background-color: $ltGry2;
+			margin-top: 20px;
 			.donate {
-				
-				width:100%;
-			
-			 
+				width:auto;
+				margin-left: 20px;
 				.button-image {
 					width:100px;
 					height: 100px;
-					margin-top: 10px;
+					margin-top: 10px;		
+				}
+				.button-text{
+					position: absolute;
+					top: 99px;
+					margin-left: 10%;
+					margin-right: 15%;
+					width: auto;
+					color: $yellow;
+					font-size: 15px;
+					text-transform: uppercase;
+				}
+			}		
+			.links {
+			    margin-left: 20px;
+  				margin-top: 10px;
+				.fa-facebook-official {
+					color: $facebookBlue;
+					.text {
+						color: black;
+						margin-left:5px;
+					}
+				}
+				.fa-twitter {
+					color: $twitterBlue; 
 					
+					.text {
+						color: black;
+						margin-left:5px;
+					}
 				}
 			}
-
-		
-		.links {
-		
-			.fa-facebook-official {
-				color: $facebookBlue;
-				.text {
-					color: black;
-					margin-left:5px;
-				}
+			.care {
+				margin-left: 10px;
+				margin-right: 10px;
+  				margin-top: 10px;
+  				padding-bottom: 10px;
+  				
 			}
-			.fa-twitter {
-				color: $twitterBlue; 
-				
-				.text {
-					color: black;
-					margin-left:5px;
-				}
-			}
-		
 		}
+			
 	}
 	
 	

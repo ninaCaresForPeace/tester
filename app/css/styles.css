@@ -386,10 +386,10 @@ color: $gry;
     color: white;
     z-index: 1;
     right: 0;
-    width: 30%;
+    width: 42%;
     top: 81%;
     font-size: 22px;
-    padding-left: 15px;
+    padding-right: 15px;
     font-family: Arial; }
     @media (max-width: 520px) {
       .top-band .box-text {
@@ -409,7 +409,7 @@ color: $gry;
     opacity: 0.5;
     z-index: 15;
     right: 0;
-    width: 30%;
+    width: 45%;
     top: 75%; }
     @media (max-width: 992px) {
       .top-band .box-overlay {
@@ -431,29 +431,51 @@ color: $gry;
     background-color: white;
     white-space: pre-line;
     font-family: Arial;
-    font-size: 23px; }
+    font-size: 23px;
+    color: #666666; }
   .middle-component .left-side .bottom-content {
     margin-top: 45px; }
     .middle-component .left-side .bottom-content .title {
       font-family: Arial;
-      font-size: 23px; }
+      font-size: 23px;
+      color: #666666; }
 
 .middle-component .right-side {
-  background-color: #DDDDDD;
-  background-color: #DDDDDD; }
-  .middle-component .right-side .donate {
-    width: 100%; }
-    .middle-component .right-side .donate .button-image {
-      width: 100px;
-      height: 100px;
+  background-color: white; }
+  .middle-component .right-side .media-container {
+    background-color: #DDDDDD;
+    margin-top: 20px; }
+    .middle-component .right-side .media-container .donate {
+      width: auto;
+      margin-left: 20px; }
+      .middle-component .right-side .media-container .donate .button-image {
+        width: 100px;
+        height: 100px;
+        margin-top: 10px; }
+      .middle-component .right-side .media-container .donate .button-text {
+        position: absolute;
+        top: 99px;
+        margin-left: 10%;
+        margin-right: 15%;
+        width: auto;
+        color: #F8BA00;
+        font-size: 15px;
+        text-transform: uppercase; }
+    .middle-component .right-side .media-container .links {
+      margin-left: 20px;
       margin-top: 10px; }
-  .middle-component .right-side .links .fa-facebook-official {
-    color: #4965A0; }
-    .middle-component .right-side .links .fa-facebook-official .text {
-      color: black;
-      margin-left: 5px; }
-  .middle-component .right-side .links .fa-twitter {
-    color: #57ADEA; }
-    .middle-component .right-side .links .fa-twitter .text {
-      color: black;
-      margin-left: 5px; }
+      .middle-component .right-side .media-container .links .fa-facebook-official {
+        color: #4965A0; }
+        .middle-component .right-side .media-container .links .fa-facebook-official .text {
+          color: black;
+          margin-left: 5px; }
+      .middle-component .right-side .media-container .links .fa-twitter {
+        color: #57ADEA; }
+        .middle-component .right-side .media-container .links .fa-twitter .text {
+          color: black;
+          margin-left: 5px; }
+    .middle-component .right-side .media-container .care {
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 10px;
+      padding-bottom: 10px; }
