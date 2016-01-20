@@ -400,7 +400,7 @@ color: $gry;
         top: 78%;
         text-align: center;
         width: 100%;
-        font-size: 25px; } }
+        font-size: 20px; } }
   .top-band .box-overlay {
     position: absolute;
     height: 120px;
@@ -448,6 +448,9 @@ color: $gry;
     .middle-component .right-side .media-container .donate {
       width: auto;
       margin-left: 20px; }
+      @media (max-width: 992px) {
+        .middle-component .right-side .media-container .donate {
+          margin-left: 10px; } }
       .middle-component .right-side .media-container .donate .button-image {
         width: 100px;
         height: 100px;
@@ -462,20 +465,31 @@ color: $gry;
         font-size: 15px;
         text-transform: uppercase; }
     .middle-component .right-side .media-container .links {
-      margin-left: 20px;
+      margin-left: 15px;
       margin-top: 10px; }
+      @media (max-width: 992px) {
+        .middle-component .right-side .media-container .links {
+          margin-left: 5px; } }
       .middle-component .right-side .media-container .links .fa-facebook-official {
-        color: #4965A0; }
+        color: #4965A0;
+        width: 110px; }
         .middle-component .right-side .media-container .links .fa-facebook-official .text {
           color: black;
-          margin-left: 5px; }
+          margin-left: 5px;
+          font-size: 11px; }
       .middle-component .right-side .media-container .links .fa-twitter {
-        color: #57ADEA; }
+        color: #57ADEA;
+        width: 110px; }
         .middle-component .right-side .media-container .links .fa-twitter .text {
           color: black;
-          margin-left: 5px; }
+          margin-left: 5px;
+          font-size: 11px;
+          padding-right: 47px; }
     .middle-component .right-side .media-container .care {
       margin-left: 10px;
       margin-right: 10px;
       margin-top: 10px;
       padding-bottom: 10px; }
+      @media (max-width: 992px) {
+        .middle-component .right-side .media-container .care {
+          font-size: 11px; } }

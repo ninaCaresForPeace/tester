@@ -29,6 +29,9 @@
 			.donate {
 				width:auto;
 				margin-left: 20px;
+				@include respond-to-max(mobile) {
+					margin-left: 10px;
+				}
 				.button-image {
 					width:100px;
 					height: 100px;
@@ -46,21 +49,31 @@
 				}
 			}		
 			.links {
-			    margin-left: 20px;
+			    margin-left: 15px;
   				margin-top: 10px;
+  				@include respond-to-max(mobile) {
+					margin-left: 5px;
+				}
+				
 				.fa-facebook-official {
 					color: $facebookBlue;
+					width: 110px;
 					.text {
 						color: black;
 						margin-left:5px;
+						font-size: 11px;
+						
 					}
 				}
 				.fa-twitter {
 					color: $twitterBlue; 
-					
+					width: 110px;
 					.text {
 						color: black;
 						margin-left:5px;
+						font-size: 11px;
+						//width: 110px;
+						padding-right: 47px;
 					}
 				}
 			}
@@ -69,6 +82,9 @@
 				margin-right: 10px;
   				margin-top: 10px;
   				padding-bottom: 10px;
+  				@include respond-to-max(mobile) {
+						font-size: 11px;
+				}
   				
 			}
 		}

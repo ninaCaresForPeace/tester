@@ -3,7 +3,7 @@
 		"overlay": "We are builders - we build clinics piece by piece - for peace"
 	},
 	"bgImage": {
-		"image": "./images/mission.jpg",
+		"image": "./images/pink.jpg",
 		"alt": "image of clinic being constructed"
 	},
 	"midComponent": {
