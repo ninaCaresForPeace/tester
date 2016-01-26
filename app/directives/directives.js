@@ -10,6 +10,7 @@ app.directive("clickTab", function () {
 		 link: function(scope, element ) { 
 			
 	        	element.bind('click', function () {
+	        		debugger;
 	                element.toggleClass("open"); 
 	            });
 		 }
@@ -17,16 +18,48 @@ app.directive("clickTab", function () {
 
 });
 
-app.directive("clickNav", function ($rootScope) {
-	return {
+app.directive("clickNav", function () {
+	//return {
+		function link(scope, element, attrs) {
+			scope.page = "home";
+		    
+			
+			element.bind('click', function (scope) {
+		    	//debugger;
+		    	var newActiveTab = element.text().trim();
+		    	var $li = element.parent().parent().parent().parent().find("li");
+		    	//var $children = element.parent().children();
+		    	//$children.removeClass("active");
+		    	$li.removeClass("active");
+		    	//element.addClass("active");
+		    	debugger;
+		    	for (var i in $li) {
+		    		var tabName = $li[i.Number()].text().trim();
+		    
+		    		debugger;
+		    		if(tabName === newActiveTab) {
+		    			
+		    			$li[i.Number()].addClass("active");
+		    		}
+		    	}
+		    	//scope.page = element.text();
+		    	//debugger;
 
-		 link: function(scope, element, attrs) { 
-	        	element.bind('click', function () {
-
-
-	            });
-		 }
-	}
+            });
+		}
+//		 link: function(scope, element, attrs) { 
+//			 var $e = element;
+//			 var $s = scope;
+//			 var $a = attrs;
+//	        	element.bind('click', function () {
+//	        		debugger;
+//
+//	            });
+//		 }
+	//}
+		return {
+		    link: link
+		  };
 
 });
 
@@ -41,9 +74,15 @@ app.directive("globalNavTabs", function () {
 	    		$scope.tabs = response.data.menu;//[0].title;
 	    		$scope.dTabs = response.data.menu;
 	    		$scope.logo = response.data.logo;
+	    		$scope.page = "Home"
 	    	});
 	    }],
-		
+//	    link: function(scope, element, attrs) { 
+//	        element.bind('click', function () {
+//	        	debugger;
+//
+//	        });
+//		 }
 		templateUrl: './Navigation/bandedNavTemplate.html'
 	};
 });

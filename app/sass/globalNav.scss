@@ -76,7 +76,7 @@
 	/* .nav-tabs > li.active > a,
 	.nav-tabs > li.active > a:hover,
 	.nav-tabs > li.active > a:focus {
-color: $gry;
+		color: $gry;
 		border: none;
 	 }*/
 	.nav > li > a {
@@ -108,13 +108,41 @@ color: $gry;
 		border: none;
 	}
 	
-	//.dropdown {
+
 	.btn-group {
 		visibility: hidden;
 		position: absolute;
-		top:70px;
-	   		right:0;
-		
+		top: 70px;
+	   	right: 0;
+
+	   	.dropdown-menu {
+	   		left: -103px;
+  			border-radius: 1px;
+	   		 .last {
+			 	a {
+				color: $yellow;
+				}
+			 }
+	   	}	
+		.dropdown-menu > .active > a, 
+		.dropdown-menu > .active > a:hover, 
+		.dropdown-menu > .active > a:focus {
+			background-color:transparent;
+			background-image: none;
+			color: $ltGry1;
+		}
+		.dropdown-menu > li > a:hover,
+		.dropdown-menu > li > a:focus {
+			  outline: none;
+			  font: 16px arial;
+			  color: $gry;
+			  background-color: $ltGry3;  
+		}
+		.dropdown-menu > li.last > a:hover,
+		.dropdown-menu > li.last > a:focus {
+			  color: $yellow;
+		}
+
 		.btn {
 			border: none;
 			background-color: transparent;
@@ -125,18 +153,11 @@ color: $gry;
 	   		.glyphicon-align-justify {
 	   			font-size: 35px;
 	   		}
-	}
-	
-	/*.btn-lg, .btn-group-lg > .btn {
-		border: none;
-		background-color: transparent;
-		padding: 0;
-   		.glyphicon-align-justify {
-   			font-size: 35px;
-   		}
-   
-	}*/
-		//visibility: visible;
+	   		
+		}
+		
+  		
+
 		@include respond-to-max(mobile) {
 			visibility:visible;
 	
@@ -152,6 +173,6 @@ color: $gry;
       		border-color: transparent;
       		color: $ltGry1;
     	}
-
   	}
+  	
 }
