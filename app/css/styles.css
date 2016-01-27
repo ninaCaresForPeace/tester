@@ -504,3 +504,23 @@ Breakpoints
       @media (max-width: 992px) {
         .middle-component .right-side .media-container .care {
           font-size: 11px; } }
+
+.c7bh .area1 {
+  background: #2b2b2b;
+  height: 1200px; }
+
+.c7bh .area2 {
+  background: #c12235;
+  height: 1200px; }
+
+.c7bh div {
+  overflow: hidden; }
+
+.c7bh .section {
+  float: left;
+  width: 33.33%;
+  height: 1200px;
+  background: url(http://jonathanarbely.de/cdn/parallax/tri.png) no-repeat; }
+
+.c7bh .area2 .section {
+  background: url(http://jonathanarbely.de/cdn/parallax/tri2.png) no-repeat; }

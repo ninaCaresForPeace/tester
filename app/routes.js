@@ -51,8 +51,14 @@ config(['$routeProvider', function($routeProvider) {
 			templateUrl: "view2/view2.html",
 			controller: 'CarouselDemoCtrl'
 		}).
-		when("/view1", {
-			templateUrl: "view1/view1.html"/*,
+		when("/c7bh", {
+			templateUrl: "Views/c7bh.html"/*,
+			controller: 'CarouselControl',
+			json: 'json/carousel.json'*/
+			
+		}).
+		when("/c7bhTest", {
+			templateUrl: "view1/c7bhTest.html"/*,
 			controller: 'CarouselControl',
 			json: 'json/carousel.json'*/
 			
