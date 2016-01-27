@@ -25,25 +25,21 @@ app.directive("clickNav", function () {
 		    
 			
 			element.bind('click', function (scope) {
-		    	//debugger;
 		    	var newActiveTab = element.text().trim();
 		    	var $li = element.parent().parent().parent().parent().find("li");
-		    	//var $children = element.parent().children();
-		    	//$children.removeClass("active");
 		    	$li.removeClass("active");
-		    	//element.addClass("active");
-		    	debugger;
 		    	for (var i in $li) {
-		    		var tabName = $li[i.Number()].text().trim();
-		    
-		    		debugger;
-		    		if(tabName === newActiveTab) {
-		    			
-		    			$li[i.Number()].addClass("active");
-		    		}
+		    		var num = Number(i);
+		    		var stop = isNaN(num);
+		    		if(!stop){
+		    			var thisElement = $li[num];
+		    			var tabName = thisElement.innerText.trim();
+		    			if(tabName === newActiveTab) {
+		    				var currentValue = thisElement.attributes.class.nodeValue;
+		    				thisElement.className = "active " + currentValue;
+		    			}
+		    		}	
 		    	}
-		    	//scope.page = element.text();
-		    	//debugger;
 
             });
 		}
@@ -62,27 +58,78 @@ app.directive("clickNav", function () {
 		  };
 
 });
+/*app.directive("setActive", function () {
+	return {
+		
+		 link: function(scope, element ) { 
+			var currentPage = location.href.substring(location.href.lastIndexOf("/")+1);
+			var e = element;
+			debugger;
+		    	scope.$on('$viewContentLoaded', function(event) {
+			    	  console.log("content loaded");
+			    	  debugger;
+			    	  console.log($("#loginForm"));   // breakpoint here 
+			    	});
 
+		 }
+	}
+
+});
+*/
 app.directive("globalNavTabs", function () {
 	return {
 		restrict: 'EA',
 		transclude: true,
 		scope: {},
-	    controller: ['$scope', '$route', 'getJsonService', function($scope, $route, getJsonService) {
+	    controller: ['$scope', '$route', '$window','getJsonService', function($scope, $route, $window, getJsonService) {
 	    	var jsonFile = './json/globalNav.json';// $route.current.$$route.json;
 	    	getJsonService.retrieveJson(jsonFile).then(function(response){ 
 	    		$scope.tabs = response.data.menu;//[0].title;
 	    		$scope.dTabs = response.data.menu;
 	    		$scope.logo = response.data.logo;
-	    		$scope.page = "Home"
+	    		$scope.currentPage = location.href.substring(location.href.lastIndexOf("/")+1);
+	    		
+	    		switch($scope.currentPage) {
+	    	    case 'home':
+	    	        	$scope.setActive = 0;
+	    	        break;
+	    	    case 'ourMission':
+	    	    		$scope.setActive = 1;
+	    	        break;
+	    	    case 'achievements':
+    	    			$scope.setActive = 2;
+    	        break;
+	    	    case 'whoWeAre':
+    	    			$scope.setActive = 3;
+    	        break;
+	    	    case 'now':
+    	    			$scope.setActive = 4;
+    	        break;
+	    	    case 'myanmar':
+    	    			$scope.setActive = 4;
+    	        break;
+	    	    case 'contact':
+    	    			$scope.setActive = 4;
+    	        break;
+	    	    case 'donate':
+    	    			$scope.setActive = 4;
+    	        break;
+	    	    default:
+	    	    		$scope.setActive = 0;
+	    		}
 	    	});
+//	    	$window.onload = function(e) {
+//	    		  debugger;//your magic here
+//	    		}
+//	    	$scope.currentPage = location.href.substring(location.href.lastIndexOf("/")+1);
+//	    	$scope.$on('$viewContentLoaded', function(event) {
+//		    	  console.log("content loaded");
+//		    	  debugger;
+//		    	  console.log($("#loginForm"));   // breakpoint here 
+//		    	});
+	    	
 	    }],
-//	    link: function(scope, element, attrs) { 
-//	        element.bind('click', function () {
-//	        	debugger;
-//
-//	        });
-//		 }
+		 
 		templateUrl: './Navigation/bandedNavTemplate.html'
 	};
 });

@@ -12,7 +12,7 @@
 	</div>
 	<div class="global-navigation-header row">
 		<ul class="nav nav-tabs">
-			<li ng-repeat="tab in tabs" role="presentation"  class="expanded"  data-ng-class="{last: $last, active: $index==0}" click-nav>
+			<li ng-repeat="tab in tabs" role="presentation"  class="expanded"  data-ng-class="{last: $last, active: $index=={{setActive}}}" click-nav>
 				<a href="{{tab.href}}">{{tab.title}}</a>
 			</li>
 		</ul>
