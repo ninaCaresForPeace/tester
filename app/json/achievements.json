@@ -9,7 +9,11 @@
 	"midComponent": {
 		"infoSection": "Our first mini medical center was successfully built in a rural village of Taung Yin, Kyauk Phyu.\r\nEach mini medical healthcare system will provide 90% of health and medical needs so that patients can receive the care they need right in their own village.\r\nThe center also offers preventative health programs, that include health screening, immunization, and chronic disease management, contraception, active aging among others.\r\nWe also have mother and child health programs, illness and injury programs, dental care programs, and basic lab and radiologic services available.\r\nWithout your support, we couldn’t have achieved this.  Please keep helping by clicking \"Donate\".",
 		"video": {
+			"show": "true",
 			"title":"Check our video of a medical center being built in Taung Yin"
+		},
+		"image": {
+			"show": "false"
 		},
 		"rightBlock": {
 			"top": {

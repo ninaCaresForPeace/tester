@@ -35,6 +35,12 @@ config(['$routeProvider', function($routeProvider) {
 			controller: 'whoWeAreController'
 			
 		}).
+		when("/myanmar", {
+			templateUrl: "Views/myanmar.html",
+			json: 'json/myanmar.json',
+			controller: 'aboutMyanmarController'
+			
+		}).
 		when("/globalNav", {
 			templateUrl: "Navigation/bandedNavTemplate.html",
 			controller: 'bandedNavControl',

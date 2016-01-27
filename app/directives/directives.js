@@ -106,13 +106,13 @@ app.directive("globalNavTabs", function () {
     	    			$scope.setActive = 4;
     	        break;
 	    	    case 'myanmar':
-    	    			$scope.setActive = 4;
+    	    			$scope.setActive = 5;
     	        break;
 	    	    case 'contact':
-    	    			$scope.setActive = 4;
+    	    			$scope.setActive = 6;
     	        break;
 	    	    case 'donate':
-    	    			$scope.setActive = 4;
+    	    			$scope.setActive = 7;
     	        break;
 	    	    default:
 	    	    		$scope.setActive = 0;

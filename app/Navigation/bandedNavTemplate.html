@@ -23,7 +23,7 @@
    <span class="glyphicon glyphicon-align-justify"></span>
   </button>
   <ul class="dropdown-menu">
-	<li ng-repeat="dTab in dTabs" role="presentation" data-ng-class="{last: $last, active: $index==0}" click-nav>
+	<li ng-repeat="dTab in dTabs" role="presentation" data-ng-class="{last: $last, active: $index=={{setActive}}}" click-nav>
 			<a href="{{dTab.href}}">{{dTab.title}}</a>
 	</li>
 	</ul>
