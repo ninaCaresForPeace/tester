@@ -184,7 +184,7 @@ app.directive("careCarousel", function () {
 	return {
 		restrict: 'E',
 		transclude: true,
-		templateUrl: './templates/carousel.html',
+		templateUrl: './templates/carousel.html'/*,
 		controller: ['$scope', 'getJsonService', function($scope, getJsonService) {
 			var jsonFile = './json/carousel.json';
 			getJsonService.retrieveJson(jsonFile).then(function(response){ 
@@ -192,15 +192,14 @@ app.directive("careCarousel", function () {
 				$scope.interval = 5000;
 				$scope.noWrapSlides = false;
 			});
-	    }]/*,
-		replace: true*/
+	    }]*/
 	}
 });
 app.directive("topicGrid", function () {
 	return {
 		restrict: 'E',
 		transclude: true,
-		templateUrl: './templates/topicGrid.html',
+		templateUrl: './templates/topicGrid.html' /*,
 		controller: ['$scope', 'getJsonService',  function($scope, getJsonService) {
 			var jsonFile = './json/topicGrid.json';
 			getJsonService.retrieveJson(jsonFile).then(function(response){ 
@@ -209,8 +208,8 @@ app.directive("topicGrid", function () {
 				
 			});
 			console.log("after topicgrid");
-	    }]/*,
-		replace: true*/
+	    }]*/
+		
 	}
 });
 app.directive("midComponent", function () {

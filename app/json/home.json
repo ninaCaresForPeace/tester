@@ -1,4 +1,8 @@
 {
+
+	"topBand": {
+		"overlay": "Help us build clinics for people in rural Myanmar"
+	},
 	"carousel": [
 	
 		{
@@ -89,8 +93,8 @@
 					{
 						"position": "middle",
 						"text": "about myanmar",
-						"image": "./images/news.jpg",
-						"alt": "buddha image",
+						"image": "./images/train2.jpg",
+						"alt": "buddhist boy on train",
 						"height": "170",
 						"width": "170",
 						"row": "bottom"

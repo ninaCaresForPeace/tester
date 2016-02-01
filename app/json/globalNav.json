@@ -8,11 +8,11 @@
 		"menu": [
 			{
 				"title": "Home",
-				"href": "#home"
+				"href": "#homePage"
 			},
 			{
 				"title": "Our Mission",
-				"href": "#view2"
+				"href": "#ourMission"
 			},
 			{
 				"title": "Achievements",
@@ -20,7 +20,7 @@
 			},
 			{
 				"title": "Who we are",
-				"href": "#ourMission"
+				"href": "#whoWeAre"
 			},
 			{
 				"title": "What's up now",

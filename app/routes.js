@@ -17,6 +17,13 @@ config(['$routeProvider', function($routeProvider) {
 			//json: 'json/globalNav.json'
 
 		}).
+		when("/homePage", {
+			templateUrl: "Views/homePage.html",
+			json: 'json/home.json',
+			controller: 'homeController'
+			
+
+		}).
 		when("/ourMission", {
 			templateUrl: "Views/mission.html",
 			json: 'json/mission.json',

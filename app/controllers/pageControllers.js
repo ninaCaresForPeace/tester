@@ -1,6 +1,21 @@
 
 var app = angular.module('myApp');
 
+app.controller("homeController", ["$scope", "$route", "getJsonService", function ($scope, $route, getJsonService) {
+	var jsonFile = $route.current.$$route.json;
+	debugger;
+	getJsonService.retrieveJson(jsonFile).then(function(response){ 
+		debugger;
+		var data = response.data;
+		$scope.topBand = data.topBand;
+		$scope.carousel = response.data.carousel;
+		$scope.interval = 5000;
+		$scope.noWrapSlides = false;
+		
+		$scope.left = response.data.topicGrid.leftBlock;
+		$scope.grid = response.data.topicGrid.rightBlock;
+	});
+}]);
 app.controller("ourMissionController", ["$scope", "$route", "getJsonService", function ($scope, $route, getJsonService) {
 	var jsonFile = $route.current.$$route.json;
 	debugger;
