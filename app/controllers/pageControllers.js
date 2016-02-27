@@ -1,92 +1,209 @@
+/* !pageController.js */
+'use strict';
+(function() {
+	var app = angular.module('myApp');
+	//homeController
+	app.controller("homeController", ["$scope", "$route", "getJsonService", function ($scope, $route, getJsonService) {
+		var jsonFile = $route.current.$$route.json;
+		getJsonService.retrieveJson(jsonFile).then(function(response){ 
+			var data = response.data;
+			$scope.topBand = data.topBand;
+			$scope.carousel = response.data.carousel;
+			$scope.interval = 5000;
+			$scope.noWrapSlides = false;
+			
+			$scope.left = response.data.topicGrid.leftBlock;
+			$scope.grid = response.data.topicGrid.rightBlock;
+		});
+	}]);
+	//ourMissionController
+	app.controller("ourMissionController", ["$scope", "$route", "getJsonService", function ($scope, $route, getJsonService) {
+		var jsonFile = $route.current.$$route.json;
+		getJsonService.retrieveJson(jsonFile).then(function(response){ 
+			var data = response.data;
+			$scope.bgImage = data.bgImage;
+			$scope.topBand = data.topBand;
+			
+			var midComponent = data.midComponent;
+			$scope.infoSection = midComponent.infoSection;
+			$scope.video = midComponent.video;
+			var rightBlock = midComponent.rightBlock;
+			$scope.top = rightBlock.top;
+			$scope.links = rightBlock.links;
+			$scope.care = rightBlock.care;
 
-var app = angular.module('myApp');
+		});
+	}]);
+	//achievementsController
+	app.controller("achievementsController", ["$scope", "$route", "getJsonService", function($scope, $route, getJsonService) {
+		var jsonFile = $route.current.$$route.json;
+		getJsonService.retrieveJson(jsonFile).then(function(response){ 
+			var data = response.data;
+			$scope.bgImage = data.bgImage;
+			$scope.topBand = data.topBand;
+			
+			var midComponent = data.midComponent;
+			$scope.infoSection = midComponent.infoSection;
+			$scope.video = midComponent.video;
+			var rightBlock = midComponent.rightBlock;
+			$scope.top = rightBlock.top;
+			$scope.links = rightBlock.links;
+			$scope.care = rightBlock.care;
+		});
+	}]);
+	//whoWeAreController
+	app.controller("whoWeAreController", ["$scope", "$route", "getJsonService", function($scope, $route, getJsonService) {
+		var jsonFile = $route.current.$$route.json;
+		getJsonService.retrieveJson(jsonFile).then(function(response){ 
+			var data = response.data;
+			$scope.bgImage = data.bgImage;
+			$scope.topBand = data.topBand;
+			
+			var midComponent = data.midComponent;
+			$scope.infoSection = midComponent.infoSection;
+			$scope.video = midComponent.video;
+			var rightBlock = midComponent.rightBlock;
+			$scope.top = rightBlock.top;
+			$scope.links = rightBlock.links;
+			$scope.care = rightBlock.care;
+		});
+	}]);
+	//aboutMyanmarController
+	app.controller("aboutMyanmarController", ["$scope", "$route", "getJsonService", function($scope, $route, getJsonService) {
+		var jsonFile = $route.current.$$route.json;
+		getJsonService.retrieveJson(jsonFile).then(function(response){ 
+			var data = response.data;
+			$scope.bgImage = data.bgImage;
+			$scope.topBand = data.topBand;
+			
+			var midComponent = data.midComponent;
+			$scope.infoSection = midComponent.infoSection;
+			$scope.video = midComponent.video;
+			$scope.image = midComponent.image;
+			var rightBlock = midComponent.rightBlock;
+			$scope.top = rightBlock.top;
+			$scope.links = rightBlock.links;
+			$scope.care = rightBlock.care;
+		});
+	}]);
 
-app.controller("homeController", ["$scope", "$route", "getJsonService", function ($scope, $route, getJsonService) {
-	var jsonFile = $route.current.$$route.json;
-	debugger;
-	getJsonService.retrieveJson(jsonFile).then(function(response){ 
-		debugger;
-		var data = response.data;
-		$scope.topBand = data.topBand;
-		$scope.carousel = response.data.carousel;
-		$scope.interval = 5000;
-		$scope.noWrapSlides = false;
-		
-		$scope.left = response.data.topicGrid.leftBlock;
-		$scope.grid = response.data.topicGrid.rightBlock;
-	});
-}]);
-app.controller("ourMissionController", ["$scope", "$route", "getJsonService", function ($scope, $route, getJsonService) {
-	var jsonFile = $route.current.$$route.json;
-	debugger;
-	getJsonService.retrieveJson(jsonFile).then(function(response){ 
-		var data = response.data;
-		$scope.bgImage = data.bgImage;
-		$scope.topBand = data.topBand;
-		
-		var midComponent = data.midComponent;
-		$scope.infoSection = midComponent.infoSection;
-		$scope.video = midComponent.video;
-		var rightBlock = midComponent.rightBlock;
-		$scope.top = rightBlock.top;
-		$scope.links = rightBlock.links;
-		$scope.care = rightBlock.care;
-		
-//		$scope.dTabs = response.data.menu;
-//		$scope.logo = response.data.logo;
-	});
-}]);
-app.controller("achievementsController", ["$scope", "$route", "getJsonService", function($scope, $route, getJsonService) {
-	var jsonFile = $route.current.$$route.json;
-	getJsonService.retrieveJson(jsonFile).then(function(response){ 
-		var data = response.data;
-		$scope.bgImage = data.bgImage;
-		$scope.topBand = data.topBand;
-		
-		var midComponent = data.midComponent;
-		$scope.infoSection = midComponent.infoSection;
-		$scope.video = midComponent.video;
-		var rightBlock = midComponent.rightBlock;
-		$scope.top = rightBlock.top;
-		$scope.links = rightBlock.links;
-		$scope.care = rightBlock.care;
-	});
-}]);
-//whoWeAreController
-app.controller("whoWeAreController", ["$scope", "$route", "getJsonService", function($scope, $route, getJsonService) {
-	var jsonFile = $route.current.$$route.json;
-	getJsonService.retrieveJson(jsonFile).then(function(response){ 
-		var data = response.data;
-		$scope.bgImage = data.bgImage;
-		$scope.topBand = data.topBand;
-		
-		var midComponent = data.midComponent;
-		$scope.infoSection = midComponent.infoSection;
-		$scope.video = midComponent.video;
-		var rightBlock = midComponent.rightBlock;
-		$scope.top = rightBlock.top;
-		$scope.links = rightBlock.links;
-		$scope.care = rightBlock.care;
-	});
-}]);
-//about Myanmar
-app.controller("aboutMyanmarController", ["$scope", "$route", "getJsonService", function($scope, $route, getJsonService) {
-	var jsonFile = $route.current.$$route.json;
-	getJsonService.retrieveJson(jsonFile).then(function(response){ 
-		var data = response.data;
-		$scope.bgImage = data.bgImage;
-		$scope.topBand = data.topBand;
-		
-		var midComponent = data.midComponent;
-		$scope.infoSection = midComponent.infoSection;
-		$scope.video = midComponent.video;
-		$scope.image = midComponent.image;
-		var rightBlock = midComponent.rightBlock;
-		$scope.top = rightBlock.top;
-		$scope.links = rightBlock.links;
-		$scope.care = rightBlock.care;
-	});
-}]);
+})();
+
+///COMMENT OUT 2/27
+//var app = angular.module('myApp');
+//
+//app.controller("homeController", ["$scope", "$route", "getJsonService", function ($scope, $route, getJsonService) {
+//	var jsonFile = $route.current.$$route.json;
+//	getJsonService.retrieveJson(jsonFile).then(function(response){ 
+//		var data = response.data;
+//		$scope.topBand = data.topBand;
+//		$scope.carousel = response.data.carousel;
+//		$scope.interval = 5000;
+//		$scope.noWrapSlides = false;
+//		
+//		$scope.left = response.data.topicGrid.leftBlock;
+//		$scope.grid = response.data.topicGrid.rightBlock;
+//	});
+//}]);
+//app.controller("ourMissionController", ["$scope", "$route", "getJsonService", function ($scope, $route, getJsonService) {
+//	var jsonFile = $route.current.$$route.json;
+//	getJsonService.retrieveJson(jsonFile).then(function(response){ 
+//		var data = response.data;
+//		$scope.bgImage = data.bgImage;
+//		$scope.topBand = data.topBand;
+//		
+//		var midComponent = data.midComponent;
+//		$scope.infoSection = midComponent.infoSection;
+//		$scope.video = midComponent.video;
+//		var rightBlock = midComponent.rightBlock;
+//		$scope.top = rightBlock.top;
+//		$scope.links = rightBlock.links;
+//		$scope.care = rightBlock.care;
+//		
+////		$scope.dTabs = response.data.menu;
+////		$scope.logo = response.data.logo;
+//	});
+//}]);
+//app.controller("achievementsController", ["$scope", "$route", "getJsonService", function($scope, $route, getJsonService) {
+//	var jsonFile = $route.current.$$route.json;
+//	getJsonService.retrieveJson(jsonFile).then(function(response){ 
+//		var data = response.data;
+//		$scope.bgImage = data.bgImage;
+//		$scope.topBand = data.topBand;
+//		
+//		var midComponent = data.midComponent;
+//		$scope.infoSection = midComponent.infoSection;
+//		$scope.video = midComponent.video;
+//		var rightBlock = midComponent.rightBlock;
+//		$scope.top = rightBlock.top;
+//		$scope.links = rightBlock.links;
+//		$scope.care = rightBlock.care;
+//	});
+//}]);
+////whoWeAreController
+//app.controller("whoWeAreController", ["$scope", "$route", "getJsonService", function($scope, $route, getJsonService) {
+//	var jsonFile = $route.current.$$route.json;
+//	getJsonService.retrieveJson(jsonFile).then(function(response){ 
+//		var data = response.data;
+//		$scope.bgImage = data.bgImage;
+//		$scope.topBand = data.topBand;
+//		
+//		var midComponent = data.midComponent;
+//		$scope.infoSection = midComponent.infoSection;
+//		$scope.video = midComponent.video;
+//		var rightBlock = midComponent.rightBlock;
+//		$scope.top = rightBlock.top;
+//		$scope.links = rightBlock.links;
+//		$scope.care = rightBlock.care;
+//	});
+//}]);
+////about Myanmar
+//app.controller("aboutMyanmarController", ["$scope", "$route", "getJsonService", function($scope, $route, getJsonService) {
+//	var jsonFile = $route.current.$$route.json;
+//	getJsonService.retrieveJson(jsonFile).then(function(response){ 
+//		var data = response.data;
+//		$scope.bgImage = data.bgImage;
+//		$scope.topBand = data.topBand;
+//		
+//		var midComponent = data.midComponent;
+//		$scope.infoSection = midComponent.infoSection;
+//		$scope.video = midComponent.video;
+//		$scope.image = midComponent.image;
+//		var rightBlock = midComponent.rightBlock;
+//		$scope.top = rightBlock.top;
+//		$scope.links = rightBlock.links;
+//		$scope.care = rightBlock.care;
+//	});
+//}]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //
 //angular.module('myApp') 
 //.controller('bandedNavControl',['$scope', '$route', 'getJsonService', function ( $scope, $route, getJsonService) {
