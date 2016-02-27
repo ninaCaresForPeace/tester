@@ -2,13 +2,6 @@
 
 angular.module('myApp.view2', ['ngRoute','ngAnimate','ui.bootstrap'])
 
-//.config(['$routeProvider', function($routeProvider) {
-//  $routeProvider.when('/view2', {
-//    templateUrl: 'view2/view2.html',
-//    controller: 'CarouselDemoCtrl'//'View2Ctrl'
-//  });
-//}])
-
 .controller('CarouselDemoCtrl', function ($scope) {
 	  $scope.myInterval = 5000;
 	  $scope.noWrapSlides = false;
@@ -47,6 +40,3 @@ angular.module('myApp.view2', ['ngRoute','ngAnimate','ui.bootstrap'])
 	  }
 	});
 
-//.controller('View2Ctrl', [function() {
-//
-//}]);
