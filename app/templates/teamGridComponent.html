@@ -1,8 +1,11 @@
 <div class="team-grid-component row">
 	<div class="left-side col-sm-10 ">
-		<div ng-repeat="batch in batches" class="team">
-			<div ng-repeat="member in batch" class="member">
+		<div class="title col-sm-3">{{title}}</div>
+		<div class="description col-sm-9">{{description}}</div>
+		<div ng-repeat="batch in batches" class="team row">
+			<div ng-repeat="member in batch" class="member col-sm-3">
 				<img class="member-photo" data-ng-src="{{member.image}}" alt="{{member.alt}}" height="" width="">
+				<div class="name">{{member.name}}</div>
 				<div class="about">{{member.about}}</div>
 			</div>
 		</div>

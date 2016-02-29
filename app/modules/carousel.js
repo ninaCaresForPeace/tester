@@ -1,4 +1,5 @@
-'use strict';
+/* !carousel.js 2/27  this was moved into the homeController*/ 
+/*'use strict';
 (function() {
 	var app = angular.module('myApp');
 
@@ -12,7 +13,8 @@
 			$scope.noWrapSlides = false;
 		});
 
-	}])//;
+	}])
 
 })();
 
+*/

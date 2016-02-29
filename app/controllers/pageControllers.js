@@ -56,16 +56,35 @@
 		var jsonFile = $route.current.$$route.json;
 		getJsonService.retrieveJson(jsonFile).then(function(response){ 
 			var data = response.data;
-			$scope.bgImage = data.bgImage;
-			$scope.topBand = data.topBand;
+			var gridMembers = data.gridMembers; 
+			var batchSize = 4;
+			var gMSize = gridMembers.length;
+			$scope.batches = [];
+			var array = [];
+			for(var i = 0; i < gMSize; i++) {
+				if(array.length === 4) {
+					$scope.batches.push(array);
+					array = [];
+					array.push(gridMembers[i]);
+					if(i === (gMSize-1)){
+						$scope.batches.push(array);
+					}
+				}else {
+					array.push(gridMembers[i]);
+					if(i === (gMSize-1)){
+						$scope.batches.push(array);
+					}
+				}
+			}
 			
-			var midComponent = data.midComponent;
-			$scope.infoSection = midComponent.infoSection;
-			$scope.video = midComponent.video;
-			var rightBlock = midComponent.rightBlock;
-			$scope.top = rightBlock.top;
-			$scope.links = rightBlock.links;
-			$scope.care = rightBlock.care;
+			
+//			var midComponent = data.midComponent;
+//			$scope.infoSection = midComponent.infoSection;
+//			$scope.video = midComponent.video;
+//			var rightBlock = midComponent.rightBlock;
+//			$scope.top = rightBlock.top;
+//			$scope.links = rightBlock.links;
+//			$scope.care = rightBlock.care;
 		});
 	}]);
 	//aboutMyanmarController

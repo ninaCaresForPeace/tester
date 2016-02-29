@@ -25,8 +25,6 @@
 			templateUrl: "Views/homePage.html",
 			json: 'json/home.json',
 			controller: 'homeController'
-			
-
 		}).
 		when("/ourMission", {
 			templateUrl: "Views/mission.html",

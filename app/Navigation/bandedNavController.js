@@ -1,7 +1,7 @@
 /* !bandedNavController.js */
 'use strict';
 (function() {
-	.controller('bandedNavControl',['$scope', '$route', 'getJsonService', function ( $scope, $route, getJsonService) {
+	angular.module('myApp').controller('bandedNavControl',['$scope', '$route', 'getJsonService', function ( $scope, $route, getJsonService) {
 		var jsonFile = $route.current.$$route.json;
 		getJsonService.retrieveJson(jsonFile).then(function(response){ 
 			$scope.tabs = response.data.menu;
