@@ -1,0 +1,105 @@
+{
+	"topBand": {
+		"overlay": "We are operating solely on your donation"
+	},
+	"bgImage": {
+		"image": "./images/myanmarBoy23.jpg",
+		"alt": "image of boy in train car"
+	},
+	"info": "Like Theraveda Buddhist monks, we live by your contribution.  We build clinics, educate and support people with your donation.  Your generosity means a lot to us and the people in Myanmar.\r\nWe process your donation through the secure gateway of Paypal, worry-free.\r\nPlease help us support world health by clicking \"Donate\".",
+	"donateOptions": {
+		"message": "If you wish to receive \"Thank You\" gifts from us, please click below.",
+		"options":[
+			{
+				"amount": "$50 Donation",
+				"image": "",
+				"alt": "",
+				"href": ""
+			},
+			{
+				"amount": "$50 Donation",
+				"image": "",
+				"alt": "",
+				"href": ""
+			},
+			{
+				"amount": "$100 Donation",
+				"image": "",
+				"alt": "",
+				"href": ""
+			},
+			{
+				"amount": "$300 Donation",
+				"image": "",
+				"alt": "",
+				"href": ""
+			},
+			{
+				"amount": "$500 Donation",
+				"image": "",
+				"alt": "",
+				"href": ""
+			},
+			{
+				"amount": "$800 Donation",
+				"image": "",
+				"alt": "",
+				"href": ""
+			},
+			{
+				"amount": "$1000 Donation",
+				"image": "",
+				"alt": "",
+				"href": ""
+			},
+			{
+				"amount": "$3000 Donation",
+				"image": "",
+				"alt": "",
+				"href": ""
+			},
+			{
+				"amount": "$5000 Donation",
+				"image": "",
+				"alt": "",
+				"href": ""
+			}
+		]
+	},
+	"alternateOption": {
+		"message": "If you would like to send a check or money order by mail, please make it payable to:",
+		"company": "Care for Peace Public Charity",
+		"streetNo": "610",
+		"streetName": "Trumbull Avenue",
+		"city": "Novato",
+		"state": "CA",
+		"zip": "94947"
+		"downloadMessage":"",
+		"form":""
+	},
+	"rightBlock": {
+			"top": {
+				"text":"donate",
+				"image":"./images/donate.jpg",
+				"text":"",
+				"href":"",
+				"alt":""
+			},
+			"links": [
+				{ 
+					"title": "facebook",
+					"icon": "fa fa-facebook-official",
+					"text":"Like Facebook",
+					"href":""
+				},
+				{
+					"title": "twitter",
+					"icon": "fa fa-twitter",
+					"text":"follow",
+					"href":""
+				}
+			],
+			"care": "Care for Peace is a non profit organization founded in 2012.  We are dedicated to build healthy communities in Myanmar"
+			
+	}
+}
