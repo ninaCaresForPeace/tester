@@ -3,109 +3,138 @@
 	"gridMembers": {
 		"title": "Meet Our Team",
 		"description": "Meet our best and brightest team members and advisors both in the U.S. and Myanmar.  We can do it with your help.",
-		[
-		{
-			"name": "Jeff Hardy",
-			"about": "President and Founder of Care for Peace",
-			"image": "./images/LindaTavaszi.jpg",
-			"alt": ""
-		},
-		{
-			"name": "Temp",
-			"about": "Temp About Section",
-			"image": "./images/LindaTavaszi.jpg",
-			"alt": ""
-		},
-		{
-			"name": "Dr.Donald Chan",
-			"about": "Orthopedic Surgeon, Professor Emeritus, University of Virginia, School of Medicine.",
-			"image": "./images/LindaTavaszi.jpg",
-			"alt": ""
-		},
-		{
-			"name": "Dr. David Halbrooke",
-			"about": "Chairman of the Board, has a 40 year experience of entrepreneurship, management, medical practice and new business development in the healthcare services industry.",
-			"image": "./images/LindaTavaszi.jpg",
-			"alt": ""
-		},
-		{
-			"name": "Temp",
-			"about": "Temp About Section",
-			"image": "./images/LindaTavaszi.jpg",
-			"alt": ""
-		},
-		{
-			"name": "Linda Tavaszi",
-			"about": "Executive Director of the Marin Community Clinics.  Mrs Tavaszi was the Senior Vice-President and Executive Director of Physician Services at Marin General Hospital.",
-			"image": "./images/LindaTavaszi.jpg",
-			"alt": "Image"
-		},
-		{
-			"name": "John Porter",
-			"about": "Chairman of Sinocare Group, which owns and operates hospitals in the People's Republic of China.",
-			"image": "./images/LindaTavaszi.jpg",
-			"alt": ""
+		"memberArray": [
+			{
+				"name": "Jeff Hardy",
+				"about": "President and Founder of Care for Peace",
+				"image": "./images/LindaTavaszi.jpg",
+				"alt": ""
+			},
+			{
+				"name": "Temp",
+				"about": "Temp About Section",
+				"image": "./images/LindaTavaszi.jpg",
+				"alt": ""
+			},
+			{
+				"name": "Dr.Donald Chan",
+				"about": "Orthopedic Surgeon, Professor Emeritus, University of Virginia, School of Medicine.",
+				"image": "./images/LindaTavaszi.jpg",
+				"alt": ""
+			},
+			{
+				"name": "Dr. David Halbrooke",
+				"about": "Chairman of the Board, has a 40 year experience of entrepreneurship, management, medical practice and new business development in the healthcare services industry.",
+				"image": "./images/LindaTavaszi.jpg",
+				"alt": ""
+			},
+			{
+				"name": "Temp",
+				"about": "Temp About Section",
+				"image": "./images/LindaTavaszi.jpg",
+				"alt": ""
+			},
+			{
+				"name": "Linda Tavaszi",
+				"about": "Executive Director of the Marin Community Clinics.  Mrs Tavaszi was the Senior Vice-President and Executive Director of Physician Services at Marin General Hospital.",
+				"image": "./images/LindaTavaszi.jpg",
+				"alt": "Image"
+			},
+			{
+				"name": "John Porter",
+				"about": "Chairman of Sinocare Group, which owns and operates hospitals in the People's Republic of China.",
+				"image": "./images/LindaTavaszi.jpg",
+				"alt": ""
+				
+			},
+			{
+				"name": "Temp",
+				"about": "Temp About Section",
+				"image": "./images/LindaTavaszi.jpg",
+				"alt": ""
+			},
+			{
+				"name": "Temp",
+				"about": "Temp About Section",
+				"image": "./images/LindaTavaszi.jpg",
+				"alt": ""
+			}
+		],
+		"rightBlock": {
+			"top": {
+				"text":"donate",
+				"image":"./images/donate.jpg",
+				"href":"",
+				"alt":""
+			},
+			"links": [
+				{ 
+					"title": "facebook",
+					"icon": "fa fa-facebook-official",
+					"text":"Like Facebook",
+					"href":""
+				},
+				{
+					"title": "twitter",
+					"icon": "fa fa-twitter",
+					"text":"follow",
+					"href":""
+				}
+			],
+			"care": "Care for Peace is a non profit organization founded in 2012.  We are dedicated to build healthy communities in Myanmar"
 			
-		},
-		{
-			"name": "Temp",
-			"about": "Temp About Section",
-			"image": "./images/LindaTavaszi.jpg",
-			"alt": ""
-		},
-		{
-			"name": "Temp",
-			"about": "Temp About Section",
-			"image": "./images/LindaTavaszi.jpg",
-			"alt": ""
 		}
-	]
 	},
-	"otherMembers": [
-		{
-			"name": "Hla Kyi",
-			"about": "Regional Director and Co-Founder of Care for Peace Myanmar. Hla Kyi is currently the Vice President, PMI Project Management International Inc.  He has over 25 years' experience in large infrastructure project development.  Project Management and Strategic Planning.  He is involved in San Francisco-based \"big project management\" that was recognized for having completed the $6.4 billion project, technical and management service for the United States Government working on three seismic-retrofit bridge projects in the San Francisco Bay, including the iconic Golden Gate Bridge Presidio Parkway Approach, and the San Francisco Oakland Bay Bridge, San Francisco-Oakland Bay Bridge West Approach replacement.  Hla Kyi has been instrumental in the planning and development of the Mini-Medical Centers in his home country."
-		},
-		{
-			"name": "Tyler Darland",
-			"about": "Project Director and Co-Founder of Care for Peace Myanmar.  Tyler Darland is a licensed civil engineer int he state of California with a Bachelor of Science degree in civil engineering.  As a engineer working for the California Department of Transportation to PMI Project Management International, Inc.  President and CEO Tyler has served as Senior Project Manager on a variety of prestigious projects throughout the United States.  Tyler has been instrumental in the planning and development of the international expansion of Care for Peace, with an eye twards the Philippines as the next country that we will commission Care for Peace to build Mini-Medical Centers throughout the rural islands of the country."
-		}
-	],
-	"friends": [
-		{
-			"name": "Dr. Than Sein",
-			"about": "President People's Health Foundation"
-		},
-		{
-			"name": "Dr. Kyaw Kyaw Aung",
-			"about": "The Rakhine Thalyaya Association"	
-		},
-		{
-			"name": "Mr. Toe Ba Shan",
-			"about": "Care for Peace Ambassador"	
-		},
-		{
-			"name": "Mr. Tha Aye",
-			"about": "Nile Industries"	
-		},
-		{
-			"name": "Mr. Tin Yu",
-			"about": "Automobile Imports"	
-		},
-		{
-			"name": "The Hon. Derek Mitchell",
-			"about": "US Ambassador"	
-		},
-		{
-			"name": "The Hon. William Slater",
-			"about": "USAID Health Director"	
-		},
-		{
-			"name": "The Hon. Thein Thein Htay",
-			"about": "Deputy Minister of Health"	
-		}
-		
-		
-			
-	]
+	"otherMembers": { 
+		"otherMembersTitle": "Other Important Members",
+		"memberArray":[
+			{
+				"name": "Hla Kyi",
+				"about": "Regional Director and Co-Founder of Care for Peace Myanmar. Hla Kyi is currently the Vice President, PMI Project Management International Inc.  He has over 25 years' experience in large infrastructure project development.  Project Management and Strategic Planning.  He is involved in San Francisco-based \"big project management\" that was recognized for having completed the $6.4 billion project, technical and management service for the United States Government working on three seismic-retrofit bridge projects in the San Francisco Bay, including the iconic Golden Gate Bridge Presidio Parkway Approach, and the San Francisco Oakland Bay Bridge, San Francisco-Oakland Bay Bridge West Approach replacement.  Hla Kyi has been instrumental in the planning and development of the Mini-Medical Centers in his home country."
+			},
+			{
+				"name": "Tyler Darland",
+				"about": "Project Director and Co-Founder of Care for Peace Myanmar.  Tyler Darland is a licensed civil engineer int he state of California with a Bachelor of Science degree in civil engineering.  As a engineer working for the California Department of Transportation to PMI Project Management International, Inc.  President and CEO Tyler has served as Senior Project Manager on a variety of prestigious projects throughout the United States.  Tyler has been instrumental in the planning and development of the international expansion of Care for Peace, with an eye twards the Philippines as the next country that we will commission Care for Peace to build Mini-Medical Centers throughout the rural islands of the country."
+			}
+		]
+	},
+	"friends": {
+		"ourFriendsTitle": "Our Friends in Myanmar",
+		"friendsArray":
+		[
+			{
+				"name": "Dr. Than Sein",
+				"about": "President People's Health Foundation"
+			},
+			{
+				"name": "Dr. Kyaw Kyaw Aung",
+				"about": "The Rakhine Thalyaya Association"	
+			},
+			{
+				"name": "Mr. Toe Ba Shan",
+				"about": "Care for Peace Ambassador"	
+			},
+			{
+				"name": "Mr. Tha Aye",
+				"about": "Nile Industries"	
+			},
+			{
+				"name": "Mr. Tin Yu",
+				"about": "Automobile Imports"	
+			},
+			{
+				"name": "The Hon. Derek Mitchell",
+				"about": "US Ambassador"	
+			},
+			{
+				"name": "The Hon. William Slater",
+				"about": "USAID Health Director"	
+			},
+			{
+				"name": "The Hon. Thein Thein Htay",
+				"about": "Deputy Minister of Health"	
+			}
+				
+		]
+	}
 }

@@ -165,6 +165,18 @@
 			templateUrl: './templates/teamGridComponent.html'
 		}
 	});
+	app.directive("teamMemberComponent", function () {
+		return {
+			restrict: 'E',
+			templateUrl: './templates/teamMemberComponent.html'
+		}
+	});
+	app.directive("ourFriends", function () {
+		return {
+			restrict: 'E',
+			templateUrl: './templates/ourFriends.html'
+		}
+	});
 	app.directive("carouselClick", function () {
 		return {
 			link: function(scope, element) { 

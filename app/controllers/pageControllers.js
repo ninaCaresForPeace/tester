@@ -56,7 +56,9 @@
 		var jsonFile = $route.current.$$route.json;
 		getJsonService.retrieveJson(jsonFile).then(function(response){ 
 			var data = response.data;
-			var gridMembers = data.gridMembers; 
+			$scope.title = data.gridMembers.title;
+			$scope.description = data.gridMembers.description;
+			var gridMembers = data.gridMembers.memberArray; 
 			var batchSize = 4;
 			var gMSize = gridMembers.length;
 			$scope.batches = [];
@@ -77,7 +79,14 @@
 				}
 			}
 			
+			$scope.otherMembers = data.otherMembers.memberArray;
+			$scope.otherMembersTitle = data.otherMembers.otherMembersTitle;
+			$scope.friendsArray = data.friends.friendsArray;
+			$scope.ourFriendsTitle = data.friends.ourFriendsTitle;
 			
+			$scope.top = data.gridMembers.rightBlock.top;
+			$scope.links = data.gridMembers.rightBlock.links;
+			$scope.care = data.gridMembers.rightBlock.care;
 //			var midComponent = data.midComponent;
 //			$scope.infoSection = midComponent.infoSection;
 //			$scope.video = midComponent.video;
