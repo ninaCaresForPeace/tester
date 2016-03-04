@@ -1,26 +1,5 @@
-.middle-component {
-	
-	.left-side {
-		background-color: white;
-		.top-content {
-			margin-top:45px;
-			background-color: white;
-			white-space: pre-line;
-		    font-family: Arial;
-		    font-size: 23px;
-		    color: $gry;
-		}
-		.bottom-content {
-			margin-top:45px;
-			.title {
-				font-family: Arial;
-				font-size: 23px;
-				color: $gry;
-			}
-		}
-	}
-	//TEMP
-	/* .right-side {
+/* !rightBlockModule.scss */
+.right-side {
 		background-color:white;
 
 		.media-container {
@@ -90,8 +69,3 @@
 		}
 			
 	}
-	 */
-	
-	
-}
-	

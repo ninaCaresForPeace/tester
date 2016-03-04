@@ -14,12 +14,12 @@
 		},
 		"image": {
 			"show": "false"
-		},
-		"rightBlock": {
+		}
+	},
+	"rightBlock": {
 			"top": {
 				"text":"donate",
 				"image":"./images/donate.jpg",
-				"text":"",
 				"href":"",
 				"alt":""
 			},
@@ -40,5 +40,4 @@
 			"care": "Care for Peace is a non profit organization founded in 2012.  We are dedicated to build healthy communities in Myanmar"
 			
 		}
-	}
 }

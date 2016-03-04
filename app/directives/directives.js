@@ -171,6 +171,12 @@
 			templateUrl: './templates/teamMemberComponent.html'
 		}
 	});
+	app.directive("rightBlockModule", function() {
+		return {
+			restrict: 'E',
+			templateUrl: './templates/rightBlockModule.html'
+		}
+	});
 	app.directive("ourFriends", function () {
 		return {
 			restrict: 'E',

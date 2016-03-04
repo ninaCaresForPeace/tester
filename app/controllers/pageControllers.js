@@ -45,7 +45,10 @@
 			var midComponent = data.midComponent;
 			$scope.infoSection = midComponent.infoSection;
 			$scope.video = midComponent.video;
-			var rightBlock = midComponent.rightBlock;
+			
+			//var rightBlock = midComponent.rightBlock;
+			var rightBlock = data.rightBlock;
+			debugger;
 			$scope.top = rightBlock.top;
 			$scope.links = rightBlock.links;
 			$scope.care = rightBlock.care;

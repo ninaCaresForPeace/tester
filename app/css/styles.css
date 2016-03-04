@@ -438,38 +438,117 @@ body {
     height: auto;
     max-height: 550px; }
 
-.middle-component .left-side {
-  background-color: white; }
-  .middle-component .left-side .top-content {
-    margin-top: 45px;
-    background-color: white;
-    white-space: pre-line;
-    font-family: Arial;
-    font-size: 23px;
-    color: #666666; }
-  .middle-component .left-side .bottom-content {
-    margin-top: 45px; }
-    .middle-component .left-side .bottom-content .title {
+.middle-component {
+  /* .right-side {
+		background-color:white;
+
+		.media-container {
+			background-color: $ltGry2;
+			margin-top: 20px;
+			.donate {
+				width:auto;
+				margin-left: 20px;
+				@include respond-to-max(mobile) {
+					margin-left: 10px;
+				}
+				.button-image {
+					width:100px;
+					height: 100px;
+					margin-top: 10px;		
+				}
+				.button-text{
+					position: absolute;
+					top: 99px;
+					margin-left: 10%;
+					margin-right: 15%;
+					width: auto;
+					color: $yellow;
+					font-size: 15px;
+					text-transform: uppercase;
+				}
+			}		
+			.links {
+			    margin-left: 15px;
+  				margin-top: 10px;
+  				@include respond-to-max(mobile) {
+					margin-left: 5px;
+				}
+				
+				.fa-facebook-official {
+					color: $facebookBlue;
+					width: 110px;
+					.text {
+						color: black;
+						margin-left:5px;
+						font-size: 11px;
+						
+					}
+				}
+				.fa-twitter {
+					color: $twitterBlue; 
+					width: 110px;
+					.text {
+						color: black;
+						margin-left:5px;
+						font-size: 11px;
+						//width: 110px;
+						padding-right: 47px;
+					}
+				}
+			}
+			.care {
+				margin-left: 10px;
+				margin-right: 10px;
+  				margin-top: 10px;
+  				padding-bottom: 10px;
+  				@include respond-to-max(mobile) {
+						font-size: 11px;
+				}
+  				
+			}
+		}
+			
+	}
+	 */ }
+  .middle-component .left-side {
+    background-color: white; }
+    .middle-component .left-side .top-content {
+      margin-top: 45px;
+      background-color: white;
+      white-space: pre-line;
       font-family: Arial;
       font-size: 23px;
       color: #666666; }
+    .middle-component .left-side .bottom-content {
+      margin-top: 45px; }
+      .middle-component .left-side .bottom-content .title {
+        font-family: Arial;
+        font-size: 23px;
+        color: #666666; }
 
-.middle-component .right-side {
+.team-grid-component {
+  margin-top: 140px; }
+  .team-grid-component .team .member-photo {
+    width: 100%;
+    height: 100%; }
+
+/* !rightBlockModule.scss */
+.right-side {
   background-color: white; }
-  .middle-component .right-side .media-container {
+  .right-side .media-container {
     background-color: #DDDDDD;
     margin-top: 20px; }
-    .middle-component .right-side .media-container .donate {
+    .right-side .media-container .donate {
       width: auto;
       margin-left: 20px; }
       @media (max-width: 992px) {
-        .middle-component .right-side .media-container .donate {
+        .right-side .media-container .donate {
           margin-left: 10px; } }
-      .middle-component .right-side .media-container .donate .button-image {
+      .right-side .media-container .donate .button-image {
         width: 100px;
         height: 100px;
         margin-top: 10px; }
-      .middle-component .right-side .media-container .donate .button-text {
+      .right-side .media-container .donate .button-text {
         position: absolute;
         top: 99px;
         margin-left: 10%;
@@ -478,38 +557,32 @@ body {
         color: #F8BA00;
         font-size: 15px;
         text-transform: uppercase; }
-    .middle-component .right-side .media-container .links {
+    .right-side .media-container .links {
       margin-left: 15px;
       margin-top: 10px; }
       @media (max-width: 992px) {
-        .middle-component .right-side .media-container .links {
+        .right-side .media-container .links {
           margin-left: 5px; } }
-      .middle-component .right-side .media-container .links .fa-facebook-official {
+      .right-side .media-container .links .fa-facebook-official {
         color: #4965A0;
         width: 110px; }
-        .middle-component .right-side .media-container .links .fa-facebook-official .text {
+        .right-side .media-container .links .fa-facebook-official .text {
           color: black;
           margin-left: 5px;
           font-size: 11px; }
-      .middle-component .right-side .media-container .links .fa-twitter {
+      .right-side .media-container .links .fa-twitter {
         color: #57ADEA;
         width: 110px; }
-        .middle-component .right-side .media-container .links .fa-twitter .text {
+        .right-side .media-container .links .fa-twitter .text {
           color: black;
           margin-left: 5px;
           font-size: 11px;
           padding-right: 47px; }
-    .middle-component .right-side .media-container .care {
+    .right-side .media-container .care {
       margin-left: 10px;
       margin-right: 10px;
       margin-top: 10px;
       padding-bottom: 10px; }
       @media (max-width: 992px) {
-        .middle-component .right-side .media-container .care {
+        .right-side .media-container .care {
           font-size: 11px; } }
-
-.team-grid-component {
-  margin-top: 140px; }
-  .team-grid-component .team .member-photo {
-    width: 100%;
-    height: 100%; }
