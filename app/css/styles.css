@@ -586,3 +586,22 @@ body {
       @media (max-width: 992px) {
         .right-side .media-container .care {
           font-size: 11px; } }
+
+.donate-info {
+  position: relative;
+  /*  */ }
+  .donate-info .text-section {
+    background-color: white;
+    height: 400px;
+    font-family: Arial;
+    font-size: 22px;
+    padding: 35px; }
+  .donate-info .donate-other {
+    background-color: blue;
+    width: 175px;
+    height: 45px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    margin-right: 25%;
+    margin-left: 25%; }

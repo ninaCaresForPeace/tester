@@ -192,7 +192,24 @@
 			}
 		}
 	});
-
+	app.directive("donateInfo", function () {
+		return {
+			restrict: 'E',
+			templateUrl: './templates/donateInfo.html'
+		}
+	});
+	app.directive("donateOptions", function () {
+		return {
+			restrict: 'E',
+			templateUrl: './templates/donateOptions.html'
+		}
+	});
+	app.directive("alternateOption", function () {
+		return {
+			restrict: 'E',
+			templateUrl: './templates/alternateOption.html'
+		}
+	});
 	app.directive("bgImage", function () {
 		return {
 			restrict: 'E',

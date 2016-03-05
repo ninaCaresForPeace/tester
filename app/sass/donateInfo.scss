@@ -1,0 +1,21 @@
+.donate-info {
+	position: relative;
+	.text-section {
+		background-color: white;
+		height: 400px;
+		font-family: Arial;
+		font-size:22px;
+		padding:35px;
+	}
+	.donate-other{
+		background-color: blue;
+    	width: 175px;
+    	height: 45px;
+    	cursor: pointer;
+    	position: absolute;
+    bottom: 0;
+        margin-right: 25%;
+    margin-left: 25%;
+	}
+	/*  */
+}    

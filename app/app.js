@@ -50,6 +50,12 @@
 			controller: 'aboutMyanmarController'
 			
 		}).
+		when("/donate", {
+			templateUrl: "Views/donate.html",
+			json: 'json/donate.json',
+			controller: 'donationController'
+			
+		}).
 		when("/globalNav", {
 			templateUrl: "Navigation/bandedNavTemplate.html",
 			controller: 'bandedNavControl',

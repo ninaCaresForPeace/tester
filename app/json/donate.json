@@ -73,7 +73,7 @@
 		"streetName": "Trumbull Avenue",
 		"city": "Novato",
 		"state": "CA",
-		"zip": "94947"
+		"zip": "94947",
 		"downloadMessage":"",
 		"form":""
 	},
@@ -81,7 +81,6 @@
 			"top": {
 				"text":"donate",
 				"image":"./images/donate.jpg",
-				"text":"",
 				"href":"",
 				"alt":""
 			},
