@@ -12,56 +12,66 @@
 		"options":[
 			{
 				"amount": "$50 Donation",
-				"image": "",
-				"alt": "",
-				"href": ""
-			},
-			{
-				"amount": "$50 Donation",
-				"image": "",
-				"alt": "",
+				"image": "./images/leafbasket.jpg",
+				"alt": "PayPal - The safer, easier way to pay online!",
+				"value": "35QK6VLNSNDCW",
+				"action": "https://www.paypal.com/cgi-bin/webscr",
 				"href": ""
 			},
 			{
 				"amount": "$100 Donation",
-				"image": "",
-				"alt": "",
+				"image": "./images/buddhistgirls.jpg",
+				"alt": "PayPal - The safer, easier way to pay online!",
+				"value": "Q66LUH46HND7E",
+				"action": "https://www.paypal.com/cgi-bin/webscr",
 				"href": ""
 			},
 			{
 				"amount": "$300 Donation",
-				"image": "",
-				"alt": "",
+				"image": "./images/foodCarriedOnHead.jpg",
+				"alt": "PayPal - The safer, easier way to pay online!",
+				"value": "ZDST2M3JXQRW6",
+				"action": "https://www.paypal.com/cgi-bin/webscr",
 				"href": ""
 			},
 			{
 				"amount": "$500 Donation",
-				"image": "",
-				"alt": "",
+				"image": "./images/train2.jpg",
+				"alt": "PayPal - The safer, easier way to pay online!",
+				"value": "P82EFCSW5YZE6",
+				"action": "https://www.paypal.com/cgi-bin/webscr",
 				"href": ""
 			},
 			{
 				"amount": "$800 Donation",
-				"image": "",
-				"alt": "",
+				"image": "./images/authenticFood.jpg",
+				"alt": "PayPal - The safer, easier way to pay online!",
+				"value": "F7YMX3B6WB5BC",
+				"action": "https://www.paypal.com/cgi-bin/webscr",
 				"href": ""
 			},
 			{
 				"amount": "$1000 Donation",
-				"image": "",
-				"alt": "",
+				"image": "./images/twoBuddhistGirls.jpg",
+				"alt": "PayPal - The safer, easier way to pay online!",
+				"value": "BYFKQ83LC6FY6",
+				"action": "https://www.paypal.com/cgi-bin/webscr",
 				"href": ""
 			},
 			{
 				"amount": "$3000 Donation",
-				"image": "",
-				"alt": "",
+				"image": "./images/train1.jpg",
+				"alt": "PayPal - The safer, easier way to pay online!",
+				"value": "UJDMCNZ4LRR38",
+				"action": "https://www.paypal.com/cgi-bin/webscr",
 				"href": ""
 			},
 			{
 				"amount": "$5000 Donation",
-				"image": "",
-				"alt": "",
+				"image": "./images/womenAndChildren.jpg",
+				"alt": "PayPal - The safer, easier way to pay online!",
+				"value": "AV5JBQQT564A8",
+				"action": "https://www.paypal.com/cgi-bin/webscr",
 				"href": ""
 			}
 		]
@@ -74,8 +84,7 @@
 		"city": "Novato",
 		"state": "CA",
 		"zip": "94947",
-		"downloadMessage":"",
-		"form":""
+		"downloadMessage":"Please download and fill in the form and include with your check, so we can send you a receipt for your tax deductable donation."
 	},
 	"rightBlock": {
 			"top": {

@@ -119,7 +119,50 @@
 			$scope.topBand = data.topBand;
 		
 			$scope.info = data.info;
-			$scope.donateOptions = data.donateOptions;
+			$scope.message = data.donateOptions.message;
+			
+			var options = data.donateOptions.options;
+			var batchSize = 4;
+			var oSize = options.length;
+			$scope.batches = [];
+			var array = [];
+			for(var i = 0; i < oSize; i++) {
+				if(array.length === 4) {
+					$scope.batches.push(array);
+					array = [];
+					array.push(options[i]);
+					if(i === (oSize-1)){
+						$scope.batches.push(array);
+					}
+				}else {
+					array.push(options[i]);
+					if(i === (oSize-1)){
+						$scope.batches.push(array);
+					}
+				}
+			}
+			var alternate = data.alternateOption;
+			$scope.company = alternate.company;
+			var streetNo = alternate.streetNo;
+			var streetName = alternate.streetName;
+			var city = alternate.city;
+			var state = alternate.state;
+			var zip = alternate.zip;
+			$scope.street = streetNo + " " + streetName;
+			$scope.locale = city + ", " + state + " " + zip;
+			$scope.downloadMessage = alternate.downloadMessage;
+			/*
+			 * 
+			"alternateOption": {
+		"message": "If you would like to send a check or money order by mail, please make it payable to:",
+		"company": "Care for Peace Public Charity",
+		"streetNo": "610",
+		"streetName": "Trumbull Avenue",
+		"city": "Novato",
+		"state": "CA",
+		"zip": "94947",
+		"downloadMessage":"",
+			 */
 			
 			var rightBlock = data.rightBlock;
 			$scope.top = rightBlock.top;

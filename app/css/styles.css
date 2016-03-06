@@ -525,6 +525,8 @@ body {
         font-family: Arial;
         font-size: 23px;
         color: #666666; }
+      .middle-component .left-side .bottom-content img {
+        width: 100%; }
 
 .team-grid-component {
   margin-top: 140px; }
@@ -588,14 +590,14 @@ body {
           font-size: 11px; } }
 
 .donate-info {
-  position: relative;
-  /*  */ }
+  position: relative; }
   .donate-info .text-section {
     background-color: white;
     height: 400px;
     font-family: Arial;
     font-size: 22px;
-    padding: 35px; }
+    padding: 35px;
+    position: relative; }
   .donate-info .donate-other {
     background-color: blue;
     width: 175px;
@@ -605,3 +607,22 @@ body {
     bottom: 0;
     margin-right: 25%;
     margin-left: 25%; }
+  .donate-info .donate-button {
+    height: 45px;
+    width: 175px;
+    background-color: #54B6EF;
+    font-family: Arial;
+    color: white;
+    border-color: transparent;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; }
+
+.donate-options {
+  margin-top: 140px; }
+  .donate-options .batch .option-image {
+    width: 100%;
+    height: 100%; }
