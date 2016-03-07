@@ -151,18 +151,7 @@
 			$scope.street = streetNo + " " + streetName;
 			$scope.locale = city + ", " + state + " " + zip;
 			$scope.downloadMessage = alternate.downloadMessage;
-			/*
-			 * 
-			"alternateOption": {
-		"message": "If you would like to send a check or money order by mail, please make it payable to:",
-		"company": "Care for Peace Public Charity",
-		"streetNo": "610",
-		"streetName": "Trumbull Avenue",
-		"city": "Novato",
-		"state": "CA",
-		"zip": "94947",
-		"downloadMessage":"",
-			 */
+			
 			
 			var rightBlock = data.rightBlock;
 			$scope.top = rightBlock.top;

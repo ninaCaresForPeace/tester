@@ -1,7 +1,7 @@
 <div class="team-grid-component row">
 	<div class="left-side col-sm-10 ">
-		<div class="title col-sm-3">{{title}}</div>
-		<div class="description col-sm-9">{{description}}</div>
+		<div class="title col-sm-12">{{title}}</div>
+		<div class="description col-sm-12">{{description}}</div>
 		<div ng-repeat="batch in batches" class="team row">
 			<div ng-repeat="member in batch" class="member col-sm-3">
 				<img class="member-photo" data-ng-src="{{member.image}}" alt="{{member.alt}}" height="" width="">
@@ -10,17 +10,5 @@
 			</div>
 		</div>
 	</div>
-	<!-- Refactor and make the right side its own directive component -->
 	<right-block-module></right-block-module>
-	<!-- div class="right-side col-sm-2">
-		<div class="donate">
-			<img class="button-image" href="{{top.href}}" data-ng-src="{{top.image}}" alt="{{top.alt}}" height="" width="">
-			<div class="button-text">{{top.text}}</div>
-		</div>
-		<div ng-repeat="link in links" class="links">
-			<div class="title">{{link.title}}</div>
-			<button type="button" class="{{link.icon}}"><span class="text">{{link.text}}</span></button>
-		</div>
-		<div class="care">{{care}}</div>
-	</div> -->
 </div>

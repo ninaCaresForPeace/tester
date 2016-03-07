@@ -2,15 +2,15 @@
 	<div class="left-side col-sm-10 ">
 		<div class="top-content">{{infoSection}}</div>
 		<div class="bottom-content">
-			<div class="title {{video.display}}">{{video.title}}</div>
+			<div ng-if="video.show =='true'" class="title">{{video.title}}</div>
 			<div class="video-container row">
 			<!-- 4:3 aspect ratio -->
 			<div class="col-sm-12">
 				<!--  do ngif between video and not video -->
-				<div class="embed-responsive embed-responsive-16by9 {{video.display}}">
-  					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/jDXZwkyLuPg"></iframe>
+				<div ng-if="video.show =='true'" class="embed-responsive embed-responsive-16by9">
+  					<iframe ng-if="video.show =='true'" class="embed-responsive-item" src="https://www.youtube.com/embed/jDXZwkyLuPg"></iframe>
 				</div>
-				<div class="bottom-image {{image.display}}">
+				<div ng-if="image.show =='true'" class="bottom-image">
   					<img class="" data-ng-src="{{image.src}}" alt="{{image.alt}}">
 				</div>
 			</div>
@@ -18,21 +18,5 @@
 			</div>
 		</div>
 	</div>
-	<!-- Refactor and make the right side its own directive component -->
 	<right-block-module></right-block-module>
-<!-- 	<div class="right-side col-sm-2">
-		<div class="media-container">
-			<div class="donate">
-				<img class="button-image" href="{{top.href}}" data-ng-src="{{top.image}}" alt="{{top.alt}}" height="" width="">
-				<div class="button-text">{{top.text}}</div>
-			</div>
-			<div ng-repeat="link in links" class="links">
-				<div class="title">{{link.title}}</div>
-				<button type="button" class="{{link.icon}}"><span class="text">{{link.text}}</span></button>
-			</div>
-			<div class="care">{{care}}</div>
-		</div>
-	</div> -->
-		
-
 </div>
