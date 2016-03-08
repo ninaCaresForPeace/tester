@@ -12,17 +12,19 @@
 	
 	.left-block {
 		height: 100%;
-		//////////////
-		
-		/////////////
-		
+		/*<!---added below 3/7/16--->*/
+		@include respond-to-max(small) {
+			height: 400px;
+		}
+		/*<!---added above 3/7/16--->*/
 		.header {
 			font-size: 25px;
 			font-weight: bold;
 			height: 35px;
 			
 			@include respond-to-max(mobile) {
-				font-size: 18px;
+				font-size: 18px; 
+				//font-size: 15px;
 				height: 29px;
 			}
 			@include respond-to-max(small) {
@@ -30,7 +32,7 @@
 				height: 32px;
 			}
 		}
-		::-webkit-scrollbar {
+		/* ::-webkit-scrollbar {
 	    	-webkit-appearance: none;
 	    	width: 7px;
 		}
@@ -38,9 +40,9 @@
 	    	border-radius: 4px;
 	    	background-color: rgba(0,0,0,.5);
 	    	box-shadow: 0 0 1px rgba(255,255,255,.5);
-		}
+		} */
 		.content {
-			::-webkit-scrollbar {
+			/* ::-webkit-scrollbar {
 		    	-webkit-appearance: none;
 		    	width: 7px;
 			}
@@ -48,10 +50,10 @@
 		    	border-radius: 4px;
 		    	background-color: rgba(0,0,0,.5);
 		    	box-shadow: 0 0 1px rgba(255,255,255,.5);
-			}
-			font-size: 18px;
+			} */
+			/* font-size: 18px;
 			max-height: 141px;
-			overflow-y: scroll;
+			overflow-y: scroll; */
 			@include respond-to-max(mobile) {
 				font-size: 14px;
 				max-height: 110px;
@@ -64,10 +66,40 @@
 		.top-box {
 			height: 50%;
 			padding: 15px;
+			.content {
+				line-height: 26px;
+				font-size: 15px;
+				/*<!---added below 3/7/16--->*/
+				@include respond-to-max(mobile) {
+					line-height: 20px;
+					font-size: 12px;
+				}
+				@include respond-to-max(small) {
+					line-height: 28px;
+					font-size: 18px;
+			
+				}
+				/*<!---added above 3/7/16--->*/
+			}
 		}
 		.bottom-box {
 			height: 50%;
 			padding: 15px;
+			.content {
+				line-height: 26px;
+				font-size: 15px;
+				/*<!---added below 3/7/16--->*/
+				@include respond-to-max(mobile) {
+					line-height: 20px;
+					font-size: 12px;
+				}
+				@include respond-to-max(small) {
+					line-height: 28px;
+					font-size: 18px;
+			
+				}
+				/*<!---added above 3/7/16--->*/
+			}
 		}
 	}
 	

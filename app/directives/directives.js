@@ -120,7 +120,8 @@
 		return {
 			restrict: 'E',
 			transclude: true,
-			template:'<div class="band container-fluid" ng-transclude>',
+			template:'<div class="band container" ng-transclude>',
+			//template:'<div class="band container-fluid" ng-transclude>',
 			replace: true
 		}
 		
@@ -131,7 +132,8 @@
 		return {
 			restrict: 'E',
 			transclude: true,
-			template:'<div class="top-band container-fluid">' +
+			template:'<div class="top-band container">' +
+			//template:'<div class="top-band container-fluid">' +
 					'<div class="box-overlay"></div>' +
 					'<div class="box-text">{{topBand.overlay}}</div>' +
 					'<div ng-transclude></div> </div>',
