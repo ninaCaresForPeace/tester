@@ -89,9 +89,9 @@ body {
     .globalNav {
       height: 150px; }
       .globalNav .block-logo img {
-        height: 99px;
+        height: 80px;
         margin-top: 27px;
-        width: 190px; } }
+        width: 148px; } }
   .globalNav .social-media {
     position: absolute;
     top: 15px;
@@ -99,7 +99,7 @@ body {
     font-size: 42px; }
     @media (max-width: 520px) {
       .globalNav .social-media {
-        top: -25px; } }
+        top: 14px; } }
   .globalNav .global-navigation-header {
     position: relative;
     height: 140px;
@@ -144,7 +144,7 @@ body {
     right: 0; }
     @media (max-width: 520px) {
       .globalNav .btn-group {
-        top: 23px; } }
+        top: 60px; } }
     .globalNav .btn-group .dropdown-menu {
       left: -103px;
       border-radius: 1px; }

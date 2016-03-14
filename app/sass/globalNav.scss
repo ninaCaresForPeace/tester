@@ -25,6 +25,7 @@
 		}
 		@include respond-to-max(x-small) {
 			width: 108px;
+			
 		}
 		
 	}
@@ -32,9 +33,9 @@
 		height: 150px;
 		.block-logo {
 			img {
-				    height: 99px;
+				    height: 80px;
 	    			margin-top: 27px;
-	    			width: 190px;
+	    			width: 148px;
 			}
 		}
 	}
@@ -46,7 +47,7 @@
 		right: 12px;
 		font-size: 42px;
 		@include respond-to-max(x-small) {
-			top: -25px;
+			top: 14px;
 		}
 	}
 	
@@ -119,7 +120,7 @@
 		top: 70px;
 	   	right: 0;
 		@include respond-to-max(x-small) {
-			top: 23px;
+			top: 60px;
 		}
 	   	.dropdown-menu {
 	   		left: -103px;
