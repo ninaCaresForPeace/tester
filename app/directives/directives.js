@@ -7,11 +7,9 @@
 	//TODO: Handle inserting the text for the dropdown
 	app.directive("clickTab", function () {
 		return {
-			
 			 link: function(scope, element ) { 
 				
 		        	element.bind('click', function () {
-		        		debugger;
 		                element.toggleClass("open"); 
 		            });
 			 }

@@ -14,6 +14,7 @@
 			
 			$scope.left = response.data.topicGrid.leftBlock;
 			$scope.grid = response.data.topicGrid.rightBlock;
+			
 		});
 	}]);
 	//ourMissionController
@@ -46,9 +47,8 @@
 			$scope.infoSection = midComponent.infoSection;
 			$scope.video = midComponent.video;
 			
-			//var rightBlock = midComponent.rightBlock;
 			var rightBlock = data.rightBlock;
-			debugger;
+			
 			$scope.top = rightBlock.top;
 			$scope.links = rightBlock.links;
 			$scope.care = rightBlock.care;
@@ -62,12 +62,14 @@
 			$scope.title = data.gridMembers.title;
 			$scope.description = data.gridMembers.description;
 			var gridMembers = data.gridMembers.memberArray; 
-			var batchSize = 4;
+			//var batchSize = 4;
+			var batchSize = 3;
 			var gMSize = gridMembers.length;
 			$scope.batches = [];
 			var array = [];
 			for(var i = 0; i < gMSize; i++) {
-				if(array.length === 4) {
+				//if(array.length === 4) {
+				if(array.length === 3) {
 					$scope.batches.push(array);
 					array = [];
 					array.push(gridMembers[i]);

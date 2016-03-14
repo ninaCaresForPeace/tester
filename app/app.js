@@ -10,7 +10,6 @@
 	  'myApp.version'
 	]).config(["snSkrollrProvider", function(snSkrollrProvider) {
 	  snSkrollrProvider.config = { smoothScrolling: true,};
-	  console.log("after config");
 	}]);
 
 	//initialise skrollr at runtime

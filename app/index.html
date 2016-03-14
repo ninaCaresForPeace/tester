@@ -27,12 +27,8 @@
   <script src="javascripts/picturefill.js" async></script>
 </head>
 <body style="height:100%">
+<div id="skrollr-body">
  <div global-nav-tabs></div>
- <!--  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-    <li><a href="#/globalNav">NavTabs</a></li>
-  </ul>--> 
 
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -40,7 +36,7 @@
 
 <div ng-view style="height:auto; "></div>
 
- <div footer-section></div>
+ 
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
@@ -57,11 +53,7 @@
   <script src="modules/carousel.js"></script>
    <script src="controllers/pageControllers.js"></script>
   <script src="directives/directives.js"></script>
- 
-  <!-- <script src="routes.js"></script>
- 
-   <script src="view1/view1.js"></script>
-    <script src="view2/view2.js"></script>-->  
+
   
   <script src="Navigation/bandedNavController.js"></script>
   <script src="components/version/version.js"></script>
@@ -70,6 +62,7 @@
 
  <script src="bower_components/skrollr/dist/skrollr.min.js"></script>
   <script src="bower_components/angular-skrollr/dist/angular-skrollr.js"></script>
-  
+</div>  
+<div footer-section></div>
 </body>
 </html>

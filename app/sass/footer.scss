@@ -1,7 +1,9 @@
 
 .footer-section {
 	height: 100px;
-	
+	@include respond-to-max(x-small) {
+		height: 120px;
+	}
 	.row {
 		background-color: $drkGry2;
 		height: 50%;
@@ -37,10 +39,16 @@
 				color: white;
 				font-size: 16px;
 				margin-left: 10px;
+				@include respond-to-max(small) {
+				text-align: center;
+			}
 		
 			}
 		}
 		.trademark-display  {
+			@include respond-to-max(x-small) {
+				top: 37px;
+			}
 			@include respond-to-max(small) {
 				text-align: center;
 			}

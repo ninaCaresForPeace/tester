@@ -8,38 +8,56 @@
 				"name": "Jeff Hardy",
 				"about": "President and Founder of Care for Peace",
 				"image": "./images/LindaTavaszi.jpg",
-				"alt": "Image of Jeff Hardy"
+				"alt": ""
+			},
+			{
+				"name": "Temp",
+				"about": "Temp About Section",
+				"image": "./images/LindaTavaszi.jpg",
+				"alt": ""
 			},
 			{
 				"name": "Dr.Donald Chan",
 				"about": "Orthopedic Surgeon, Professor Emeritus, University of Virginia, School of Medicine.",
-				"image": "./images/Don with Pagoda.jpg",
-				"alt": "Image of Dr. Donald Chan"
+				"image": "./images/LindaTavaszi.jpg",
+				"alt": ""
 			},
 			{
 				"name": "Dr. David Halbrooke",
 				"about": "Chairman of the Board, has a 40 year experience of entrepreneurship, management, medical practice and new business development in the healthcare services industry.",
-				"image": "./images/David BG pagoda.jpg",
-				"alt": "Image of Dr. David Halbrooke"
+				"image": "./images/LindaTavaszi.jpg",
+				"alt": ""
 			},
 			{
-				"name": "Larry Lococo",
-				"about": "CEO of Lawrence J. Lococo Accounting Practice that specializes in tax law.",
+				"name": "Temp",
+				"about": "Temp About Section",
 				"image": "./images/LindaTavaszi.jpg",
-				"alt": "Image of Larry Lococo"
+				"alt": ""
 			},
 			{
 				"name": "Linda Tavaszi",
 				"about": "Executive Director of the Marin Community Clinics.  Mrs Tavaszi was the Senior Vice-President and Executive Director of Physician Services at Marin General Hospital.",
 				"image": "./images/LindaTavaszi.jpg",
-				"alt": "Image of Linda Tavaszi"
+				"alt": "Image"
 			},
 			{
 				"name": "John Porter",
 				"about": "Chairman of Sinocare Group, which owns and operates hospitals in the People's Republic of China.",
-				"image": "./images/John Porter.jpg",
-				"alt": "Image of John Porter"
+				"image": "./images/LindaTavaszi.jpg",
+				"alt": ""
 				
+			},
+			{
+				"name": "Temp",
+				"about": "Temp About Section",
+				"image": "./images/LindaTavaszi.jpg",
+				"alt": ""
+			},
+			{
+				"name": "Temp",
+				"about": "Temp About Section",
+				"image": "./images/LindaTavaszi.jpg",
+				"alt": ""
 			}
 		],
 		"rightBlock": {

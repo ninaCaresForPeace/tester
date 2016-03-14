@@ -56,7 +56,8 @@
 						"alt": "image of clinic being constructed",
 						"height": "170",
 						"width": "170",
-						"row": "top"
+						"row": "top",
+						"href": "#ourMission"
 					},
 					{
 						"position": "middle",
@@ -65,7 +66,8 @@
 						"alt": "image of clinic",
 						"height": "170",
 						"width": "170",
-						"row": "top"
+						"row": "top",
+						"href": "#achievements"
 					},
 					{
 						"position": "right",
@@ -74,7 +76,8 @@
 						"alt": "donation image",
 						"height": "170",
 						"width": "170",
-						"row": "top"
+						"row": "top",
+						"href": "#donate"
 					}
 				]
 			},
@@ -88,7 +91,8 @@
 						"alt": "image of speaker speaking",
 						"height": "170",
 						"width": "170",
-						"row": "bottom"
+						"row": "bottom",
+						"href": "#whoWeAre"
 					},
 					{
 						"position": "middle",
@@ -97,7 +101,8 @@
 						"alt": "buddhist boy on train",
 						"height": "170",
 						"width": "170",
-						"row": "bottom"
+						"row": "bottom",
+						"href": "#myanmar"
 					},
 					{
 						"position": "right",
@@ -106,7 +111,8 @@
 						"alt": "woman holding baby image",
 						"height": "170",
 						"width": "170",
-						"row": "bottom"
+						"row": "bottom",
+						"href": "#Now"
 					}
 				]
 			}

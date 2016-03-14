@@ -29,13 +29,14 @@
 		
 	}
 	@include respond-to-max(x-small) {
+		height: 150px;
 		.block-logo {
-		img {
-			    height: 99px;
-    			margin-top: 27px;
-    			width: 190px;
+			img {
+				    height: 99px;
+	    			margin-top: 27px;
+	    			width: 190px;
+			}
 		}
-	}
 	}
 	
 	
@@ -44,6 +45,9 @@
 		top: 15px;
 		right: 12px;
 		font-size: 42px;
+		@include respond-to-max(x-small) {
+			top: -25px;
+		}
 	}
 	
 	.global-navigation-header {
@@ -114,7 +118,9 @@
 		position: absolute;
 		top: 70px;
 	   	right: 0;
-
+		@include respond-to-max(x-small) {
+			top: 23px;
+		}
 	   	.dropdown-menu {
 	   		left: -103px;
   			border-radius: 1px;

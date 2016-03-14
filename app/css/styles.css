@@ -86,15 +86,20 @@ body {
       .globalNav .dove-logo {
         width: 108px; } }
   @media (max-width: 520px) {
-    .globalNav .block-logo img {
-      height: 99px;
-      margin-top: 27px;
-      width: 190px; } }
+    .globalNav {
+      height: 150px; }
+      .globalNav .block-logo img {
+        height: 99px;
+        margin-top: 27px;
+        width: 190px; } }
   .globalNav .social-media {
     position: absolute;
     top: 15px;
     right: 12px;
     font-size: 42px; }
+    @media (max-width: 520px) {
+      .globalNav .social-media {
+        top: -25px; } }
   .globalNav .global-navigation-header {
     position: relative;
     height: 140px;
@@ -137,6 +142,9 @@ body {
     position: absolute;
     top: 70px;
     right: 0; }
+    @media (max-width: 520px) {
+      .globalNav .btn-group {
+        top: 23px; } }
     .globalNav .btn-group .dropdown-menu {
       left: -103px;
       border-radius: 1px; }
@@ -205,6 +213,9 @@ body {
     @media (max-width: 767px) {
       .topic-grid .left-block {
         height: 400px; } }
+    @media (max-width: 520px) {
+      .topic-grid .left-block {
+        height: 485px; } }
     .topic-grid .left-block .header {
       font-size: 25px;
       font-weight: bold;
@@ -253,6 +264,9 @@ body {
           .topic-grid .left-block .top-box .content {
             line-height: 28px;
             font-size: 18px; } }
+        @media (max-width: 520px) {
+          .topic-grid .left-block .top-box .content {
+            font-size: 16px; } }
     .topic-grid .left-block .bottom-box {
       height: 50%;
       padding: 15px; }
@@ -269,6 +283,9 @@ body {
           .topic-grid .left-block .bottom-box .content {
             line-height: 28px;
             font-size: 18px; } }
+        @media (max-width: 520px) {
+          .topic-grid .left-block .bottom-box .content {
+            font-size: 16px; } }
   .topic-grid .right-block {
     height: 100%; }
     @media (max-width: 767px) {
@@ -386,6 +403,9 @@ body {
 
 .footer-section {
   height: 100px; }
+  @media (max-width: 520px) {
+    .footer-section {
+      height: 120px; } }
   .footer-section .row {
     background-color: #999999;
     height: 50%; }
@@ -414,6 +434,12 @@ body {
         color: white;
         font-size: 16px;
         margin-left: 10px; }
+        @media (max-width: 767px) {
+          .footer-section .row .info-Text .text {
+            text-align: center; } }
+    @media (max-width: 520px) {
+      .footer-section .row .trademark-display {
+        top: 37px; } }
     @media (max-width: 767px) {
       .footer-section .row .trademark-display {
         text-align: center; } }
@@ -440,16 +466,17 @@ body {
     font-size: 22px;
     padding-right: 15px;
     font-family: Arial; }
-    @media (max-width: 520px) {
-      .top-band .box-text {
-        top: 80%;
-        font-size: 33px; } }
     @media (max-width: 992px) {
       .top-band .box-text {
         top: 78%;
         text-align: center;
         width: 100%;
         font-size: 20px; } }
+    @media (max-width: 520px) {
+      .top-band .box-text {
+        top: 79%;
+        font-size: 15px;
+        line-height: 13px; } }
   .top-band .box-overlay {
     position: absolute;
     height: 120px;
@@ -464,10 +491,16 @@ body {
       .top-band .box-overlay {
         width: 100%;
         height: 80px; } }
+    @media (max-width: 520px) {
+      .top-band .box-overlay {
+        height: 50px; } }
 
 /*!bgImage.scss*/
 .bg-image {
   margin-top: 140px; }
+  @media (max-width: 520px) {
+    .bg-image {
+      margin-top: 150px; } }
   .bg-image img {
     width: 100%;
     height: auto;
@@ -565,12 +598,57 @@ body {
 
 .team-grid-component {
   margin-top: 140px; }
-  .team-grid-component .title {
+  .team-grid-component .meet-title {
     font-family: Verdana;
-    font-size: 32px; }
+    font-size: 32px;
+    padding-left: 0px; }
+    @media (max-width: 767px) {
+      .team-grid-component .meet-title {
+        padding-right: 0;
+        text-align: center; } }
+  .team-grid-component .description {
+    width: 70%; }
+    @media (max-width: 767px) {
+      .team-grid-component .description {
+        text-align: center;
+        width: 500px;
+        margin-left: 15%;
+        margin-right: 15%; } }
+    @media (max-width: 520px) {
+      .team-grid-component .description {
+        text-align: center;
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px; } }
   .team-grid-component .team .member-photo {
-    width: 100%;
-    height: 100%; }
+    width: 240px;
+    height: 325px; }
+    @media (max-width: 992px) {
+      .team-grid-component .team .member-photo {
+        width: 160px;
+        height: 220px; } }
+    @media (max-width: 767px) {
+      .team-grid-component .team .member-photo {
+        width: 325px;
+        height: 425px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block; } }
+  .team-grid-component .team .name {
+    font-weight: bold;
+    font-family: Arial; }
+    @media (max-width: 767px) {
+      .team-grid-component .team .name {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 10px; } }
+  .team-grid-component .team .about {
+    font-family: Arial; }
+    @media (max-width: 767px) {
+      .team-grid-component .team .about {
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 20px; } }
 
 /* !rightBlockModule.scss */
 .right-side {
@@ -578,9 +656,26 @@ body {
   .right-side .media-container {
     background-color: #DDDDDD;
     margin-top: 20px; }
+    @media (max-width: 520px) {
+      .right-side .media-container {
+        padding-top: 10px; } }
+    @media (max-width: 992px) {
+      .right-side .media-container {
+        width: 125px; } }
+    @media (max-width: 767px) {
+      .right-side .media-container {
+        width: 100%;
+        padding-top: 10px; } }
     .right-side .media-container .donate {
       width: auto;
-      margin-left: 20px; }
+      margin-left: 15px; }
+      @media (max-width: 520px) {
+        .right-side .media-container .donate {
+          margin-left: 0px;
+          position: relative; } }
+      @media (max-width: 767px) {
+        .right-side .media-container .donate {
+          margin-left: 0px; } }
       @media (max-width: 992px) {
         .right-side .media-container .donate {
           margin-left: 10px; } }
@@ -588,6 +683,19 @@ body {
         width: 100px;
         height: 100px;
         margin-top: 10px; }
+        @media (max-width: 520px) {
+          .right-side .media-container .donate .button-image {
+            margin-left: auto;
+            margin-right: auto;
+            display: block; } }
+        @media (max-width: 767px) {
+          .right-side .media-container .donate .button-image {
+            width: 200px;
+            height: 200px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px; } }
       .right-side .media-container .donate .button-text {
         position: absolute;
         top: 99px;
@@ -597,27 +705,83 @@ body {
         color: #F8BA00;
         font-size: 15px;
         text-transform: uppercase; }
+        @media (max-width: 520px) {
+          .right-side .media-container .donate .button-text {
+            top: 77px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            position: absolute; } }
+        @media (max-width: 767px) {
+          .right-side .media-container .donate .button-text {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            top: 171px;
+            left: 3px;
+            position: absolute;
+            font-size: 24px; } }
     .right-side .media-container .links {
       margin-left: 15px;
       margin-top: 10px; }
+      @media (max-width: 520px) {
+        .right-side .media-container .links {
+          margin-left: 0px;
+          /* margin-left: auto;
+  						margin-right: auto;
+    					width: 100%;
+    					position: absolute; */ }
+          .right-side .media-container .links .title {
+            text-align: center;
+            font-size: 15px; } }
+      @media (max-width: 767px) {
+        .right-side .media-container .links .title {
+          text-align: center;
+          font-size: 32px; } }
       @media (max-width: 992px) {
         .right-side .media-container .links {
           margin-left: 5px; } }
       .right-side .media-container .links .fa-facebook-official {
         color: #4965A0;
         width: 110px; }
+        @media (max-width: 520px) {
+          .right-side .media-container .links .fa-facebook-official .title {
+            font-size: 16px !important; } }
+        @media (max-width: 520px) {
+          .right-side .media-container .links .fa-facebook-official {
+            margin-left: auto;
+            height: 25px;
+            width: auto;
+            display: block;
+            margin-right: auto; } }
         .right-side .media-container .links .fa-facebook-official .text {
           color: black;
           margin-left: 5px;
           font-size: 11px; }
+          @media (max-width: 520px) {
+            .right-side .media-container .links .fa-facebook-official .text {
+              font-size: 14px; } }
       .right-side .media-container .links .fa-twitter {
         color: #57ADEA;
         width: 110px; }
+        @media (max-width: 520px) {
+          .right-side .media-container .links .fa-twitter {
+            margin-left: auto;
+            height: 25px;
+            width: auto;
+            display: block;
+            margin-right: auto; } }
         .right-side .media-container .links .fa-twitter .text {
           color: black;
           margin-left: 5px;
           font-size: 11px;
           padding-right: 47px; }
+          @media (max-width: 520px) {
+            .right-side .media-container .links .fa-twitter .text {
+              font-size: 14px;
+              padding-right: 0px; } }
     .right-side .media-container .care {
       margin-left: 10px;
       margin-right: 10px;
@@ -664,3 +828,21 @@ body {
   .donate-options .batch .option-image {
     width: 100%;
     height: 100%; }
+
+/* !teamMemberComponent.scss*/
+.team-member-component .other-member-title {
+  font-family: Verdana;
+  font-size: 32px; }
+
+.team-member-component .members {
+  margin-top: 20px;
+  font-family: Arial; }
+
+/* !ourFriends.scss */
+.our-friends .friends-title {
+  font-family: Verdana;
+  font-size: 32px; }
+
+.our-friends .friends {
+  margin-top: 20px;
+  font-family: Arial; }

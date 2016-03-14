@@ -16,6 +16,9 @@
 		@include respond-to-max(small) {
 			height: 400px;
 		}
+		@include respond-to-max(x-small) {
+			height: 485px;
+		}
 		/*<!---added above 3/7/16--->*/
 		.header {
 			font-size: 25px;
@@ -77,7 +80,9 @@
 				@include respond-to-max(small) {
 					line-height: 28px;
 					font-size: 18px;
-			
+				}
+				@include respond-to-max(x-small) {
+					font-size: 16px;
 				}
 				/*<!---added above 3/7/16--->*/
 			}
@@ -96,7 +101,9 @@
 				@include respond-to-max(small) {
 					line-height: 28px;
 					font-size: 18px;
-			
+				}
+				@include respond-to-max(x-small) {
+					font-size: 16px;
 				}
 				/*<!---added above 3/7/16--->*/
 			}
@@ -104,7 +111,7 @@
 	}
 	
 	.right-block {
-		height: 100%;//410px;
+		height: 100%;
 		
 		@include respond-to-max(small) {
 			height: 470px;

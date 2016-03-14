@@ -1,7 +1,9 @@
 /*!bgImage.scss*/
 .bg-image {
 	margin-top:140px;
-	
+	@include respond-to-max(x-small) {
+		margin-top: 150px;
+	}
         img {
         	width: 100%;
         	height: auto;

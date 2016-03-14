@@ -13,17 +13,18 @@
     	font-size: 22px;
     	padding-right: 15px;
     	font-family: Arial;
-    	
-    	@include respond-to-max(x-small) {
-			top: 80%;
-			font-size: 33px;
-		}
     	@include respond-to-max(mobile) {
 			top: 78%;
 			text-align: center;
 			width: 100%;
 			font-size: 20px;
 		}
+    	@include respond-to-max(x-small) {
+			top: 79%;
+			font-size: 15px;
+			line-height: 13px;
+		}
+    	
 		
    		
     }
@@ -43,5 +44,9 @@
 			height: 80px;
 	
 		}
+		@include respond-to-max(x-small) {
+			height: 50px;
+		}
+		
 	}
 }
