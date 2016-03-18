@@ -3,7 +3,7 @@
 		"overlay": "Your contribution has enabled us to build this clinic"
 	},
 	"bgImage": {
-		"image": "./images/sample5.jpg",
+		"image": "./images/monk_boys.jpg",
 		"alt": "image of clinic being constructed"
 	},
 	"midComponent": {

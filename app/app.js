@@ -5,6 +5,7 @@
 	var myApp = angular.module('myApp', [
 	  'ngRoute',
 	  'sn.skrollr',
+	  'ng.picturefill',
 	  'ngAnimate',
 	  'ui.bootstrap',
 	  'myApp.version'
