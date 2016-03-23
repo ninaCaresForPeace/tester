@@ -3,7 +3,28 @@
 		"overlay": "We are builders - we build clinics piece by piece - for peace"
 	},
 	"bgImage": {
-		"image": "./images/pink.jpg",
+		"images": [
+			{
+				"src": "./images/monk_boys.jpg"
+			},
+			{
+				"src" :"./images/monk_boys-320.jpg",
+				"media": "1px"
+			},
+			{
+				"src" :"./images/monk_boys-480.jpg",
+				"media": "645px"
+			},
+			{
+				"src" :"./images/monk_boys-768.jpg",
+				"media": "920px"
+			},
+			{
+				"src" :"./images/monk_boys-1920.jpg",
+				"media": "1200px"
+			}
+		
+		],
 		"alt": "image of clinic being constructed"
 	},
 	"midComponent": {
