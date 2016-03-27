@@ -5,22 +5,22 @@
 	"bgImage": {
 		"images": [
 			{
-				"src": "./images/monk_boys.jpg"
+				"src": "./images/monkPagoda.png"
 			},
 			{
-				"src" :"./images/monk_boys-320.jpg",
+				"src" :"./images/monkPagoda_480x320.png",
 				"media": "1px"
 			},
 			{
-				"src" :"./images/monk_boys-480.jpg",
+				"src" :"./images/monkPagoda_768x512.png",
 				"media": "645px"
 			},
 			{
-				"src" :"./images/monk_boys-768.jpg",
+				"src" :"./images/monkPagoda_920x613.png",
 				"media": "920px"
 			},
 			{
-				"src" :"./images/monk_boys-1920.jpg",
+				"src" :"./images/monkPagoda_1200x800.png",
 				"media": "1200px"
 			}
 		

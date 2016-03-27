@@ -22,8 +22,9 @@
 		var jsonFile = $route.current.$$route.json;
 		getJsonService.retrieveJson(jsonFile).then(function(response){ 
 			var data = response.data;
-			//$scope.bgImage = data.bgImage;
 			$scope.topBand = data.topBand;
+
+			var bgImage = data.bgImage;
 			
 			$scope.images = [];
 			for(var i = 0; i < bgImage.images.length; i++) {
@@ -33,6 +34,17 @@
 					$scope.images.push(bgImage.images[i]);
 				}
 			}
+//			//$scope.bgImage = data.bgImage;
+//			$scope.topBand = data.topBand;
+//			
+//			$scope.images = [];
+//			for(var i = 0; i < bgImage.images.length; i++) {
+//				if(i == 0){
+//					$scope.defImage = bgImage.images[i];
+//				}else {
+//					$scope.images.push(bgImage.images[i]);
+//				}
+//			}
 			
 			var midComponent = data.midComponent;
 			$scope.infoSection = midComponent.infoSection;

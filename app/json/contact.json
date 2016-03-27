@@ -1,0 +1,60 @@
+{
+	"topBand": {
+		"overlay": "Let us know what you think"
+	},
+	"bgImage": {
+		"images": [
+			{
+				"src": "./images/monk_boys.jpg"
+			},
+			{
+				"src" :"./images/monk_boys-320.jpg",
+				"media": "1px"
+			},
+			{
+				"src" :"./images/monk_boys-480.jpg",
+				"media": "645px"
+			},
+			{
+				"src" :"./images/mb_768x418.jpg",
+				"media": "920px"
+			},
+			{
+				"src" :"./images/mb_1920x814.jpg",
+				"media": "1200px"
+			}
+		
+		],
+		"alt": "image of clinic being constructed"
+	},
+	"contactTitle": "We want to hear from you",
+	"directions": "Please submit any questions, concerns, or general feedback in the space below along with your name and email address.",
+	"alternate": "You can also send an email to info@careforpeace.org, or call at 415.531.0295",
+	"company": "Care for Peace Public Charity",
+	"street": "610 Trumball Avenue",
+	"cityState": "Novato, CA 94947",
+	"rightBlock": {
+			"top": {
+				"text":"donate",
+				"image":"./images/donate.jpg",
+				"href":"",
+				"alt":""
+			},
+			"links": [
+				{ 
+					"title": "facebook",
+					"icon": "fa fa-facebook-official",
+					"text":"Like Facebook",
+					"href":""
+				},
+				{
+					"title": "twitter",
+					"icon": "fa fa-twitter",
+					"text":"follow",
+					"href":""
+				}
+			],
+			"care": "Care for Peace is a non profit organization founded in 2012.  We are dedicated to build healthy communities in Myanmar"
+			
+		}
+}
