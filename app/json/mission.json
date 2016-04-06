@@ -23,7 +23,11 @@
 			{
 				"src" :"./images/pinkPng_1200x800.png",
 				"media": "1200px"
-			}
+			},
+			{
+				"src" :"./images/pinkPng_1400x933.png",
+				"media": "1400px"
+				}
 		
 		],
 		"alt": "image of clinic being constructed"

@@ -16,6 +16,15 @@
 			$scope.grid = response.data.topicGrid.rightBlock;
 			
 		});
+//		debugger;
+//		//var SMTPConnection = require('smtp-connection');
+//		var connection = new SMTPConnection(options);
+//		var envelope = {
+//			form: "nina.dr16@gmail.com",	
+//			to: "nina.dr16@gmail.com"
+//		}; 
+//		var message = "testing";
+//		connection.send(envelope, message,callback);
 	}]);
 	//ourMissionController
 	app.controller("ourMissionController", ["$scope", "$route", "getJsonService", function ($scope, $route, getJsonService) {
@@ -138,6 +147,8 @@
 			//$scope.bgImage = data.bgImage;
 			$scope.topBand = data.topBand;
 			
+			var bgImage = data.bgImage;
+			
 			$scope.images = [];
 			for(var i = 0; i < bgImage.images.length; i++) {
 				if(i == 0){
@@ -157,14 +168,16 @@
 			$scope.care = rightBlock.care;
 		});
 	}]);
-	//donationController
-	app.controller("donationController", ["$scope", "$route", "getJsonService", function($scope, $route, getJsonService) {
+	//contactUsController
+	app.controller("contactUsController", ["$scope", "$http", "$route", "getJsonService", function($scope, $http, $route, getJsonService) {
 		var jsonFile = $route.current.$$route.json;
 		getJsonService.retrieveJson(jsonFile).then(function(response){ 
 			var data = response.data;
 			//$scope.bgImage = data.bgImage;
 			$scope.topBand = data.topBand;
-		
+			
+			var bgImage = data.bgImage;
+			
 			$scope.images = [];
 			for(var i = 0; i < bgImage.images.length; i++) {
 				if(i == 0){
@@ -173,6 +186,81 @@
 					$scope.images.push(bgImage.images[i]);
 				}
 			}
+			$scope.directions = data.directions;
+			$scope.alternate = data.alternate;
+			$scope.company = data.company;
+			$scope.street = data.street;
+			$scope.cityState = data.cityState;
+			
+//			<form ng-submit="submit()">
+//			  	<input type="text" ng-model="name" name="text" placeholder="Name"/>
+//			  	<input type="email" ng-model="email" name="email" placeholder="Email"/>
+//			  	<input type="text" ng-model="message" name="message" maxlength="500" placeholder="Message"/>
+//			  	<input type="submit" id="submit" value="Send" />
+//			</form>
+			
+			$scope.sendMail = function () {
+				data = ({
+					name : this.name,
+					email: this.email,
+					message: this.message
+				});
+				$http({
+				  method: 'POST',
+				  url: '/contactForm',
+				  data: data
+					  
+				}).then(function successCallback(response) {
+				    // this callback will be called asynchronously
+				    // when the response is available
+					console.log("Success in submission");
+				  }, function errorCallback(response) {
+				    // called asynchronously if an error occurs
+				    // or server returns response with an error status.
+					  console.log("there was an error in submission");
+				  });
+			}
+		      $scope.name = '';
+		      $scope.email = '';
+		     
+		      
+//			var midComponent = data.midComponent;
+//			$scope.infoSection = midComponent.infoSection;
+//			$scope.video = midComponent.video;
+//			$scope.image = midComponent.image;
+			var rightBlock = data.rightBlock;
+			$scope.top = rightBlock.top;
+			$scope.links = rightBlock.links;
+			$scope.care = rightBlock.care;
+		});
+	}]);
+	//donationController
+	app.controller("donationController", ["$scope", "$route", "getJsonService", function($scope, $route, getJsonService) {
+		var jsonFile = $route.current.$$route.json;
+		getJsonService.retrieveJson(jsonFile).then(function(response){ 
+			var data = response.data;
+			//$scope.bgImage = data.bgImage;
+			$scope.topBand = data.topBand;
+		
+			var bgImage = data.bgImage;
+			
+			$scope.images = [];
+			for(var i = 0; i < bgImage.images.length; i++) {
+				if(i == 0){
+					$scope.defImage = bgImage.images[i];
+				}else {
+					$scope.images.push(bgImage.images[i]);
+				}
+			}
+			
+//			$scope.images = [];
+//			for(var i = 0; i < bgImage.images.length; i++) {
+//				if(i == 0){
+//					$scope.defImage = bgImage.images[i];
+//				}else {
+//					$scope.images.push(bgImage.images[i]);
+//				}
+//			}
 			$scope.info = data.info;
 			$scope.message = data.donateOptions.message;
 			

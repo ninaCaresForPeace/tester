@@ -22,6 +22,10 @@
 			{
 				"src" :"./images/monkPagoda_1200x800.png",
 				"media": "1200px"
+			}, 
+			{
+				"src" :"./images/monkPagoda_1400x933.png",
+				"media": "1400px"
 			}
 		
 		],

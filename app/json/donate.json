@@ -3,7 +3,32 @@
 		"overlay": "We are operating solely on your donation"
 	},
 	"bgImage": {
-		"image": "./images/myanmarBoy23.jpg",
+		"images": [
+			{
+				"src": "./images/boy.png"
+			},
+			{
+				"src" :"./images/boy_480x320.png",
+				"media": "1px"
+			},
+			{
+				"src" :"./images/boy_768x512.png",
+				"media": "645px"
+			},
+			{
+				"src" :"./images/boy_920x613.png",
+				"media": "920px"
+			},
+			{
+				"src" :"./images/boy_1200x799.png",
+				"media": "1200px"
+			},
+			{
+				"src" :"./images/boy_1920x1279.png",
+				"media": "1400px"
+			}
+		
+		],
 		"alt": "image of boy in train car"
 	},
 	"info": "Like Theraveda Buddhist monks, we live by your contribution.  We build clinics, educate and support people with your donation.  Your generosity means a lot to us and the people in Myanmar.\r\nWe process your donation through the secure gateway of Paypal, worry-free.\r\nPlease help us support world health by clicking \"Donate\".",

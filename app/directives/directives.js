@@ -210,6 +210,12 @@
 			templateUrl: './templates/alternateOption.html'
 		}
 	});
+	app.directive("contactComponent", function () {
+		return {
+			restrict: 'E',
+			templateUrl: './templates/contactComponent.html'
+		}
+	});
 	app.directive("bgImage", function () {
 		return {
 			restrict: 'E',

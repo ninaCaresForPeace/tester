@@ -3,7 +3,33 @@
 		"overlay": "Myanmar is located between India, China, and Thailand"
 	},
 	"bgImage": {
-		"image": "./images/myanmarSunset.jpg",
+		"images": [
+			
+				{
+					"src": "./images/myanmarSunset.png"
+				},
+				{
+					"src" :"./images/myanmarSunset_480x320.png",
+					"media": "1px"
+				},
+				{
+					"src" :"./images/myanmarSunset_768x512.png",
+					"media": "645px"
+				},
+				{
+					"src" :"./images/myanmarSunset_920x613.png",
+					"media": "920px"
+				},
+				{
+					"src" :"./images/myanmarSunset_1200x799.png",
+					"media": "1200px"
+				},
+				{
+					"src" :"./images/myanmarSunset_1400x932.png",
+					"media": "1400px"
+				}
+			],
+		
 		"alt": "Pagodas at sunset"
 	},
 	"midComponent": {
