@@ -62,6 +62,12 @@
 			controller: 'contactUsController'
 			
 		}).
+		when("/blog", {
+			templateUrl: "Navigation/blogNow.html",
+			controller: 'blogController',
+			json: 'json/blogNow.json'
+
+		}).
 		when("/globalNav", {
 			templateUrl: "Navigation/bandedNavTemplate.html",
 			controller: 'bandedNavControl',

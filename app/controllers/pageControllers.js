@@ -302,6 +302,68 @@
 			$scope.care = rightBlock.care;
 		});
 	}]);
+	//donationController
+	app.controller("donationController", ["$scope", "$route", "getJsonService", function($scope, $route, getJsonService) {
+		var jsonFile = $route.current.$$route.json;
+		getJsonService.retrieveJson(jsonFile).then(function(response){ 
+			var data = response.data;
+			
+			var images = data.images;
+			$scope.posts = data.posts;
+			
+			$scope.images = [];
+			for(var i = 0; i < images.length; i++) {
+				if(i == 0){
+					$scope.defImage = bgImage.images[i];
+				}else {
+					$scope.images.push(bgImage.images[i]);
+				}
+			}
+			//Assume we have 4 images per actual image
+			//Total number of images would be divisible by 4
+			var totalNumImages = $scope.images.length / 4;
+			//totalNumImages mod 3 and below to get our batch size
+			$scope.imageBatches = [];
+//			$scope.images = [];
+//			for(var i = 0; i < bgImage.images.length; i++) {
+//				if(i == 0){
+//					$scope.defImage = bgImage.images[i];
+//				}else {
+//					$scope.images.push(bgImage.images[i]);
+//				}
+//			}
+			$scope.info = data.info;
+			$scope.message = data.donateOptions.message;
+			
+			var options = data.donateOptions.options;
+			var batchSize = 4;
+			var oSize = options.length;
+			$scope.batches = [];
+			var array = [];
+			for(var i = 0; i < oSize; i++) {
+				if(array.length === 4) {
+					$scope.batches.push(array);
+					array = [];
+					array.push(options[i]);
+					if(i === (oSize-1)){
+						$scope.batches.push(array);
+					}
+				}else {
+					array.push(options[i]);
+					if(i === (oSize-1)){
+						$scope.batches.push(array);
+					}
+				}
+			}
+		
+			
+			
+			var rightBlock = data.rightBlock;
+			$scope.top = rightBlock.top;
+			$scope.links = rightBlock.links;
+			$scope.care = rightBlock.care;
+		});
+	}]);
 })();
 
 ///COMMENT OUT 2/27

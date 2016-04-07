@@ -224,6 +224,22 @@
 			
 		}
 	});
+	app.directive("blogHeader", function () {
+		return {
+			restrict: 'E',
+			transclude: true,
+			templateUrl: './templates/blogHeader.html'
+			
+		}
+	});
+	app.directive("visualMedia", function () {
+		return {
+			restrict: 'E',
+			transclude: true,
+			templateUrl: './templates/visualMedia.html'
+			
+		}
+	});
 	
 })();
 
