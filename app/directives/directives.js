@@ -232,6 +232,14 @@
 			
 		}
 	});
+	app.directive("blogComponent", function () {
+		return {
+			restrict: 'E',
+			transclude: true,
+			templateUrl: './templates/blogComponent.html'
+			
+		}
+	});
 	app.directive("visualMedia", function () {
 		return {
 			restrict: 'E',

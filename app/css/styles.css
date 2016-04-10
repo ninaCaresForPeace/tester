@@ -846,3 +846,13 @@ body {
 .our-friends .friends {
   margin-top: 20px;
   font-family: Arial; }
+
+/*  !blogHeader.scss */
+.blog-header {
+  margin-top: 140px; }
+
+.blog-component .text-section {
+  white-space: pre-line;
+  font-size: 14px;
+  font-family: Arial;
+  line-height: 1.5; }

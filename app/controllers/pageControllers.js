@@ -302,62 +302,54 @@
 			$scope.care = rightBlock.care;
 		});
 	}]);
-	//donationController
-	app.controller("donationController", ["$scope", "$route", "getJsonService", function($scope, $route, getJsonService) {
+	//blogController
+	app.controller("blogController", ["$scope", "$route", "$window", "getJsonService", function($scope, $route, $window, getJsonService) {
 		var jsonFile = $route.current.$$route.json;
-		getJsonService.retrieveJson(jsonFile).then(function(response){ 
+		getJsonService.retrieveJson(jsonFile).then(function(response){
+
 			var data = response.data;
 			
 			var images = data.images;
-			$scope.posts = data.posts;
 			
+			$scope.TopTitle = data.blogTopMessage;
 			$scope.images = [];
-			for(var i = 0; i < images.length; i++) {
-				if(i == 0){
-					$scope.defImage = bgImage.images[i];
-				}else {
-					$scope.images.push(bgImage.images[i]);
-				}
+			//			
+			$scope.allPosts = data.posts;
+			var numPosts = $scope.allPosts.length;
+			//$scope.maxPerPage = 2;
+			$scope.totalItems = numPosts;//30;// Math.ceil($scope.numPosts/$scope.maxPerPage);
+			  
+			$scope.currentPage = 1;
+			$scope.numPerPage = 2;
+			
+			$scope.pages = [];
+			for(var p = 0; p < numPosts; p += 2){
+				var posts = [];
+				posts.push($scope.allPosts[p]);
+				posts.push($scope.allPosts[p+1]);
+				$scope.pages.push(posts);
+				
 			}
-			//Assume we have 4 images per actual image
-			//Total number of images would be divisible by 4
-			var totalNumImages = $scope.images.length / 4;
-			//totalNumImages mod 3 and below to get our batch size
-			$scope.imageBatches = [];
-//			$scope.images = [];
-//			for(var i = 0; i < bgImage.images.length; i++) {
-//				if(i == 0){
-//					$scope.defImage = bgImage.images[i];
-//				}else {
-//					$scope.images.push(bgImage.images[i]);
-//				}
-//			}
-			$scope.info = data.info;
-			$scope.message = data.donateOptions.message;
+			$scope.posts = $scope.pages[0];//$scope.allPosts;//$scope.pages[0];
+//		
+			//$scope.itemsPerPage =2;
 			
-			var options = data.donateOptions.options;
-			var batchSize = 4;
-			var oSize = options.length;
-			$scope.batches = [];
-			var array = [];
-			for(var i = 0; i < oSize; i++) {
-				if(array.length === 4) {
-					$scope.batches.push(array);
-					array = [];
-					array.push(options[i]);
-					if(i === (oSize-1)){
-						$scope.batches.push(array);
-					}
-				}else {
-					array.push(options[i]);
-					if(i === (oSize-1)){
-						$scope.batches.push(array);
-					}
-				}
-			}
-		
-			
-			
+			$scope.pageChanged = function() {
+				$scope.currentPage = this.currentPage;
+				//$scope.posts = $scope.pages[$scope.currentPage];
+			};
+			$scope.$watch('currentPage', function() {
+			//	debugger;
+//			    var begin = (($scope.currentPage - 1) * $scope.numPerPage)
+//			    , end = begin + $scope.numPerPage;
+				
+			    $scope.posts = $scope.pages[$scope.currentPage-1];//$scope.todos.slice(begin, end);
+			    $window.scrollTo(0, 0);
+			  });
+  			$scope.maxSize = 3;
+//			  $scope.bigTotalItems = 175;
+//			  $scope.bigCurrentPage = 1;
+//		
 			var rightBlock = data.rightBlock;
 			$scope.top = rightBlock.top;
 			$scope.links = rightBlock.links;

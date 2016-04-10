@@ -7,27 +7,31 @@
 			<h1 class="blog-title">{{post.blogTitle}}</h1>
 			<div class="date">{{post.date}}</div>
 			<div class="text-section">{{post.blogText}}</div>
+			
 			<!-- refactor to use directive for this portion, also on mid component also refactor the section for video -->
 			<!-- <visual-media></visual-media> -->
 			<div class="bottom-content">
-				<div ng-if="video.show =='true'" class="title">{{video.title}}</div>
+				<div ng-if="post.video.show =='true'" class="title">{{post.video.title}}</div>
 				<div class="video-container row">
 				<!-- 4:3 aspect ratio -->
 				<div class="col-sm-12">
 					<!--  do ngif between video and not video -->
-					<div ng-if="video.show =='true'" class="embed-responsive embed-responsive-16by9">
-	  					<iframe ng-if="video.show =='true'" class="embed-responsive-item" src="https://www.youtube.com/embed/jDXZwkyLuPg"></iframe>
+					<div ng-if="post.video.show =='true'" class="embed-responsive embed-responsive-16by9">
+	  					<iframe ng-if="post.video.show =='true'" class="embed-responsive-item" src="https://www.youtube.com/embed/jDXZwkyLuPg"></iframe>
 					</div>
 					<div ng-if="image.show =='true'" class="bottom-image">
-	  					<img class="" data-ng-src="{{image.src}}" alt="{{image.alt}}">
+	  					<img class="" data-ng-src="{{post.image.src}}" alt="{{post.image.alt}}">
 					</div>
 				</div>
+				
 	         
 				</div>
 			</div>
 		</div><!-- end ng-repeat -->
 		<!-- add pagination -->
-		</div>
+		<!--  uib-pagination boundary-links="true" total-items="5" ng-model="currentPage" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></uib-pagination-->
+	 <uib-pagination boundary-links="true" rotate="true" num-pages="numPages" total-items="allPosts.length" ng-model="currentPage" ng-change="pageChanged()" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;" max-size="3" items-per-page="2"></uib-pagination>
+   </div>
 	<right-block-module></right-block-module>
 	
 </div>

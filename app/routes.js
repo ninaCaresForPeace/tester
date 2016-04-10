@@ -63,7 +63,7 @@
 			
 		}).
 		when("/blog", {
-			templateUrl: "Navigation/blogNow.html",
+			templateUrl: "Views/blogNow.html",
 			controller: 'blogController',
 			json: 'json/blogNow.json'
 
