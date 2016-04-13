@@ -6,6 +6,7 @@
 			"date":"November 28, 2015",
 			"blogText":"Our first mini medical center was successfully built in a rural village of Taung Yin, Kyauk Phyu.\r\nEach mini medical healthcare system will provide 90% of health and medical needs so that patients can have the care they need right in their own village.\r\nThe center also offers preventive health programs, that include health screening, immunization and chronic disease management, contraception, active aging among others.\r\nWe also have mother and child health programs, illness and injury programs, dental care programs, and basic lab and radiologic services available.\r\nWithout your support, we couldn't have achieved this.  Please help by clicking \"Donate\".",
 			"video": {
+				"url": "https://www.youtube.com/embed/jDXZwkyLuPg",
 				"show": "true",
 				"title":"Check our video of a medical center being built in Taung Yin"
 			},
@@ -18,6 +19,7 @@
 			"date":"November 03, 2015",
 			"blogText":"Mark your calendar for January 31.\r\nHave you ever been able to say \"I was there...\" precisely when and where history is being made?  Better: Have you been able to say \"...and I helped start something grand\" before others even heard about it?  Now you can!\r\nYour donation over the last three years have helped Care for Peace start something Grand!\r\nMark your calendars: Please join uson Sunday, January 17th @ 6:00 pm when Care for Peace(C4P) at Shwe Myanmar Restaurant will hold our second fundraiser to hear major updates on our progress in helping Myanmar build a model for rural health care.\r\nThe event: Hear exciting news from Dr.Donald P.K. Chan, C4P Board member and Jeff Hardy, C4P Founder who will have returned from their December/January trip to Myanmar where they will be \"sealing the deal\" with high-level philanthropists who have already expressed their interest in the now-proven Care for Peace mission to serve the critical health needs of the under-served villagers who live in rural Myanmar.\r\nWe will be sending out a formal invitation in December, but feel free to pass this SAVE THE DATE Email to others you believe would be interested in attending.  We are already accepting attendee registrants because the last fundraiser in April was sold out two weeks before the event, so let us know ASAP if you would like us hold seats for you and your friends.\r\nPlease know that your support over the past three years has been invaluable.  Your ongoing contributions allow us to continue.",
 			"video": {
+				"url": "https://www.youtube.com/embed/jDXZwkyLuPg",
 				"show": "true",
 				"title":"Check our video of a medical center being built in Taung Yin"
 			},
@@ -211,7 +213,7 @@
 		"top": {
 			"text":"donate",
 			"image":"./images/donate.jpg",
-			"href":"",
+			"href": "#donate",
 			"alt":""
 		},
 		"links": [
@@ -219,13 +221,13 @@
 				"title": "facebook",
 				"icon": "fa fa-facebook-official",
 				"text":"Like Facebook",
-				"href":""
+				"href":"https://www.facebook.com/CareForPeace"
 			},
 			{
 				"title": "twitter",
 				"icon": "fa fa-twitter",
 				"text":"follow",
-				"href":""
+				"href":"https://twitter.com/Care4peace"
 			}
 		],
 		"care": "Care for Peace is a non profit organization founded in 2012.  We are dedicated to build healthy communities in Myanmar"

@@ -65,7 +65,15 @@
   <script src="bower_components/angular-skrollr/dist/angular-skrollr.js"></script>
   <script src="http://tinacious.github.io/angular-picturefill/bower_components/picturefill/picturefill.js"></script>
   <script src="bower_components/angular-picturefill/angular-picturefill.js"></script>
-  
+ <script>
+ var onresize = function() 
+ {
+   var width = window.innerWidth
+   || document.documentElement.clientWidth
+   || document.body.clientWidth;
+   console.log(width);
+ }
+ </script> 
   
 </div>  
 <div footer-section></div>

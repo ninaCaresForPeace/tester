@@ -11,10 +11,12 @@
 			
 			@include respond-to-max(mobile) {
 				width: 125px;
+				margin-left: -22px;
 			}
 			@include respond-to-max(small) {
 				width: 100%;
     			padding-top: 10px;
+    			margin-left: 0;
 			}
 			.donate {
 				width:auto;
@@ -118,6 +120,12 @@
 					    margin-right: auto;
 					    
 					}
+					@include respond-to-max(small) {
+						margin-right: auto;
+					    display: block;
+					    margin-left: auto;
+
+					}
 					.text {
 						color: black;
 						margin-left:5px;
@@ -137,6 +145,12 @@
 					    width: auto;
 					    display: block;
 					    margin-right: auto;
+					}
+					@include respond-to-max(small) {
+						margin-right: auto;
+					    display: block;
+					    margin-left: auto;
+
 					}
 					.text {
 						color: black;

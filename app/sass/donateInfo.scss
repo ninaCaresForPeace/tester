@@ -1,6 +1,7 @@
 .donate-info {
 	position: relative;
 	.text-section {
+		white-space: pre-line;
 		background-color: white;
 		height: 400px;
 		font-family: Arial;
@@ -17,20 +18,23 @@
     	bottom: 0;
         margin-right: 25%;
     	margin-left: 25%;
+    	
 	}
 	.donate-button {
-		height:45px; 
-		width:175px;
+		height:75px; 
+		width:250px;
 		background-color:$donateBlue;
 		font-family: Arial;
+		font-size: 20px;
 		color: white;
 		border-color: transparent;
-		position: absolute;
-	    top: 0;
-	    bottom: 0;
-	    left: 0;
-	    right: 0;
 	    margin: auto;
+	    margin-left: auto;
+    	display: block;
+    	margin-right: auto;
+    	@include respond-to-max(x-small) {
+			 margin-top: 80px;
+		}
 	}
 
-}    
+}       

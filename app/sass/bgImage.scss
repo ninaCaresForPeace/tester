@@ -1,6 +1,7 @@
 /*!bgImage.scss*/
 .bg-image {
-	margin-top:140px;
+	margin-top: 140px;
+	padding-right: 10px;
 	@include respond-to-max(x-small) {
 		margin-top: 150px;
 	}

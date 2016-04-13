@@ -17,7 +17,8 @@
 				<div class="col-sm-12">
 					<!--  do ngif between video and not video -->
 					<div ng-if="post.video.show =='true'" class="embed-responsive embed-responsive-16by9">
-	  					<iframe ng-if="post.video.show =='true'" class="embed-responsive-item" src="https://www.youtube.com/embed/jDXZwkyLuPg"></iframe>
+					<!-- <iframe ng-if="post.video.show =='true'" class="embed-responsive-item" src="https://www.youtube.com/embed/jDXZwkyLuPg"></iframe> -->
+						<iframe ng-if="post.video.show =='true'" class="embed-responsive-item" src="{{post.video.url | trustUrl}}"></iframe>
 					</div>
 					<div ng-if="image.show =='true'" class="bottom-image">
 	  					<img class="" data-ng-src="{{post.image.src}}" alt="{{post.image.alt}}">

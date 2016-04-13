@@ -1,10 +1,26 @@
+/*!donateOptions.scss*/
 .donate-options {
-	margin-top:140px;
-	
+	margin-top:110px;
+	@include respond-to-max(x-small) {
+			margin-top: 80px;
+	}
+	.message {
+		    font-family: Arial;
+    		font-size: 20px;
+    		margin-bottom: 30px;
+    		text-align: center;
+	}
 	.batch {
 		.option-image {
 			width: 100%;
     		height: 100%;
+		}
+		.option-grid {
+			.amount {
+				font-family: Arial;
+				font-size: 16px;
+				text-align: center;
+			}
 		}
 	}
 }

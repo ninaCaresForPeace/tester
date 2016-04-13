@@ -47,7 +47,7 @@
 			"top": {
 				"text":"donate",
 				"image":"./images/donate.jpg",
-				"href":"",
+				"href": "#donate",
 				"alt":""
 			},
 			"links": [

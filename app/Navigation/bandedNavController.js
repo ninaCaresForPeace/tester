@@ -11,7 +11,9 @@
 
 	}]);
 })();
-
+//Twitter:  I think it’s https://twitter.com/Care4peace
+//
+//	Facebook: https://www.facebook.com/CareForPeace/
 //COMMENT OUT 2/27
 //angular.module('myApp') 
 //.controller('bandedNavControl',['$scope', '$route', 'getJsonService', function ( $scope, $route, getJsonService) {

@@ -1,40 +1,19 @@
-<div class="contact-component">
-	<div class="contact-title">{{title}}</div>
-	<div class="directions">{{directions}}</div>
-	<form name="contactForm" data-ng-submit="sendMail()">
-	  	<input type="text" ng-model="name" name="text" placeholder="Name"/>
-	  	<input type="email" ng-model="email" name="email" placeholder="Email" ng-required/>
-	  	<input type="text" ng-model="message" name="message" maxlength="500" placeholder="Message"/>
-	  	<input type="submit" id="submit" value="Send" />
-	</form>
-	<div class="alternate">{{alternate}}</div>
-	<div class="physical">
-		<div class="company">{{company}}</div>
-		<div class="street">{{street}}</div>
-		<div class="cityState">{{cityState}}</div>
+<div class="contact-component row">
+	<div class="left-side col-sm-10">
+		<div class="contact-title">{{title}}</div>
+		<div class="directions">{{directions}}</div>
+		<form name="contactForm" data-ng-submit="sendMail()">
+		  	<input type="text" ng-model="name" name="text" placeholder="Name"/>
+		  	<input type="email" ng-model="email" name="email" placeholder="Email" ng-required/>
+		  	<input type="text" ng-model="message" name="message" maxlength="500" placeholder="Message"/>
+		  	<input type="submit" id="submit" value="Send" />
+		</form>
+		<div class="alternate">{{alternate}}</div>
+		<div class="physical">
+			<div class="company">{{company}}</div>
+			<div class="street">{{street}}</div>
+			<div class="cityState">{{cityState}}</div>
+		</div>
 	</div>
+	<right-block-module></right-block-module>
 </div>
-
-<!-- <script>
-  angular.module('submitExample', [])
-    .controller('ExampleController', ['$scope', function($scope) {
-      $scope.list = [];
-      $scope.text = 'hello';
-      $scope.submit = function() {
-        if ($scope.text) {
-          $scope.list.push(this.text);
-          $scope.text = '';
-        }
-      };
-    }]);
-</script>
-<form ng-submit="submit()" ng-controller="ExampleController">
-  Enter text and hit enter:
-  <input type="text" ng-model="text" name="text" />
-  <input type="submit" id="submit" value="Submit" />
-  <pre>list={{list}}</pre>
-</form>
-
-"company": "Care for Peace Public Charity",
-	"street": "610 Trumball Avenue",
-	"cityState" -->

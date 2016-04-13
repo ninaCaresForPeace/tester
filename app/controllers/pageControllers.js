@@ -223,11 +223,6 @@
 		      $scope.name = '';
 		      $scope.email = '';
 		     
-		      
-//			var midComponent = data.midComponent;
-//			$scope.infoSection = midComponent.infoSection;
-//			$scope.video = midComponent.video;
-//			$scope.image = midComponent.image;
 			var rightBlock = data.rightBlock;
 			$scope.top = rightBlock.top;
 			$scope.links = rightBlock.links;
@@ -239,7 +234,7 @@
 		var jsonFile = $route.current.$$route.json;
 		getJsonService.retrieveJson(jsonFile).then(function(response){ 
 			var data = response.data;
-			//$scope.bgImage = data.bgImage;
+			
 			$scope.topBand = data.topBand;
 		
 			var bgImage = data.bgImage;
@@ -253,14 +248,7 @@
 				}
 			}
 			
-//			$scope.images = [];
-//			for(var i = 0; i < bgImage.images.length; i++) {
-//				if(i == 0){
-//					$scope.defImage = bgImage.images[i];
-//				}else {
-//					$scope.images.push(bgImage.images[i]);
-//				}
-//			}
+
 			$scope.info = data.info;
 			$scope.message = data.donateOptions.message;
 			
@@ -285,6 +273,7 @@
 				}
 			}
 			var alternate = data.alternateOption;
+			$scope.alternateMessage = alternate.alternateMessage;
 			$scope.company = alternate.company;
 			var streetNo = alternate.streetNo;
 			var streetName = alternate.streetName;
@@ -312,12 +301,10 @@
 			var images = data.images;
 			
 			$scope.TopTitle = data.blogTopMessage;
-			$scope.images = [];
-			//			
+			$scope.images = [];			
 			$scope.allPosts = data.posts;
 			var numPosts = $scope.allPosts.length;
-			//$scope.maxPerPage = 2;
-			$scope.totalItems = numPosts;//30;// Math.ceil($scope.numPosts/$scope.maxPerPage);
+			$scope.totalItems = numPosts;
 			  
 			$scope.currentPage = 1;
 			$scope.numPerPage = 2;
@@ -330,26 +317,17 @@
 				$scope.pages.push(posts);
 				
 			}
-			$scope.posts = $scope.pages[0];//$scope.allPosts;//$scope.pages[0];
-//		
-			//$scope.itemsPerPage =2;
+			$scope.posts = $scope.pages[0];
+
 			
 			$scope.pageChanged = function() {
 				$scope.currentPage = this.currentPage;
-				//$scope.posts = $scope.pages[$scope.currentPage];
 			};
 			$scope.$watch('currentPage', function() {
-			//	debugger;
-//			    var begin = (($scope.currentPage - 1) * $scope.numPerPage)
-//			    , end = begin + $scope.numPerPage;
-				
-			    $scope.posts = $scope.pages[$scope.currentPage-1];//$scope.todos.slice(begin, end);
+			    $scope.posts = $scope.pages[$scope.currentPage-1];
 			    $window.scrollTo(0, 0);
 			  });
   			$scope.maxSize = 3;
-//			  $scope.bigTotalItems = 175;
-//			  $scope.bigCurrentPage = 1;
-//		
 			var rightBlock = data.rightBlock;
 			$scope.top = rightBlock.top;
 			$scope.links = rightBlock.links;

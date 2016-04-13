@@ -31,13 +31,13 @@
 		],
 		"alt": "image of boy in train car"
 	},
-	"info": "Like Theraveda Buddhist monks, we live by your contribution.  We build clinics, educate and support people with your donation.  Your generosity means a lot to us and the people in Myanmar.\r\nWe process your donation through the secure gateway of Paypal, worry-free.\r\nPlease help us support world health by clicking \"Donate\".",
+	"info": "Like Theraveda Buddhist monks, we live by your contribution.  We build clinics, educate and support people with your donation.  Your generosity means a lot to us and the people in Myanmar.\r\n\r\nWe process your donation through the secure gateway of Paypal, worry-free.\r\n\r\nPlease help us support world health by clicking \"Donate\".",
 	"donateOptions": {
 		"message": "If you wish to receive \"Thank You\" gifts from us, please click below.",
 		"options":[
 			{
 				"amount": "$50 Donation",
-				"image": "./images/leafbasket.jpg",
+				"image": "./images/leafbasket_480x320.jpg",
 				"alt": "PayPal - The safer, easier way to pay online!",
 				"value": "35QK6VLNSNDCW",
 				"action": "https://www.paypal.com/cgi-bin/webscr",
@@ -45,7 +45,7 @@
 			},
 			{
 				"amount": "$100 Donation",
-				"image": "./images/buddhistgirls.jpg",
+				"image": "./images/buddhistgirls_480x320.jpg",
 				"alt": "PayPal - The safer, easier way to pay online!",
 				"value": "Q66LUH46HND7E",
 				"action": "https://www.paypal.com/cgi-bin/webscr",
@@ -53,7 +53,7 @@
 			},
 			{
 				"amount": "$300 Donation",
-				"image": "./images/foodCarriedOnHead.jpg",
+				"image": "./images/foodCarriedOnHead_480x320.jpg",
 				"alt": "PayPal - The safer, easier way to pay online!",
 				"value": "ZDST2M3JXQRW6",
 				"action": "https://www.paypal.com/cgi-bin/webscr",
@@ -61,7 +61,7 @@
 			},
 			{
 				"amount": "$500 Donation",
-				"image": "./images/train2.jpg",
+				"image": "./images/train2_480x320.jpg",
 				"alt": "PayPal - The safer, easier way to pay online!",
 				"value": "P82EFCSW5YZE6",
 				"action": "https://www.paypal.com/cgi-bin/webscr",
@@ -69,7 +69,7 @@
 			},
 			{
 				"amount": "$800 Donation",
-				"image": "./images/authenticFood.jpg",
+				"image": "./images/authenticFood_480x320.jpg",
 				"alt": "PayPal - The safer, easier way to pay online!",
 				"value": "F7YMX3B6WB5BC",
 				"action": "https://www.paypal.com/cgi-bin/webscr",
@@ -77,7 +77,7 @@
 			},
 			{
 				"amount": "$1000 Donation",
-				"image": "./images/twoBuddhistGirls.jpg",
+				"image": "./images/twoBuddhistGirls_480x320.jpg",
 				"alt": "PayPal - The safer, easier way to pay online!",
 				"value": "BYFKQ83LC6FY6",
 				"action": "https://www.paypal.com/cgi-bin/webscr",
@@ -85,7 +85,7 @@
 			},
 			{
 				"amount": "$3000 Donation",
-				"image": "./images/train1.jpg",
+				"image": "./images/train1_480x320.jpg",
 				"alt": "PayPal - The safer, easier way to pay online!",
 				"value": "UJDMCNZ4LRR38",
 				"action": "https://www.paypal.com/cgi-bin/webscr",
@@ -93,7 +93,7 @@
 			},
 			{
 				"amount": "$5000 Donation",
-				"image": "./images/womenAndChildren.jpg",
+				"image": "./images/womenAndChildren_480x320.jpg",
 				"alt": "PayPal - The safer, easier way to pay online!",
 				"value": "AV5JBQQT564A8",
 				"action": "https://www.paypal.com/cgi-bin/webscr",
@@ -102,7 +102,7 @@
 		]
 	},
 	"alternateOption": {
-		"message": "If you would like to send a check or money order by mail, please make it payable to:",
+		"alternateMessage": "If you would like to send a check or money order by mail, please make it payable to:",
 		"company": "Care for Peace Public Charity",
 		"streetNo": "610",
 		"streetName": "Trumbull Avenue",
@@ -115,7 +115,7 @@
 			"top": {
 				"text":"donate",
 				"image":"./images/donate.jpg",
-				"href":"",
+				"href": "#donate",
 				"alt":""
 			},
 			"links": [
