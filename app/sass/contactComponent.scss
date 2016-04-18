@@ -1,5 +1,23 @@
 /*!contactComponent.scss*/
 .contact-component {
+	.left-side {
+	    background-color: white;
+    	height: 500px;
+	}
+	.tempDirections {
+	    text-align: center;
+	    font-family: Arial;
+	    font-size: 20px;
+	    margin-bottom: 30px;
+	}
+	.emailLink {
+		text-align: center;
+	    font-family: Arial;
+	    font-size: 20px;
+	    margin-bottom: 30px;
+	    display: block;
+	    text-decoration: underline;
+	}
 	.alternate {
 		text-align: center;
 		font-family: Arial;

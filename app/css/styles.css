@@ -901,6 +901,24 @@ body {
   line-height: 1.5; }
 
 /*!contactComponent.scss*/
+.contact-component .left-side {
+  background-color: white;
+  height: 500px; }
+
+.contact-component .tempDirections {
+  text-align: center;
+  font-family: Arial;
+  font-size: 20px;
+  margin-bottom: 30px; }
+
+.contact-component .emailLink {
+  text-align: center;
+  font-family: Arial;
+  font-size: 20px;
+  margin-bottom: 30px;
+  display: block;
+  text-decoration: underline; }
+
 .contact-component .alternate {
   text-align: center;
   font-family: Arial;

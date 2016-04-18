@@ -191,6 +191,7 @@
 			$scope.company = data.company;
 			$scope.street = data.street;
 			$scope.cityState = data.cityState;
+			$scope.tempDirections = data.tempDirections;
 			
 //			<form ng-submit="submit()">
 //			  	<input type="text" ng-model="name" name="text" placeholder="Name"/>

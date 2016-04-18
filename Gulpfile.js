@@ -4,6 +4,13 @@
 	var gulp 		= require('gulp');
 	var sass 		= require('gulp-sass');
 	var concatCss 	= require('gulp-concat-css');
+	var uglify 		= require('gulp-uglify');
+	 
+	gulp.task('compress', function() {
+	  return gulp.src('lib/*.js')
+	    .pipe(uglify())
+	    .pipe(gulp.dest('app/dist'));
+	});
 
 	//Watch task - check for changes in scss files
 	gulp.task('styles', function() {
