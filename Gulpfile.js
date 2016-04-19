@@ -8,7 +8,8 @@
 	var rename 		= require('gulp-rename');
 	var concat 		= require('gulp-concat');
 	var streamqueue  = require('streamqueue');
-	
+	//var template = require('gulp-template-compile');
+	//var obfuscate 	= require('gulp-obfuscate');
 	var jsDest = 'app/dist/scripts';
 	
 	//concatenate js scripts to one file, rename file to min and then
@@ -29,10 +30,16 @@
 		.pipe(concat('scripts.js'))
 		.pipe(gulp.dest(jsDest))
 		.pipe(rename('scripts.min.js'))
-		.pipe(uglify())
+		.pipe(uglify({mangle: true}))
 		.pipe(gulp.dest(jsDest));
+		
 	});
-	
+//	gulp.task('templates', function () {
+//		gulp.src('app/templates/**/*.html')
+//			.pipe(template())
+//			.pipe(concat('templates.js'))
+//			.pipe(gulp.dest('dist/html/'));
+//	});
 
 	//Watch task - check for changes in scss files
 	gulp.task('styles', function() {

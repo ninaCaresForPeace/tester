@@ -1,7 +1,7 @@
 /* !rightBlockModule.scss */
 .right-side {
 		background-color:white;
-
+	height: 380px;
 		.media-container {
 			background-color: $ltGry2;
 			margin-top: 20px;
@@ -107,6 +107,12 @@
 				.fa-facebook-official {
 					color: $facebookBlue;
 					width: 110px;
+					/******Added for A tag below*********/
+					    background-color: #FFFFFF;
+					    border-radius: 3px;
+					    padding-left: 2px;
+					    border: 2px outset #FFFFFF;
+					/******Added for A tag above********/
 					.title {
 						@include respond-to-max(x-small) {
 							font-size: 16px !important;
@@ -118,20 +124,29 @@
 					    width: auto;
 					    display: block;
 					    margin-right: auto;
+					   /******Added for A tag below*********/
+					    width: 141px;
+					    /******Added for A tag above********/
 					    
 					}
 					@include respond-to-max(small) {
 						margin-right: auto;
 					    display: block;
 					    margin-left: auto;
+					   /******Added for A tag below*********/
+					    width: 135px;
+					    /******Added for A tag above********/
 
 					}
 					.text {
 						color: black;
 						margin-left:5px;
-						font-size: 11px;
+						font-size: 13px;
 						@include respond-to-max(x-small) {
-							font-size: 14px;
+							font-size: 25px;
+						}
+						@include respond-to-max(small) {
+							font-size: 17px;
 						}
 						
 					}
@@ -139,27 +154,42 @@
 				.fa-twitter {
 					color: $twitterBlue; 
 					width: 110px;
+					/******Added for A tag below*********/
+					    background-color: #FFFFFF;
+					    border-radius: 3px;
+					    padding-left: 2px;
+					    border: 2px outset #FFFFFF;
+					/******Added for A tag above********/
 					@include respond-to-max(x-small) {
 						margin-left: auto;
 						height: 25px;
 					    width: auto;
 					    display: block;
 					    margin-right: auto;
+					    /******Added for A tag below*********/
+					    width: 141px;
+					    /******Added for A tag above********/
 					}
 					@include respond-to-max(small) {
 						margin-right: auto;
 					    display: block;
 					    margin-left: auto;
+					     /******Added for A tag below*********/
+					    width: 135px;
+					    /******Added for A tag above********/
 
 					}
 					.text {
 						color: black;
 						margin-left:5px;
-						font-size: 11px;
+						font-size: 13px;
 						padding-right: 47px;
 						@include respond-to-max(x-small) {
 							font-size: 14px;
 							padding-right: 0px;
+						}
+						@include respond-to-max(small) {
+							font-size: 17px;
 						}
 					}
 				}

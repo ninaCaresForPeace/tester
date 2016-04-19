@@ -55,13 +55,13 @@
 					"title": "facebook",
 					"icon": "fa fa-facebook-official",
 					"text":"Like Facebook",
-					"href":""
+					"href":"https://www.facebook.com/CareForPeace"
 				},
 				{
 					"title": "twitter",
 					"icon": "fa fa-twitter",
 					"text":"follow",
-					"href":""
+					"href":"https://twitter.com/Care4peace"
 				}
 			],
 			"care": "Care for Peace is a non profit organization founded in 2012.  We are dedicated to build healthy communities in Myanmar"

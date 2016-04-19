@@ -653,7 +653,8 @@ body {
 
 /* !rightBlockModule.scss */
 .right-side {
-  background-color: white; }
+  background-color: white;
+  height: 380px; }
   .right-side .media-container {
     background-color: #DDDDDD;
     margin-top: 20px; }
@@ -748,7 +749,13 @@ body {
           margin-left: 5px; } }
       .right-side .media-container .links .fa-facebook-official {
         color: #4965A0;
-        width: 110px; }
+        width: 110px;
+        /******Added for A tag below*********/
+        background-color: #FFFFFF;
+        border-radius: 3px;
+        padding-left: 2px;
+        border: 2px outset #FFFFFF;
+        /******Added for A tag above********/ }
         @media (max-width: 520px) {
           .right-side .media-container .links .fa-facebook-official .title {
             font-size: 16px !important; } }
@@ -758,43 +765,67 @@ body {
             height: 25px;
             width: auto;
             display: block;
-            margin-right: auto; } }
+            margin-right: auto;
+            /******Added for A tag below*********/
+            width: 141px;
+            /******Added for A tag above********/ } }
         @media (max-width: 767px) {
           .right-side .media-container .links .fa-facebook-official {
             margin-right: auto;
             display: block;
-            margin-left: auto; } }
+            margin-left: auto;
+            /******Added for A tag below*********/
+            width: 135px;
+            /******Added for A tag above********/ } }
         .right-side .media-container .links .fa-facebook-official .text {
           color: black;
           margin-left: 5px;
-          font-size: 11px; }
+          font-size: 13px; }
           @media (max-width: 520px) {
             .right-side .media-container .links .fa-facebook-official .text {
-              font-size: 14px; } }
+              font-size: 25px; } }
+          @media (max-width: 767px) {
+            .right-side .media-container .links .fa-facebook-official .text {
+              font-size: 17px; } }
       .right-side .media-container .links .fa-twitter {
         color: #57ADEA;
-        width: 110px; }
+        width: 110px;
+        /******Added for A tag below*********/
+        background-color: #FFFFFF;
+        border-radius: 3px;
+        padding-left: 2px;
+        border: 2px outset #FFFFFF;
+        /******Added for A tag above********/ }
         @media (max-width: 520px) {
           .right-side .media-container .links .fa-twitter {
             margin-left: auto;
             height: 25px;
             width: auto;
             display: block;
-            margin-right: auto; } }
+            margin-right: auto;
+            /******Added for A tag below*********/
+            width: 141px;
+            /******Added for A tag above********/ } }
         @media (max-width: 767px) {
           .right-side .media-container .links .fa-twitter {
             margin-right: auto;
             display: block;
-            margin-left: auto; } }
+            margin-left: auto;
+            /******Added for A tag below*********/
+            width: 135px;
+            /******Added for A tag above********/ } }
         .right-side .media-container .links .fa-twitter .text {
           color: black;
           margin-left: 5px;
-          font-size: 11px;
+          font-size: 13px;
           padding-right: 47px; }
           @media (max-width: 520px) {
             .right-side .media-container .links .fa-twitter .text {
               font-size: 14px;
               padding-right: 0px; } }
+          @media (max-width: 767px) {
+            .right-side .media-container .links .fa-twitter .text {
+              font-size: 17px; } }
     .right-side .media-container .care {
       margin-left: 10px;
       margin-right: 10px;
