@@ -5,18 +5,41 @@
 	var sass 		= require('gulp-sass');
 	var concatCss 	= require('gulp-concat-css');
 	var uglify 		= require('gulp-uglify');
-	 
-	gulp.task('compress', function() {
-	  return gulp.src('lib/*.js')
-	    .pipe(uglify())
-	    .pipe(gulp.dest('app/dist'));
+	var rename 		= require('gulp-rename');
+	var concat 		= require('gulp-concat');
+	var streamqueue  = require('streamqueue');
+	
+	var jsDest = 'app/dist/scripts';
+	
+	//concatenate js scripts to one file, rename file to min and then
+	//further reduce size by removing whitespace and cpmments
+	//TODO: ADD IN THE GULP-CONCAT AND DOUBLE CHECK TO SEE IF THESE FILES HAVE 
+	//HAD THE VARIABLES CHANGED TO UN-MEANINGFUL VAR NAMES...THEN COMBINE THESE WITH
+	//THE THIRD PART JAVASCRIPT FILES
+	//Watch task - combines and reduces JS files to one and reduces size to aid in performance
+	gulp.task('scripts', function() {
+		//return gulp.src(jsFiles)
+		return streamqueue({ objectMode: true },
+		        gulp.src('app/js/routes.js'),
+		        gulp.src('app/js/appFactories.js'),
+		        gulp.src('app/js/pageControllers.js'),
+		        gulp.src('app/js/bandedNavController.js'),
+		        gulp.src('app/js/directives.js')
+		    )
+		.pipe(concat('scripts.js'))
+		.pipe(gulp.dest(jsDest))
+		.pipe(rename('scripts.min.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest(jsDest));
 	});
+	
 
 	//Watch task - check for changes in scss files
 	gulp.task('styles', function() {
 		gulp.src('app/styles/**/*.scss')
 	        .pipe(sass().on('error', sass.logError))
-	       .pipe(gulp.dest('app/css/'));
+	      // .pipe(gulp.dest('app/css/'));app/dist/scripts
+	        .pipe(gulp.dest('app/dist/css/'));
 	});
 
 	//Watch task - check for changes in scss files continuously
