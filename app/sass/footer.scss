@@ -1,9 +1,13 @@
-
+/*!footer.scss*/
 .footer-section {
 	height: 100px;
 	@include respond-to-max(x-small) {
 		height: 120px;
 	}
+	@include respond-to-max(small) {
+		margin-top: 146px;
+	}
+		
 	.row {
 		background-color: $drkGry2;
 		height: 50%;
@@ -48,10 +52,11 @@
 		}
 		.trademark-display  {
 			@include respond-to-max(x-small) {
-				top: 37px;
+				top: 17px;
 			}
 			@include respond-to-max(small) {
 				text-align: center;
+				margin-top:15px;
 			}
 			.glyphicon-copyright-mark{
 				margin-left: 10px;

@@ -63,13 +63,7 @@ body {
   right: 0;
   margin-bottom: 20px;
   height: 140px;
-  background-color: white;
-  /* .nav-tabs > li.active > a,
-	.nav-tabs > li.active > a:hover,
-	.nav-tabs > li.active > a:focus {
-		color: $gry;
-		border: none;
-	 }*/ }
+  background-color: white; }
   .globalNav .dove-logo {
     float: left;
     width: 175px;
@@ -100,6 +94,10 @@ body {
     @media (max-width: 520px) {
       .globalNav .social-media {
         top: 14px; } }
+    .globalNav .social-media a {
+      color: black; }
+    .globalNav .social-media a:hover {
+      text-decoration: none; }
   .globalNav .global-navigation-header {
     position: relative;
     height: 140px;
@@ -401,11 +399,15 @@ body {
         .topic-grid .right-block .bottom {
           height: 150px; } }
 
+/*!footer.scss*/
 .footer-section {
   height: 100px; }
   @media (max-width: 520px) {
     .footer-section {
       height: 120px; } }
+  @media (max-width: 767px) {
+    .footer-section {
+      margin-top: 146px; } }
   .footer-section .row {
     background-color: #999999;
     height: 50%; }
@@ -439,10 +441,11 @@ body {
             text-align: center; } }
     @media (max-width: 520px) {
       .footer-section .row .trademark-display {
-        top: 37px; } }
+        top: 17px; } }
     @media (max-width: 767px) {
       .footer-section .row .trademark-display {
-        text-align: center; } }
+        text-align: center;
+        margin-top: 15px; } }
     .footer-section .row .trademark-display .glyphicon-copyright-mark {
       margin-left: 10px;
       margin-right: 10px;
@@ -925,11 +928,26 @@ body {
 .blog-header {
   margin-top: 140px; }
 
-.blog-component .text-section {
-  white-space: pre-line;
-  font-size: 14px;
+.blog-component .date {
+  font-weight: bold;
+  line-height: 17px;
   font-family: Arial;
-  line-height: 1.5; }
+  font-size: 18px;
+  text-transform: capitalize; }
+
+.blog-component .title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-family: Arial; }
+
+.blog-component .text-section {
+  margin-top: 20px;
+  border-top: 2px solid black;
+  white-space: pre-line;
+  font-size: 15px;
+  font-family: Arial;
+  line-height: 1.8; }
 
 /*!contactComponent.scss*/
 .contact-component .left-side {

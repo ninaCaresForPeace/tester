@@ -65,7 +65,7 @@
 		when("/blog", {
 			templateUrl: "Views/blogNow.html",
 			controller: 'blogController',
-			json: 'json/blogNow.json'
+			json: 'json/blogNow_new.json'
 
 		}).
 		when("/globalNav", {

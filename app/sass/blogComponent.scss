@@ -1,9 +1,27 @@
 .blog-component {
-	.text-section {
-		white-space: pre-line; //allows for newline to show
-		font-size: 14px;
+	.blog-title{
+		
+	}
+	.date {
+		font-weight: bold;
+	    line-height: 17px;
 	    font-family: Arial;
-	    line-height: 1.5;
+	    font-size: 18px;
+	    text-transform: capitalize;
+	}
+	.title{
+	    margin-top: 20px;
+	    margin-bottom: 10px;
+	    font-size: 15px;
+	    font-family: Arial;
+	}
+	.text-section {
+	    margin-top: 20px;
+    	border-top: 2px solid black;
+		white-space: pre-line; //allows for newline to show
+		font-size: 15px;
+	    font-family: Arial;
+	    line-height: 1.8;
 	}
 	
 }

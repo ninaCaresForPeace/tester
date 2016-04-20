@@ -27,6 +27,14 @@
 				{
 					"src" :"./images/myanmarSunset_1400x932.png",
 					"media": "1400px"
+				}, 
+				{
+					"src" :"./images/myanmarSunset_1600x1066.png",
+					"media": "1600px"
+				}, 
+				{
+					"src" :"./images/myanmarSunset_1920x1279.png",
+					"media": "1920px"
 				}
 			],
 		

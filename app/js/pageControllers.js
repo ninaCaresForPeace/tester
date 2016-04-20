@@ -16,15 +16,6 @@
 			$scope.grid = response.data.topicGrid.rightBlock;
 			
 		});
-//		debugger;
-//		//var SMTPConnection = require('smtp-connection');
-//		var connection = new SMTPConnection(options);
-//		var envelope = {
-//			form: "nina.dr16@gmail.com",	
-//			to: "nina.dr16@gmail.com"
-//		}; 
-//		var message = "testing";
-//		connection.send(envelope, message,callback);
 	}]);
 	//ourMissionController
 	app.controller("ourMissionController", ["$scope", "$route", "getJsonService", function ($scope, $route, getJsonService) {
@@ -43,17 +34,6 @@
 					$scope.images.push(bgImage.images[i]);
 				}
 			}
-//			//$scope.bgImage = data.bgImage;
-//			$scope.topBand = data.topBand;
-//			
-//			$scope.images = [];
-//			for(var i = 0; i < bgImage.images.length; i++) {
-//				if(i == 0){
-//					$scope.defImage = bgImage.images[i];
-//				}else {
-//					$scope.images.push(bgImage.images[i]);
-//				}
-//			}
 			
 			var midComponent = data.midComponent;
 			$scope.infoSection = midComponent.infoSection;
@@ -93,10 +73,7 @@
 			$scope.top = rightBlock.top;
 			$scope.links = rightBlock.links;
 			$scope.care = rightBlock.care;
-//			 return function (text) {
-//		      if (text) {
-//		          return text.slice(0, text.lastIndexOf('.')) || text;
-//		        }
+
 		});
 	}]);
 	//whoWeAreController
@@ -107,13 +84,11 @@
 			$scope.title = data.gridMembers.title;
 			$scope.description = data.gridMembers.description;
 			var gridMembers = data.gridMembers.memberArray; 
-			//var batchSize = 4;
 			var batchSize = 3;
 			var gMSize = gridMembers.length;
 			$scope.batches = [];
 			var array = [];
 			for(var i = 0; i < gMSize; i++) {
-				//if(array.length === 4) {
 				if(array.length === 3) {
 					$scope.batches.push(array);
 					array = [];
@@ -144,7 +119,6 @@
 		var jsonFile = $route.current.$$route.json;
 		getJsonService.retrieveJson(jsonFile).then(function(response){ 
 			var data = response.data;
-			//$scope.bgImage = data.bgImage;
 			$scope.topBand = data.topBand;
 			
 			var bgImage = data.bgImage;
@@ -173,7 +147,6 @@
 		var jsonFile = $route.current.$$route.json;
 		getJsonService.retrieveJson(jsonFile).then(function(response){ 
 			var data = response.data;
-			//$scope.bgImage = data.bgImage;
 			$scope.topBand = data.topBand;
 			
 			var bgImage = data.bgImage;
@@ -193,14 +166,7 @@
 			$scope.cityState = data.cityState;
 			$scope.tempDirections = data.tempDirections;
 			
-//			<form ng-submit="submit()">
-//			  	<input type="text" ng-model="name" name="text" placeholder="Name"/>
-//			  	<input type="email" ng-model="email" name="email" placeholder="Email"/>
-//			  	<input type="text" ng-model="message" name="message" maxlength="500" placeholder="Message"/>
-//			  	<input type="submit" id="submit" value="Send" />
-//			</form>
-			
-			$scope.sendMail = function () {
+			/*$scope.sendMail = function () {
 				data = ({
 					name : this.name,
 					email: this.email,
@@ -222,7 +188,7 @@
 				  });
 			}
 		      $scope.name = '';
-		      $scope.email = '';
+		      $scope.email = '';*/
 		     
 			var rightBlock = data.rightBlock;
 			$scope.top = rightBlock.top;
@@ -337,129 +303,3 @@
 	}]);
 })();
 
-///COMMENT OUT 2/27
-//var app = angular.module('myApp');
-//
-//app.controller("homeController", ["$scope", "$route", "getJsonService", function ($scope, $route, getJsonService) {
-//	var jsonFile = $route.current.$$route.json;
-//	getJsonService.retrieveJson(jsonFile).then(function(response){ 
-//		var data = response.data;
-//		$scope.topBand = data.topBand;
-//		$scope.carousel = response.data.carousel;
-//		$scope.interval = 5000;
-//		$scope.noWrapSlides = false;
-//		
-//		$scope.left = response.data.topicGrid.leftBlock;
-//		$scope.grid = response.data.topicGrid.rightBlock;
-//	});
-//}]);
-//app.controller("ourMissionController", ["$scope", "$route", "getJsonService", function ($scope, $route, getJsonService) {
-//	var jsonFile = $route.current.$$route.json;
-//	getJsonService.retrieveJson(jsonFile).then(function(response){ 
-//		var data = response.data;
-//		$scope.bgImage = data.bgImage;
-//		$scope.topBand = data.topBand;
-//		
-//		var midComponent = data.midComponent;
-//		$scope.infoSection = midComponent.infoSection;
-//		$scope.video = midComponent.video;
-//		var rightBlock = midComponent.rightBlock;
-//		$scope.top = rightBlock.top;
-//		$scope.links = rightBlock.links;
-//		$scope.care = rightBlock.care;
-//		
-////		$scope.dTabs = response.data.menu;
-////		$scope.logo = response.data.logo;
-//	});
-//}]);
-//app.controller("achievementsController", ["$scope", "$route", "getJsonService", function($scope, $route, getJsonService) {
-//	var jsonFile = $route.current.$$route.json;
-//	getJsonService.retrieveJson(jsonFile).then(function(response){ 
-//		var data = response.data;
-//		$scope.bgImage = data.bgImage;
-//		$scope.topBand = data.topBand;
-//		
-//		var midComponent = data.midComponent;
-//		$scope.infoSection = midComponent.infoSection;
-//		$scope.video = midComponent.video;
-//		var rightBlock = midComponent.rightBlock;
-//		$scope.top = rightBlock.top;
-//		$scope.links = rightBlock.links;
-//		$scope.care = rightBlock.care;
-//	});
-//}]);
-////whoWeAreController
-//app.controller("whoWeAreController", ["$scope", "$route", "getJsonService", function($scope, $route, getJsonService) {
-//	var jsonFile = $route.current.$$route.json;
-//	getJsonService.retrieveJson(jsonFile).then(function(response){ 
-//		var data = response.data;
-//		$scope.bgImage = data.bgImage;
-//		$scope.topBand = data.topBand;
-//		
-//		var midComponent = data.midComponent;
-//		$scope.infoSection = midComponent.infoSection;
-//		$scope.video = midComponent.video;
-//		var rightBlock = midComponent.rightBlock;
-//		$scope.top = rightBlock.top;
-//		$scope.links = rightBlock.links;
-//		$scope.care = rightBlock.care;
-//	});
-//}]);
-////about Myanmar
-//app.controller("aboutMyanmarController", ["$scope", "$route", "getJsonService", function($scope, $route, getJsonService) {
-//	var jsonFile = $route.current.$$route.json;
-//	getJsonService.retrieveJson(jsonFile).then(function(response){ 
-//		var data = response.data;
-//		$scope.bgImage = data.bgImage;
-//		$scope.topBand = data.topBand;
-//		
-//		var midComponent = data.midComponent;
-//		$scope.infoSection = midComponent.infoSection;
-//		$scope.video = midComponent.video;
-//		$scope.image = midComponent.image;
-//		var rightBlock = midComponent.rightBlock;
-//		$scope.top = rightBlock.top;
-//		$scope.links = rightBlock.links;
-//		$scope.care = rightBlock.care;
-//	});
-//}]);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-//angular.module('myApp') 
-//.controller('bandedNavControl',['$scope', '$route', 'getJsonService', function ( $scope, $route, getJsonService) {
-//		var jsonFile = $route.current.$$route.json;
-//		getJsonService.retrieveJson(jsonFile).then(function(response){ 
-//			$scope.tabs = response.data.menu;//[0].title;
-//			$scope.dTabs = response.data.menu;
-//			$scope.logo = response.data.logo;
-//		});
-//
-//}]);"midComponent": {

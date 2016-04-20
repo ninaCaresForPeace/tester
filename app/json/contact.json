@@ -5,23 +5,35 @@
 	"bgImage": {
 		"images": [
 			{
-				"src": "./images/monk_boys.jpg"
+				"src": "./images/goldenPagoda.png"
 			},
 			{
-				"src" :"./images/monk_boys-320.jpg",
+				"src" :"./images/goldenPagoda_480x320.png",
 				"media": "1px"
 			},
 			{
-				"src" :"./images/monk_boys-480.jpg",
+				"src" :"./images/goldenPagoda_768x512.png",
 				"media": "645px"
 			},
 			{
-				"src" :"./images/mb_768x418.jpg",
+				"src" :"./images/goldenPagoda_920x613.png",
 				"media": "920px"
 			},
 			{
-				"src" :"./images/mb_1920x814.jpg",
+				"src" :"./images/goldenPagoda_1200x800.png",
 				"media": "1200px"
+			},
+			{
+				"src" :"./images/goldenPagoda_1400x933.png",
+				"media": "1400px"
+			},
+			{
+				"src" :"./images/goldenPagoda_1600x1067.png",
+				"media": "1600px"
+			},
+			{
+				"src" :"./images/goldenPagoda_1920x1280.png",
+				"media": "1920px"
 			}
 		
 		],

@@ -26,6 +26,14 @@
 			{
 				"src" :"./images/monkPagoda_1400x933.png",
 				"media": "1400px"
+			}, 
+			{
+				"src" :"./images/monkPagoda_1600x1067.png",
+				"media": "1600px"
+			}, 
+			{
+				"src" :"./images/monkPagoda_1920x1280.png",
+				"media": "1920px"
 			}
 		
 		],

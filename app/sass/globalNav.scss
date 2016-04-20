@@ -48,6 +48,12 @@
 		@include respond-to-max(x-small) {
 			top: 14px;
 		}
+		a {
+			color: black;
+		}
+		a:hover {
+			text-decoration: none;
+		}
 	}
 	
 	.global-navigation-header {
@@ -77,12 +83,6 @@
 		
 		}
 	}
-	/* .nav-tabs > li.active > a,
-	.nav-tabs > li.active > a:hover,
-	.nav-tabs > li.active > a:focus {
-		color: $gry;
-		border: none;
-	 }*/
 	.nav > li > a {
 		font: 16px arial;
 		color: $gry;

@@ -6,28 +6,36 @@
 		"images": [
 		
 			{
-				"src": "./images/pinkPng.png"
+				"src": "./images/family1.png"
 			},
 			{
-				"src" :"./images/pinkPng_480x320.png",
+				"src" :"./images/family1_480x320.png",
 				"media": "1px"
 			},
 			{
-				"src" :"./images/pinkPng_768x512.png",
+				"src" :"./images/family1_768x512.png",
 				"media": "645px"
 			},
 			{
-				"src" :"./images/pinkPng_920x613.png",
+				"src" :"./images/family1_920x613.png",
 				"media": "920px"
 			},
 			{
-				"src" :"./images/pinkPng_1200x800.png",
+				"src" :"./images/family1_1200x800.png",
 				"media": "1200px"
 			},
 			{
-				"src" :"./images/pinkPng_1400x933.png",
+				"src" :"./images/family1_1400x933.png",
 				"media": "1400px"
-				}
+			},
+			{
+				"src" :"./images/family1_1600x1067.png",
+				"media": "1600px"
+			},
+			{
+				"src" :"./images/family1_1920x1280.png",
+				"media": "1920px"
+			}
 		
 		],
 		"alt": "image of clinic being constructed"

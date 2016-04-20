@@ -21,11 +21,24 @@
 	gulp.task('scripts', function() {
 		//return gulp.src(jsFiles)
 		return streamqueue({ objectMode: true },
+				gulp.src('app/js/angular-animate.js'),
+				gulp.src('app/bower_components/angular-route/angular-route.js'),
+				gulp.src('app/javascripts/ui-bootstrap-tpls-0.14.3.js'),
+				
 		        gulp.src('app/js/routes.js'),
 		        gulp.src('app/js/appFactories.js'),
 		        gulp.src('app/js/pageControllers.js'),
 		        gulp.src('app/js/bandedNavController.js'),
-		        gulp.src('app/js/directives.js')
+		        gulp.src('app/js/directives.js'),
+		        
+		        gulp.src('app/components/version/version.js'),
+		        gulp.src('app/components/version/version-directive.js'),
+		        gulp.src('app/components/version/interpolate-filter.js'),
+
+		        gulp.src('app/bower_components/angular-skrollr/dist/angular-skrollr.js'),
+		        //gulp.src('bower_components/angular-skrollr/dist/angular-skrollr.js'),
+		        gulp.src('app/bower_components/picturefill/picturefill.js'),
+		        gulp.src('app/bower_components/angular-picturefill/angular-picturefill.js')
 		    )
 		.pipe(concat('scripts.js'))
 		.pipe(gulp.dest(jsDest))
