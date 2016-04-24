@@ -1,0 +1,30 @@
+#!/bin/bash
+
+	name=$(basename $f)
+	pre="sudo scp -i \"~/ubuntu.pem\" ~/Documents/workspaceMars/tester2/app/images/"
+	post=" ubuntu@ec2-52-91-251-207.compute-1.amazonaws.com:~/"
+
+	str=$pre$name$post$name
+
+	echo $str
+	
+
+	#$(basename $name)
+	#echo $(dirname $name)
+	#first strip the right string
+	#first="sudo scp -i "ubuntu.pem" ~/Documents/workspaceMars/tester2/app/images/"
+	#last="ubuntu@ec2-52-91-251-207.compute-1.amazonaws.com:~/"
+	
+
+done
+
+#echo 
+#sudo mv authenticFood.jpg /var/www/tester/app/images/ 
+#sudo scp -i "ubuntu.pem" ~/Documents/workspaceMars/tester2/app/images/mapOfMyanmar.jpg ubuntu@ec2-52-91-251-207.compute-1.amazonaws.com:~/mapOfMyanmar.jpg
+
+#ssh -i "ubuntu.pem" ubuntu@ec2-52-91-251-207.compute-1.amazonaws.com
+
+//do thefollowing tar command while in the folder of the same directory
+#tar -zcvf imgTarfile.tar.gz -C ~/Documents/workspaceMars/tester2/app/images/ .
+unzip tar file :    tar -xvzf imgTarFile.tar.gz 
+

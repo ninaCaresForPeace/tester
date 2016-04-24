@@ -1,8 +1,8 @@
 {
   "name": "CareForPeace",
-  "description": "CareForPeace WebDevelopment",
+  "description": "CareForPeace WebSite",
   "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-seed",
+  "homepage": "https://www.careforpeace.org",
   "license": "MIT",
   "private": true,
   "dependencies": {
@@ -10,7 +10,7 @@
     "angular-picturefill": "*"
   },
   "authors": [
-    "Nina <nina.dr16@gmail.com>"
+    "Nina <info@careforPeace.org>"
   ],
   "main": "",
   "moduleType": [],

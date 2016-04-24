@@ -66,11 +66,8 @@ body {
   background-color: white; }
   .globalNav .dove-logo {
     float: left;
-    width: 175px;
+    width: 135px;
     height: 140px;
-    /* width: 95px;
-		position: absolute;
-		top: -12px; */
     display: inline; }
     .globalNav .dove-logo img {
       height: 125px;

@@ -139,6 +139,27 @@
 		}
 		
 	});
+	app.directive('onFinishRender', function ($timeout, $window) {
+	    return {
+	        restrict: 'A',
+	        link: function (scope, element, attr) {
+	        	var w = angular.element($window);
+	        	
+	            if (scope.$last === true) {
+	            	var p = element.parent("pf-src");
+	            	//debugger;
+	            	if( element.parent().find("img").attr("src") === "") {
+	            		console.log("NO IMG...CALLING RESIZE");
+	            		 $timeout(picturefill);
+	            		
+	            	}
+//	                $timeout(function () {
+//	                    scope.$emit('ngRepeatFinished');
+//	                });
+	            }
+	        }
+	    }
+	});
 	app.directive("careCarousel", function () {
 		return {
 			restrict: 'E',

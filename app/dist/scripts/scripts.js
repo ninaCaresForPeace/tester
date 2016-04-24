@@ -14212,6 +14212,27 @@ angular.module("template/typeahead/typeahead-popup.html", []).run(["$templateCac
 		}
 		
 	});
+	app.directive('onFinishRender', function ($timeout, $window) {
+	    return {
+	        restrict: 'A',
+	        link: function (scope, element, attr) {
+	        	var w = angular.element($window);
+	        	
+	            if (scope.$last === true) {
+	            	var p = element.parent("pf-src");
+	            	//debugger;
+	            	if( element.parent().find("img").attr("src") === "") {
+	            		console.log("NO IMG...CALLING RESIZE");
+	            		 $timeout(picturefill);
+	            		
+	            	}
+//	                $timeout(function () {
+//	                    scope.$emit('ngRepeatFinished');
+//	                });
+	            }
+	        }
+	    }
+	});
 	app.directive("careCarousel", function () {
 		return {
 			restrict: 'E',
@@ -14523,11 +14544,11 @@ angular.module("sn.skrollr", [])
 
 	w.picturefill = function() {
 		var ps = w.document.getElementsByTagName( "span" );
-
+		console.log("in picturefill js");
 		// Loop the pictures
 		for( var i = 0, il = ps.length; i < il; i++ ){
 			if( ps[ i ].getAttribute( "data-picture" ) !== null ){
-
+				console.log("in picturefill js 1");
 				var sources = ps[ i ].getElementsByTagName( "span" ),
 					matches = [];
 
@@ -14548,6 +14569,7 @@ angular.module("sn.skrollr", [])
 				if( !picImg || picImg.parentNode.nodeName === "NOSCRIPT" ){
 					picImg = w.document.createElement( "img" );
 					picImg.alt = ps[ i ].getAttribute( "data-alt" );
+					console.log("in picturefill js 2");
 				}
 				else if( matchedEl === picImg.parentNode ){
 					// Skip further actions if the correct image is already in place
@@ -14558,9 +14580,11 @@ angular.module("sn.skrollr", [])
 				matchedEl.appendChild( picImg );
 				picImg.removeAttribute("width");
 				picImg.removeAttribute("height");
+				console.log("in picturefill js 3");
 			}
 			else if( picImg ){
 				picImg.parentNode.removeChild( picImg );
+				console.log("in picturefill js 4");
 			}
 		}
 		}
@@ -14571,13 +14595,15 @@ angular.module("sn.skrollr", [])
 		w.addEventListener( "resize", w.picturefill, false );
 		w.addEventListener( "DOMContentLoaded", function(){
 			w.picturefill();
+			console.log("in picturefill js 5");
 			// Run once only
-			w.removeEventListener( "load", w.picturefill, false );
+		w.removeEventListener( "load", w.picturefill, false );
 		}, false );
 		w.addEventListener( "load", w.picturefill, false );
 	}
 	else if( w.attachEvent ){
 		w.attachEvent( "onload", w.picturefill );
+		console.log("in picturefill js 6");
 	}
 
 }( this ));
@@ -14590,6 +14616,7 @@ angular.module('ng.picturefill', [])
       controller: 'PictureFillCtrl',
       link: function (scope, elem, attrs) {
         elem.attr('data-picture', '');
+        console.log("datapicture function in picturefillctrl directive");
       }
     };
   }])
@@ -14597,11 +14624,40 @@ angular.module('ng.picturefill', [])
     return {
       link: function (scope, elem, attrs) {
         elem.attr('data-src', attrs.pfSrc);
+        scope.$watch('$viewContentLoaded', function(){
+        	console.log("Content View Loaded");
+        });
+        console.log("pfSrc directive");
       }
     };
   })
-  .controller('PictureFillCtrl', ['$timeout', function ($timeout) {
+ 
+  
+//  .directive('lastplace', ['$interpolate', function($interpolate) {
+//	  return {
+//	    restrict: 'C',
+//	   // priority: Number.MIN_SAFE_INTEGER, // execute last, after all other directives if any.
+//	    link: function($scope, $element, $attributes) {
+//	    	console.log("totally last");
+//	    }
+//	  };
+//  }])
+//  
+///*
+// * This img directive makes it so that if you put a loaded="" attribute on any
+// * img element in your app, the expression of that attribute will be evaluated
+// * after the images has finished loading. Use this to, for example, remove
+// * loading animations after images have finished loading.
+// */
+ 
+  .controller('PictureFillCtrl', ['$timeout','$scope', function ($timeout, $scope) {
+	  console.log("calling picturefill");
     $timeout(picturefill);
+    
+	
+//    $scope.$watch('$viewContentLoaded', function(){
+//    	console.log("Content View Loaded");
+//    });
   }])
   .filter('trimExt', [function () {
     return function (text) {
@@ -14610,3 +14666,5 @@ angular.module('ng.picturefill', [])
       }
     };
   }]);
+
+  
