@@ -13433,12 +13433,20 @@ angular.module("template/typeahead/typeahead-popup.html", []).run(["$templateCac
 	  'ui.bootstrap',
 	  'myApp.version'
 	]).config(["snSkrollrProvider", function(snSkrollrProvider) {
-	  snSkrollrProvider.config = { smoothScrolling: true,};
+	  snSkrollrProvider.config = { smoothScrolling: true,
+			  					   forceHeight: false,
+			  					   mobileCheck: function() {
+			  						 return !(/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
+			  					   }
+			  					  };
 	}]);
 
 	//initialise skrollr at runtime
 	myApp.run(["snSkrollr", function(snSkrollr) {
-	  snSkrollr.init();
+	  var sn = snSkrollr.init();
+//	  if(sn.isMobile()) {
+//		  sn.destroy();
+//	  }
 	  console.log("in init ");
 	}]);
 
