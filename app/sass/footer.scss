@@ -1,11 +1,16 @@
 /*!footer.scss*/
-.footer-section {
+.footer-section { 
 	height: 100px;
+	background-color: $drkGry2;
 	@include respond-to-max(x-small) {
 		height: 120px;
 	}
 	@include respond-to-max(small) {
 		margin-top: 146px;
+	}   
+    @include respond-to-max(xs-small) {
+		 position: relative;
+    	bottom: -55px;
 	}
 		
 	.row {
