@@ -21,9 +21,6 @@
 	//initialise skrollr at runtime
 	myApp.run(["snSkrollr", function(snSkrollr) {
 	  var sn = snSkrollr.init();
-//	  if(sn.isMobile()) {
-//		  sn.destroy();
-//	  }
 	  console.log("in init ");
 	}]);
 
