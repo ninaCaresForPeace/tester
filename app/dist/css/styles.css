@@ -398,13 +398,18 @@ body {
 
 /*!footer.scss*/
 .footer-section {
-  height: 100px; }
+  height: 100px;
+  background-color: #999999; }
   @media (max-width: 520px) {
     .footer-section {
       height: 120px; } }
   @media (max-width: 767px) {
     .footer-section {
       margin-top: 146px; } }
+  @media (max-width: 464px) {
+    .footer-section {
+      position: relative;
+      bottom: -55px; } }
   .footer-section .row {
     background-color: #999999;
     height: 50%; }
