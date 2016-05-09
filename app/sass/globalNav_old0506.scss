@@ -20,11 +20,15 @@
 			width: 113px;
 			padding-top: 10px;
 		}
+		@include respond-to-max(x-small) {
+			width: 108px;
+			
+		}
 		
 	}
 	.block-logo {
 		img {
-			/* 	@include respond-to-max(ipad-768) {
+				@include respond-to-max(ipad-768) {
 				    padding-top: 20px;
 				}
     			@include respond-to-max(small) {
@@ -38,7 +42,7 @@
 				}
 				@include respond-to-max(xs-small) {
 					width: 127px;
-				} */
+				}
 			}
 	}
 	@include respond-to-max(x-small) {
@@ -65,9 +69,9 @@
 	/* 	@include respond-to-max(x-small) {
 			top: 14px;
 		} */
-		/* @include respond-to-max(xs-small) {
+		@include respond-to-max(xs-small) {
 			right: 30px;
-		} */
+		}
 		a {
 			color: black;
 		}
@@ -88,14 +92,10 @@
 		.nav-tabs {
 			border-bottom: none;
 			.expanded {
-				@include respond-to-max(md-screen-min) {
-					visibility:hidden;
-				}
-			
-				/* @include respond-to-max(mobile) {
+				@include respond-to-max(mobile) {
 					visibility:hidden;
 	
-				} */
+				}
 			}
 		}
 	}
@@ -110,12 +110,12 @@
 	.nav > li > a {
 		font: 16px arial;
 		color: $gry;
-		/* @include respond-to-max(sm-screen) {
+		@include respond-to-max(sm-screen) {
 			font-size: 14px;
 			padding-left: 8px;
 			padding-right: 8px;
 	
-		} */
+		}
 	}
 	
 	.nav > li > a:hover,
@@ -147,12 +147,12 @@
 		position: absolute;
 		top: 70px;
 	   	right: 0;
-		/* @include respond-to-max(x-small) {
+		@include respond-to-max(x-small) {
 			top: 60px;
 		}
 		@include respond-to-max(xs-small) {
 			right: 18px;
-		} */
+		}
 	   	.dropdown-menu {
 	   		left: -103px;
   			border-radius: 1px;
@@ -204,18 +204,18 @@
 	   			font-size: 35px;
 	   		}
 	   		
-	   		/* @include respond-to-max(xs-small){
+	   		@include respond-to-max(xs-small){
 	   			//right: 40px;
-	   		} */
+	   		}
 	   		
 		}
 		
   		
 
-	/* 	@include respond-to-max(mobile) {
+		@include respond-to-max(mobile) {
 			visibility:visible;
 	
-		} */
+		}
 		
 	}
 	.dropdown.open > a{

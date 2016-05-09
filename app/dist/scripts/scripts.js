@@ -13436,7 +13436,12 @@ angular.module("template/typeahead/typeahead-popup.html", []).run(["$templateCac
 	  snSkrollrProvider.config = { smoothScrolling: true,
 			  					   forceHeight: false,
 			  					   mobileCheck: function() {
-			  						 return !(/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
+			  						   if((/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
+			  							   console.log("Mobile View");
+			  							 return !(/Android|webOs|iPhone|iPad|iPod|IEMobile|Opera Mini|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
+			  						   } else {
+			  							 console.log("Desktop View");
+			  						   }
 			  					   }
 			  					  };
 	}]);
@@ -13444,9 +13449,6 @@ angular.module("template/typeahead/typeahead-popup.html", []).run(["$templateCac
 	//initialise skrollr at runtime
 	myApp.run(["snSkrollr", function(snSkrollr) {
 	  var sn = snSkrollr.init();
-//	  if(sn.isMobile()) {
-//		  sn.destroy();
-//	  }
 	  console.log("in init ");
 	}]);
 

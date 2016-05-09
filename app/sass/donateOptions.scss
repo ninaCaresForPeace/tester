@@ -16,10 +16,16 @@
     		height: 100%;
 		}
 		.option-grid {
+			@include respond-to-max(ipad-768) {
+				width: 50%;
+			}
 			.amount {
 				font-family: Arial;
 				font-size: 16px;
 				text-align: center;
+				@include respond-to-max(ipad-768) {
+					font-size: 25px;
+				}
 			}
 		}
 	}

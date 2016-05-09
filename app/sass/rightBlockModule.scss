@@ -1,206 +1,152 @@
 /* !rightBlockModule.scss */
 .right-side {
 		background-color:white;
-	height: 380px;
+		height: 380px;
+		
+		@include respond-to-max(lg-screen-max){
+			//Max width of 991 px
+			height: 100%;
+			padding-left: 0;
+    		padding-right: 0;
+					
+		}
+		@include respond-to-max(md-screen-min) {
+			padding-left: 0;
+ 			padding-right: 0;
+		}
 		.media-container {
 			background-color: $ltGry2;
-			margin-top: 20px;
-			@include respond-to-max(x-small) {
-				padding-top: 10px;
-			}
+			margin-top: 84px;
 			
-			@include respond-to-max(mobile) {
-				width: 125px;
-				margin-left: -22px;
-			}
-			@include respond-to-max(small) {
-				width: 100%;
-    			padding-top: 10px;
-    			margin-left: 0;
-			}
 			.donate {
 				width:auto;
 				margin-left: 15px;
-				@include respond-to-max(x-small) {
-				    margin-left: 0px;
-				    position: relative;
-				}	
-				@include respond-to-max(small) {
-					margin-left: 0px;
-				}
-				@include respond-to-max(mobile) {
-					margin-left: 10px;
-				}
+				
 				.button-image {
 					width:100px;
 					height: 100px;
-					margin-top: 10px;	
-					@include respond-to-max(x-small) {
-				    	margin-left: auto;
-    					margin-right: auto;
-    					display: block;
-					}	
-					@include respond-to-max(small) {
-						width: 200px;
-					    height: 200px;
-					    display: block;
-					    margin-left: auto;
-					    margin-right: auto;
-					    margin-top: 10px;
+					margin-top: 10px;
+					display: block;
+    				margin-left: auto;
+    				margin-right: auto;
+					
+					@include respond-to-max(lg-screen-max){
+						//Max width of 991 px
+						width: 250px;
+					    height: 250px;
 					}
-					    
 				}
+
 				.button-text{
 					position: absolute;
-					top: 99px;
-					margin-left: 10%;
-					margin-right: 15%;
-					width: auto;
+					top: 187px;
+					margin-left: auto;
+					margin-right: auto;
 					color: $yellow;
 					font-size: 15px;
 					text-transform: uppercase;
-					@include respond-to-max(x-small) {
-						top: 77px;
-						text-align: center;
-						margin-left: auto;
-  						margin-right: auto;
-    					width: 100%;
-    					position: absolute;
-					}
-					@include respond-to-max(small) {
-						text-align: center;
-					    margin-left: auto;
-					    margin-right: auto;
-					    width: 100%;
-					    top: 171px;
-					    left: 3px;
-					    position: absolute;
-					    font-size: 24px;
+					text-align: center;
+					padding-left: 0px;
+					padding-right: 30px;
+					@include respond-to-max(lg-screen-max){
+						top:-38px;
+						position:relative;
+					    font-size: 23px;
+					    margin-left: 0;
+					    margin-right: 0;
+					    text-align: center;
+					    padding-left: 0px;
+					    padding-right: 0px;
 					}
 				}
 			}		
 			.links {
 			    margin-left: 15px;
   				margin-top: 10px;
-  				@include respond-to-max(x-small) {
-						margin-left: 0px;
-						/* margin-left: auto;
-  						margin-right: auto;
-    					width: 100%;
-    					position: absolute; */
-    					.title {
+  				@include respond-to-max(lg-screen-max){
+					margin-left: 0px;
+				}
+				.title {
+					text-transform: capitalize;
+					 font-family: Arial;
+					 font-size: 15px;
+						@include respond-to-max(lg-screen-max){
 							text-align: center;
-							font-size: 15px;
+							font-size: 30px;
 						}
 				}
-				@include respond-to-max(small) {
-					.title {
-						text-align: center;
-   		 				font-size: 32px;
+				.button-container {
+					@include respond-to-max(lg-screen-max){
+						margin-left: auto;
+					    margin-right: auto;
+					    display: block;
 					}
-				}
-  				@include respond-to-max(mobile) {
-					margin-left: 5px;
-				}
-				
-				
-				.fa-facebook-official {
-					color: $facebookBlue;
-					width: 110px;
-					/******Added for A tag below*********/
+					.fa-facebook-official {
+						color: $facebookBlue;
+						width: 110px;
 					    background-color: #FFFFFF;
 					    border-radius: 3px;
 					    padding-left: 2px;
 					    border: 2px outset #FFFFFF;
-					/******Added for A tag above********/
-					.title {
-						@include respond-to-max(x-small) {
-							font-size: 16px !important;
+						@include respond-to-max(lg-screen-max){
+							font-size: 22px;
+	   						width: 175px;
+	   						margin-left: auto;
+						    margin-right: auto;
+						    display: block;
+						}
+						.text {
+							color: black;
+							margin-left:5px;
+							font-size: 13px;
+							font-family: Arial;
+							text-transform: capitalize;
+							@include respond-to-max(lg-screen-max){
+								font-size: 22px;
+							}
+							
 						}
 					}
-					@include respond-to-max(x-small) {
-						margin-left: auto;
-						height: 25px;
-					    width: auto;
-					    display: block;
-					    margin-right: auto;
-					   /******Added for A tag below*********/
-					    width: 141px;
-					    /******Added for A tag above********/
-					    
-					}
-					@include respond-to-max(small) {
-						margin-right: auto;
-					    display: block;
-					    margin-left: auto;
-					   /******Added for A tag below*********/
-					    width: 135px;
-					    /******Added for A tag above********/
-
-					}
-					.text {
-						color: black;
-						margin-left:5px;
-						font-size: 13px;
-						@include respond-to-max(x-small) {
-							font-size: 25px;
-						}
-						@include respond-to-max(small) {
-							font-size: 17px;
+					.fa-twitter {
+						color: $twitterBlue; 
+						width: 110px;
+					    background-color: #FFFFFF;
+					    border-radius: 3px;
+					    padding-left: 2px;
+					    border: 2px outset #FFFFFF;
+						@include respond-to-max(lg-screen-max){
+							font-size: 22px;
+	   						width: 108px;
+	   						display: block;
+						    margin-left: auto;
+						    margin-right: auto;
 						}
 						
-					}
-				}
-				.fa-twitter {
-					color: $twitterBlue; 
-					width: 110px;
-					/******Added for A tag below*********/
-					    background-color: #FFFFFF;
-					    border-radius: 3px;
-					    padding-left: 2px;
-					    border: 2px outset #FFFFFF;
-					/******Added for A tag above********/
-					@include respond-to-max(x-small) {
-						margin-left: auto;
-						height: 25px;
-					    width: auto;
-					    display: block;
-					    margin-right: auto;
-					    /******Added for A tag below*********/
-					    width: 141px;
-					    /******Added for A tag above********/
-					}
-					@include respond-to-max(small) {
-						margin-right: auto;
-					    display: block;
-					    margin-left: auto;
-					     /******Added for A tag below*********/
-					    width: 135px;
-					    /******Added for A tag above********/
-
-					}
-					.text {
-						color: black;
-						margin-left:5px;
-						font-size: 13px;
-						padding-right: 47px;
-						@include respond-to-max(x-small) {
-							font-size: 14px;
-							padding-right: 0px;
-						}
-						@include respond-to-max(small) {
-							font-size: 17px;
+						.text {
+							color: black;
+							margin-left:5px;
+							font-size: 13px;
+							padding-right: 47px;
+							text-transform: capitalize;
+							font-family: Arial;
+							@include respond-to-max(lg-screen-max){
+								font-size: 22px;
+							}
+							
 						}
 					}
+				
 				}
+ 				
 			}
 			.care {
+				font-family: Arial;
 				margin-left: 10px;
 				margin-right: 10px;
   				margin-top: 10px;
   				padding-bottom: 10px;
-  				@include respond-to-max(mobile) {
-						font-size: 11px;
+  				@include respond-to-max(lg-screen-max) {
+					text-align: center;
 				}
   				
 			}

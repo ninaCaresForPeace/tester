@@ -13,7 +13,12 @@
 	  snSkrollrProvider.config = { smoothScrolling: true,
 			  					   forceHeight: false,
 			  					   mobileCheck: function() {
-			  						 return !(/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
+			  						   if((/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
+			  							   console.log("Mobile View");
+			  							 return !(/Android|webOs|iPhone|iPad|iPod|IEMobile|Opera Mini|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
+			  						   } else {
+			  							 console.log("Desktop View");
+			  						   }
 			  					   }
 			  					  };
 	}]);

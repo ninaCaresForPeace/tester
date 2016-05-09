@@ -1,0 +1,279 @@
+/* !rightBlockModule.scss */
+.right-side {
+		background-color:white;
+		height: 380px;
+		
+		/* @include respond-to-max(ipad-768) {
+			height: 100%;
+		} */
+		
+		.media-container {
+			background-color: $ltGry2;
+			margin-top: 20px;
+			/* @include respond-to-max(x-small) {
+				padding-top: 10px;
+			} */
+			
+			/*@include respond-to-max(mobile) {
+				width: 125px;
+				margin-left: -22px;
+			}*/
+			@include respond-to-max(ipad-768) {
+				width: 100%;
+				margin-left: 0px;
+			}
+			@include respond-to-max(small) {
+				width: 100%;
+    			padding-top: 10px;
+    			margin-left: 0;
+			}
+			.donate {
+				width:auto;
+				margin-left: 15px;
+				/* @include respond-to-max(x-small) {
+				    margin-left: 0px;
+				    position: relative;
+				}	
+				@include respond-to-max(small) {
+					margin-left: 0px;
+				}
+				@include respond-to-max(mobile) {
+					margin-left: 10px;
+				} */
+				.button-image {
+					width:100px;
+					height: 100px;
+					margin-top: 10px;
+						
+				/* 	@include respond-to-max(x-small) {
+				    	margin-left: auto;
+    					margin-right: auto;
+    					display: block;
+					}	
+					@include respond-to-max(small) {
+						width: 200px;
+					    height: 200px;
+					    display: block;
+					    margin-left: auto;
+					    margin-right: auto;
+					    margin-top: 10px;
+					} */
+					/* @include respond-to-max(xs-small) {
+				    	height: 250px;
+				    	width: 250px;
+					}	 */
+					/* @include respond-to-max(ipad-768) {
+						width: 250px;
+					    height: 250px;
+					    display: block;
+					    margin-left: auto;
+					    margin-right: auto;
+					
+					} */
+					
+					    
+				}
+				
+				.button-text{
+					position: absolute;
+					top: 99px;
+					margin-left: 10%;
+					margin-right: 15%;
+					//width: auto; <- breaks mobile ipad
+					color: $yellow;
+					font-size: 15px;
+					text-transform: uppercase;
+					
+					/* @include respond-to-max(xs-small) {
+					    right: 1px;
+					    top: 180px;
+					    text-align: center;
+					    margin-left: auto;
+					    margin-right: auto;
+					    width: 100%;
+					    position: absolute;
+					    font-size: 40px;
+					    text-transform: uppercase;
+					    color: $yellow;
+					} */
+					/*@include respond-to-max(x-small) {
+						top: 77px;
+						text-align: center;
+						margin-left: auto;
+  						margin-right: auto;
+    					width: 100%;
+    					position: absolute;
+					}*
+					
+					/*@include respond-to-max(small) {
+					text-align: center;
+				    margin-left: auto;
+				    margin-right: auto;
+				    width: 100%;
+									   /*  top: -43px;
+									    display: table;
+									    position: absolute;
+									    font-size: 28px; */
+											/* text-align: center;
+										    margin-left: auto;
+										    margin-right: auto;
+										    width: 100%;
+										    top: 171px;
+										    left: 3px;
+										    position: absolute;
+										    font-size: 24px; */
+					//}
+				/* 	@include respond-to-max(ipad-768) {
+						text-align: center;
+						top: 235px;
+						font-size: 30px;
+						margin-left: 0;
+					    margin-right: 0;
+					    padding-left: 0;
+					    padding-right: 0;
+					    left: 0;
+						position: absolute;
+					    top: 334px;
+					    font-size: 39px;
+					    left: 277px;
+					}
+					@include respond-to-max(xs-554) {
+						display: inline-table;
+						top: -60px;
+					}
+					 */
+					
+				}
+			}		
+			.links {
+			    margin-left: 15px;
+  				margin-top: 10px;
+  			/* 	@include respond-to-max(x-small) {
+						margin-left: 0px;
+						margin-left: auto;
+  						margin-right: auto;
+    					width: 100%;
+    					position: absolute;
+    					.title {
+							text-align: center;
+							font-size: 15px;
+						}
+				}
+				@include respond-to-max(small) {
+					.title {
+						text-align: center;
+   		 				font-size: 32px;
+   		 				text-transform: capitalize;
+					}
+				}
+  				@include respond-to-max(mobile) {
+					margin-left: 5px;
+				} */
+				
+				
+				.fa-facebook-official {
+					color: $facebookBlue;
+					width: 110px;
+					/******Added for A tag below*********/
+					    background-color: #FFFFFF;
+					    border-radius: 3px;
+					    padding-left: 2px;
+					    border: 2px outset #FFFFFF;
+					/******Added for A tag above********/
+					.title {
+					
+					/* 	@include respond-to-max(x-small) {
+							font-size: 16px !important;
+						} */
+					}
+					/* @include respond-to-max(x-small) {
+						margin-left: auto;
+						height: 25px;
+					    width: auto;
+					    display: block;
+					    margin-right: auto;
+					 
+					    width: 141px;
+					   
+					    
+					} */
+				/* 	@include respond-to-max(small) {
+						margin-right: auto;
+					    display: block;
+					    margin-left: auto;
+					  
+					    width: 135px;
+					   
+
+					} */
+					.text {
+						color: black;
+						margin-left:5px;
+						font-size: 13px;
+						text-transform: capitalize;
+						/* @include respond-to-max(x-small) {
+							font-size: 25px;
+						}
+						@include respond-to-max(small) {
+							font-size: 17px;
+						} */
+						
+					}
+				}
+				.fa-twitter {
+					color: $twitterBlue; 
+					width: 110px;
+					/******Added for A tag below*********/
+					    background-color: #FFFFFF;
+					    border-radius: 3px;
+					    padding-left: 2px;
+					    border: 2px outset #FFFFFF;
+					/******Added for A tag above********/
+					/* @include respond-to-max(x-small) {
+						margin-left: auto;
+						height: 25px;
+					    width: auto;
+					    display: block;
+					    margin-right: auto;
+					   
+					    width: 141px;
+					   
+					}
+					@include respond-to-max(small) {
+						margin-right: auto;
+					    display: block;
+					    margin-left: auto;
+					    
+					    width: 135px;
+					   
+
+					} */
+					.text {
+						color: black;
+						margin-left:5px;
+						font-size: 13px;
+						padding-right: 47px;
+						text-transform: capitalize;
+						/* @include respond-to-max(x-small) {
+							font-size: 14px;
+							padding-right: 0px;
+						}
+						@include respond-to-max(small) {
+							font-size: 17px;
+						} */
+					}
+				}
+			}
+			.care {
+				margin-left: 10px;
+				margin-right: 10px;
+  				margin-top: 10px;
+  				padding-bottom: 10px;
+  				/* @include respond-to-max(mobile) {
+						font-size: 11px;
+				} */
+  				
+			}
+		}
+			
+	}

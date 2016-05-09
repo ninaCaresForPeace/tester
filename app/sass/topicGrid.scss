@@ -20,6 +20,9 @@
 			height: 485px;
 		}
 		/*<!---added above 3/7/16--->*/
+		@include respond-to-max(xs-small) { 
+			height: 580px;
+		}
 		.header {
 			font-size: 25px;
 			font-weight: bold;
@@ -117,12 +120,20 @@
 			height: 470px;
 		}
 		
+		@include respond-to-max(xs-small) { 
+			height: 520px;
+		}
+		
 		.row.top-row {
 			height:50%;
 			.left, .middle, .right {
 				height: 100%;
 				padding: 15px;
-				
+				@include respond-to-max(xs-small) {
+					width: 100%;
+					height: auto;
+					//height: 315px;
+				}
 				.button-text {
 					font-size: 14px;
 					color: white;
@@ -142,7 +153,18 @@
 						font-size: 14px;
 						width: 82%;
 					}
-
+					@include respond-to-max(x-small) {
+						font-family: Arial;
+						font-size: 20px;
+					}
+					@include respond-to-max(xs-small) {
+					    display: block;
+					    margin-left: auto;
+					    margin-right: auto;
+					    width: 100%;
+					    padding-right: 30px;
+					}
+					
 				}
 				.button-text.donate {
 					font-size: 22px;
@@ -165,9 +187,13 @@
 			.left, .middle, .right {
 				height: 100%;
 				padding: 15px;
-				
+				@include respond-to-max(xs-small) {
+					width: 100%;
+					height: auto;
+				}
 				.button-text {
 					font-size: 14px;
+					font-family: Arial;
 					color: white;
 					text-transform: uppercase;
     				position: absolute;
@@ -185,7 +211,17 @@
 						font-size: 14px;
 						width: 82%;
 					}
-					
+					@include respond-to-max(x-small) {
+						font-family: Arial;
+						font-size: 20px;
+					}
+					@include respond-to-max(xs-small) {
+					    display: block;
+					    margin-left: auto;
+					    margin-right: auto;
+					    width: 100%;
+					    padding-right: 30px;
+					}
 
 				}
 				
@@ -236,6 +272,10 @@
 			@include respond-to-max(x-small) {
 				height: 150px;
 			}
+			@include respond-to-max(xs-small) {
+				height:345px;
+				
+			}
 			
 		}
 			
@@ -254,6 +294,9 @@
 			}
 			@include respond-to-max(x-small) {
 				height: 150px;
+			}
+			@include respond-to-max(xs-small) {
+				height:345px;
 			}
 		}
 	}

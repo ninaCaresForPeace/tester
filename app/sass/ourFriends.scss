@@ -1,11 +1,48 @@
 /* !ourFriends.scss */
 .our-friends {
+	.left-side {
+		/* @include respond-to-max(ipad-768) {
+			width: 100%;
+		}  */
+	}
 	.friends-title {
 		font-family: Verdana;
 		font-size: 32px;
+		@include respond-to-max(lg-screen-max) {
+			text-align: center;
+		} 
 	}
 	.friends {
 		margin-top: 20px;
 		font-family: Arial;
+		@include respond-to-max(xs-small) {
+			font-size: 21px;
+		}
+		@include respond-to-max(ipad-768) {
+			font-size: 23px;
+		} 
+	}
+	.show-mobile {
+		@include respond-to-max(tablet-991) {
+			visibility: visible;
+		}
+		@include respond-to-min(desktop-992) {
+			visibility: hidden;
+		}
+		
 	}
 }
+
+.hide-mobile {
+		@include respond-to-max(tablet-991) {
+			visibility: hidden;
+		}
+		@include respond-to-min(desktop-992) {
+			visibility: visible;
+		}
+		/* .right-side {
+			@include respond-to-min(ipad-768) {
+				display: none;
+			}
+		} */
+	}

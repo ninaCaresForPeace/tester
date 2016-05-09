@@ -3,10 +3,27 @@
 	.other-member-title {
 		font-family: Verdana;
 		font-size: 32px;
+		@include respond-to-max(lg-screen-max) {
+			text-align: center;
+		} 
 	}
 	.members {
 		margin-top: 20px;
 		font-family: Arial;
+		@include respond-to-max(xs-small) {
+			font-size: 21px;
+		}
+		
 	}
+	.left-side {
+		/* @include respond-to-max(ipad-768) {
+			//	width: 100%;
+		} */
+	}
+	 @include respond-to-max(xs-small) {
+		 padding-top: 100px;
+	}
+	
+	
 	
 }

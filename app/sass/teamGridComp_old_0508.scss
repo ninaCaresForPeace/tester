@@ -1,25 +1,20 @@
 .team-grid-component {
 	margin-top:140px;
-	/* @include respond-to-max(lg-screen-max) {
-		margin-top:140px;
-	} */
+
 	.meet-title  {
 		font-family: Verdana;
 		font-size: 32px;
-		margin-left: 15px;
-		@include respond-to-max(lg-screen-max) {
-			text-align: center;
-		} 
-		/* @include respond-to-max(small) {
+		padding-left: 0px;
+		@include respond-to-max(small) {
     		padding-right: 0;
     		text-align: center;
-		} */
+		}
 
 	}
 	.description {
-		text-align: center;
+		width: 70%;
 
-		/* @include respond-to-max(small) {
+		@include respond-to-max(small) {
 			text-align: center;
 		    width: 500px;
 		    margin-left: 15%;
@@ -30,17 +25,14 @@
     		width: 100%;
     		margin-left: 0px;
 		    margin-right: 0px;
-		} */
+		}
 	}
 	.team {
 		
 		.member-photo {
     		width: 240px;
     		height: 325px;
-    		display: block;
-		    margin-right: auto;
-		    margin-left: auto;
-    		/* @include respond-to-max(mobile) {
+    		@include respond-to-max(mobile) {
 				    width: 160px;
     				height: 220px;
 			}
@@ -50,28 +42,26 @@
     			margin-left: auto;
     			margin-right: auto;
     			display: block;
-			} */
+			}
     		
 		}
 		.name {
 			font-weight: bold;
 			font-family: Arial;
-			text-align:center;
-			/* @include respond-to-max(small) {
+			@include respond-to-max(small) {
 				font-size: 18px;
 				text-align: center;
 				margin-top: 10px;
 				
-			} */
+			}
 		}
 		.about {
 			font-family: Arial;
-			text-align: center;
-			/* @include respond-to-max(small) {
+			@include respond-to-max(small) {
 				font-size: 18px;
 				text-align: center;
 				margin-bottom: 20px;
-			} */
+			}
 		}
 		.member {
 			
