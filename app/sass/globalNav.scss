@@ -13,61 +13,50 @@
 		float: left;
 		width: 135px;
 		height: 140px;
-		
 		display: inline;
+		
 		img {
 			height: 125px;
 			width: 113px;
 			padding-top: 10px;
+			
+			@include respond-to-max(lg-screen-min) {
+				height: 120px;
+    			width: 110px;
+			}
+			@include respond-to-max(sm-screen-max) {
+				width: 90px;
+		    	height: 100px;
+			}
 		}
 		
 	}
 	.block-logo {
 		img {
-			/* 	@include respond-to-max(ipad-768) {
-				    padding-top: 20px;
-				}
-    			@include respond-to-max(small) {
-					padding-top:15px; //for ipad horizontal view at 736px
-				}
-				@include respond-to-max(x-small) {
-					height: 80px;
-	    			margin-top: 27px;
-	    			width: 148px;
-	    			padding-top: 0;
-				}
-				@include respond-to-max(xs-small) {
-					width: 127px;
-				} */
+			@include respond-to-max(lg-screen-min) {
+    			width: 180px;
+    			position: absolute;
+    			top: 10px;
+				left: 106px;
 			}
-	}
-	@include respond-to-max(x-small) {
-		height: 150px;
-		/* .block-logo {
-			img {
-			    height: 80px;
-    			margin-top: 27px;
-    			width: 148px;
-    			
-    			@include respond-to-max(xs-small) {
-					width: 127px;
-				}
+			@include respond-to-max(sm-screen-min) {
+				width: 160px;
+				visibility: visibile;
 			}
-		} */
+			@include respond-to-max(sm-screen-max) {
+				visibility: hidden;
+			}
+		}
 	}
-	
 	
 	.social-media {
 		position: absolute;
 		top: 15px;
 		right: 12px;
 		font-size: 42px;
-	/* 	@include respond-to-max(x-small) {
-			top: 14px;
-		} */
-		/* @include respond-to-max(xs-small) {
-			right: 30px;
-		} */
+		@include respond-to-max(lg-screen-min) {
+			right: 25px;
+		}
 		a {
 			color: black;
 		}
@@ -88,10 +77,16 @@
 		.nav-tabs {
 			border-bottom: none;
 			.expanded {
-				@include respond-to-max(md-screen-min) {
+				@include respond-to-max(lg-screen-max) {
 					visibility:hidden;
 				}
-			
+				
+				@include respond-to-min(lg-screen-min) {
+					visibility:visible;
+				}
+				@include respond-to-max(lg-screen-min) {
+					visibility:hidden;
+				}
 				/* @include respond-to-max(mobile) {
 					visibility:hidden;
 	
@@ -110,6 +105,7 @@
 	.nav > li > a {
 		font: 16px arial;
 		color: $gry;
+		padding: 10px 5px;
 		/* @include respond-to-max(sm-screen) {
 			font-size: 14px;
 			padding-left: 8px;
@@ -137,9 +133,9 @@
 	}
 	
 	.btn-group.open {
-	background-color: transparent;
-    				border-color: transparent;
-    				box-shadow: none;
+		background-color: transparent;
+		border-color: transparent;
+		box-shadow: none;
 	}
 	
 	.btn-group {
@@ -147,12 +143,14 @@
 		position: absolute;
 		top: 70px;
 	   	right: 0;
-		/* @include respond-to-max(x-small) {
-			top: 60px;
+	   	@include respond-to-max(lg-screen-min) {
+			visibility: visible;
+			right: 12px;
 		}
-		@include respond-to-max(xs-small) {
-			right: 18px;
-		} */
+		@include respond-to-min(lg-screen-min) {
+			visibility: hidden;
+		}
+		
 	   	.dropdown-menu {
 	   		left: -103px;
   			border-radius: 1px;
@@ -180,19 +178,7 @@
 		.dropdown-menu > li.last > a:focus {
 			  color: $yellow;
 		}
-/* .btn-default:active:hover,
-		 .btn-default.active:hover,
-		  .open > .dropdown-toggle.btn-default:hover,
-		   .btn-default:active:focus,
-		    .btn-default.active:focus,
-		     .open > .dropdown-toggle.btn-default:focus,
-		      .btn-default:active.focus,
-		       .btn-default.active.focus,
-		        .open > .dropdown-toggle.btn-default.focus{
-		            background-color: transparent;
-    				border-color: transparent;
-    				box-shadow: none;
-		        } */
+
 		.btn {
 			border: none;
 			background-color: transparent;
@@ -204,18 +190,7 @@
 	   			font-size: 35px;
 	   		}
 	   		
-	   		/* @include respond-to-max(xs-small){
-	   			//right: 40px;
-	   		} */
-	   		
 		}
-		
-  		
-
-	/* 	@include respond-to-max(mobile) {
-			visibility:visible;
-	
-		} */
 		
 	}
 	.dropdown.open > a{

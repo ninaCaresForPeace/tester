@@ -1,0 +1,304 @@
+/*!topicGrid.scss*/
+.topic-grid {
+	background-color: white;
+	height: 410px;
+	padding: 0;
+	 @include respond-to-max(small) {
+		height: 780px;
+	}
+	@include respond-to-max(mobile) {
+		height: 362px;
+	}
+	
+	.left-block {
+		height: 100%;
+		/*<!---added below 3/7/16--->*/
+		@include respond-to-max(small) {
+			height: 400px;
+		}
+		@include respond-to-max(x-small) {
+			height: 485px;
+		}
+		/*<!---added above 3/7/16--->*/
+		@include respond-to-max(xs-small) { 
+			height: 580px;
+		}
+		.header {
+			font-size: 25px;
+			font-weight: bold;
+			height: 35px;
+			
+			@include respond-to-max(mobile) {
+				font-size: 18px; 
+				//font-size: 15px;
+				height: 29px;
+			}
+			@include respond-to-max(small) {
+				font-size: 24px;
+				height: 32px;
+			}
+		}
+		/* ::-webkit-scrollbar {
+	    	-webkit-appearance: none;
+	    	width: 7px;
+		}
+		::-webkit-scrollbar-thumb {
+	    	border-radius: 4px;
+	    	background-color: rgba(0,0,0,.5);
+	    	box-shadow: 0 0 1px rgba(255,255,255,.5);
+		} */
+		.content {
+			/* ::-webkit-scrollbar {
+		    	-webkit-appearance: none;
+		    	width: 7px;
+			}
+			::-webkit-scrollbar-thumb {
+		    	border-radius: 4px;
+		    	background-color: rgba(0,0,0,.5);
+		    	box-shadow: 0 0 1px rgba(255,255,255,.5);
+			} */
+			/* font-size: 18px;
+			max-height: 141px;
+			overflow-y: scroll; */
+			@include respond-to-max(mobile) {
+				font-size: 14px;
+				max-height: 110px;
+			}
+			@include respond-to-max(small) {
+				font-size: 20px;
+			
+			}
+		}
+		.top-box {
+			height: 50%;
+			padding: 15px;
+			.content {
+				line-height: 26px;
+				font-size: 15px;
+				/*<!---added below 3/7/16--->*/
+				@include respond-to-max(mobile) {
+					line-height: 20px;
+					font-size: 12px;
+				}
+				@include respond-to-max(small) {
+					line-height: 28px;
+					font-size: 18px;
+				}
+				@include respond-to-max(x-small) {
+					font-size: 16px;
+				}
+				/*<!---added above 3/7/16--->*/
+			}
+		}
+		.bottom-box {
+			height: 50%;
+			padding: 15px;
+			.content {
+				line-height: 26px;
+				font-size: 15px;
+				/*<!---added below 3/7/16--->*/
+				@include respond-to-max(mobile) {
+					line-height: 20px;
+					font-size: 12px;
+				}
+				@include respond-to-max(small) {
+					line-height: 28px;
+					font-size: 18px;
+				}
+				@include respond-to-max(x-small) {
+					font-size: 16px;
+				}
+				/*<!---added above 3/7/16--->*/
+			}
+		}
+	}
+	
+	.right-block {
+		height: 100%;
+		
+		@include respond-to-max(small) {
+			height: 470px;
+		}
+		
+		@include respond-to-max(xs-small) { 
+			height: 520px;
+		}
+		
+		.row.top-row {
+			height:50%;
+			.left, .middle, .right {
+				height: 100%;
+				padding: 15px;
+				@include respond-to-max(xs-small) {
+					width: 100%;
+					height: auto;
+					//height: 315px;
+				}
+				.button-text {
+					font-size: 14px;
+					color: white;
+					text-transform: uppercase;
+    				position: absolute;
+    				bottom: 25px;
+    				width: 85%;
+    				text-align: center;
+    				@include respond-to-max(mobile) {
+						bottom: 0;
+					}
+					@include respond-to-max(small) {
+						font-size: 18px;
+					}
+					@include respond-to-max(x-small) {
+						bottom: 20px;
+						font-size: 14px;
+						width: 82%;
+					}
+					@include respond-to-max(x-small) {
+						font-family: Arial;
+						font-size: 20px;
+					}
+					@include respond-to-max(xs-small) {
+					    display: block;
+					    margin-left: auto;
+					    margin-right: auto;
+					    width: 100%;
+					    padding-right: 30px;
+					}
+					
+				}
+				.button-text.donate {
+					font-size: 22px;
+					color: $yellow;
+				}
+			}
+			@include respond-to-max(mobile) {
+				height: 161px;
+			}
+
+			@include respond-to-max(small) {
+					height: 235px;
+			}
+			@include respond-to-max(x-small) {
+				height: 180px;
+			}
+		}
+		.row.bottom-row {
+			height:50%;
+			.left, .middle, .right {
+				height: 100%;
+				padding: 15px;
+				@include respond-to-max(xs-small) {
+					width: 100%;
+					height: auto;
+				}
+				.button-text {
+					font-size: 14px;
+					font-family: Arial;
+					color: white;
+					text-transform: uppercase;
+    				position: absolute;
+    				bottom: 25px;
+    				width: 85%;
+    				text-align: center;
+    				@include respond-to-max(mobile) {
+						bottom: 0;
+					}
+					@include respond-to-max(small) {
+						font-size: 18px;
+					}
+					@include respond-to-max(x-small) {
+						bottom: 20px;
+						font-size: 14px;
+						width: 82%;
+					}
+					@include respond-to-max(x-small) {
+						font-family: Arial;
+						font-size: 20px;
+					}
+					@include respond-to-max(xs-small) {
+					    display: block;
+					    margin-left: auto;
+					    margin-right: auto;
+					    width: 100%;
+					    padding-right: 30px;
+					}
+
+				}
+				
+			}
+			@include respond-to-max(mobile) {
+				height: 161px;
+				margin-top: 15px;
+			}
+
+			@include respond-to-max(small) {
+					height: 235px;
+			}
+			@include respond-to-max(x-small) {
+				height: 180px;
+			}
+		
+		}
+		.left {
+			background-color: transparent;
+			height: 100%;
+			
+		}
+		
+		.middle {
+			background-color: transparent;
+			height:100%;
+		}
+		
+		.right {
+			background-color: transparent;
+			height:100%;
+		}
+		
+		.top {
+			width: 100%;
+			height:100%;
+			
+			@include respond-to-max(mobile) {
+				height: 161px;
+			}
+			@include respond-to-max(mobile-920) {
+				height: 145px;
+			}
+			
+			@include respond-to-max(small) {
+				height: 225px;
+			}
+			@include respond-to-max(x-small) {
+				height: 150px;
+			}
+			@include respond-to-max(xs-small) {
+				height:345px;
+				
+			}
+			
+		}
+			
+		.bottom {
+			width: 100%;
+			height:100%;
+			@include respond-to-max(mobile) {
+				height: 161px;
+			}
+			@include respond-to-max(mobile-920) {
+				height: 145px;
+			}
+			
+			@include respond-to-max(small) {
+				height: 225px;
+			}
+			@include respond-to-max(x-small) {
+				height: 150px;
+			}
+			@include respond-to-max(xs-small) {
+				height:345px;
+			}
+		}
+	}
+
+}

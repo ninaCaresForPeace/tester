@@ -45,8 +45,9 @@
 				"content": "Care for Peace is founded on the premise that there is a connection between providing care through public health services to the underserved people of the world, and the peace desired by government and the people.  In Myanmar peace hangs in the balance.  It is our charge to test our premise and provide care...for peace."
 			}
 		],
-		"rightBlock": {
-				
+		"rightBlock": [
+			{
+				"row": "top-row",
 				"items": [
 					{
 						"position": "left",
@@ -55,7 +56,7 @@
 						"alt": "image of clinic being constructed",
 						"height": "170",
 						"width": "170",
-						"textColor": "white",
+						"row": "top",
 						"href": "#ourMission"
 					},
 					{
@@ -65,7 +66,7 @@
 						"alt": "image of clinic",
 						"height": "170",
 						"width": "170",
-						"textColor": "white",
+						"row": "top",
 						"href": "#achievements"
 					},
 					{
@@ -75,9 +76,14 @@
 						"alt": "donation image",
 						"height": "170",
 						"width": "170",
-						"textColor": "yellow",
+						"row": "top",
 						"href": "#donate"
-					},
+					}
+				]
+			},
+			{
+				"row": "bottom-row",
+				"items": [
 					{
 						"position": "left",
 						"text": "who we are",
@@ -85,7 +91,7 @@
 						"alt": "image of speaker speaking",
 						"height": "170",
 						"width": "170",
-						"textColor": "white",
+						"row": "bottom",
 						"href": "#whoWeAre"
 					},
 					{
@@ -95,7 +101,7 @@
 						"alt": "buddhist boy on train",
 						"height": "170",
 						"width": "170",
-						"textColor": "white",
+						"row": "bottom",
 						"href": "#myanmar"
 					},
 					{
@@ -105,12 +111,13 @@
 						"alt": "woman holding baby image",
 						"height": "170",
 						"width": "170",
-						"textColor": "white",
+						"row": "bottom",
 						"href": "#blog"
 					}
-					
 				]
-			}			
+			}
+			
+		]
 	}
 }
 

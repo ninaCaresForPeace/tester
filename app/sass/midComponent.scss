@@ -10,10 +10,10 @@
 		    font-size: 23px;
 		    color: $gry;
 		}
-		@include respond-to-min(ipad-768) {
+		/* @include respond-to-min(ipad-768) {
 				width: 100%;
 				
-		}
+		} */
 		.bottom-content {
 			margin-top:45px;
 			.title {

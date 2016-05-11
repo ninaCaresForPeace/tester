@@ -13,10 +13,40 @@
 			$scope.noWrapSlides = false;
 			
 			$scope.left = response.data.topicGrid.leftBlock;
-			$scope.grid = response.data.topicGrid.rightBlock;
+			var items = response.data.topicGrid.rightBlock.items;
+			
+			$scope.grid = [];
+			for(var i = 0; i < 6; i++) {
+				$scope.grid.push(items[i]);
+				
+			}
+//			$scope.grid = [];
+//			for (var prop in items) {
+//			    var value = items[prop];
+//			    if (typeof value === 'object') {
+//			    	$scope.grid.push(toArray(value));
+//			    } else {
+//			    	$scope.grid.push(value);
+//			    }
+//			  }
+			
 			
 		});
 	}]);
+//	app.controller("homeController", ["$scope", "$route", "getJsonService", function ($scope, $route, getJsonService) {
+//		var jsonFile = $route.current.$$route.json;
+//		getJsonService.retrieveJson(jsonFile).then(function(response){ 
+//			var data = response.data;
+//			$scope.topBand = data.topBand;
+//			$scope.carousel = response.data.carousel;
+//			$scope.interval = 5000;
+//			$scope.noWrapSlides = false;
+//			
+//			$scope.left = response.data.topicGrid.leftBlock;
+//			$scope.grid = response.data.topicGrid.rightBlock;
+//			
+//		});
+//	}]);
 	//ourMissionController
 	app.controller("ourMissionController", ["$scope", "$route", "getJsonService", function ($scope, $route, getJsonService) {
 		var jsonFile = $route.current.$$route.json;

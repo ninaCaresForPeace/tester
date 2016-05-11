@@ -1,5 +1,5 @@
 <div class="middle-component row">
-	<div class="left-side col-sm-10">
+	<div class="left-side col-md-10 col-lg-10 col-sm-12 col-xs-12">
 		<div class="top-content">{{infoSection}}</div>
 		<div class="bottom-content">
 			<div ng-if="video.show =='true'" class="title">{{video.title}}</div>
@@ -24,3 +24,27 @@
 
 
 
+
+<!-- <div class="middle-component row">
+	<div class="left-side col-sm-10">
+		<div class="top-content">{{infoSection}}</div>
+		<div class="bottom-content">
+			<div ng-if="video.show =='true'" class="title">{{video.title}}</div>
+			<div class="video-container row">
+		
+			<div class="col-sm-12">
+
+				<div ng-if="video.show =='true'" class="embed-responsive embed-responsive-16by9">
+  					
+					<iframe ng-if="video.show =='true'" class="embed-responsive-item" src="{{video.src | trustUrl}}"></iframe>
+				</div>
+				<div ng-if="image.show =='true'" class="bottom-image">
+  					<img class="" data-ng-src="{{image.src}}" alt="{{image.alt}}">
+				</div>
+			</div>
+         
+			</div>
+		</div>
+	</div>
+	<right-block-module></right-block-module>
+</div> -->

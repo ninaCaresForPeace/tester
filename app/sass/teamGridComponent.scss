@@ -10,27 +10,16 @@
 		@include respond-to-max(lg-screen-max) {
 			text-align: center;
 		} 
-		/* @include respond-to-max(small) {
-    		padding-right: 0;
-    		text-align: center;
-		} */
+		
 
 	}
 	.description {
 		text-align: center;
-
-		/* @include respond-to-max(small) {
-			text-align: center;
-		    width: 500px;
-		    margin-left: 15%;
-		    margin-right: 15%;
+		font-family: Arial;
+		@include respond-to-max(lg-screen-max) {
+				font-size: 21px;
 		}
-		@include respond-to-max(x-small) {
-			text-align: center;
-    		width: 100%;
-    		margin-left: 0px;
-		    margin-right: 0px;
-		} */
+		
 	}
 	.team {
 		
@@ -40,38 +29,24 @@
     		display: block;
 		    margin-right: auto;
 		    margin-left: auto;
-    		/* @include respond-to-max(mobile) {
-				    width: 160px;
-    				height: 220px;
-			}
-    		@include respond-to-max(small) {
-				width: 325px;
-    			height: 425px;
-    			margin-left: auto;
-    			margin-right: auto;
-    			display: block;
-			} */
     		
 		}
 		.name {
 			font-weight: bold;
 			font-family: Arial;
 			text-align:center;
-			/* @include respond-to-max(small) {
-				font-size: 18px;
-				text-align: center;
-				margin-top: 10px;
-				
-			} */
+			@include respond-to-max(lg-screen-max) {
+				font-size: 21px;
+			}
+			
 		}
 		.about {
+			@include respond-to-max(lg-screen-max) {
+				font-size: 21px;
+			}
 			font-family: Arial;
 			text-align: center;
-			/* @include respond-to-max(small) {
-				font-size: 18px;
-				text-align: center;
-				margin-bottom: 20px;
-			} */
+			
 		}
 		.member {
 			
