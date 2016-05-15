@@ -28,7 +28,7 @@
 				line-height: 26px;
 				font-size: 15px;
 				@include respond-to-max(xl-screen-max) {
-					font-size: 18px;
+					font-size: 21px;
 				} 
 			}
 		}
@@ -56,13 +56,55 @@
 					top: 162px;
 					text-transform: uppercase;
 					z-index: 10;
-					@include respond-to-max(lg-screen-max) {
+					
+					@include respond-to-min(sm-screen-min) { //min-width: 544px
+						top: 236px;
+						font-size: 30px;
+					}
+					@include respond-to-min(md-screen-min) { //min-width: 768px
+						font-size: 19px;
+						top: 220px;
+					}
+					@include respond-to-min(lg-screen-min) { //min-width: 992px
+						
+						top: 162px;;
+		    			
+					}
+					@include respond-to-min(xl-screen-min) { //min-width: 1200px
+						font-size: 16px;
+					}
+					/* @include respond-to-min(lg-screen-min) { //min-width: 1200px
+						  
+					}
+					@include respond-to-max(xl-screen-max) { //max-width: 1199px
+				 		
+					}
+					@include respond-to-min(lg-screen-min) { //min-width: 992px
+							   
+					}
+					@include respond-to-max(lg-screen-max) { //max-width: 991px
+						
+					}
+					@include respond-to-min(md-screen-min) { //min-width: 768px
+							
+					}
+					@include respond-to-max(md-screen-max) { //max-width: 767px
+						
+					}
+					@include respond-to-min(sm-screen-min) { //min-width: 544px
+						
+					}
+					@include respond-to-max(sm-screen-max) { //max-width: 543px
+						top: 187px;
+						font-size: 19px;
+					} */
+					/* @include respond-to-max(lg-screen-max) {
 						font-size: 23px;
 				    	top: 329px;
-					}
-					@include respond-to-max(sm-screen-max) {
+					} */
+					/* @include respond-to-max(sm-screen-max) {
 					 	top: 289px;
-					}
+					} */
 				}
 				.button-text.white {
 					color: white;
@@ -73,18 +115,108 @@
 				img {
 					margin-left: auto;
 				    margin-right: auto;
-				    display: block;
-				    width: 170px;
-				    height: 170px;
+				  	display: block;
+				  	width: 300px;
+		   				height: 200px;
+				    /* width: 170px;
+				    height: 170px; */
 				   
-				    @include respond-to-max(lg-screen-max) {
+					
+					
+					
+					
+					@include respond-to-min(sm-screen-min) { //min-width: 544px
+					width: 450px;
+						height: 266px;
+						/* width: 250px;
+		   				height: 167px;  */
+					}
+				/* 	@include respond-to-max(md-screen-max) { //max-width: 767px
+						width: 450px;
+						height: 266px;
+						width: 250px;
+		   				height: 167px; 
+					} */
+					@include respond-to-min(md-screen-min) { //min-width: 768px
 						width: 350px;
-				    	height: 350px;
+						height: 233px;
 					}
-					@include respond-to-max(sm-screen-max) {
+					/* @include respond-to-max(lg-screen-max) { //max-width: 991px
+						width: 350px;
+		   				height: 233px;
+					} */
+					@include respond-to-min(lg-screen-min) { //min-width: 992px
+						/* width: 200px;
+		    			height: 133px;  */
+		    			 width: 250px;
+		   				height: 167px;
+		    			
+					}
+				   /*  @include respond-to-max(xl-screen-max) { //max-width: 1199px
+				 		width: 250px;
+		   				height: 167px; 
+					} */
+					@include respond-to-min(xl-screen-min) { //min-width: 1200px
+						width: 170px;
+				    	height: 170px;
+					}
+					///////////////////////
+					/* @include respond-to-min(xl-screen-min) { //min-width: 1200px
+						width: 170px;
+				    	height: 170px;
+						width: 200px;
+		    			height: 133px;    
+					}
+					@include respond-to-max(xl-screen-max) { //max-width: 1199px
+				 		width: 250px;
+		   				height: 167px; 
+					}
+					@include respond-to-min(lg-screen-min) { //min-width: 992px
+						width: 200px;
+		    			height: 133px;    
+					}
+					@include respond-to-max(lg-screen-max) { //max-width: 991px
+						width: 350px;
+		   				height: 233px;
+				 		width: 250px;
+		   				height: 167px; 
+					}
+					@include respond-to-min(md-screen-min) { //min-width: 768px
+						width: 350px;
+		   				height: 233px;
+						width: 250px;
+		    			height: 167px; 
+					}
+					@include respond-to-max(md-screen-max) { //max-width: 767px
+					width: 250px;
+		   				height: 167px; 
+						width: 263px;
+						height: 175px;
+						/* width: 350px;
+		   				height: 233px;
+					}
+					@include respond-to-min(sm-screen-min) { //min-width: 544px
+					width: 250px;
+		   				height: 167px; 
+						width: 263px;
+						height: 175px;
+					}
+					@include respond-to-max(sm-screen-max) { //max-width: 543px
+						width: 450px;
+						height: 266px
 						width: 300px;
-				    	height: 300px;
+		   				height: 200px;
+		   				margin-left: 0;
+				    	margin-right: 0;
 					}
+					 */
+					
+					
+					
+					
+					
+				
+
 				
 				}
 			}

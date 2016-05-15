@@ -248,27 +248,28 @@
 
 			$scope.info = data.info;
 			$scope.message = data.donateOptions.message;
+			$scope.options = data.donateOptions.options;
 			
-			var options = data.donateOptions.options;
-			var batchSize = 4;
-			var oSize = options.length;
-			$scope.batches = [];
-			var array = [];
-			for(var i = 0; i < oSize; i++) {
-				if(array.length === 4) {
-					$scope.batches.push(array);
-					array = [];
-					array.push(options[i]);
-					if(i === (oSize-1)){
-						$scope.batches.push(array);
-					}
-				}else {
-					array.push(options[i]);
-					if(i === (oSize-1)){
-						$scope.batches.push(array);
-					}
-				}
-			}
+//			var options = data.donateOptions.options;
+//			var batchSize = 4;
+//			var oSize = options.length;
+//			$scope.batches = [];
+//			var array = [];
+//			for(var i = 0; i < oSize; i++) {
+//				if(array.length === 4) {
+//					$scope.batches.push(array);
+//					array = [];
+//					array.push(options[i]);
+//					if(i === (oSize-1)){
+//						$scope.batches.push(array);
+//					}
+//				}else {
+//					array.push(options[i]);
+//					if(i === (oSize-1)){
+//						$scope.batches.push(array);
+//					}
+//				}
+//			}
 			var alternate = data.alternateOption;
 			$scope.alternateMessage = alternate.alternateMessage;
 			$scope.company = alternate.company;

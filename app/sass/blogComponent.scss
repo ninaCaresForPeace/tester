@@ -23,5 +23,22 @@
 	    font-family: Arial;
 	    line-height: 1.8;
 	}
+	.pagination-sm > li > a, .pagination-sm > li > span {
+		font-size: 21px;
+		color: $gry;
+	}
+	.pagination > .active > a,
+	 .pagination > .active > span,
+	  .pagination > .active > a:hover,
+	   .pagination > .active > span:hover,
+	    .pagination > .active > a:focus,
+	     .pagination > .active > span:focus {
+	     	background-color: $yellow;
+	     	border-color: $yellow;
+	     	color: white;
+	     	
+	     }
+	
+	
 	
 }

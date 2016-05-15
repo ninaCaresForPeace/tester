@@ -35,6 +35,7 @@
 			    			if(tabName === newActiveTab) {
 			    				var currentValue = thisElement.attributes.class.nodeValue;
 			    				thisElement.className = "active " + currentValue;
+			    				thisElement.children.click();
 			    			}
 			    		}	
 			    	}

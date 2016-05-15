@@ -33,7 +33,7 @@
 	}
 	.block-logo {
 		img {
-			@include respond-to-max(lg-screen-min) {
+			@include respond-to-max(lg-screen-max) {
     			width: 180px;
     			position: absolute;
     			top: 10px;
@@ -71,6 +71,7 @@
 		margin-top: none;
 		line-height:0px;
 		display: inline; //or inline block?
+		visibility:visible;
 		&.row {
 			margin-left: 0px;
 		}
@@ -81,16 +82,6 @@
 					visibility:hidden;
 				}
 				
-				@include respond-to-min(lg-screen-min) {
-					visibility:visible;
-				}
-				@include respond-to-max(lg-screen-min) {
-					visibility:hidden;
-				}
-				/* @include respond-to-max(mobile) {
-					visibility:hidden;
-	
-				} */
 			}
 		}
 	}
@@ -106,12 +97,7 @@
 		font: 16px arial;
 		color: $gry;
 		padding: 10px 5px;
-		/* @include respond-to-max(sm-screen) {
-			font-size: 14px;
-			padding-left: 8px;
-			padding-right: 8px;
-	
-		} */
+		
 	}
 	
 	.nav > li > a:hover,
@@ -143,13 +129,11 @@
 		position: absolute;
 		top: 70px;
 	   	right: 0;
-	   	@include respond-to-max(lg-screen-min) {
+	   	@include respond-to-max(lg-screen-max) {
 			visibility: visible;
 			right: 12px;
 		}
-		@include respond-to-min(lg-screen-min) {
-			visibility: hidden;
-		}
+		
 		
 	   	.dropdown-menu {
 	   		left: -103px;

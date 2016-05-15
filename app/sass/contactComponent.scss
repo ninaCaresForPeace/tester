@@ -2,7 +2,11 @@
 .contact-component {
 	.left-side {
 	    background-color: white;
-    	height: 500px;
+    	height: 600px;
+    	@include respond-to-max(lg-screen-max) {
+			height:400px;
+		}
+				
 	}
 	.tempDirections {
 	    text-align: center;

@@ -12,21 +12,61 @@
 	}
 	.batch {
 		.option-image {
-			width: 100%;
-    		height: 100%;
+			@include respond-to-max(sm-screen-max) { //max-width: 543px
+				width: 450px;
+				height: 266px
+			}
+			@include respond-to-min(sm-screen-min) { //min-width: 544px
+				width: 263px;
+				height: 175px;
+			}
+			@include respond-to-max(md-screen-max) { //max-width: 767px
+				width: 350px;
+   				height: 233px;
+			}
+			@include respond-to-min(md-screen-min) { //min-width: 768px
+				width: 250px;
+    			height: 167px; 
+			}
+			@include respond-to-max(lg-screen-max) { //max-width: 991px
+		 		width: 250px;
+   				height: 167px; 
+			}
+			@include respond-to-min(lg-screen-min) { //min-width: 992px
+				width: 200px;
+    			height: 133px;    
+			}
+			@include respond-to-max(xl-screen-max) { //max-width: 1199px
+		 		width: 250px;
+   				height: 167px; 
+			}
+			@include respond-to-min(lg-screen-min) { //min-width: 1200px
+				width: 200px;
+    			height: 133px;    
+			}
+			
 		}
 		.option-grid {
-			@include respond-to-max(ipad-768) {
-				width: 50%;
-			}
+			
 			.amount {
 				font-family: Arial;
 				font-size: 16px;
 				text-align: center;
-				@include respond-to-max(ipad-768) {
-					font-size: 25px;
-				}
+				
 			}
 		}
 	}
 }
+/*width: 200px;
+    height: 133px;
+
+'sm-screen-max': 543px,
+  'sm-screen-min': 544px,
+  
+  'md-screen-max': 767px,
+  'md-screen-min': 768px,
+  'lg-screen-min': 992px,
+  'lg-screen-max': 991px,
+  'xl-screen-max': 1199px,
+  'xl-screen-min': 1200px
+  */

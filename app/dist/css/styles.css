@@ -81,7 +81,7 @@ body {
         .globalNav .dove-logo img {
           width: 90px;
           height: 100px; } }
-  @media (max-width: 992px) {
+  @media (max-width: 991px) {
     .globalNav .block-logo img {
       width: 180px;
       position: absolute;
@@ -111,37 +111,21 @@ body {
     height: 140px;
     margin-top: none;
     line-height: 0px;
-    display: inline; }
+    display: inline;
+    visibility: visible; }
     .globalNav .global-navigation-header.row {
       margin-left: 0px; }
     .globalNav .global-navigation-header .nav-tabs {
       border-bottom: none; }
-      .globalNav .global-navigation-header .nav-tabs .expanded {
-        /* @include respond-to-max(mobile) {
-					visibility:hidden;
-	
-				} */ }
-        @media (max-width: 991px) {
-          .globalNav .global-navigation-header .nav-tabs .expanded {
-            visibility: hidden; } }
-        @media (min-width: 992px) {
-          .globalNav .global-navigation-header .nav-tabs .expanded {
-            visibility: visible; } }
-        @media (max-width: 992px) {
-          .globalNav .global-navigation-header .nav-tabs .expanded {
-            visibility: hidden; } }
+      @media (max-width: 991px) {
+        .globalNav .global-navigation-header .nav-tabs .expanded {
+          visibility: hidden; } }
   .globalNav .nav .last a {
     color: #F8BA00; }
   .globalNav .nav > li > a {
     font: 16px arial;
     color: #666666;
-    padding: 10px 5px;
-    /* @include respond-to-max(sm-screen) {
-			font-size: 14px;
-			padding-left: 8px;
-			padding-right: 8px;
-	
-		} */ }
+    padding: 10px 5px; }
   .globalNav .nav > li > a:hover,
   .globalNav .nav > li > a:focus,
   .globalNav .nav > li > a:active {
@@ -165,13 +149,10 @@ body {
     position: absolute;
     top: 70px;
     right: 0; }
-    @media (max-width: 992px) {
+    @media (max-width: 991px) {
       .globalNav .btn-group {
         visibility: visible;
         right: 12px; } }
-    @media (min-width: 992px) {
-      .globalNav .btn-group {
-        visibility: hidden; } }
     .globalNav .btn-group .dropdown-menu {
       left: -103px;
       border-radius: 1px; }
@@ -233,7 +214,7 @@ body {
       font-size: 15px; }
       @media (max-width: 1199px) {
         .topic-grid .left-block .top-box .content {
-          font-size: 18px; } }
+          font-size: 21px; } }
   .topic-grid .left-block .bottom-box {
     height: 50%;
     padding: 15px; }
@@ -249,14 +230,53 @@ body {
     text-align: center;
     top: 162px;
     text-transform: uppercase;
-    z-index: 10; }
-    @media (max-width: 991px) {
+    z-index: 10;
+    /* @include respond-to-min(lg-screen-min) { //min-width: 1200px
+						  
+					}
+					@include respond-to-max(xl-screen-max) { //max-width: 1199px
+				 		
+					}
+					@include respond-to-min(lg-screen-min) { //min-width: 992px
+							   
+					}
+					@include respond-to-max(lg-screen-max) { //max-width: 991px
+						
+					}
+					@include respond-to-min(md-screen-min) { //min-width: 768px
+							
+					}
+					@include respond-to-max(md-screen-max) { //max-width: 767px
+						
+					}
+					@include respond-to-min(sm-screen-min) { //min-width: 544px
+						
+					}
+					@include respond-to-max(sm-screen-max) { //max-width: 543px
+						top: 187px;
+						font-size: 19px;
+					} */
+    /* @include respond-to-max(lg-screen-max) {
+						font-size: 23px;
+				    	top: 329px;
+					} */
+    /* @include respond-to-max(sm-screen-max) {
+					 	top: 289px;
+					} */ }
+    @media (min-width: 544px) {
       .topic-grid .right-block .grid .button-container .button-text {
-        font-size: 23px;
-        top: 329px; } }
-    @media (max-width: 543px) {
+        top: 236px;
+        font-size: 30px; } }
+    @media (min-width: 768px) {
       .topic-grid .right-block .grid .button-container .button-text {
-        top: 289px; } }
+        font-size: 19px;
+        top: 220px; } }
+    @media (min-width: 992px) {
+      .topic-grid .right-block .grid .button-container .button-text {
+        top: 162px; } }
+    @media (min-width: 1200px) {
+      .topic-grid .right-block .grid .button-container .button-text {
+        font-size: 16px; } }
   .topic-grid .right-block .grid .button-container .button-text.white {
     color: white; }
   .topic-grid .right-block .grid .button-container .button-text.yellow {
@@ -265,16 +285,93 @@ body {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    width: 170px;
-    height: 170px; }
-    @media (max-width: 991px) {
+    width: 300px;
+    height: 200px;
+    /* width: 170px;
+				    height: 170px; */
+    /* 	@include respond-to-max(md-screen-max) { //max-width: 767px
+						width: 450px;
+						height: 266px;
+						width: 250px;
+		   				height: 167px; 
+					} */
+    /* @include respond-to-max(lg-screen-max) { //max-width: 991px
+						width: 350px;
+		   				height: 233px;
+					} */
+    /*  @include respond-to-max(xl-screen-max) { //max-width: 1199px
+				 		width: 250px;
+		   				height: 167px; 
+					} */
+    /* @include respond-to-min(xl-screen-min) { //min-width: 1200px
+						width: 170px;
+				    	height: 170px;
+						width: 200px;
+		    			height: 133px;    
+					}
+					@include respond-to-max(xl-screen-max) { //max-width: 1199px
+				 		width: 250px;
+		   				height: 167px; 
+					}
+					@include respond-to-min(lg-screen-min) { //min-width: 992px
+						width: 200px;
+		    			height: 133px;    
+					}
+					@include respond-to-max(lg-screen-max) { //max-width: 991px
+						width: 350px;
+		   				height: 233px;
+				 		width: 250px;
+		   				height: 167px; 
+					}
+					@include respond-to-min(md-screen-min) { //min-width: 768px
+						width: 350px;
+		   				height: 233px;
+						width: 250px;
+		    			height: 167px; 
+					}
+					@include respond-to-max(md-screen-max) { //max-width: 767px
+					width: 250px;
+		   				height: 167px; 
+						width: 263px;
+						height: 175px;
+						/* width: 350px;
+		   				height: 233px;
+					}
+					@include respond-to-min(sm-screen-min) { //min-width: 544px
+					width: 250px;
+		   				height: 167px; 
+						width: 263px;
+						height: 175px;
+					}
+					@include respond-to-max(sm-screen-max) { //max-width: 543px
+						width: 450px;
+						height: 266px
+						width: 300px;
+		   				height: 200px;
+		   				margin-left: 0;
+				    	margin-right: 0;
+					}
+					 */ }
+    @media (min-width: 544px) {
+      .topic-grid .right-block .grid .button-container img {
+        width: 450px;
+        height: 266px;
+        /* width: 250px;
+		   				height: 167px;  */ } }
+    @media (min-width: 768px) {
       .topic-grid .right-block .grid .button-container img {
         width: 350px;
-        height: 350px; } }
-    @media (max-width: 543px) {
+        height: 233px; } }
+    @media (min-width: 992px) {
       .topic-grid .right-block .grid .button-container img {
-        width: 300px;
-        height: 300px; } }
+        /* width: 200px;
+		    			height: 133px;  */
+        width: 250px;
+        height: 167px; } }
+    @media (min-width: 1200px) {
+      .topic-grid .right-block .grid .button-container img {
+        width: 170px;
+        height: 170px; } }
 
 /*!footer.scss*/
 .footer-section {
@@ -540,13 +637,12 @@ body {
 /* !rightBlockModule.scss */
 .right-side {
   background-color: white;
-  height: 380px; }
-  @media (max-width: 991px) {
+  height: auto; }
+  @media (min-width: 768px) {
     .right-side {
-      height: 100%;
       padding-left: 0;
       padding-right: 0; } }
-  @media (max-width: 768px) {
+  @media (min-width: 992px) {
     .right-side {
       padding-left: 0;
       padding-right: 0; } }
@@ -710,20 +806,56 @@ body {
     font-size: 20px;
     margin-bottom: 30px;
     text-align: center; }
-  .donate-options .batch .option-image {
-    width: 100%;
-    height: 100%; }
-  @media (max-width: 768px) {
-    .donate-options .batch .option-grid {
-      width: 50%; } }
+  @media (max-width: 543px) {
+    .donate-options .batch .option-image {
+      width: 450px;
+      height: 266px; } }
+  @media (min-width: 544px) {
+    .donate-options .batch .option-image {
+      width: 263px;
+      height: 175px; } }
+  @media (max-width: 767px) {
+    .donate-options .batch .option-image {
+      width: 350px;
+      height: 233px; } }
+  @media (min-width: 768px) {
+    .donate-options .batch .option-image {
+      width: 250px;
+      height: 167px; } }
+  @media (max-width: 991px) {
+    .donate-options .batch .option-image {
+      width: 250px;
+      height: 167px; } }
+  @media (min-width: 992px) {
+    .donate-options .batch .option-image {
+      width: 200px;
+      height: 133px; } }
+  @media (max-width: 1199px) {
+    .donate-options .batch .option-image {
+      width: 250px;
+      height: 167px; } }
+  @media (min-width: 992px) {
+    .donate-options .batch .option-image {
+      width: 200px;
+      height: 133px; } }
   .donate-options .batch .option-grid .amount {
     font-family: Arial;
     font-size: 16px;
     text-align: center; }
-    @media (max-width: 768px) {
-      .donate-options .batch .option-grid .amount {
-        font-size: 25px; } }
 
+/*width: 200px;
+    height: 133px;
+
+'sm-screen-max': 543px,
+  'sm-screen-min': 544px,
+  
+  'md-screen-max': 767px,
+  'md-screen-min': 768px,
+  'lg-screen-min': 992px,
+  'lg-screen-max': 991px,
+  'xl-screen-max': 1199px,
+  'xl-screen-min': 1200px
+  */
 /* !teamMemberComponent.scss*/
 .team-member-component .other-member-title {
   font-family: Verdana;
@@ -831,10 +963,27 @@ body {
   font-family: Arial;
   line-height: 1.8; }
 
+.blog-component .pagination-sm > li > a, .blog-component .pagination-sm > li > span {
+  font-size: 21px;
+  color: #666666; }
+
+.blog-component .pagination > .active > a,
+.blog-component .pagination > .active > span,
+.blog-component .pagination > .active > a:hover,
+.blog-component .pagination > .active > span:hover,
+.blog-component .pagination > .active > a:focus,
+.blog-component .pagination > .active > span:focus {
+  background-color: #F8BA00;
+  border-color: #F8BA00;
+  color: white; }
+
 /*!contactComponent.scss*/
 .contact-component .left-side {
   background-color: white;
-  height: 500px; }
+  height: 600px; }
+  @media (max-width: 991px) {
+    .contact-component .left-side {
+      height: 400px; } }
 
 .contact-component .tempDirections {
   text-align: center;

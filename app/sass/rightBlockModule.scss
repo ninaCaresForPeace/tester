@@ -1,19 +1,18 @@
 /* !rightBlockModule.scss */
 .right-side {
 		background-color:white;
-		height: 380px;
+		height: auto;
 		
-		@include respond-to-max(lg-screen-max){
-			//Max width of 991 px
-			height: 100%;
+		@include respond-to-min(md-screen-min) { //min-width: 768px
+			padding-left: 0;
+				padding-right: 0;
+		}
+		@include respond-to-min(lg-screen-min) { //min-width: 992px
 			padding-left: 0;
     		padding-right: 0;
+		}
 					
-		}
-		@include respond-to-max(md-screen-min) {
-			padding-left: 0;
- 			padding-right: 0;
-		}
+
 		.media-container {
 			background-color: $ltGry2;
 			margin-top: 84px;

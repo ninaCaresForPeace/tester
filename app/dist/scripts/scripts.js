@@ -14011,27 +14011,28 @@ angular.module("template/typeahead/typeahead-popup.html", []).run(["$templateCac
 
 			$scope.info = data.info;
 			$scope.message = data.donateOptions.message;
+			$scope.options = data.donateOptions.options;
 			
-			var options = data.donateOptions.options;
-			var batchSize = 4;
-			var oSize = options.length;
-			$scope.batches = [];
-			var array = [];
-			for(var i = 0; i < oSize; i++) {
-				if(array.length === 4) {
-					$scope.batches.push(array);
-					array = [];
-					array.push(options[i]);
-					if(i === (oSize-1)){
-						$scope.batches.push(array);
-					}
-				}else {
-					array.push(options[i]);
-					if(i === (oSize-1)){
-						$scope.batches.push(array);
-					}
-				}
-			}
+//			var options = data.donateOptions.options;
+//			var batchSize = 4;
+//			var oSize = options.length;
+//			$scope.batches = [];
+//			var array = [];
+//			for(var i = 0; i < oSize; i++) {
+//				if(array.length === 4) {
+//					$scope.batches.push(array);
+//					array = [];
+//					array.push(options[i]);
+//					if(i === (oSize-1)){
+//						$scope.batches.push(array);
+//					}
+//				}else {
+//					array.push(options[i]);
+//					if(i === (oSize-1)){
+//						$scope.batches.push(array);
+//					}
+//				}
+//			}
 			var alternate = data.alternateOption;
 			$scope.alternateMessage = alternate.alternateMessage;
 			$scope.company = alternate.company;
@@ -14136,6 +14137,7 @@ angular.module("template/typeahead/typeahead-popup.html", []).run(["$templateCac
 			    
 				
 				element.bind('click', function (scope) {
+				//	debugger;
 			    	var newActiveTab = element.text().trim();
 			    	var $li = element.parent().parent().parent().parent().find("li");
 			    	$li.removeClass("active");
@@ -14148,6 +14150,7 @@ angular.module("template/typeahead/typeahead-popup.html", []).run(["$templateCac
 			    			if(tabName === newActiveTab) {
 			    				var currentValue = thisElement.attributes.class.nodeValue;
 			    				thisElement.className = "active " + currentValue;
+			    				thisElement.children.click();
 			    			}
 			    		}	
 			    	}
