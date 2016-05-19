@@ -5,34 +5,34 @@
 	"bgImage": {
 		"images": [
 			{
-				"src": "./images/goldenPagoda.png"
+				"src": "./images/templeT.png"
 			},
 			{
-				"src" :"./images/goldenPagoda_480x320.png",
+				"src" :"./images/templeT_480x320.png",
 				"media": "1px"
 			},
 			{
-				"src" :"./images/goldenPagoda_768x512.png",
+				"src" :"./images/templeT_768x300.png",
 				"media": "645px"
 			},
 			{
-				"src" :"./images/goldenPagoda_920x613.png",
+				"src" :"./images/templeT_920x469.png",
 				"media": "920px"
 			},
 			{
-				"src" :"./images/goldenPagoda_1200x800.png",
+				"src" :"./images/templeT_1200x469.png",
 				"media": "1200px"
 			},
 			{
-				"src" :"./images/goldenPagoda_1400x933.png",
+				"src" :"./images/templeT_1400x547.png",
 				"media": "1400px"
 			},
 			{
-				"src" :"./images/goldenPagoda_1600x1067.png",
+				"src" :"./images/templeT_1600x625.png",
 				"media": "1600px"
 			},
 			{
-				"src" :"./images/goldenPagoda_1920x1280.png",
+				"src" :"./images/templeT_1920x750.png",
 				"media": "1920px"
 			}
 		

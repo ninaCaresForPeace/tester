@@ -10,6 +10,10 @@
 			"altTag"	: "Young boys in Myanmar"
 		},
 		{
+			"image"		: "./images/burma_buddha_1024x400.png",
+			"altTag"	: "Buddha statue in Burma"
+		},
+		{
 			"image"		: "./images/burma_buffalo_1024x400.png",
 			"altTag"	: "Buffalo in Burma"
 		},
@@ -24,6 +28,10 @@
 		{
 			"image"		: "./images/myanmar_care_1024x400.png",
 			"altTag"	: "Myanmar Care"
+		},
+		{
+			"image"		: "./images/myanmar_health_1024x400.png",
+			"altTag"	: "Myanmar Health"
 		}
 	],
 	"topicGrid": {

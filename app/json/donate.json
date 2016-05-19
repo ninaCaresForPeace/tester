@@ -12,27 +12,27 @@
 				"media": "1px"
 			},
 			{
-				"src" :"./images/boy_768x512.png",
+				"src" :"./images/z_boy_768x300.png",
 				"media": "645px"
 			},
 			{
-				"src" :"./images/boy_920x613.png",
+				"src" :"./images/z_boy_920x359.png",
 				"media": "920px"
 			},
 			{
-				"src" :"./images/boy_1200x799.png",
+				"src" :"./images/z_boy_1200x469.png",
 				"media": "1200px"
 			},
 			{
-				"src" :"./images/boy_1400x932.png",
+				"src" :"./images/z_boy_1400x547.png",
 				"media": "1400px"
 			},
 			{
-				"src" :"./images/boy_1600x1066.png",
+				"src" :"./images/z_boy_1600x625.png",
 				"media": "1600px"
 			},
 			{
-				"src" :"./images/boy_1920x1279.png",
+				"src" :"./images/z_boy_1920x750.png",
 				"media": "1920px"
 			}
 		

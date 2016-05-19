@@ -12,27 +12,27 @@
 				"media": "1px"
 			},
 			{
-				"src" :"./images/monkPagoda_768x512.png",
+				"src" :"./images/z_monkPagoda_768x300.png",
 				"media": "645px"
 			},
 			{
-				"src" :"./images/monkPagoda_920x613.png",
+				"src" :"./images/z_monkPagoda_920x359.png",
 				"media": "920px"
 			},
 			{
-				"src" :"./images/monkPagoda_1200x800.png",
+				"src" :"./images/z_monkPagoda_1200x469.png",
 				"media": "1200px"
 			}, 
 			{
-				"src" :"./images/monkPagoda_1400x933.png",
+				"src" :"./images/z_monkPagoda_1400x547.png",
 				"media": "1400px"
 			}, 
 			{
-				"src" :"./images/monkPagoda_1600x1067.png",
+				"src" :"./images/z_monkPagoda_1600x625.png",
 				"media": "1600px"
 			}, 
 			{
-				"src" :"./images/monkPagoda_1920x1280.png",
+				"src" :"./images/z_monkPagoda_1920x750.png",
 				"media": "1920px"
 			}
 		

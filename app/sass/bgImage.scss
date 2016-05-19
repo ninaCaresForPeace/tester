@@ -1,6 +1,6 @@
 /*!bgImage.scss*/
 .bg-image {
-	margin-top: 140px;
+	padding-top: 140px;
 	padding-right: 10px;
 	@include respond-to-max(x-small) {
 		margin-top: 150px;
@@ -8,7 +8,12 @@
         img {
         	width: 100%;
         	height: auto;
-        	max-height: 800px;
+        	//max-height: 800px;
+        	max-height: 500px;
+        	/* clear: left;
+        	display:block;
+        	vertical-align: bottom;
+        	line-height:0; */
         }
         
 }
