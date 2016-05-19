@@ -26,5 +26,5 @@ done
 
 //do thefollowing tar command while in the folder of the same directory
 #tar -zcvf imgTarfile.tar.gz -C ~/Documents/workspaceMars/tester2/app/images/ .
-unzip tar file :    tar -xvzf imgTarFile.tar.gz 
+unzip tar file :    sudo tar -xvzf imgTarFile.tar.gz 
 

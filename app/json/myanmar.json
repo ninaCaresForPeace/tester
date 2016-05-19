@@ -13,27 +13,27 @@
 					"media": "1px"
 				},
 				{
-					"src" :"./images/myanmarSunset_768x512.png",
+					"src" :"./images/z_myanmarSunset_768x300.png",
 					"media": "645px"
 				},
 				{
-					"src" :"./images/myanmarSunset_920x613.png",
+					"src" :"./images/z_myanmarSunset_920x360.png",
 					"media": "920px"
 				},
 				{
-					"src" :"./images/myanmarSunset_1200x799.png",
+					"src" :"./images/z_myanmarSunset_1200x469.png",
 					"media": "1200px"
 				},
 				{
-					"src" :"./images/myanmarSunset_1400x932.png",
+					"src" :"./images/z_myanmarSunset_1400x547.png",
 					"media": "1400px"
 				}, 
 				{
-					"src" :"./images/myanmarSunset_1600x1066.png",
+					"src" :"./images/z_myanmarSunset_1600x626.png",
 					"media": "1600px"
 				}, 
 				{
-					"src" :"./images/myanmarSunset_1920x1279.png",
+					"src" :"./images/z_myanmarSunset_1920x751.png",
 					"media": "1920px"
 				}
 			],

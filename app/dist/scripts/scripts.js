@@ -14137,7 +14137,6 @@ angular.module("template/typeahead/typeahead-popup.html", []).run(["$templateCac
 			    
 				
 				element.bind('click', function (scope) {
-				//	debugger;
 			    	var newActiveTab = element.text().trim();
 			    	var $li = element.parent().parent().parent().parent().find("li");
 			    	$li.removeClass("active");
