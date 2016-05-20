@@ -8,6 +8,9 @@
 		font-size:22px;
 		padding:35px;
 		position: relative;
+		@include respond-to-max(sm-screen-min) { //min-width: 544px
+			height: auto;
+		}
 	}
 	.donate-other{
 		background-color: blue;

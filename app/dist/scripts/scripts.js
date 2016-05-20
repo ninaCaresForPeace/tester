@@ -14208,7 +14208,7 @@ angular.module("template/typeahead/typeahead-popup.html", []).run(["$templateCac
 		    	
 		    }],
 			 
-			templateUrl: './Navigation/bandedNavTemplate.html'
+			templateUrl: './templates/bandedNavTemplate.html'
 		};
 	});
 
