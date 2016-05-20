@@ -94,7 +94,7 @@
 		    	
 		    }],
 			 
-			templateUrl: './Navigation/bandedNavTemplate.html'
+			templateUrl: './templates/bandedNavTemplate.html'
 		};
 	});
 

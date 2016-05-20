@@ -484,7 +484,7 @@ body {
   padding-right: 10px; }
   @media (max-width: 520px) {
     .bg-image {
-      margin-top: 150px; } }
+      padding-top: 150px; } }
   .bg-image img {
     width: 100%;
     height: auto;
@@ -774,6 +774,9 @@ body {
     font-size: 22px;
     padding: 35px;
     position: relative; }
+    @media (max-width: 544px) {
+      .donate-info .text-section {
+        height: auto; } }
   .donate-info .donate-other {
     background-color: blue;
     width: 175px;
