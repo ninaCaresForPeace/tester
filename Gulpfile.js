@@ -8,9 +8,12 @@
 	var rename 		= require('gulp-rename');
 	var concat 		= require('gulp-concat');
 	var streamqueue  = require('streamqueue');
+	var htmlmin 	= require('gulp-htmlmin');
 	//var template = require('gulp-template-compile');
 	//var obfuscate 	= require('gulp-obfuscate');
 	var jsDest = 'app/dist/scripts';
+	var jsonminify = require('gulp-jsonminify');
+	 
 	
 	//concatenate js scripts to one file, rename file to min and then
 	//further reduce size by removing whitespace and cpmments
@@ -24,6 +27,10 @@
 				gulp.src('app/js/angular-animate.js'),
 				gulp.src('app/bower_components/angular-route/angular-route.js'),
 				gulp.src('app/javascripts/ui-bootstrap-tpls-0.14.3.js'),
+				gulp.src('app/bower_components/angular-skrollr/dist/angular-skrollr.js'),
+		        //gulp.src('bower_components/angular-skrollr/dist/angular-skrollr.js'),
+		        gulp.src('app/bower_components/picturefill/picturefill.js'),
+		        gulp.src('app/bower_components/angular-picturefill/angular-picturefill.js'),
 				
 		        gulp.src('app/js/routes.js'),
 		        gulp.src('app/js/appFactories.js'),
@@ -33,12 +40,12 @@
 		        
 		        gulp.src('app/components/version/version.js'),
 		        gulp.src('app/components/version/version-directive.js'),
-		        gulp.src('app/components/version/interpolate-filter.js'),
+		        gulp.src('app/components/version/interpolate-filter.js')
 
-		        gulp.src('app/bower_components/angular-skrollr/dist/angular-skrollr.js'),
-		        //gulp.src('bower_components/angular-skrollr/dist/angular-skrollr.js'),
-		        gulp.src('app/bower_components/picturefill/picturefill.js'),
-		        gulp.src('app/bower_components/angular-picturefill/angular-picturefill.js')
+//		        gulp.src('app/bower_components/angular-skrollr/dist/angular-skrollr.js'),
+//		        //gulp.src('bower_components/angular-skrollr/dist/angular-skrollr.js'),
+//		        gulp.src('app/bower_components/picturefill/picturefill.js'),
+//		        gulp.src('app/bower_components/angular-picturefill/angular-picturefill.js')
 		    )
 		.pipe(concat('scripts.js'))
 		.pipe(gulp.dest(jsDest))
@@ -46,6 +53,21 @@
 		.pipe(uglify({mangle: true}))
 		.pipe(gulp.dest(jsDest));
 		
+	});
+	gulp.task('htmlmin', function() {
+		return streamqueue({ objectMode: true },
+				gulp.src('app/templates/**/*.html'),
+				gulp.src('app/Views/**/*.html')
+				
+				)
+	    .pipe(htmlmin({collapseWhitespace: true,
+	    	removeComments: true}))
+	    .pipe(gulp.dest('app/dist/html/'));
+	});
+	gulp.task('jsonMin', function () {
+	    return gulp.src(['app/json/**/*.json'])
+	        .pipe(jsonminify())
+	        .pipe(gulp.dest('app/dist/json/'));
 	});
 //	gulp.task('templates', function () {
 //		gulp.src('app/templates/**/*.html')
@@ -58,7 +80,7 @@
 	gulp.task('styles', function() {
 		gulp.src('app/styles/**/*.scss')
 	        .pipe(sass().on('error', sass.logError))
-	      // .pipe(gulp.dest('app/css/'));app/dist/scripts
+	       // .pipe(gulp.dest('app/dist/css/'));
 	        .pipe(gulp.dest('app/dist/css/'));
 	});
 
@@ -66,11 +88,35 @@
 	gulp.task('watchStyles',function() {
 	    gulp.watch('app/sass/**/*.scss',['styles']);
 	});
+	
+	var gulp = require('gulp');
+	var cleanCSS = require('gulp-clean-css');
+
+	gulp.task('minify-css', function() {
+	  return streamqueue({ objectMode: true },
+			  gulp.src('app/css/bootstrap.css'),
+			  gulp.src('app/css/bootstrap-theme.css'),
+			  gulp.src('app/css/styles.css'))
+	  
+	//  gulp.src('app/css/**/*.css')
+	    .pipe(cleanCSS({compatibility: 'ie8'}))
+	    .pipe(gulp.dest('app/dist/styles.css'));
+	});
+	
 	//Concatenate CSS and send to one file
 	gulp.task('concat', function () {
-		return gulp.src('app/css/**/*.css')
-			.pipe(concatCss('styles/bundle.css'))
-			.pips(gulp.dest('out/'));
+		return streamqueue({ objectMode: true },
+				//gulp.src('app/css/bootstrap.css'),
+				//gulp.src('app/css/bootstrap-theme.css'),
+				//gulp.src('app/css/bootstrap.min.css'),
+				
+				gulp.src('app/css/styles.css')
+				)
+				.pipe(concatCss('bundle.css'))
+				.pipe(gulp.dest('app/dist/css/'));
+//		return gulp.src('app/css/**/*.css')
+//			.pipe(concatCss('styles/bundle.css'))
+//			.pipe(gulp.dest('app/dist/css/'));
 	});
 })();
 

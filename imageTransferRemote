@@ -30,3 +30,9 @@ unzip tar file :    sudo tar -xvzf imgTarFile.tar.gz
 
 
 forever start ./node_modules/http-server/bin/http-server -a localhost -p 8000 -c-1
+
+remove large files in git history:
+http://stackoverflow.com/questions/21168846/cant-remove-file-from-git-commit
+http://stackoverflow.com/questions/6403601/purging-file-from-git-repo-failed-unable-to-create-new-backup
+http://dalibornasevic.com/posts/2-permanently-remove-files-and-folders-from-a-git-repository
+http://stackoverflow.com/questions/8740187/git-how-to-remove-file-from-historical-commit

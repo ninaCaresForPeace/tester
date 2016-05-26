@@ -9,35 +9,56 @@
 			},
 			{
 				"src" :"./images/boy_480x320.png",
-				"media": "1px"
+				"media": "1px",
+				"width": "480px",
+				"height": "320px",
+				"alt": "Image of Child"
 			},
 			{
 				"src" :"./images/z_boy_768x300.png",
-				"media": "645px"
+				"media": "645px",
+				"width": "768px",
+				"height": "300px",
+				"alt": "Image of Child"
 			},
 			{
 				"src" :"./images/z_boy_920x359.png",
-				"media": "920px"
+				"media": "920px",
+				"width": "920px",
+				"height": "359px",
+				"alt": "Image of Child"
 			},
 			{
 				"src" :"./images/z_boy_1200x469.png",
-				"media": "1200px"
+				"media": "1200px",
+				"width": "1200px",
+				"height": "469px",
+				"alt": "Image of Child"
 			},
 			{
 				"src" :"./images/z_boy_1400x547.png",
-				"media": "1400px"
+				"media": "1400px",
+				"width": "1400px",
+				"height": "547px",
+				"alt": "Image of Child"
 			},
 			{
 				"src" :"./images/z_boy_1600x625.png",
-				"media": "1600px"
+				"media": "1600px",
+				"width": "1600px",
+				"height": "625px",
+				"alt": "Image of Child"
 			},
 			{
 				"src" :"./images/z_boy_1920x750.png",
-				"media": "1920px"
+				"media": "1920px",
+				"width": "1920px",
+				"height": "750px",
+				"alt": "Image of Child"
 			}
 		
 		],
-		"alt": "image of boy in train car"
+		"alt": "Image of Child"
 	},
 	"info": "Like Theraveda Buddhist monks, we live by your contribution.  We build clinics, educate and support people with your donation.  Your generosity means a lot to us and the people in Myanmar.\r\n\r\nWe process your donation through the secure gateway of Paypal, worry-free.\r\n\r\nPlease help us support world health by clicking \"Donate\".",
 	"donateOptions": {

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" style="height:100%" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" style="height:100%" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" style="height:100%" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp"  style="height:100%" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Care For Peace</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <!--  <link rel="stylesheet" href="app.css">-->
+  <!--  TODO: dynamically add in this  -->
+   <link rel="stylesheet" href="dist/css/styles.css">
+   <link rel="stylesheet" href="css/bootstrap.css">
+   <link rel="stylesheet" href="css/bootstrap-theme.css">
+   <link rel="globalNav" type="application/json" href="json/globalNav.json">
+   
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>  
+</head>
+<body style="height:100%">
+<div id="skrollr-body">
+<!--div id="skrollr-body"-->
+ <div global-nav-tabs></div>
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+<div ng-view style="height:auto; "></div>
+
+ 
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.min.js"></script>
+  <!--script src="dist/scripts/scripts.min.js"></script-->
+   <script src="dist/scripts/scripts.js"></script>
+  
+  <script src="bower_components/skrollr/dist/skrollr.min.js"></script>
+ <script>
+ var onresize = function() 
+ {
+   var width = window.innerWidth
+   || document.documentElement.clientWidth
+   || document.body.clientWidth;
+   console.log(width);
+ }
+
+ window.onload = function () { 
+	 
+	// picturefill();
+	// alert("It's loaded!");
+	 }
+
+ </script> 
+  
+</div>  
+<div footer-section></div>
+</body>
+</html>

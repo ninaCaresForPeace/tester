@@ -140,7 +140,7 @@
 		}
 		
 	});
-	app.directive('onFinishRender', function ($timeout, $window) {
+	app.directive('onFinishRender', ['$timeout','$window', function ($timeout, $window) {
 	    return {
 	        restrict: 'A',
 	        link: function (scope, element, attr) {
@@ -160,7 +160,7 @@
 	            }
 	        }
 	    }
-	});
+	}]);
 	app.directive("careCarousel", function () {
 		return {
 			restrict: 'E',

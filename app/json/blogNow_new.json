@@ -2,6 +2,19 @@
 	"blogTopMessage": "what's up with c4p",
 	"posts": [
 		{
+			"blogTitle":"Debut of the CARE FOR PEACE a-Capella song!",
+			"date":"May 17, 2016",
+			"blogText":"The Care for Peace song came as an inspiration to Founder Jeff Hardy after experiencing an outdoor concert called \"Zat Pwe\" while in Myanmar.  He wrote the song for the children of rural Myanmar to sing at the Grand Opening of the first Care for Peace Rural Health Center in June, 2016.  So that they can learn the song in advance of the opening, the children of Singers Marin created the training video below.  Under the tutelage of Stevie Greenwell, Voval Music Teacher and Choirmaster, and Natalie John, Professional Music Arranger, the Advanced Treble Choir developed an \"a-Capella\" version of the song.",
+			"video": {
+				"url": "https://www.youtube.com/embed/LGY2Mdw5Ho8",
+				"show": "true",
+				"title":"The Care For Peace Song"
+			},
+			"image": {
+				"show": "false"
+			}
+		},
+		{
 			"blogTitle":"CARE FOR PEACE IS GETTING READY FOR THE SECOND CLINIC",
 			"date":"November 28, 2015",
 			"blogText":"Our first mini medical center was successfully built in a rural village of Taung Yin, Kyauk Phyu.\r\nEach mini medical healthcare system will provide 90% of health and medical needs so that patients can have the care they need right in their own village.\r\nThe center also offers preventive health programs, that include health screening, immunization and chronic disease management, contraception, active aging among others.\r\nWe also have mother and child health programs, illness and injury programs, dental care programs, and basic lab and radiologic services available.\r\nWithout your support, we couldn't have achieved this.  Please help by clicking \"Donate\".",

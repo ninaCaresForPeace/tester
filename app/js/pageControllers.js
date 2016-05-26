@@ -84,6 +84,7 @@
 			$scope.topBand = data.topBand;
 
 			var bgImage = data.bgImage;
+			$scope.imageAlt = bgImage.alt;
 			
 			$scope.images = [];
 			for(var i = 0; i < bgImage.images.length; i++) {

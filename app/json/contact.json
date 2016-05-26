@@ -9,35 +9,56 @@
 			},
 			{
 				"src" :"./images/templeT_480x320.png",
-				"media": "1px"
+				"media": "1px",
+				"width": "480px",
+				"height": "320px",
+				"alt": "Scene from Bagan"
 			},
 			{
 				"src" :"./images/templeT_768x300.png",
-				"media": "645px"
+				"media": "645px",
+				"width": "768px",
+				"height": "300px",
+				"alt": "Scene from Bagan"
 			},
 			{
 				"src" :"./images/templeT_920x469.png",
-				"media": "920px"
+				"media": "920px",
+				"width": "920px",
+				"height": "359px",
+				"alt": "Scene from Bagan"
 			},
 			{
 				"src" :"./images/templeT_1200x469.png",
-				"media": "1200px"
+				"media": "1200px",
+				"width": "1200px",
+				"height": "469px",
+				"alt": "Scene from Bagan"
 			},
 			{
 				"src" :"./images/templeT_1400x547.png",
-				"media": "1400px"
+				"media": "1400px",
+				"width": "1400px",
+				"height": "547px",
+				"alt": "Scene from Bagan"
 			},
 			{
 				"src" :"./images/templeT_1600x625.png",
-				"media": "1600px"
+				"media": "1600px",
+				"width": "1600px",
+				"height": "625px",
+				"alt": "Scene from Bagan"
 			},
 			{
 				"src" :"./images/templeT_1920x750.png",
-				"media": "1920px"
+				"media": "1920px",
+				"width": "1920px",
+				"height": "750px",
+				"alt": "Scene from Bagan"
 			}
 		
 		],
-		"alt": "image of clinic being constructed"
+		"alt": "Scene from Bagan"
 	},
 	"contactTitle": "We want to hear from you",
 	"directions": "Please submit any questions, concerns, or general feedback in the space below along with your name and email address.",

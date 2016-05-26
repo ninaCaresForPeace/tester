@@ -10,35 +10,56 @@
 				},
 				{
 					"src" :"./images/myanmarSunset_480x320.png",
-					"media": "1px"
+					"media": "1px",
+					"width": "480px",
+					"height": "320px",
+					"alt": "Bagan at sunset"
 				},
 				{
 					"src" :"./images/z_myanmarSunset_768x300.png",
-					"media": "645px"
+					"media": "645px",
+					"width": "768px",
+					"height": "300px",
+					"alt": "Bagan at sunset"
 				},
 				{
 					"src" :"./images/z_myanmarSunset_920x360.png",
-					"media": "920px"
+					"media": "920px",
+					"width": "920px",
+					"height": "360px",
+					"alt": "Bagan at sunset"
 				},
 				{
 					"src" :"./images/z_myanmarSunset_1200x469.png",
-					"media": "1200px"
+					"media": "1200px",
+					"width": "1200px",
+					"height": "469px",
+					"alt": "Bagan at sunset"
 				},
 				{
 					"src" :"./images/z_myanmarSunset_1400x547.png",
-					"media": "1400px"
+					"media": "1400px",
+					"width": "1400px",
+					"height": "547px",
+					"alt": "Bagan at sunset"
 				}, 
 				{
 					"src" :"./images/z_myanmarSunset_1600x626.png",
-					"media": "1600px"
+					"media": "1600px",
+					"width": "1600px",
+					"height": "626px",
+					"alt": "Bagan at sunset"
 				}, 
 				{
 					"src" :"./images/z_myanmarSunset_1920x751.png",
-					"media": "1920px"
+					"media": "1920px",
+					"width": "1920px",
+					"height": "751px",
+					"alt": "Bagan at sunset"
 				}
 			],
 		
-		"alt": "Pagodas at sunset"
+		"alt": "Bagan at sunset"
 	},
 	"midComponent": {
 		"infoSection": "Myanmar, formerly known as Burma, is located between India, China and Thailand in Southeast Asia. \r\nMyanmar ranks 150 out of 187 countries in the Human Development Index.  It is one of the poorest nations in Southeast Asia. \r\nBuddhism was established as the dominant religion in the upper Irrawady River valley by a king of Pagan during the 11th century.  Aside from Teravada Buddhism practiced by 80 to 89% of the population, some Hindu, Christian and Muslim people practice their religions.\r\nWomen in Myanmar apply makeup called thanaka ont heir faces every morning.  It is a yellowish white paste made from ground bark.\r\nMyanmar's government spends the least percentage of its GDP on health care of any country in the world.  According to a report published by Doctors without Borders, 25,000 AIDS patients died in 2007 in Myanmar.\r\nMyanmar is slowly transitioning towards democracy.  National League of Democracy, lead by Aung San Suu Kyi, won the election in 2015.\r\nWith your support, we can change the dire statistics of Myanmar.  Please help by clicking \"Donate\".",

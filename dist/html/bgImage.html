@@ -1,0 +1,30 @@
+<div class="bg-image row skrollable skrollable-between clearfix" sn-skrollr data-top-top="transform: translate(0%, 0%)" data-top-bottom="transform: translate(0%, 50%)" style="transform: translate(0%, 0%)"><!--  <img class="" data-ng-src="{{bgImage.image}}" alt="{{bgImage.alt}}">--><!--span picture-fill data-alt="{{bgImage.alt}}" data-picture--> <span picture-fill data-alt="{{bgImage.alt}}"><span pf-src="{{defImage}}"></span> <span ng-repeat="image in images" pf-src="{{image.src}}" data-media="(min-width: {{image.media}})" on-finish-render></span></span></div><!--  span picture-fill data-alt="{{post.thumbnail.description}}" ng-if="post.thumbnail">
+  <span pf-src="{{post.thumbnail.url}}"></span>
+  <span pf-src="{{post.thumbnail.url | trimExt}}-150x150.jpg" data-media="(min-width: 1px)"></span>
+  <span pf-src="{{post.thumbnail.url | trimExt}}-300x300.jpg" data-media="(min-width: 1px) and (-webkit-min-device-pixel-ratio: 1.5),(min-resolution: 144dpi),(min-resolution: 1.5dppx)"></span>
+  <span pf-src="{{post.thumbnail.url | trimExt}}-300x225.jpg" data-media="(min-width: 320px)"></span>
+  <span pf-src="{{post.thumbnail.url | trimExt}}-600x450.jpg" data-media="(min-width: 320px) and (-webkit-min-device-pixel-ratio: 1.5),(min-resolution: 144dpi),(min-resolution: 1.5dppx)"></span>
+  <span pf-src="{{post.thumbnail.url | trimExt}}-1024x768.jpg" data-media="(min-width: 645px)"></span>
+  <span pf-src="{{post.thumbnail.url | trimExt}}.jpg" data-media="(min-width: 645px) and (-webkit-min-device-pixel-ratio: 1.5),(min-resolution: 144dpi),(min-resolution: 1.5dppx)"></span>
+  <span pf-src="{{post.thumbnail.url | trimExt}}.jpg" data-media="(min-width: 2068px)"></span>
+</span>
+
+
+ <span pf-src="{{bgImage.image}}"></span>
+  	<span pf-src="{{bgImage.image | trimExt}}-320.jpg" data-media="(min-width: 1px)"></span>
+  	<span pf-src="{{bgImage.image | trimExt}}-320.jpg" data-media="(min-width: 1px) and (-webkit-min-device-pixel-ratio: 1.5),(min-resolution: 144dpi),(min-resolution: 1.5dppx)"></span>
+  <span pf-src="{{bgImage.image | trimExt}}-320.jpg" data-media="(min-width: 320px)"></span>
+  <span pf-src="{{bgImage.image | trimExt}}-320.jpg" data-media="(min-width: 320px) and (-webkit-min-device-pixel-ratio: 1.5),(min-resolution: 144dpi),(min-resolution: 1.5dppx)"></span>
+  <span pf-src="{{bgImage.image | trimExt}}-480.jpg" data-media="(min-width: 645px)"></span>
+  <span pf-src="{{bgImage.image | trimExt}}-768.jpg" data-media="(min-width: 645px) and (-webkit-min-device-pixel-ratio: 1.5),(min-resolution: 144dpi),(min-resolution: 1.5dppx)"></span>
+  <span pf-src="{{bgImage.image | trimExt}}-1920.jpg" data-media="(min-width: 2068px)"></span>
+
+
+below works
+<span picture-fill data-alt="Juicy hanger steak on a croissant.">
+  	<span pf-src="./images/monk_boys-320.jpg" data-media="(min-width: 1px)"></span>
+  <span pf-src="./images/monk_boys-480.jpg" data-media="(min-width: 645px)"></span>
+  <span pf-src="./images/monk_boys-768.jpg" data-media="(min-width: 920px)"></span>
+  <span pf-src="./images/monk_boys-1920.jpg" data-media="(min-width: 1200px)"></span>
+  </span>
+-->

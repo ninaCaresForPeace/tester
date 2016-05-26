@@ -13421,6 +13421,300 @@ angular.module("template/typeahead/typeahead-popup.html", []).run(["$templateCac
     "");
 }]);
 !angular.$$csp() && angular.element(document).find('head').prepend('<style type="text/css">.ng-animate.item:not(.left):not(.right){-webkit-transition:0s ease-in-out left;transition:0s ease-in-out left}</style>');
+/*! angular-skrollr - v0.1.5 - 2015-12-08 */
+"use strict";
+/**
+ * Wrap skrollr.js
+ * @author SOON_
+ * @module sn.skrollr
+ */
+angular.module("sn.skrollr", [])
+
+/**
+ * Provider to configuring skrollr
+ * @example
+ *      snSkrollrProvider.config({ smoothScrolling: true });
+ *      snSkrollr.init();
+ */
+.provider("snSkrollr", function snSkrollrProvider() {
+
+    var _this = this;
+
+    /**
+     * Skrollr initialisation options
+     * @property {Object} config
+     */
+    this.config = {};
+
+    /**
+     * Instance of Skrollr
+     * @property {Object}  skrollrInstance
+     */
+    this.skrollrInstance = {};
+
+    /**
+     * Has the skrollInstance been initialised
+     * @property {Boolean} hasBeenInitialised
+     */
+    this.hasBeenInitialised = false;
+
+    /**
+     * Methods returned on snSkrollr service
+     * @property {Object} serviceMethods
+     */
+    this.serviceMethods = {};
+
+    /**
+     * snSkroller service
+     */
+    this.$get = [
+        "$window",
+        "$document",
+        "$rootScope",
+        /**
+         * @constructor
+         * @param   {Object}  $window    angular wrapper for window
+         * @param   {Object}  $document  angular wrapper for document
+         * @param   {Object}  $rootScope angular root application scope
+         */
+        function($window, $document, $rootScope) {
+
+            _this.serviceMethods = {
+
+                /**
+                 * Initialise skrollrjs with config options
+                 * @method init
+                 */
+                init: function(config) {
+
+                    var skrollrConfig = config ? config : _this.config,
+                        skrollrInit = function skrollrInit(){
+                        _this.skrollrInstance = $window.skrollr.init(skrollrConfig);
+                        _this.hasBeenInitialised = true;
+                        _this.serviceMethods.refresh();
+                    };
+
+                    $document.ready(function () {
+                        if (!$rootScope.$$phase) {
+                            $rootScope.$apply(skrollrInit);
+                        } else {
+                            skrollrInit();
+                        }
+                    });
+
+                },
+
+                /**
+                 * Call refresh on Skrollr instance
+                 * Useful for resetting skrollr after modifying the DOM
+                 * @method refresh
+                 */
+                refresh: function($element) {
+                    if (_this.hasBeenInitialised) {
+                        _this.skrollrInstance.refresh($element);
+                    }
+                },
+
+                /**
+                 * Call skrollr.destroy()
+                 * @method refresh
+                 */
+                destroy: function() {
+                    if (_this.hasBeenInitialised) {
+                        _this.skrollrInstance.destroy();
+                        _this.hasBeenInitialised = false;
+                    }
+                }
+            };
+
+            return _this.serviceMethods;
+        }
+    ];
+})
+
+/**
+ * Refresh skrollrjs on element init
+ * @class  snSkrollr
+ */
+.directive("snSkrollr", [
+    "$timeout",
+    "$window",
+    "snSkrollr",
+    /**
+     * @constructor
+     */
+    function ($timeout, $window, snSkrollr){
+        return {
+            restrict: "AE",
+            link: function($scope, $element) {
+
+                /**
+                 * delay refresh to allow time for
+                 * template to render
+                 * @property timer
+                 */
+                $scope.timer = $timeout(function(){
+                    snSkrollr.refresh($element);
+                }, 100);
+
+                /**
+                 * Event handler for scroll and resize. Cancel timer if there
+                 * is an active one and then create a new timer to replace.
+                 * This is so we can wait until the user has finished scrolling
+                 * before calling refresh. This helps with performance.
+                 * @method onChange
+                 */
+                $scope.onChange = function onChange(){
+                    if ($scope.timer) {
+                        $timeout.cancel($scope.timer);
+                    }
+
+                    $scope.timer = $timeout(function(){
+                        snSkrollr.refresh($element);
+                    }, 200);
+                };
+
+                angular.element($window).on("scroll", $scope.onChange);
+                angular.element($window).on("resize", $scope.onChange);
+
+            }
+        };
+    }
+]);
+
+/*! Picturefill - Responsive Images that work today. (and mimic the proposed Picture element with span elements). Author: Scott Jehl, Filament Group, 2012 | License: MIT/GPLv2 */
+
+(function( w ){
+
+	// Enable strict mode
+	"use strict";
+
+	w.picturefill = function() {
+		var ps = w.document.getElementsByTagName( "span" );
+		console.log("in picturefill js");
+		// Loop the pictures
+		for( var i = 0, il = ps.length; i < il; i++ ){
+			if( ps[ i ].getAttribute( "data-picture" ) !== null ){
+				console.log("in picturefill js 1");
+				var sources = ps[ i ].getElementsByTagName( "span" ),
+					matches = [];
+
+				// See if which sources match
+				for( var j = 0, jl = sources.length; j < jl; j++ ){
+					var media = sources[ j ].getAttribute( "data-media" );
+					// if there's no media specified, OR w.matchMedia is supported 
+					if( !media || ( w.matchMedia && w.matchMedia( media ).matches ) ){
+						matches.push( sources[ j ] );
+					}
+				}
+
+			// Find any existing img element in the picture element
+			var picImg = ps[ i ].getElementsByTagName( "img" )[ 0 ];
+
+			if( matches.length ){
+				var matchedEl = matches.pop();
+				if( !picImg || picImg.parentNode.nodeName === "NOSCRIPT" ){
+					picImg = w.document.createElement( "img" );
+					picImg.alt = ps[ i ].getAttribute( "data-alt" );
+					console.log("in picturefill js 2");
+				}
+				else if( matchedEl === picImg.parentNode ){
+					// Skip further actions if the correct image is already in place
+					continue;
+				}
+
+				picImg.src =  matchedEl.getAttribute( "data-src" );
+				matchedEl.appendChild( picImg );
+				picImg.removeAttribute("width");
+				picImg.removeAttribute("height");
+				console.log("in picturefill js 3");
+			}
+			else if( picImg ){
+				picImg.parentNode.removeChild( picImg );
+				console.log("in picturefill js 4");
+			}
+		}
+		}
+	};
+
+	// Run on resize and domready (w.load as a fallback)
+	if( w.addEventListener ){
+		w.addEventListener( "resize", w.picturefill, false );
+		w.addEventListener( "DOMContentLoaded", function(){
+			w.picturefill();
+			console.log("in picturefill js 5");
+			// Run once only
+		w.removeEventListener( "load", w.picturefill, false );
+		}, false );
+		w.addEventListener( "load", w.picturefill, false );
+	}
+	else if( w.attachEvent ){
+		w.attachEvent( "onload", w.picturefill );
+		console.log("in picturefill js 6");
+	}
+
+}( this ));
+
+'use strict';
+
+angular.module('ng.picturefill', [])
+  .directive('pictureFill', [function () {
+    return {
+      controller: 'PictureFillCtrl',
+      link: function (scope, elem, attrs) {
+        elem.attr('data-picture', '');
+        console.log("datapicture function in picturefillctrl directive");
+      }
+    };
+  }])
+  .directive('pfSrc', function () {
+    return {
+      link: function (scope, elem, attrs) {
+        elem.attr('data-src', attrs.pfSrc);
+        scope.$watch('$viewContentLoaded', function(){
+        	console.log("Content View Loaded");
+        });
+        console.log("pfSrc directive");
+      }
+    };
+  })
+ 
+  
+//  .directive('lastplace', ['$interpolate', function($interpolate) {
+//	  return {
+//	    restrict: 'C',
+//	   // priority: Number.MIN_SAFE_INTEGER, // execute last, after all other directives if any.
+//	    link: function($scope, $element, $attributes) {
+//	    	console.log("totally last");
+//	    }
+//	  };
+//  }])
+//  
+///*
+// * This img directive makes it so that if you put a loaded="" attribute on any
+// * img element in your app, the expression of that attribute will be evaluated
+// * after the images has finished loading. Use this to, for example, remove
+// * loading animations after images have finished loading.
+// */
+ 
+  .controller('PictureFillCtrl', ['$timeout','$scope', function ($timeout, $scope) {
+	  console.log("calling picturefill");
+    $timeout(picturefill);
+    
+	
+//    $scope.$watch('$viewContentLoaded', function(){
+//    	console.log("Content View Loaded");
+//    });
+  }])
+  .filter('trimExt', [function () {
+    return function (text) {
+      if (text) {
+        return text.slice(0, text.lastIndexOf('.')) || text;
+      }
+    };
+  }]);
+
+  
 /* !app.js */
 'use strict';
 (function() {
@@ -13455,56 +13749,56 @@ angular.module("template/typeahead/typeahead-popup.html", []).run(["$templateCac
 	myApp.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.
 		when("/homePage", {
-			templateUrl: "Views/homePage.html",
-			json: 'json/home.json',
+			templateUrl: "./dist/html/homePage.html",
+			json: './dist/json/home.json',
 			controller: 'homeController'
 		}).
 		when("/ourMission", {
-			templateUrl: "Views/mission.html",
-			json: 'json/mission.json',
+			templateUrl: "./dist/html/mission.html",
+			json: './dist/json/mission.json',
 			controller: 'ourMissionController'
 			
 		}).
 		when("/achievements", {
-			templateUrl: "Views/achievements.html",
-			json: 'json/achievements.json',
+			templateUrl: "./dist/html/achievements.html",
+			json: './dist/json/achievements.json',
 			controller: 'achievementsController'
 			
 		}).
 		when("/whoWeAre", {
-			templateUrl: "Views/whoWeAre.html",
-			json: 'json/whoWeAre.json',
+			templateUrl: "./dist/html/whoWeAre.html",
+			json: './dist/json/whoWeAre.json',
 			controller: 'whoWeAreController'
 			
 		}).
 		when("/myanmar", {
-			templateUrl: "Views/myanmar.html",
-			json: 'json/myanmar.json',
+			templateUrl: "./dist/html/myanmar.html",
+			json: './dist/json/myanmar.json',
 			controller: 'aboutMyanmarController'
 			
 		}).
 		when("/donate", {
-			templateUrl: "Views/donate.html",
-			json: 'json/donate.json',
+			templateUrl: "./dist/html/donate.html",
+			json: './dist/json/donate.json',
 			controller: 'donationController'
 			
 		}).
 		when("/contact", {
-			templateUrl: "Views/contact.html",
-			json: 'json/contact.json',
+			templateUrl: "./dist/html/contact.html",
+			json: './dist/json/contact.json',
 			controller: 'contactUsController'
 			
 		}).
 		when("/blog", {
-			templateUrl: "Views/blogNow.html",
+			templateUrl: "./dist/html/blogNow.html",
 			controller: 'blogController',
-			json: 'json/blogNow_new.json'
+			json: './dist/json/blogNow_new.json'
 
 		}).
 		when("/globalNav", {
-			templateUrl: "Navigation/bandedNavTemplate.html",
+			templateUrl: "./dist/html/bandedNavTemplate.html",
 			controller: 'bandedNavControl',
-			json: 'json/globalNav.json'
+			json: './dist/json/globalNav.json'
 
 		}).
 		otherwise({redirectTo: '/homePage'})
@@ -13660,83 +13954,6 @@ angular.module("template/typeahead/typeahead-popup.html", []).run(["$templateCac
 
 
 
-
-//'use strict';
-
-// Declare app level module which depends on views, and components
-//angular.module('myApp').//,['ngRoute','getJsonService'
-////  'ngRoute',
-////  'myApp.view1',
-////  'myApp.view2',
-////  'myApp.globalNav',
-////  'myApp.version'
-////]).
-//config(['$routeProvider', function($routeProvider) {
-////config(['$routeProvider', 'getJsonService', function($routeProvider,getJsonService) {
-//	$routeProvider.
-//		when("/home", {
-//			templateUrl: "Views/home.html"
-//			//controller: 'bandedNavControl',
-//			//json: 'json/globalNav.json'
-//
-//		}).
-//		when("/homePage", {
-//			templateUrl: "Views/homePage.html",
-//			json: 'json/home.json',
-//			controller: 'homeController'
-//			
-//
-//		}).
-//		when("/ourMission", {
-//			templateUrl: "Views/mission.html",
-//			json: 'json/mission.json',
-//			controller: 'ourMissionController'
-//			
-//		}).
-//		when("/achievements", {
-//			templateUrl: "Views/achievements.html",
-//			json: 'json/achievements.json',
-//			controller: 'achievementsController'
-//			
-//		}).
-//		when("/whoWeAre", {
-//			templateUrl: "Views/whoWeAre.html",
-//			json: 'json/whoWeAre.json',
-//			controller: 'whoWeAreController'
-//			
-//		}).
-//		when("/myanmar", {
-//			templateUrl: "Views/myanmar.html",
-//			json: 'json/myanmar.json',
-//			controller: 'aboutMyanmarController'
-//			
-//		}).
-//		when("/globalNav", {
-//			templateUrl: "Navigation/bandedNavTemplate.html",
-//			controller: 'bandedNavControl',
-//			json: 'json/globalNav.json'
-//
-//		}).
-//		when("/view2", {
-//			templateUrl: "view2/view2.html",
-//			controller: 'CarouselDemoCtrl'
-//		}).
-//		when("/c7bh", {
-//			templateUrl: "Views/c7bh.html"/*,
-//			controller: 'CarouselControl',
-//			json: 'json/carousel.json'*/
-//			
-//		}).
-//		when("/c7bhTest", {
-//			templateUrl: "view1/c7bhTest.html"/*,
-//			controller: 'CarouselControl',
-//			json: 'json/carousel.json'*/
-//			
-//		}).
-//		otherwise({redirectTo: '/globalNav'})
-//		//otherwise({redirectTo: '/view1'})
-//}]);
-
 /* !appFactories.js */
 'use strict';
 (function() {
@@ -13847,6 +14064,7 @@ angular.module("template/typeahead/typeahead-popup.html", []).run(["$templateCac
 			$scope.topBand = data.topBand;
 
 			var bgImage = data.bgImage;
+			$scope.imageAlt = bgImage.alt;
 			
 			$scope.images = [];
 			for(var i = 0; i < bgImage.images.length; i++) {
@@ -14254,7 +14472,7 @@ angular.module("template/typeahead/typeahead-popup.html", []).run(["$templateCac
 		}
 		
 	});
-	app.directive('onFinishRender', function ($timeout, $window) {
+	app.directive('onFinishRender', ['$timeout','$window', function ($timeout, $window) {
 	    return {
 	        restrict: 'A',
 	        link: function (scope, element, attr) {
@@ -14274,7 +14492,7 @@ angular.module("template/typeahead/typeahead-popup.html", []).run(["$templateCac
 	            }
 	        }
 	    }
-	});
+	}]);
 	app.directive("careCarousel", function () {
 		return {
 			restrict: 'E',
@@ -14415,298 +14633,3 @@ angular.module('myApp.version.interpolate-filter', [])
     return String(text).replace(/\%VERSION\%/mg, version);
   };
 }]);
-
-/*! angular-skrollr - v0.1.5 - 2015-12-08 */
-"use strict";
-/**
- * Wrap skrollr.js
- * @author SOON_
- * @module sn.skrollr
- */
-angular.module("sn.skrollr", [])
-
-/**
- * Provider to configuring skrollr
- * @example
- *      snSkrollrProvider.config({ smoothScrolling: true });
- *      snSkrollr.init();
- */
-.provider("snSkrollr", function snSkrollrProvider() {
-
-    var _this = this;
-
-    /**
-     * Skrollr initialisation options
-     * @property {Object} config
-     */
-    this.config = {};
-
-    /**
-     * Instance of Skrollr
-     * @property {Object}  skrollrInstance
-     */
-    this.skrollrInstance = {};
-
-    /**
-     * Has the skrollInstance been initialised
-     * @property {Boolean} hasBeenInitialised
-     */
-    this.hasBeenInitialised = false;
-
-    /**
-     * Methods returned on snSkrollr service
-     * @property {Object} serviceMethods
-     */
-    this.serviceMethods = {};
-
-    /**
-     * snSkroller service
-     */
-    this.$get = [
-        "$window",
-        "$document",
-        "$rootScope",
-        /**
-         * @constructor
-         * @param   {Object}  $window    angular wrapper for window
-         * @param   {Object}  $document  angular wrapper for document
-         * @param   {Object}  $rootScope angular root application scope
-         */
-        function($window, $document, $rootScope) {
-
-            _this.serviceMethods = {
-
-                /**
-                 * Initialise skrollrjs with config options
-                 * @method init
-                 */
-                init: function(config) {
-
-                    var skrollrConfig = config ? config : _this.config,
-                        skrollrInit = function skrollrInit(){
-                        _this.skrollrInstance = $window.skrollr.init(skrollrConfig);
-                        _this.hasBeenInitialised = true;
-                        _this.serviceMethods.refresh();
-                    };
-
-                    $document.ready(function () {
-                        if (!$rootScope.$$phase) {
-                            $rootScope.$apply(skrollrInit);
-                        } else {
-                            skrollrInit();
-                        }
-                    });
-
-                },
-
-                /**
-                 * Call refresh on Skrollr instance
-                 * Useful for resetting skrollr after modifying the DOM
-                 * @method refresh
-                 */
-                refresh: function($element) {
-                    if (_this.hasBeenInitialised) {
-                        _this.skrollrInstance.refresh($element);
-                    }
-                },
-
-                /**
-                 * Call skrollr.destroy()
-                 * @method refresh
-                 */
-                destroy: function() {
-                    if (_this.hasBeenInitialised) {
-                        _this.skrollrInstance.destroy();
-                        _this.hasBeenInitialised = false;
-                    }
-                }
-            };
-
-            return _this.serviceMethods;
-        }
-    ];
-})
-
-/**
- * Refresh skrollrjs on element init
- * @class  snSkrollr
- */
-.directive("snSkrollr", [
-    "$timeout",
-    "$window",
-    "snSkrollr",
-    /**
-     * @constructor
-     */
-    function ($timeout, $window, snSkrollr){
-        return {
-            restrict: "AE",
-            link: function($scope, $element) {
-
-                /**
-                 * delay refresh to allow time for
-                 * template to render
-                 * @property timer
-                 */
-                $scope.timer = $timeout(function(){
-                    snSkrollr.refresh($element);
-                }, 100);
-
-                /**
-                 * Event handler for scroll and resize. Cancel timer if there
-                 * is an active one and then create a new timer to replace.
-                 * This is so we can wait until the user has finished scrolling
-                 * before calling refresh. This helps with performance.
-                 * @method onChange
-                 */
-                $scope.onChange = function onChange(){
-                    if ($scope.timer) {
-                        $timeout.cancel($scope.timer);
-                    }
-
-                    $scope.timer = $timeout(function(){
-                        snSkrollr.refresh($element);
-                    }, 200);
-                };
-
-                angular.element($window).on("scroll", $scope.onChange);
-                angular.element($window).on("resize", $scope.onChange);
-
-            }
-        };
-    }
-]);
-
-/*! Picturefill - Responsive Images that work today. (and mimic the proposed Picture element with span elements). Author: Scott Jehl, Filament Group, 2012 | License: MIT/GPLv2 */
-
-(function( w ){
-
-	// Enable strict mode
-	"use strict";
-
-	w.picturefill = function() {
-		var ps = w.document.getElementsByTagName( "span" );
-		console.log("in picturefill js");
-		// Loop the pictures
-		for( var i = 0, il = ps.length; i < il; i++ ){
-			if( ps[ i ].getAttribute( "data-picture" ) !== null ){
-				console.log("in picturefill js 1");
-				var sources = ps[ i ].getElementsByTagName( "span" ),
-					matches = [];
-
-				// See if which sources match
-				for( var j = 0, jl = sources.length; j < jl; j++ ){
-					var media = sources[ j ].getAttribute( "data-media" );
-					// if there's no media specified, OR w.matchMedia is supported 
-					if( !media || ( w.matchMedia && w.matchMedia( media ).matches ) ){
-						matches.push( sources[ j ] );
-					}
-				}
-
-			// Find any existing img element in the picture element
-			var picImg = ps[ i ].getElementsByTagName( "img" )[ 0 ];
-
-			if( matches.length ){
-				var matchedEl = matches.pop();
-				if( !picImg || picImg.parentNode.nodeName === "NOSCRIPT" ){
-					picImg = w.document.createElement( "img" );
-					picImg.alt = ps[ i ].getAttribute( "data-alt" );
-					console.log("in picturefill js 2");
-				}
-				else if( matchedEl === picImg.parentNode ){
-					// Skip further actions if the correct image is already in place
-					continue;
-				}
-
-				picImg.src =  matchedEl.getAttribute( "data-src" );
-				matchedEl.appendChild( picImg );
-				picImg.removeAttribute("width");
-				picImg.removeAttribute("height");
-				console.log("in picturefill js 3");
-			}
-			else if( picImg ){
-				picImg.parentNode.removeChild( picImg );
-				console.log("in picturefill js 4");
-			}
-		}
-		}
-	};
-
-	// Run on resize and domready (w.load as a fallback)
-	if( w.addEventListener ){
-		w.addEventListener( "resize", w.picturefill, false );
-		w.addEventListener( "DOMContentLoaded", function(){
-			w.picturefill();
-			console.log("in picturefill js 5");
-			// Run once only
-		w.removeEventListener( "load", w.picturefill, false );
-		}, false );
-		w.addEventListener( "load", w.picturefill, false );
-	}
-	else if( w.attachEvent ){
-		w.attachEvent( "onload", w.picturefill );
-		console.log("in picturefill js 6");
-	}
-
-}( this ));
-
-'use strict';
-
-angular.module('ng.picturefill', [])
-  .directive('pictureFill', [function () {
-    return {
-      controller: 'PictureFillCtrl',
-      link: function (scope, elem, attrs) {
-        elem.attr('data-picture', '');
-        console.log("datapicture function in picturefillctrl directive");
-      }
-    };
-  }])
-  .directive('pfSrc', function () {
-    return {
-      link: function (scope, elem, attrs) {
-        elem.attr('data-src', attrs.pfSrc);
-        scope.$watch('$viewContentLoaded', function(){
-        	console.log("Content View Loaded");
-        });
-        console.log("pfSrc directive");
-      }
-    };
-  })
- 
-  
-//  .directive('lastplace', ['$interpolate', function($interpolate) {
-//	  return {
-//	    restrict: 'C',
-//	   // priority: Number.MIN_SAFE_INTEGER, // execute last, after all other directives if any.
-//	    link: function($scope, $element, $attributes) {
-//	    	console.log("totally last");
-//	    }
-//	  };
-//  }])
-//  
-///*
-// * This img directive makes it so that if you put a loaded="" attribute on any
-// * img element in your app, the expression of that attribute will be evaluated
-// * after the images has finished loading. Use this to, for example, remove
-// * loading animations after images have finished loading.
-// */
- 
-  .controller('PictureFillCtrl', ['$timeout','$scope', function ($timeout, $scope) {
-	  console.log("calling picturefill");
-    $timeout(picturefill);
-    
-	
-//    $scope.$watch('$viewContentLoaded', function(){
-//    	console.log("Content View Loaded");
-//    });
-  }])
-  .filter('trimExt', [function () {
-    return function (text) {
-      if (text) {
-        return text.slice(0, text.lastIndexOf('.')) || text;
-      }
-    };
-  }]);
-
-  

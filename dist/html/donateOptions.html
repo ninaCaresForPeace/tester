@@ -1,0 +1,16 @@
+<div class="donate-options row"><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><div class="message">{{message}}</div><div class="batch row"><div ng-repeat="option in options" class="option-grid col-lg-3 col-md-3 col-sm-6 col-xs-12"><div class="amount">{{option.amount}}<form action="{{option.action | trustUrl}}" method="post" target="_top" name="myForm"><input type="hidden" name="cmd" value="_s-xclick"> <input type="hidden" name="hosted_button_id" value="{{option.value}}"> <input type="image" class="option-image" src="{{option.image}}" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"></form></div></div></div></div></div><!--div class="donate-options row">
+	<div class="col-sm-12">
+		<div class="message">{{message}}</div>
+		<div ng-repeat="batch in batches" class="batch row">
+			<div ng-repeat="option in batch" class="option-grid col-sm-3">
+				<div class="amount">{{option.amount}}
+					<form action="{{option.action | trustUrl}}" method="post" target="_top" name="myForm">
+						<input type="hidden" name="cmd" value="_s-xclick">
+						<input type="hidden" name="hosted_button_id" value="{{option.value}}">
+						<input type="image" class="option-image"src="{{option.image}}" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+					</form>
+				</div>	
+			</div>
+		</div>
+	</div>
+</div-->

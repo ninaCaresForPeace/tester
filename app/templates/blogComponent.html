@@ -1,8 +1,6 @@
 <!-- blog component -->
 <div class="blog-component">
 	<div class="left-side col-sm-10">
-		<!-- add ng repeat for number of items to be displayed and work on querying info for multiple items -->
-		<!-- may need to filter out sections too -->
 		<div ng-repeat="post in posts" class="friends">
 			<h1 class="blog-title">{{post.blogTitle}}</h1>
 			<div class="date">{{post.date}}</div>
@@ -15,7 +13,7 @@
 				<div class="video-container row">
 					<!-- 4:3 aspect ratio -->
 					<div class="col-sm-12">
-						<!--  do ngif between video and not video -->
+						
 						<div ng-if="post.video.show =='true'" class="embed-responsive embed-responsive-16by9">
 							<iframe ng-if="post.video.show =='true'" class="embed-responsive-item" src="{{post.video.url | trustUrl}}"></iframe>
 						</div>
